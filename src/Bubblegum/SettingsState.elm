@@ -1,4 +1,4 @@
-module Bubblegum.SettingsEntity exposing (Model)
+module Bubblegum.SettingsState exposing (Model)
 
 {-| Setting key
 
@@ -7,7 +7,6 @@ module Bubblegum.SettingsEntity exposing (Model)
 -}
 
 import Bubblegum.SettingsAttribute as SettingsAttribute
-
 {-| The core representation of a field.
 -}
 type alias Model = {
