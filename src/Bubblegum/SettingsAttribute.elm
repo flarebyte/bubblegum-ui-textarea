@@ -2,7 +2,9 @@ module Bubblegum.SettingsAttribute exposing (Model
     , findAttributeByKey
     , findListStringByKey
     , findStringByKey
-    , findIntByKey)
+    , findIntByKey
+    , findIntTupleByKeyTuple
+    , findBoolByKey)
 
 {-| Setting key
 
@@ -10,6 +12,8 @@ module Bubblegum.SettingsAttribute exposing (Model
 
 -}
 import Result
+import Tuple exposing(first, second)
+import List
 
 {-| The core representation of a field.
 -}
@@ -48,4 +52,25 @@ findIntByKey: String -> List Model -> Maybe Int
 findIntByKey key attributes =
     findStringByKey key attributes |> Maybe.andThen stringToInt
 
+findIntTupleByKeyTuple: (String, String) -> List Model -> (Maybe Int, Maybe Int)
+findIntTupleByKeyTuple keyTuple attributes =
+    (findIntByKey (first keyTuple) attributes, findIntByKey (first keyTuple) attributes)
+
+trueList = ["true", "ok", "yes"]
+falseList = ["false", "ko", "no"]
+
+stringToBool: String -> Maybe Bool
+stringToBool str =
+    let
+        value = String.toLower str
+    in
+        if List.member value trueList then
+            Just True
+        else if List.member value falseList then
+            Just False
+        else Nothing
+
+findBoolByKey: String -> List Model -> Maybe Bool
+findBoolByKey key attributes =
+    findStringByKey key attributes |> Maybe.andThen stringToBool
 
