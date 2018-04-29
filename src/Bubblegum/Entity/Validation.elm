@@ -213,5 +213,18 @@ asFloatTuple outcome =
     Outcome.check (\t -> (first t |> isFloat) && (second t |> isFloat)) "unsatisfied-constraint:float-tuple"  outcome  
     |> Outcome.map (\t -> (first t |> floatOrZero, second t |> floatOrZero))
 
+asIntRange: Outcome (Int, Int) -> Outcome (Int, Int)
+asIntRange outcome =
+    Outcome.check (\t -> first t < second t) "unsatisfied-constraint:int-range"  outcome
 
+asFloatRange: Outcome (Float, Float) -> Outcome (Float, Float)
+asFloatRange outcome =
+    Outcome.check (\t -> first t < second t) "unsatisfied-constraint:float-range"  outcome
 
+withinIntRange: (Int, Int) -> Outcome (Int, Int) -> Outcome (Int, Int)
+withinIntRange range outcome =
+   Outcome.check (\t -> (first t  >= first range) && (second t < second range)) ("unsatisfied-constraint:within-int-range:" ++ toString range)  outcome
+
+withinFloatRange: (Float, Float) -> Outcome (Float, Float) -> Outcome (Float, Float)
+withinFloatRange range outcome =
+   Outcome.check (\t -> (first t  >= first range) && (second t < second range)) ("unsatisfied-constraint:within-float-range:" ++ toString range)  outcome  
