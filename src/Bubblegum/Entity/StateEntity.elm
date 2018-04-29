@@ -1,4 +1,4 @@
-module Bubblegum.Entity.SettingsEntity exposing (Model)
+module Bubblegum.Entity.StateEntity exposing (Model)
 
 {-| Setting key
 

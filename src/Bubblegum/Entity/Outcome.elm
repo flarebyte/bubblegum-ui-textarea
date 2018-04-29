@@ -78,3 +78,10 @@ check checker warnMsg ra =
         else
             Warning warnMsg
 
+fromMaybe : Maybe a -> Outcome a
+fromMaybe maybe =
+    case maybe of
+      Just v  ->
+        Valid v
+      Nothing ->
+        None
