@@ -187,9 +187,17 @@ matchRegex regExp outcome =
 
 -- https://mathiasbynens.be/demo/url-regex
 -- based on regex from @stephenhay which mostly pass
-matchAbsoluteUrl: String -> Outcome String -> Outcome String
-matchAbsoluteUrl regExp outcome =
+matchAbsoluteUrl: Outcome String -> Outcome String
+matchAbsoluteUrl outcome =
     let
         re = Regex.regex "^https?://[^\\s/$.?#].[^\\s]*$"
     in
         matchNormalizedString outcome |> Outcome.check (\v -> Regex.contains re v) ("unsatisfied-constraint:absolute-url")
+
+-- prefix should not exceed 15 chars
+matchCompactUri: Outcome String -> Outcome String
+matchCompactUri outcome =
+    let
+        re = Regex.regex "^[a-z][a-z0-9_.-]{1,15}:\\w[^\\s]*$"
+    in
+        matchNormalizedString outcome |> Outcome.check (\v -> Regex.contains re v) ("unsatisfied-constraint:compact-uri")
