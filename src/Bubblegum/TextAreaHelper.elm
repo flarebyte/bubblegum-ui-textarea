@@ -5,14 +5,15 @@ module Bubblegum.TextAreaHelper exposing (..)
 @docs Model
 
 -}
-
+import Maybe exposing(..)
+import Html as Html
+import Html.Attributes as Attributes
 import Bubblegum.Entity.SettingsEntity as SettingsEntity
 import Bubblegum.Entity.StateEntity as StateEntity
 import Bubblegum.TextAreaVocabulary exposing(..)
 import Bubblegum.Entity.Attribute as Attribute
 import Bubblegum.Entity.Outcome as Outcome exposing(..)
 import Bubblegum.Entity.Validation as Validation
-import Maybe exposing(..)
 
 titleCharRange = (1, 70) -- The new title length is 70 characters before Google will truncate the title with ellipses
 keywordCharRange = (1, 30)
@@ -95,3 +96,15 @@ isDisabled: StateEntity.Model -> Outcome Bool
 isDisabled settings =
     findString ui_disabled settings.attributes
     |> Validation.asBool
+
+append: (a -> Html.Html msg) -> Outcome a -> List (Html.Html msg) -> List (Html.Html msg)
+append ifSuccess outcome htmlList=
+    case outcome of
+        None ->
+            htmlList
+        Warning warn ->
+            htmlList ++ [Html.div [Attributes.class "is-invisible"] [ Html.text warn]]
+        Valid success ->
+            htmlList ++ [ifSuccess success]
+        
+
