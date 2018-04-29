@@ -10,6 +10,7 @@ import List
 import Bubblegum.Entity.Outcome as Outcome exposing(Outcome(..))
 import Set
 import Regex
+import Tuple exposing(first, second)
 
 matchListSize: Int -> List String -> Bool
 matchListSize expected list =
@@ -201,3 +202,16 @@ matchCompactUri outcome =
         re = Regex.regex "^[a-z][a-z0-9_.-]{1,15}:\\w[^\\s]*$"
     in
         matchNormalizedString outcome |> Outcome.check (\v -> Regex.contains re v) ("unsatisfied-constraint:compact-uri")
+
+asIntTuple: Outcome (String, String) -> Outcome (Int, Int)
+asIntTuple outcome =
+    Outcome.check (\t -> (first t |> isInt) && (second t |> isInt)) "unsatisfied-constraint:int-tuple"  outcome  
+    |> Outcome.map (\t -> (first t |> intOrZero, second t |> intOrZero))
+
+asFloatTuple: Outcome (String, String) -> Outcome (Float, Float)
+asFloatTuple outcome =
+    Outcome.check (\t -> (first t |> isFloat) && (second t |> isFloat)) "unsatisfied-constraint:float-tuple"  outcome  
+    |> Outcome.map (\t -> (first t |> floatOrZero, second t |> floatOrZero))
+
+
+
