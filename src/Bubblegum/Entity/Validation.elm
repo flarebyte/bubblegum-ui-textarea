@@ -9,6 +9,7 @@ module Bubblegum.Entity.Validation exposing (..)
 import List
 import Bubblegum.Entity.Outcome as Outcome exposing(Outcome(..))
 import Set
+import Regex
 
 matchListSize: Int -> List String -> Bool
 matchListSize expected list =
@@ -160,4 +161,35 @@ matchEnum: List String -> Outcome String -> Outcome String
 matchEnum enum outcome =
      Outcome.check (\v -> List.member v enum) "unsatisfied-constraint:enum-match" outcome
 
-     
+stringStartsWith: String -> Outcome String -> Outcome String
+stringStartsWith prefix outcome =
+     Outcome.check (\v -> String.startsWith prefix v) ("unsatisfied-constraint:starts-with:" ++ prefix) outcome
+
+stringEndsWith: String -> Outcome String -> Outcome String
+stringEndsWith suffix outcome =
+     Outcome.check (\v -> String.endsWith suffix v) ("unsatisfied-constraint:ends-with:" ++ suffix) outcome
+
+stringContains: String -> Outcome String -> Outcome String
+stringContains str outcome =
+     Outcome.check (\v -> String.contains str v) ("unsatisfied-constraint:contains:" ++ str) outcome
+
+matchNormalizedString: Outcome String -> Outcome String
+matchNormalizedString outcome =
+     Outcome.check (\v -> String.contains "\n" v) "unsatisfied-constraint:normalized-string" outcome
+    
+
+matchRegex: String -> Outcome String -> Outcome String
+matchRegex regExp outcome =
+    let
+        re = "^" ++ regExp ++ "$" |> Regex.regex
+    in
+        matchNormalizedString outcome |> Outcome.check (\v -> Regex.contains re v) ("unsatisfied-constraint:regex")
+
+-- https://mathiasbynens.be/demo/url-regex
+-- based on regex from @stephenhay which mostly pass
+matchAbsoluteUrl: String -> Outcome String -> Outcome String
+matchAbsoluteUrl regExp outcome =
+    let
+        re = Regex.regex "^https?://[^\\s/$.?#].[^\\s]*$"
+    in
+        matchNormalizedString outcome |> Outcome.check (\v -> Regex.contains re v) ("unsatisfied-constraint:absolute-url")
