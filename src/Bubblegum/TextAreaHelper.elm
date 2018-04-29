@@ -11,7 +11,13 @@ import Bubblegum.Entity.StateEntity as StateEntity
 import Bubblegum.TextAreaVocabulary exposing(..)
 import Bubblegum.Entity.Attribute as Attribute
 import Bubblegum.Entity.Outcome as Outcome exposing(..)
+import Bubblegum.Entity.Validation as Validation
 import Maybe exposing(..)
+
+titleCharRange = (1, 70) -- The new title length is 70 characters before Google will truncate the title with ellipses
+keywordCharRange = (1, 30)
+charRange=(0, 60000)
+wordRange = (0, 12000)
 
 {-| The core representation of a field.
 -}
@@ -19,66 +25,73 @@ calculateRatio: Int -> Int -> Int
 calculateRatio target value =
     (toFloat value / toFloat target ) * 100 |> round
 
-findIntRange: (String, String) -> List Model -> Maybe (Int, Int)
+findIntRange: (String, String) -> List Attribute.Model -> Outcome (Int, Int)
 findIntRange keyTuple attributes =
-    let
-        found = findIntTupleByKeyTuple keyTuple attributes
-    in
-       case found of
-        (Nothing, Nothing) ->
-            Nothing
-        (Nothing, Just b) ->
-            Just (b, b)
-        (Just a, Nothing) ->
-            Just (a, a)
-        (Just a, Just b) ->
-            Just (a, b)    
+    Attribute.findOutcomeByKeyTuple keyTuple attributes 
+    |> Validation.asTuple
+    |> Validation.asIntTuple
+    |> Validation.asIntRange
         
-    
+findString: String -> List Attribute.Model -> Outcome String
+findString key attributes =
+    Attribute.findOutcomeByKey key attributes |> Validation.asSingle
+
 getSuccessCharRange: SettingsEntity.Model ->  Outcome (Int, Int)
 getSuccessCharRange settings =
-    findIntRange (ui_successMinChars,ui_successMaxChars)  settings.attributes
+    findIntRange (ui_successMinChars,ui_successMaxChars)  settings.attributes 
+    |> Validation.withinIntRange charRange
 
-getDangerCharRange: SettingsEntity.Model -> Maybe (Int, Int)
+getDangerCharRange: SettingsEntity.Model -> Outcome (Int, Int)
 getDangerCharRange settings =
     findIntRange (ui_dangerMinChars, ui_dangerMaxChars) settings.attributes
+    |> Validation.withinIntRange charRange
     
-getSuccessWordRange: SettingsEntity.Model -> Maybe (Int, Int)
+getSuccessWordRange: SettingsEntity.Model ->Outcome (Int, Int)
 getSuccessWordRange settings =
     findIntRange (ui_successMinWords, ui_successMaxWords) settings.attributes
+    |> Validation.withinIntRange wordRange
 
-getDangerWordRange: SettingsEntity.Model -> Maybe (Int, Int)
+getDangerWordRange: SettingsEntity.Model -> Outcome (Int, Int)
 getDangerWordRange settings =
     findIntRange (ui_dangerMinWords, ui_dangerMaxWords) settings.attributes
+    |> Validation.withinIntRange wordRange
 
-getPlaceholder: SettingsEntity.Model -> Maybe String
+getPlaceholder: SettingsEntity.Model -> Outcome String
 getPlaceholder settings =
-    findStringByKey ui_placeholder settings.attributes
+    findString ui_placeholder settings.attributes 
+    |> Validation.withinStringCharsRange titleCharRange
 
-getLabel: SettingsEntity.Model -> Maybe String
+getLabel: SettingsEntity.Model -> Outcome String
 getLabel settings =
-    findStringByKey ui_label settings.attributes
+    findString ui_label settings.attributes
+    |> Validation.withinStringCharsRange titleCharRange
 
-getHelp: SettingsEntity.Model -> Maybe String
+getHelp: SettingsEntity.Model -> Outcome String
 getHelp settings =
-    findStringByKey ui_help settings.attributes
+    findString ui_help settings.attributes
+    |> Validation.withinStringCharsRange titleCharRange
 
-getIcon: SettingsEntity.Model -> Maybe String
+getIcon: SettingsEntity.Model -> Outcome String
 getIcon settings =
-    findStringByKey ui_icon settings.attributes
+    findString ui_icon settings.attributes
+    |> Validation.withinStringCharsRange keywordCharRange
 
-getInputSize: SettingsEntity.Model -> Maybe String
+getInputSize: SettingsEntity.Model -> Outcome String
 getInputSize settings =
-    findStringByKey ui_inputSize settings.attributes
+    findString ui_inputSize settings.attributes 
+    |> Validation.matchEnum ["is-small", "is-medium", "is-large"]
 
-getInputState: SettingsState.Model -> Maybe String
+getInputState: StateEntity.Model -> Outcome String
 getInputState settings =
-    findStringByKey ui_inputState settings.attributes
+    findString ui_inputState settings.attributes
+    |> Validation.matchEnum ["is-hovered", "is-focused", "is-loading"]
 
-isReadOnly: SettingsState.Model -> Bool
+isReadOnly: StateEntity.Model ->Outcome Bool
 isReadOnly settings =
-    findBoolByKey ui_readOnly settings.attributes |> Maybe.withDefault False
+    findString ui_readOnly settings.attributes 
+    |> Validation.asBool
 
-isDisabled: SettingsState.Model -> Bool
+isDisabled: StateEntity.Model -> Outcome Bool
 isDisabled settings =
-    findBoolByKey ui_disabled settings.attributes |> Maybe.withDefault False
+    findString ui_disabled settings.attributes
+    |> Validation.asBool

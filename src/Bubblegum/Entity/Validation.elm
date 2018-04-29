@@ -1,4 +1,27 @@
-module Bubblegum.Entity.Validation exposing (..)
+module Bubblegum.Entity.Validation exposing (
+    asSingle
+    , asTuple
+    , listEqual
+    , asUnique
+    , asInt
+    , asFloat
+    , asBool
+    , matchEnum
+    , stringStartsWith
+    , stringEndsWith
+    , stringContains
+    , matchNormalizedString
+    , matchRegex
+    , matchAbsoluteUrl
+    , matchCompactUri
+    , asIntTuple
+    , asFloatTuple
+    , asIntRange
+    , asFloatRange
+    , withinIntRange
+    , withinFloatRange
+    , withinStringCharsRange
+ )
 
 {-| Setting key
 
@@ -12,37 +35,6 @@ import Set
 import Regex
 import Tuple exposing(first, second)
 
-matchListSize: Int -> List String -> Bool
-matchListSize expected list =
-      List.length list == expected 
-
-helperMoreThan: Int -> List String -> Bool
-helperMoreThan expected list =
-      List.length list >= expected 
-
-helperStrictlyMoreThan: Int -> List String -> Bool
-helperStrictlyMoreThan expected list =
-      List.length list > expected 
-
-helperLessThan: Int -> List String -> Bool
-helperLessThan expected list =
-      List.length list <= expected 
-
-helperStrictlyLessThan: Int -> List String -> Bool
-helperStrictlyLessThan expected list =
-      List.length list < expected 
-
-onlyOne: List String -> String
-onlyOne list =
-    List.head list |> Maybe.withDefault "should-never-happen"
-
-onlyTuple: (List String, List String) -> (String, String)
-onlyTuple listTuple =
-    case listTuple of
-        (a :: [], b :: []) ->
-            (a, b)
-        _ ->
-            ("should-never-happen", "should-never-happen")
 
 asSingle: Outcome (List String) -> Outcome String
 asSingle outcome =
@@ -76,31 +68,6 @@ asUnique: Outcome (List String) -> Outcome (List String)
 asUnique outcome =
     Outcome.map (\list -> Set.fromList list |> Set.toList) outcome
 
-isInt: String -> Bool
-isInt value =
-    case String.toInt value of
-        Ok _ ->
-            True
-        Err _ ->
-            False
-
-isFloat: String -> Bool
-isFloat value =
-    case String.toFloat value of
-        Ok _ ->
-            True
-        Err _ ->
-            False
-
-intOrZero: String -> Int
-intOrZero value =
-    String.toInt value |> Result.withDefault 0
-
-floatOrZero: String -> Float
-floatOrZero value =
-    String.toFloat value |> Result.withDefault 0
-
-
 asInt: Outcome String -> Outcome Int
 asInt outcome =
     Outcome.check isInt "unsatisfied-constraint:int"  outcome |> Outcome.map intOrZero
@@ -109,22 +76,9 @@ asFloat: Outcome String -> Outcome Float
 asFloat outcome =
     Outcome.check isFloat "unsatisfied-constraint:float"  outcome |> Outcome.map floatOrZero
 
-trueList = ["true", "ok", "yes", "y", "t"]
-falseList = ["false", "ko", "no", "n", "f"]
-trueFalseList = trueList ++ falseList
-
-stringToBool: String -> Bool
-stringToBool value =
-    List.member (String.toLower value) trueList
-
-isBool: String -> Bool
-isBool value =
-    List.member (String.toLower value) trueFalseList
-
 asBool: Outcome String -> Outcome Bool
 asBool outcome =
     Outcome.check isBool "unsatisfied-constraint:bool"  outcome |> Outcome.map stringToBool
-
 
 intMoreThan: Int -> Outcome Int -> Outcome Int
 intMoreThan limit outcome =
@@ -227,4 +181,77 @@ withinIntRange range outcome =
 
 withinFloatRange: (Float, Float) -> Outcome (Float, Float) -> Outcome (Float, Float)
 withinFloatRange range outcome =
-   Outcome.check (\t -> (first t  >= first range) && (second t < second range)) ("unsatisfied-constraint:within-float-range:" ++ toString range)  outcome  
+   Outcome.check (\t -> (first t  >= first range) && (second t < second range)) ("unsatisfied-constraint:within-float-range:" ++ toString range)  outcome
+
+withinStringCharsRange: (Int, Int) -> Outcome String -> Outcome String
+withinStringCharsRange range outcome =
+   Outcome.check (\t -> (String.length t >= first range) && (String.length t < second range)) ("unsatisfied-constraint:within-string-chars-range:" ++ toString range)  outcome
+
+-- private
+matchListSize: Int -> List String -> Bool
+matchListSize expected list =
+      List.length list == expected 
+
+helperMoreThan: Int -> List String -> Bool
+helperMoreThan expected list =
+      List.length list >= expected 
+
+helperStrictlyMoreThan: Int -> List String -> Bool
+helperStrictlyMoreThan expected list =
+      List.length list > expected 
+
+helperLessThan: Int -> List String -> Bool
+helperLessThan expected list =
+      List.length list <= expected 
+
+helperStrictlyLessThan: Int -> List String -> Bool
+helperStrictlyLessThan expected list =
+      List.length list < expected 
+
+onlyOne: List String -> String
+onlyOne list =
+    List.head list |> Maybe.withDefault "should-never-happen"
+
+onlyTuple: (List String, List String) -> (String, String)
+onlyTuple listTuple =
+    case listTuple of
+        (a :: [], b :: []) ->
+            (a, b)
+        _ ->
+            ("should-never-happen", "should-never-happen")
+
+isInt: String -> Bool
+isInt value =
+    case String.toInt value of
+        Ok _ ->
+            True
+        Err _ ->
+            False
+
+isFloat: String -> Bool
+isFloat value =
+    case String.toFloat value of
+        Ok _ ->
+            True
+        Err _ ->
+            False
+
+intOrZero: String -> Int
+intOrZero value =
+    String.toInt value |> Result.withDefault 0
+
+floatOrZero: String -> Float
+floatOrZero value =
+    String.toFloat value |> Result.withDefault 0
+
+trueList = ["true", "ok", "yes", "y", "t"]
+falseList = ["false", "ko", "no", "n", "f"]
+trueFalseList = trueList ++ falseList
+
+stringToBool: String -> Bool
+stringToBool value =
+    List.member (String.toLower value) trueList
+
+isBool: String -> Bool
+isBool value =
+    List.member (String.toLower value) trueFalseList
