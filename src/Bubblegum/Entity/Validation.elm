@@ -50,24 +50,24 @@ asTuple: Outcome (List String) -> Outcome (String, String)
 asTuple outcome =
     Outcome.check (matchListSize 2) "unsatisfied-constraint:tuple" outcome |> Outcome.map onlyTuple
 
-asListEqual: Int -> Outcome (List String) -> Outcome (List String)
-asListEqual size outcome =
+listEqual: Int -> Outcome (List String) -> Outcome (List String)
+listEqual size outcome =
     Outcome.check (matchListSize size) ("unsatisfied-constraint:list-equal-" ++ (toString size)) outcome
 
-asListMoreThan: Int -> Outcome (List String) -> Outcome (List String)
-asListMoreThan size outcome =
+listMoreThan: Int -> Outcome (List String) -> Outcome (List String)
+listMoreThan size outcome =
     Outcome.check (helperMoreThan size) ("unsatisfied-constraint:list-more-than-" ++ (toString size)) outcome
 
-asListStrictlyMoreThan: Int -> Outcome (List String) -> Outcome (List String)
-asListStrictlyMoreThan size outcome =
+listStrictlyMoreThan: Int -> Outcome (List String) -> Outcome (List String)
+listStrictlyMoreThan size outcome =
     Outcome.check (helperStrictlyMoreThan size) ("unsatisfied-constraint:list-strictly-more-than-" ++ (toString size)) outcome
 
-asListLessThan: Int -> Outcome (List String) -> Outcome (List String)
-asListLessThan size outcome =
+listLessThan: Int -> Outcome (List String) -> Outcome (List String)
+listLessThan size outcome =
     Outcome.check (helperLessThan size) ("unsatisfied-constraint:list-less-than-" ++ (toString size)) outcome
 
-asListStrictlyLessThan: Int -> Outcome (List String) -> Outcome (List String)
-asListStrictlyLessThan size outcome =
+listStrictlyLessThan: Int -> Outcome (List String) -> Outcome (List String)
+listStrictlyLessThan size outcome =
     Outcome.check (helperStrictlyLessThan size) ("unsatisfied-constraint:list-strictly-less-than-" ++ (toString size)) outcome
 
 asUnique: Outcome (List String) -> Outcome (List String)
@@ -124,35 +124,40 @@ asBool outcome =
     Outcome.check isBool "unsatisfied-constraint:bool"  outcome |> Outcome.map stringToBool
 
 
-asIntMoreThan: Int -> Outcome Int -> Outcome Int
-asIntMoreThan limit outcome =
+intMoreThan: Int -> Outcome Int -> Outcome Int
+intMoreThan limit outcome =
     Outcome.check (\v -> v >= limit) ("unsatisfied-constraint:int-more-than-" ++ (toString limit)) outcome
 
-asIntStrictlyMoreThan: Int -> Outcome Int -> Outcome Int
-asIntStrictlyMoreThan limit outcome =
+intStrictlyMoreThan: Int -> Outcome Int -> Outcome Int
+intStrictlyMoreThan limit outcome =
     Outcome.check (\v -> v > limit) ("unsatisfied-constraint:int-strictly-more-than-" ++ (toString limit)) outcome
 
-asIntLessThan: Int -> Outcome Int -> Outcome Int
-asIntLessThan limit outcome =
+intLessThan: Int -> Outcome Int -> Outcome Int
+intLessThan limit outcome =
     Outcome.check (\v -> v <= limit) ("unsatisfied-constraint:int-less-than-" ++ (toString limit)) outcome
 
-asIntStrictlyLessThan: Int -> Outcome Int -> Outcome Int
-asIntStrictlyLessThan limit outcome =
+intStrictlyLessThan: Int -> Outcome Int -> Outcome Int
+intStrictlyLessThan limit outcome =
     Outcome.check (\v -> v < limit) ("unsatisfied-constraint:int-strictly-less-than-" ++ (toString limit)) outcome
 
-asFloatMoreThan: Float -> Outcome Float -> Outcome Float
-asFloatMoreThan limit outcome =
+floatMoreThan: Float -> Outcome Float -> Outcome Float
+floatMoreThan limit outcome =
     Outcome.check (\v -> v >= limit) ("unsatisfied-constraint:float-more-than-" ++ (toString limit)) outcome
 
-asFloatStrictlyMoreThan: Float -> Outcome Float -> Outcome Float
-asFloatStrictlyMoreThan limit outcome =
+floatStrictlyMoreThan: Float -> Outcome Float -> Outcome Float
+floatStrictlyMoreThan limit outcome =
     Outcome.check (\v -> v > limit) ("unsatisfied-constraint:float-strictly-more-than-" ++ (toString limit)) outcome
 
-asFloatLessThan: Float -> Outcome Float -> Outcome Float
-asFloatLessThan limit outcome =
+floatLessThan: Float -> Outcome Float -> Outcome Float
+floatLessThan limit outcome =
     Outcome.check (\v -> v <= limit) ("unsatisfied-constraint:float-less-than-" ++ (toString limit)) outcome
 
-asFloatStrictlyLessThan: Float -> Outcome Float -> Outcome Float
-asFloatStrictlyLessThan limit outcome =
+floatStrictlyLessThan: Float -> Outcome Float -> Outcome Float
+floatStrictlyLessThan limit outcome =
     Outcome.check (\v -> v < limit) ("unsatisfied-constraint:float-strictly-less-than-" ++ (toString limit)) outcome
 
+matchEnum: List String -> Outcome String -> Outcome String
+matchEnum enum outcome =
+     Outcome.check (\v -> List.member v enum) "unsatisfied-constraint:enum-match" outcome
+
+     
