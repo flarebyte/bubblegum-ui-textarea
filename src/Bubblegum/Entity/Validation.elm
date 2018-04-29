@@ -8,7 +8,7 @@ module Bubblegum.Entity.Validation exposing (..)
 
 import List
 import Bubblegum.Entity.Outcome as Outcome exposing(Outcome(..))
-
+import Set
 
 matchListSize: Int -> List String -> Bool
 matchListSize expected list =
@@ -69,4 +69,58 @@ asListLessThan size outcome =
 asListStrictlyLessThan: Int -> Outcome (List String) -> Outcome (List String)
 asListStrictlyLessThan size outcome =
     Outcome.check (helperStrictlyLessThan size) ("unsatisfied-constraint:list-strictly-less-than-" ++ (toString size)) outcome
+
+asUnique: Outcome (List String) -> Outcome (List String)
+asUnique outcome =
+    Outcome.map (\list -> Set.fromList list |> Set.toList) outcome
+
+isInt: String -> Bool
+isInt value =
+    case String.toInt value of
+        Ok _ ->
+            True
+        Err _ ->
+            False
+
+isFloat: String -> Bool
+isFloat value =
+    case String.toFloat value of
+        Ok _ ->
+            True
+        Err _ ->
+            False
+
+intOrZero: String -> Int
+intOrZero value =
+    String.toInt value |> Result.withDefault 0
+
+floatOrZero: String -> Float
+floatOrZero value =
+    String.toFloat value |> Result.withDefault 0
+
+
+asInt: Outcome String -> Outcome Int
+asInt outcome =
+    Outcome.check isInt "unsatisfied-constraint:int"  outcome |> Outcome.map intOrZero
+
+asFloat: Outcome String -> Outcome Float
+asFloat outcome =
+    Outcome.check isFloat "unsatisfied-constraint:float"  outcome |> Outcome.map floatOrZero
+
+trueList = ["true", "ok", "yes", "y", "t"]
+falseList = ["false", "ko", "no", "n", "f"]
+trueFalseList = trueList ++ falseList
+
+stringToBool: String -> Bool
+stringToBool value =
+    List.member (String.toLower value) trueList
+
+isBool: String -> Bool
+isBool value =
+    List.member (String.toLower value) trueFalseList
+
+asBool: Outcome String -> Outcome Bool
+asBool outcome =
+    Outcome.check isBool "unsatisfied-constraint:bool"  outcome |> Outcome.map stringToBool
+
 
