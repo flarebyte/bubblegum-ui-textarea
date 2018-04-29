@@ -22,3 +22,4 @@ ui_inputSize = "ui:input-size" -- is-small, is-medium, is-large
 ui_inputState = "ui:input-state" -- is-hovered, is-focused, is-loading
 ui_readOnly = "ui:read-only"
 ui_disabled = "ui:disabled"
+ui_content = "ui:content"

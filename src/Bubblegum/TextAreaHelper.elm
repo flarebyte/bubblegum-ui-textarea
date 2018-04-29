@@ -83,18 +83,18 @@ getInputSize settings =
     |> Validation.matchEnum ["is-small", "is-medium", "is-large"]
 
 getInputState: StateEntity.Model -> Outcome String
-getInputState settings =
-    findString ui_inputState settings.attributes
+getInputState state =
+    findString ui_inputState state.attributes
     |> Validation.matchEnum ["is-hovered", "is-focused", "is-loading"]
 
 isReadOnly: StateEntity.Model ->Outcome Bool
-isReadOnly settings =
-    findString ui_readOnly settings.attributes 
+isReadOnly state =
+    findString ui_readOnly state.attributes 
     |> Validation.asBool
 
 isDisabled: StateEntity.Model -> Outcome Bool
-isDisabled settings =
-    findString ui_disabled settings.attributes
+isDisabled state =
+    findString ui_disabled state.attributes
     |> Validation.asBool
 
 append: (a -> Html.Html msg) -> Outcome a -> List (Html.Html msg) -> List (Html.Html msg)
@@ -107,4 +107,8 @@ append ifSuccess outcome htmlList=
         Valid success ->
             htmlList ++ [ifSuccess success]
         
+getContent: SettingsEntity.Model -> Outcome String
+getContent state =
+    findString ui_content state.attributes
+    |> Validation.withinStringCharsRange charRange
 
