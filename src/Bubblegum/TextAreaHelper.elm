@@ -6,10 +6,11 @@ module Bubblegum.TextAreaHelper exposing (..)
 
 -}
 
-import Bubblegum.SettingsEntity as SettingsEntity
-import Bubblegum.SettingsState as SettingsState
+import Bubblegum.Entity.SettingsEntity as SettingsEntity
+import Bubblegum.Entity.StateEntity as StateEntity
 import Bubblegum.TextAreaVocabulary exposing(..)
-import Bubblegum.SettingsAttribute exposing(..)
+import Bubblegum.Entity.Attribute as Attribute
+import Bubblegum.Entity.Outcome as Outcome exposing(..)
 import Maybe exposing(..)
 
 {-| The core representation of a field.
@@ -34,7 +35,7 @@ findIntRange keyTuple attributes =
             Just (a, b)    
         
     
-getSuccessCharRange: SettingsEntity.Model ->  Maybe (Int, Int)
+getSuccessCharRange: SettingsEntity.Model ->  Outcome (Int, Int)
 getSuccessCharRange settings =
     findIntRange (ui_successMinChars,ui_successMaxChars)  settings.attributes
 

@@ -36,10 +36,10 @@ onlyOne: List String -> String
 onlyOne list =
     List.head list |> Maybe.withDefault "should-never-happen"
 
-onlyTuple: List String -> (String, String)
-onlyTuple list =
-    case list of
-        a :: b :: [] ->
+onlyTuple: (List String, List String) -> (String, String)
+onlyTuple listTuple =
+    case listTuple of
+        (a :: [], b :: []) ->
             (a, b)
         _ ->
             ("should-never-happen", "should-never-happen")
@@ -48,9 +48,9 @@ asSingle: Outcome (List String) -> Outcome String
 asSingle outcome =
     Outcome.check (matchListSize 1) "unsatisfied-constraint:single" outcome |> Outcome.map onlyOne
 
-asTuple: Outcome (List String) -> Outcome (String, String)
+asTuple: Outcome (List String, List String) -> Outcome (String, String)
 asTuple outcome =
-    Outcome.check (matchListSize 2) "unsatisfied-constraint:tuple" outcome |> Outcome.map onlyTuple
+    Outcome.check (\o -> (first o |> matchListSize 1)&& (second o |> matchListSize 1)) "unsatisfied-constraint:tuple" outcome |> Outcome.map onlyTuple
 
 listEqual: Int -> Outcome (List String) -> Outcome (List String)
 listEqual size outcome =
