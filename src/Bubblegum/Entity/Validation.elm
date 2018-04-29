@@ -124,3 +124,35 @@ asBool outcome =
     Outcome.check isBool "unsatisfied-constraint:bool"  outcome |> Outcome.map stringToBool
 
 
+asIntMoreThan: Int -> Outcome Int -> Outcome Int
+asIntMoreThan limit outcome =
+    Outcome.check (\v -> v >= limit) ("unsatisfied-constraint:int-more-than-" ++ (toString limit)) outcome
+
+asIntStrictlyMoreThan: Int -> Outcome Int -> Outcome Int
+asIntStrictlyMoreThan limit outcome =
+    Outcome.check (\v -> v > limit) ("unsatisfied-constraint:int-strictly-more-than-" ++ (toString limit)) outcome
+
+asIntLessThan: Int -> Outcome Int -> Outcome Int
+asIntLessThan limit outcome =
+    Outcome.check (\v -> v <= limit) ("unsatisfied-constraint:int-less-than-" ++ (toString limit)) outcome
+
+asIntStrictlyLessThan: Int -> Outcome Int -> Outcome Int
+asIntStrictlyLessThan limit outcome =
+    Outcome.check (\v -> v < limit) ("unsatisfied-constraint:int-strictly-less-than-" ++ (toString limit)) outcome
+
+asFloatMoreThan: Float -> Outcome Float -> Outcome Float
+asFloatMoreThan limit outcome =
+    Outcome.check (\v -> v >= limit) ("unsatisfied-constraint:float-more-than-" ++ (toString limit)) outcome
+
+asFloatStrictlyMoreThan: Float -> Outcome Float -> Outcome Float
+asFloatStrictlyMoreThan limit outcome =
+    Outcome.check (\v -> v > limit) ("unsatisfied-constraint:float-strictly-more-than-" ++ (toString limit)) outcome
+
+asFloatLessThan: Float -> Outcome Float -> Outcome Float
+asFloatLessThan limit outcome =
+    Outcome.check (\v -> v <= limit) ("unsatisfied-constraint:float-less-than-" ++ (toString limit)) outcome
+
+asFloatStrictlyLessThan: Float -> Outcome Float -> Outcome Float
+asFloatStrictlyLessThan limit outcome =
+    Outcome.check (\v -> v < limit) ("unsatisfied-constraint:float-strictly-less-than-" ++ (toString limit)) outcome
+
