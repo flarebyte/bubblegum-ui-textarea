@@ -1,4 +1,4 @@
-module Bubblegum.SettingsAttribute exposing (Model
+module Bubblegum.Entity.Attribute exposing (Model
     , findAttributeByKey
     , findListStringByKey
     , findStringByKey
