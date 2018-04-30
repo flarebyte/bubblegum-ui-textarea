@@ -6,8 +6,8 @@ module Bubblegum.TextAreaHelper exposing (..)
 
 -}
 import Maybe exposing(..)
-import Html as Html
-import Html.Attributes as Attributes
+import Html as Html exposing(Attribute)
+import Html.Attributes as Attributes exposing(attribute)
 import Bubblegum.Entity.SettingsEntity as SettingsEntity
 import Bubblegum.Entity.StateEntity as StateEntity
 import Bubblegum.TextAreaVocabulary exposing(..)
@@ -113,6 +113,16 @@ appendIfSuccess ifSuccess outcome htmlList=
             htmlList ++ [Html.div [Attributes.class "is-invisible"] [ Html.text warn]]
         Valid success ->
             htmlList ++ [ifSuccess success]
+
+appendAttributeIfSuccess: (a -> Attribute msg) -> Outcome a -> List (Attribute msg) -> List (Attribute msg)
+appendAttributeIfSuccess ifSuccess outcome attributes=
+    case outcome of
+        None ->
+            attributes
+        Warning warn ->
+            attributes ++ [attribute "bubblegum-warn" warn]
+        Valid success ->
+            attributes ++ [ifSuccess success]
         
 getContent: SettingsEntity.Model -> Outcome String
 getContent state =

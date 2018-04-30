@@ -4,11 +4,9 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onInput, onClick, onMouseEnter, onMouseOut)
 import List
-import Bubblegum.TextAreaVocabulary exposing(..)
 import Bubblegum.TextAreaAdapter as TextAreaAdapter
 import Bubblegum.Entity.SettingsEntity as SettingsEntity
 import Bubblegum.Entity.StateEntity as StateEntity
-import Bubblegum.Entity.Attribute as Attribute
 import Bubblegum.Entity.Outcome as Outcome exposing(..)
 import Bubblegum.TextAreaHelper exposing(..)
 import Tuple exposing(first, second)
@@ -19,11 +17,11 @@ successRange size range =
 
 dangerRange: Int -> (Int, Int) -> Bool
 dangerRange size range =
-    not successRange size range
+    not (successRange size range)
 
 successRatio: Int -> (Int, Int) -> String
 successRatio size range =
-    calculateRatio (first) size |> toString
+    calculateRatio (first range) size |> toString
 
 textInfoProgress: TextAreaAdapter.Model msg -> SettingsEntity.Model -> StateEntity.Model -> Html msg
 textInfoProgress adapter settings state =
@@ -35,7 +33,7 @@ textInfoProgress adapter settings state =
         contentWithinDangerRange = Outcome.map2 dangerRange contentWordLength optSuccessWordRange
         contentSuccessRatio = Outcome.map2 successRatio contentWordLength optSuccessWordRange
     in
-        progress [ class "progress is-info", Html.Attributes.max "100", value ratio ][ text ( ratio ++ "%") ]
+        progress [ class "progress is-info", Html.Attributes.max "100", value "47" ][ text ("47%") ]
 
 
 displayCharsProgress: TextAreaAdapter.Model msg -> SettingsEntity.Model -> StateEntity.Model -> Html msg
@@ -44,13 +42,13 @@ displayCharsProgress adapter settings state =
         optSuccessCharRange = getSuccessCharRange settings
         optDangerCharRange = getDangerCharRange settings
         contentLength = getContent state |> Outcome.map String.length
-        appendContentLength = appendIfSuccess (\v -> [text (toString v)]) contentLength
+        appendContentLength = appendIfSuccess (\v -> text (toString v)) contentLength
     in
         
     div [ class "control" ]
         [ div [ class "tags has-addons" ]
             [ span [ class "tag is-info" ]
-                appendContentLength []
+                (appendContentLength [])
             , span [ class "tag is-dark" ]
                 [ text "/ 200 chars" ]
             ]
@@ -60,15 +58,6 @@ displayTextInfo: TextAreaAdapter.Model msg -> SettingsEntity.Model -> StateEntit
 displayTextInfo adapter settings state =
     div [ class "field is-grouped is-grouped-multiline" ]
         [ displayCharsProgress adapter settings state
-        , div [ class "control" ]
-            [ div [ class "tags has-addons" ]
-                [ span [ class "tag is-info" ]
-                    [ text (model.value |> words |> List.length |> toString) ]
-                , span [ class "tag is-dark" ]
-                    [ text "/ 300 words" ]
-                ]
-            ]
-        , textInfoProgress model    
-
+        , textInfoProgress adapter settings state    
         ]
   
