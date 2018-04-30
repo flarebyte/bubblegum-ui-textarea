@@ -20,11 +20,18 @@ keywordCharRange = (1, 30)
 charRange=(0, 60000)
 wordRange = (0, 12000)
 
+limit100: Int -> Int
+limit100 value =
+    if value > 100 then
+        100
+    else
+        value
+
 {-| The core representation of a field.
 -}
 calculateRatio: Int -> Int -> Int
 calculateRatio target value =
-    (toFloat value / toFloat target ) * 100 |> round
+    (toFloat value / toFloat target ) * 100 |> round |> limit100
 
 findIntRange: (String, String) -> List Attribute.Model -> Outcome (Int, Int)
 findIntRange keyTuple attributes =
@@ -97,8 +104,8 @@ isDisabled state =
     findString ui_disabled state.attributes
     |> Validation.asBool
 
-append: (a -> Html.Html msg) -> Outcome a -> List (Html.Html msg) -> List (Html.Html msg)
-append ifSuccess outcome htmlList=
+appendIfSuccess: (a -> Html.Html msg) -> Outcome a -> List (Html.Html msg) -> List (Html.Html msg)
+appendIfSuccess ifSuccess outcome htmlList=
     case outcome of
         None ->
             htmlList

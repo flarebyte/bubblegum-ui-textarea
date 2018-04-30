@@ -11,12 +11,29 @@ import Bubblegum.Entity.StateEntity as StateEntity
 import Bubblegum.Entity.Attribute as Attribute
 import Bubblegum.Entity.Outcome as Outcome exposing(..)
 import Bubblegum.TextAreaHelper exposing(..)
+import Tuple exposing(first, second)
 
+successRange: Int -> (Int, Int) -> Bool
+successRange size range =
+    (size >= first range) && (size < second range)
+
+dangerRange: Int -> (Int, Int) -> Bool
+dangerRange size range =
+    not successRange size range
+
+successRatio: Int -> (Int, Int) -> String
+successRatio size range =
+    calculateRatio (first) size |> toString
 
 textInfoProgress: TextAreaAdapter.Model msg -> SettingsEntity.Model -> StateEntity.Model -> Html msg
 textInfoProgress adapter settings state =
     let
-        ratio = model.value |> words |> List.length |> calculateRatio 40 |> toString
+        optSuccessWordRange = getSuccessWordRange settings
+        optDangerWordRange = getDangerWordRange settings
+        contentWordLength = getContent state |> Outcome.map (\c -> String.words c |> List.length)
+        contentWithinSuccessRange = Outcome.map2 successRange contentWordLength optSuccessWordRange
+        contentWithinDangerRange = Outcome.map2 dangerRange contentWordLength optSuccessWordRange
+        contentSuccessRatio = Outcome.map2 successRatio contentWordLength optSuccessWordRange
     in
         progress [ class "progress is-info", Html.Attributes.max "100", value ratio ][ text ( ratio ++ "%") ]
 
@@ -24,14 +41,16 @@ textInfoProgress adapter settings state =
 displayCharsProgress: TextAreaAdapter.Model msg -> SettingsEntity.Model -> StateEntity.Model -> Html msg
 displayCharsProgress adapter settings state =
     let
-        successCharRange = getSuccessCharRange settings
+        optSuccessCharRange = getSuccessCharRange settings
+        optDangerCharRange = getDangerCharRange settings
         contentLength = getContent state |> Outcome.map String.length
+        appendContentLength = appendIfSuccess (\v -> [text (toString v)]) contentLength
     in
         
     div [ class "control" ]
         [ div [ class "tags has-addons" ]
             [ span [ class "tag is-info" ]
-                [ text (String.length model.value |> toString) ]
+                appendContentLength []
             , span [ class "tag is-dark" ]
                 [ text "/ 200 chars" ]
             ]
