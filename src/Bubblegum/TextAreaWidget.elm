@@ -14,7 +14,6 @@ import Bubblegum.Entity.StateEntity as StateEntity
 import Bubblegum.Entity.Outcome as Outcome exposing(..)
 import Bubblegum.TextAreaHelper exposing(..)
 import List
-import Debug
 import Bubblegum.TextAreaProgressWidget exposing(displayTextInfo)
 
 calculateRows: String -> String
@@ -23,8 +22,8 @@ calculateRows content =
 
 {-| The core representation of a field.
 -}
-view: TextAreaAdapter.Model msg -> SettingsEntity.Model -> StateEntity.Model -> Html msg
-view  adapter settings state =
+view: TextAreaAdapter.Model msg -> SettingsEntity.Model -> SettingsEntity.Model -> StateEntity.Model -> Html msg
+view  adapter userSettings settings state =
     let
        addPlaceholder = appendAttributeIfSuccess placeholder (getPlaceholder settings)
        addValue = appendAttributeIfSuccess value (getContent state)
@@ -33,11 +32,11 @@ view  adapter settings state =
         div [ class "box is-marginless is-paddingless is-shadowless has-addons"]
             [   textarea (
                 [ class "textarea is-marginless is-paddingless is-shadowless"
-                -- , onInput OnChangeTextArea
+                , onInput adapter.onInput
                 ] |> addPlaceholder
                   |> addValue
                   |> addRows
                 )
                 []
-                , displayTextInfo adapter settings state 
+                , displayTextInfo adapter userSettings settings state 
             ]       

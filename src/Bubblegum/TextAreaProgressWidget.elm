@@ -2,7 +2,6 @@ module Bubblegum.TextAreaProgressWidget exposing (..)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
-import Html.Events exposing (onInput, onClick, onMouseEnter, onMouseOut)
 import List
 import Bubblegum.TextAreaAdapter as TextAreaAdapter
 import Bubblegum.Entity.SettingsEntity as SettingsEntity
@@ -23,8 +22,8 @@ successRatio: Int -> (Int, Int) -> String
 successRatio size range =
     calculateRatio (first range) size |> toString
 
-textInfoProgress: TextAreaAdapter.Model msg -> SettingsEntity.Model -> StateEntity.Model -> Html msg
-textInfoProgress adapter settings state =
+textInfoProgress: TextAreaAdapter.Model msg -> SettingsEntity.Model -> SettingsEntity.Model -> StateEntity.Model -> Html msg
+textInfoProgress adapter userSettings settings state =
     let
         optSuccessWordRange = getSuccessWordRange settings
         optDangerWordRange = getDangerWordRange settings
@@ -36,8 +35,8 @@ textInfoProgress adapter settings state =
         progress [ class "progress is-info", Html.Attributes.max "100", value "47" ][ text ("47%") ]
 
 
-displayCharsProgress: TextAreaAdapter.Model msg -> SettingsEntity.Model -> StateEntity.Model -> Html msg
-displayCharsProgress adapter settings state =
+displayCharsProgress: TextAreaAdapter.Model msg -> SettingsEntity.Model -> SettingsEntity.Model -> StateEntity.Model -> Html msg
+displayCharsProgress adapter userSettings settings state =
     let
         optSuccessCharRange = getSuccessCharRange settings
         optDangerCharRange = getDangerCharRange settings
@@ -54,10 +53,10 @@ displayCharsProgress adapter settings state =
             ]
         ]
 
-displayTextInfo: TextAreaAdapter.Model msg -> SettingsEntity.Model -> StateEntity.Model -> Html msg
-displayTextInfo adapter settings state =
+displayTextInfo: TextAreaAdapter.Model msg -> SettingsEntity.Model -> SettingsEntity.Model -> StateEntity.Model -> Html msg
+displayTextInfo adapter userSettings settings state =
     div [ class "field is-grouped is-grouped-multiline" ]
-        [ displayCharsProgress adapter settings state
-        , textInfoProgress adapter settings state    
+        [ displayCharsProgress adapter userSettings settings state
+        , textInfoProgress adapter userSettings settings state    
         ]
   
