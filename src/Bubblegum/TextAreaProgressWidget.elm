@@ -1,49 +1,118 @@
 module Bubblegum.TextAreaProgressWidget exposing (..)
 
+import Bubblegum.Entity.Outcome as Outcome exposing (..)
+import Bubblegum.Entity.SettingsEntity as SettingsEntity
+import Bubblegum.Entity.StateEntity as StateEntity
+import Bubblegum.TextAreaAdapter as TextAreaAdapter
+import Bubblegum.TextAreaHelper exposing (..)
+import Bubblegum.Entity.Validation as Validation
+import Debug
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import List
-import Bubblegum.TextAreaAdapter as TextAreaAdapter
-import Bubblegum.Entity.SettingsEntity as SettingsEntity
-import Bubblegum.Entity.StateEntity as StateEntity
-import Bubblegum.Entity.Outcome as Outcome exposing(..)
-import Bubblegum.TextAreaHelper exposing(..)
-import Tuple exposing(first, second)
+import Tuple exposing (first, second)
 
-successRange: Int -> (Int, Int) -> Bool
+
+successRange : Int -> ( Int, Int ) -> Bool
 successRange size range =
     (size >= first range) && (size < second range)
 
-dangerRange: Int -> (Int, Int) -> Bool
+
+dangerRange : Int -> ( Int, Int ) -> Bool
 dangerRange size range =
     not (successRange size range)
 
-successRatio: Int -> (Int, Int) -> String
+
+successRatio : Int -> ( Int, Int ) -> String
 successRatio size range =
     calculateRatio (first range) size |> toString
 
-textInfoProgress: TextAreaAdapter.Model msg -> SettingsEntity.Model -> SettingsEntity.Model -> StateEntity.Model -> Html msg
-textInfoProgress adapter userSettings settings state =
+
+
+{-
+   The pogress bar is available only if a number of words has been defined for measuring progress
+-}
+
+
+textWordProgressBar : TextAreaAdapter.Model msg -> SettingsEntity.Model -> SettingsEntity.Model -> StateEntity.Model -> Html msg
+textWordProgressBar adapter userSettings settings state =
     let
-        optSuccessWordRange = getSuccessWordRange settings
-        optDangerWordRange = getDangerWordRange settings
-        contentWordLength = getContent state |> Outcome.map (\c -> String.words c |> List.length)
-        contentWithinSuccessRange = Outcome.map2 successRange contentWordLength optSuccessWordRange
-        contentWithinDangerRange = Outcome.map2 dangerRange contentWordLength optSuccessWordRange
-        contentSuccessRatio = Outcome.map2 successRatio contentWordLength optSuccessWordRange
+        optSuccessWordRange =
+            getSuccessWordRange settings
+
+        hasWordTarget =
+            optSuccessWordRange |> Outcome.isValid
+
+        optDangerWordRange =
+            getDangerWordRange settings
+
+        contentWordLength =
+            getContent state |> Outcome.map (\c -> String.words c |> List.length)
+
+        contentWithinSuccessRange =
+            Outcome.map2 successRange contentWordLength optSuccessWordRange
+
+        contentWithinDangerRange =
+            Outcome.map2 dangerRange contentWordLength optSuccessWordRange
+
+        themeBasedOnRange =
+            Outcome.or
+                (contentWithinSuccessRange |> Outcome.checkOrNone identity |> Outcome.trueMapToConstant "is-success")
+                (contentWithinDangerRange |> Outcome.checkOrNone identity |> Outcome.trueMapToConstant "is-danger")
+            |> Outcome.withDefault "is-info"
+
+        contentSuccessRatio =
+            Outcome.map2 successRatio contentWordLength optSuccessWordRange
+
+        addProgressTheme =
+            appendAttributeIfSuccess class (themeBasedOnRange |> Validation.addStringPrefix "progress ")
+
+        addTagTheme =
+            appendAttributeIfSuccess class (themeBasedOnRange |> Validation.addStringPrefix "tag ")
+
+        addRatio =
+            appendAttributeIfSuccess class contentSuccessRatio
+
+        addContentLength =
+            appendIfSuccess (\v -> text (toString v)) (contentWordLength |> Debug.log "contentWordLength")
+
+        addTargetLength =
+            appendIfSuccess (\tuple -> text (first tuple |> toString)) optSuccessWordRange
     in
-        progress [ class "progress is-info", Html.Attributes.max "100", value "47" ][ text ("47%") ]
+    div []
+        [ div [ class "control" ]
+            [ div [ class "tags has-addons" ]
+                [ span ([] |> addTagTheme)
+                    (addContentLength [])
+                , span [ class "tag is-dark" ]
+                    (addTargetLength [])
+                ]
+            ]
+        , progress
+            ([ Html.Attributes.max "100"
+             ]
+                |> addProgressTheme
+                |> addRatio
+            )
+            [ text "47%" ]
+        ]
 
 
-displayCharsProgress: TextAreaAdapter.Model msg -> SettingsEntity.Model -> SettingsEntity.Model -> StateEntity.Model -> Html msg
+displayCharsProgress : TextAreaAdapter.Model msg -> SettingsEntity.Model -> SettingsEntity.Model -> StateEntity.Model -> Html msg
 displayCharsProgress adapter userSettings settings state =
     let
-        optSuccessCharRange = getSuccessCharRange settings
-        optDangerCharRange = getDangerCharRange settings
-        contentLength = getContent state |> Outcome.map String.length
-        appendContentLength = appendIfSuccess (\v -> text (toString v)) contentLength
+        optSuccessCharRange =
+            getSuccessCharRange settings
+
+        optDangerCharRange =
+            getDangerCharRange settings
+
+        contentLength =
+            getContent state |> Outcome.map String.length
+
+        appendContentLength =
+            appendIfSuccess (\v -> text (toString v)) contentLength
     in
-        
     div [ class "control" ]
         [ div [ class "tags has-addons" ]
             [ span [ class "tag is-info" ]
@@ -53,10 +122,10 @@ displayCharsProgress adapter userSettings settings state =
             ]
         ]
 
-displayTextInfo: TextAreaAdapter.Model msg -> SettingsEntity.Model -> SettingsEntity.Model -> StateEntity.Model -> Html msg
+
+displayTextInfo : TextAreaAdapter.Model msg -> SettingsEntity.Model -> SettingsEntity.Model -> StateEntity.Model -> Html msg
 displayTextInfo adapter userSettings settings state =
     div [ class "field is-grouped is-grouped-multiline" ]
         [ displayCharsProgress adapter userSettings settings state
-        , textInfoProgress adapter userSettings settings state    
+        , textWordProgressBar adapter userSettings settings state
         ]
-  

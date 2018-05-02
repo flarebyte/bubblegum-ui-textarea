@@ -1,4 +1,4 @@
-module Bubblegum.Entity.StateEntity exposing (Model)
+module Bubblegum.Entity.StateEntity exposing (Model, asAttributesIn, setAttributes)
 
 {-| Setting key
 
@@ -8,9 +8,19 @@ module Bubblegum.Entity.StateEntity exposing (Model)
 
 import Bubblegum.Entity.Attribute as Attribute
 
+
 {-| The core representation of a field.
 -}
-type alias Model = {
-    attributes: List Attribute.Model
- }
+type alias Model =
+    { attributes : List Attribute.Model
+    }
 
+
+setAttributes : List Attribute.Model -> Model -> Model
+setAttributes attributes model =
+    { model | attributes = attributes }
+
+
+asAttributesIn : Model -> List Attribute.Model -> Model
+asAttributesIn =
+    flip setAttributes

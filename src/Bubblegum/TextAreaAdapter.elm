@@ -6,9 +6,9 @@ module Bubblegum.TextAreaAdapter exposing (Model)
 
 -}
 
+
 {-| The core representation of a field.
 -}
-
-type alias Model msg = {
-    onInput: String -> msg
-}
+type alias Model msg =
+    { onInput : String -> msg
+    }

@@ -1,28 +1,39 @@
+.PHONY: html js test doc docs
+
 SRC = src
-BUILD = build
+DOCS = docs
+DEMO = demo
 
 reset:
 	rm -rf elm-stuff
 	rm -rf tests/elm-stuff
-	rm -rf build
+	rm -rf docs
 
-build: test build-directory js
+build: test build-directory js html
 
 install:
 	elm-package install -y
 	pushd tests && elm-package install -y && popd
+	pushd demo && elm-package install -y && popd
 
 build-directory:
-	mkdir -p $(BUILD)
+	mkdir -p $(DOCS)
 
 js:
-	elm-make src/Bubblegum/TextAreaWidget.elm --output $(BUILD)/graph.js
+	pushd demo && elm-make App.elm --output ../$(DOCS)/app.js
 
 test:
 	cd tests && elm-test Main.elm
+
+html:
+	cp $(DEMO)/index.html $(DOCS)/index.html
+	cp $(DEMO)/styles.css $(DOCS)/styles.css
 
 doc:
 	elm-make --docs=documentation.json
 
 diff:
 	elm-package diff
+
+start:
+	cd docs;http-server -p 7000 -c10 -o
