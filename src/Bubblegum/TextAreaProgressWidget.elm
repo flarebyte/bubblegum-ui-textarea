@@ -53,13 +53,13 @@ textWordProgressBar adapter userSettings settings state =
             Outcome.map2 successRange contentWordLength optSuccessWordRange
 
         contentWithinDangerRange =
-            Outcome.map2 dangerRange contentWordLength optSuccessWordRange
+            Outcome.map2 dangerRange contentWordLength optDangerWordRange
 
         themeBasedOnRange =
             Outcome.or
-                (contentWithinSuccessRange |> Outcome.checkOrNone identity |> Outcome.trueMapToConstant "is-success")
-                (contentWithinDangerRange |> Outcome.checkOrNone identity |> Outcome.trueMapToConstant "is-danger")
-                |> Outcome.withDefault "is-info"
+                (contentWithinSuccessRange |> Outcome.checkOrNone identity |> Outcome.trueMapToConstant "is-success" |> Debug.log "A")
+                (contentWithinDangerRange |> Outcome.checkOrNone identity |> Outcome.trueMapToConstant "is-danger" |> Debug.log "B")
+                |> Debug.log "C" |> Outcome.withDefault "is-info"
 
         contentSuccessRatio =
             Outcome.map2 successRatio contentWordLength optSuccessWordRange
@@ -71,7 +71,7 @@ textWordProgressBar adapter userSettings settings state =
             appendAttributeIfSuccess class (themeBasedOnRange |> Validation.addStringPrefix "tag ")
 
         addRatio =
-            appendAttributeIfSuccess class contentSuccessRatio
+            appendAttributeIfSuccess value contentSuccessRatio
 
         addContentLength =
             appendIfSuccess (\v -> text (toString v)) (contentWordLength |> Debug.log "contentWordLength")
@@ -95,7 +95,7 @@ textWordProgressBar adapter userSettings settings state =
                 |> addProgressTheme
                 |> addRatio
             )
-            [ text "47%" ]
+            [ text ("37%") ]
         ]
 
 

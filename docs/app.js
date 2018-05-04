@@ -9829,23 +9829,32 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$textWordPr
 			},
 			A2(_elm_lang$core$Debug$log, 'contentWordLength', contentWordLength));
 		var optDangerWordRange = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getDangerWordRange(settings);
+		var contentWithinDangerRange = A3(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$dangerRange, contentWordLength, optDangerWordRange);
 		var optSuccessWordRange = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getSuccessWordRange(settings);
 		var hasWordTarget = _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$isValid(optSuccessWordRange);
 		var contentWithinSuccessRange = A3(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$successRange, contentWordLength, optSuccessWordRange);
-		var contentWithinDangerRange = A3(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$dangerRange, contentWordLength, optSuccessWordRange);
 		var themeBasedOnRange = A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$withDefault,
 			'is-info',
 			A2(
-				_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$or,
+				_elm_lang$core$Debug$log,
+				'C',
 				A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$trueMapToConstant,
-					'is-success',
-					A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$checkOrNone, _elm_lang$core$Basics$identity, contentWithinSuccessRange)),
-				A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$trueMapToConstant,
-					'is-danger',
-					A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$checkOrNone, _elm_lang$core$Basics$identity, contentWithinDangerRange))));
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$or,
+					A2(
+						_elm_lang$core$Debug$log,
+						'A',
+						A2(
+							_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$trueMapToConstant,
+							'is-success',
+							A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$checkOrNone, _elm_lang$core$Basics$identity, contentWithinSuccessRange))),
+					A2(
+						_elm_lang$core$Debug$log,
+						'B',
+						A2(
+							_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$trueMapToConstant,
+							'is-danger',
+							A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$checkOrNone, _elm_lang$core$Basics$identity, contentWithinDangerRange))))));
 		var addProgressTheme = A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$appendAttributeIfSuccess,
 			_elm_lang$html$Html_Attributes$class,
@@ -9855,7 +9864,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$textWordPr
 			_elm_lang$html$Html_Attributes$class,
 			A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$addStringPrefix, 'tag ', themeBasedOnRange));
 		var contentSuccessRatio = A3(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$successRatio, contentWordLength, optSuccessWordRange);
-		var addRatio = A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$appendAttributeIfSuccess, _elm_lang$html$Html_Attributes$class, contentSuccessRatio);
+		var addRatio = A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$appendAttributeIfSuccess, _elm_lang$html$Html_Attributes$value, contentSuccessRatio);
 		var addTargetLength = A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$appendIfSuccess,
 			function (tuple) {
@@ -9944,7 +9953,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$textWordPr
 								})),
 						{
 							ctor: '::',
-							_0: _elm_lang$html$Html$text('47%'),
+							_0: _elm_lang$html$Html$text('37%'),
 							_1: {ctor: '[]'}
 						}),
 					_1: {ctor: '[]'}
