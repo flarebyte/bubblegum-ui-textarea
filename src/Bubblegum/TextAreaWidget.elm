@@ -12,6 +12,7 @@ import Bubblegum.Entity.StateEntity as StateEntity
 import Bubblegum.TextAreaAdapter as TextAreaAdapter
 import Bubblegum.TextAreaHelper exposing (..)
 import Bubblegum.TextAreaProgressWidget exposing (displayTextInfo)
+import Debug
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onClick, onInput, onMouseEnter, onMouseOut)
@@ -35,11 +36,14 @@ view adapter userSettings settings state =
         addValue =
             appendAttributeIfSuccess value (getContent state)
 
+        addValueInDiv =
+            appendIfSuccess (\v -> div [] [ text v ]) (getContent state)
+
         addRows =
             appendAttributeIfSuccess (attribute "rows") (getContent state |> Outcome.map calculateRows)
     in
     div [ class "box is-marginless is-paddingless is-shadowless has-addons" ]
-        [ textarea
+        ([ textarea
             ([ class "textarea is-marginless is-paddingless is-shadowless"
              , onInput adapter.onInput
              ]
@@ -48,5 +52,7 @@ view adapter userSettings settings state =
                 |> addRows
             )
             []
-        , displayTextInfo adapter userSettings settings state
-        ]
+         , displayTextInfo adapter userSettings settings state
+         ]
+            |> addValueInDiv
+        )

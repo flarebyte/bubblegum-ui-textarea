@@ -10016,6 +10016,19 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaWidget$view = F4(
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map,
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaWidget$calculateRows,
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getContent(state)));
+		var addValueInDiv = A2(
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$appendIfSuccess,
+			function (v) {
+				return A2(
+					_elm_lang$html$Html$div,
+					{ctor: '[]'},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text(v),
+						_1: {ctor: '[]'}
+					});
+			},
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getContent(state));
 		var addValue = A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$appendAttributeIfSuccess,
 			_elm_lang$html$Html_Attributes$value,
@@ -10031,29 +10044,30 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaWidget$view = F4(
 				_0: _elm_lang$html$Html_Attributes$class('box is-marginless is-paddingless is-shadowless has-addons'),
 				_1: {ctor: '[]'}
 			},
-			{
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$textarea,
-					addRows(
-						addValue(
-							addPlaceholder(
-								{
-									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$class('textarea is-marginless is-paddingless is-shadowless'),
-									_1: {
-										ctor: '::',
-										_0: _elm_lang$html$Html_Events$onInput(adapter.onInput),
-										_1: {ctor: '[]'}
-									}
-								}))),
-					{ctor: '[]'}),
-				_1: {
+			addValueInDiv(
+				{
 					ctor: '::',
-					_0: A4(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$displayTextInfo, adapter, userSettings, settings, state),
-					_1: {ctor: '[]'}
-				}
-			});
+					_0: A2(
+						_elm_lang$html$Html$textarea,
+						addRows(
+							addValue(
+								addPlaceholder(
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$class('textarea is-marginless is-paddingless is-shadowless'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$html$Html_Events$onInput(adapter.onInput),
+											_1: {ctor: '[]'}
+										}
+									}))),
+						{ctor: '[]'}),
+					_1: {
+						ctor: '::',
+						_0: A4(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$displayTextInfo, adapter, userSettings, settings, state),
+						_1: {ctor: '[]'}
+					}
+				}));
 	});
 
 var _flarebyte$bubblegum_ui_textarea$WidgetBuilder$adapter = {onInput: _flarebyte$bubblegum_ui_textarea$AppMsg$OnInputContent};
