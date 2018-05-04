@@ -9859,9 +9859,20 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$textWordPr
 		var addTargetLength = A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$appendIfSuccess,
 			function (tuple) {
-				return _elm_lang$html$Html$text(
-					_elm_lang$core$Basics$toString(
-						_elm_lang$core$Tuple$first(tuple)));
+				return A2(
+					_elm_lang$html$Html$span,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('tag is-dark'),
+						_1: {ctor: '[]'}
+					},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text(
+							_elm_lang$core$Basics$toString(
+								_elm_lang$core$Tuple$first(tuple))),
+						_1: {ctor: '[]'}
+					});
 			},
 			optSuccessWordRange);
 		return A2(
@@ -9885,15 +9896,13 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$textWordPr
 								_0: _elm_lang$html$Html_Attributes$class('tags has-addons'),
 								_1: {ctor: '[]'}
 							},
-							{
-								ctor: '::',
-								_0: A2(
-									_elm_lang$html$Html$span,
-									addTagTheme(
-										{ctor: '[]'}),
-									addContentLength(
-										{ctor: '[]'})),
-								_1: {
+							A3(
+								_elm_lang$core$Basics$flip,
+								F2(
+									function (x, y) {
+										return A2(_elm_lang$core$Basics_ops['++'], x, y);
+									}),
+								{
 									ctor: '::',
 									_0: A2(
 										_elm_lang$html$Html$span,
@@ -9902,11 +9911,24 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$textWordPr
 											_0: _elm_lang$html$Html_Attributes$class('tag is-dark'),
 											_1: {ctor: '[]'}
 										},
-										addTargetLength(
-											{ctor: '[]'})),
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html$text(' words'),
+											_1: {ctor: '[]'}
+										}),
 									_1: {ctor: '[]'}
-								}
-							}),
+								},
+								addTargetLength(
+									{
+										ctor: '::',
+										_0: A2(
+											_elm_lang$html$Html$span,
+											addTagTheme(
+												{ctor: '[]'}),
+											addContentLength(
+												{ctor: '[]'})),
+										_1: {ctor: '[]'}
+									}))),
 						_1: {ctor: '[]'}
 					}),
 				_1: {

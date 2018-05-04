@@ -3,9 +3,9 @@ module Bubblegum.TextAreaProgressWidget exposing (..)
 import Bubblegum.Entity.Outcome as Outcome exposing (..)
 import Bubblegum.Entity.SettingsEntity as SettingsEntity
 import Bubblegum.Entity.StateEntity as StateEntity
+import Bubblegum.Entity.Validation as Validation
 import Bubblegum.TextAreaAdapter as TextAreaAdapter
 import Bubblegum.TextAreaHelper exposing (..)
-import Bubblegum.Entity.Validation as Validation
 import Debug
 import Html exposing (..)
 import Html.Attributes exposing (..)
@@ -59,7 +59,7 @@ textWordProgressBar adapter userSettings settings state =
             Outcome.or
                 (contentWithinSuccessRange |> Outcome.checkOrNone identity |> Outcome.trueMapToConstant "is-success")
                 (contentWithinDangerRange |> Outcome.checkOrNone identity |> Outcome.trueMapToConstant "is-danger")
-            |> Outcome.withDefault "is-info"
+                |> Outcome.withDefault "is-info"
 
         contentSuccessRatio =
             Outcome.map2 successRatio contentWordLength optSuccessWordRange
@@ -77,16 +77,17 @@ textWordProgressBar adapter userSettings settings state =
             appendIfSuccess (\v -> text (toString v)) (contentWordLength |> Debug.log "contentWordLength")
 
         addTargetLength =
-            appendIfSuccess (\tuple -> text (first tuple |> toString)) optSuccessWordRange
+            appendIfSuccess (\tuple -> span [ class "tag is-dark" ] [ text (first tuple |> toString) ]) optSuccessWordRange
     in
     div []
         [ div [ class "control" ]
             [ div [ class "tags has-addons" ]
-                [ span ([] |> addTagTheme)
+                ([ span ([] |> addTagTheme)
                     (addContentLength [])
-                , span [ class "tag is-dark" ]
-                    (addTargetLength [])
-                ]
+                 ]
+                    |> addTargetLength
+                    |> flip (++) [ span [ class "tag is-dark" ] [ text " words" ] ]
+                )
             ]
         , progress
             ([ Html.Attributes.max "100"
