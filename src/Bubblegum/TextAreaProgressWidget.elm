@@ -27,11 +27,18 @@ successRatio : Int -> ( Int, Int ) -> String
 successRatio size range =
     calculateRatio (first range) size |> toString
 
-
+tupleify: a -> b -> (a, b)
+tupleify a b = (a, b)
 
 {-
    The pogress bar is available only if a number of words has been defined for measuring progress
 -}
+
+
+progressBar : (String , String) -> Html msg
+progressBar tuple =
+    progress [ class ("progress is-small " ++ (second tuple)), Html.Attributes.max "100", value (first tuple) ]
+        [ text ((first tuple) ++ "%") ]
 
 
 textWordProgressBar : TextAreaAdapter.Model msg -> SettingsEntity.Model -> SettingsEntity.Model -> StateEntity.Model -> Html msg
@@ -59,19 +66,20 @@ textWordProgressBar adapter userSettings settings state =
             Outcome.or
                 (contentWithinSuccessRange |> Outcome.checkOrNone identity |> Outcome.trueMapToConstant "is-success" |> Debug.log "A")
                 (contentWithinDangerRange |> Outcome.checkOrNone identity |> Outcome.trueMapToConstant "is-danger" |> Debug.log "B")
-                |> Debug.log "C" |> Outcome.withDefault "is-info"
+                |> Debug.log "C"
+                |> Outcome.withDefault "is-info"
 
         contentSuccessRatio =
             Outcome.map2 successRatio contentWordLength optSuccessWordRange
 
-        addProgressTheme =
-            appendAttributeIfSuccess class (themeBasedOnRange |> Validation.addStringPrefix "progress ")
+        ratioAndStatus =
+            Outcome.map2 tupleify contentSuccessRatio themeBasedOnRange
 
         addTagTheme =
             appendAttributeIfSuccess class (themeBasedOnRange |> Validation.addStringPrefix "tag ")
 
-        addRatio =
-            appendAttributeIfSuccess value contentSuccessRatio
+        addProgressBar =
+            appendIfSuccess progressBar ratioAndStatus
 
         addContentLength =
             appendIfSuccess (\v -> text (toString v)) (contentWordLength |> Debug.log "contentWordLength")
@@ -81,21 +89,16 @@ textWordProgressBar adapter userSettings settings state =
     in
     div []
         [ div [ class "control" ]
-            [ div [ class "tags has-addons" ]
+            ([ div [ class "tags has-addons" ]
                 ([ span ([] |> addTagTheme)
                     (addContentLength [])
                  ]
                     |> addTargetLength
                     |> flip (++) [ span [ class "tag is-light" ] [ text " words" ] ]
                 )
-            ]
-        , progress
-            ([ Html.Attributes.max "100"
              ]
-                |> addProgressTheme
-                |> addRatio
+                |> addProgressBar
             )
-            [ text ("37%") ]
         ]
 
 

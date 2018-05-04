@@ -9792,6 +9792,41 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$displayCha
 				_1: {ctor: '[]'}
 			});
 	});
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$progressBar = function (tuple) {
+	return A2(
+		_elm_lang$html$Html$progress,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class(
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					'progress is-small ',
+					_elm_lang$core$Tuple$second(tuple))),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$max('100'),
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$value(
+						_elm_lang$core$Tuple$first(tuple)),
+					_1: {ctor: '[]'}
+				}
+			}
+		},
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html$text(
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					_elm_lang$core$Tuple$first(tuple),
+					'%')),
+			_1: {ctor: '[]'}
+		});
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$tupleify = F2(
+	function (a, b) {
+		return {ctor: '_Tuple2', _0: a, _1: b};
+	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$successRatio = F2(
 	function (size, range) {
 		return _elm_lang$core$Basics$toString(
@@ -9855,16 +9890,13 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$textWordPr
 							_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$trueMapToConstant,
 							'is-danger',
 							A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$checkOrNone, _elm_lang$core$Basics$identity, contentWithinDangerRange))))));
-		var addProgressTheme = A2(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$appendAttributeIfSuccess,
-			_elm_lang$html$Html_Attributes$class,
-			A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$addStringPrefix, 'progress ', themeBasedOnRange));
 		var addTagTheme = A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$appendAttributeIfSuccess,
 			_elm_lang$html$Html_Attributes$class,
 			A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$addStringPrefix, 'tag ', themeBasedOnRange));
 		var contentSuccessRatio = A3(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$successRatio, contentWordLength, optSuccessWordRange);
-		var addRatio = A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$appendAttributeIfSuccess, _elm_lang$html$Html_Attributes$value, contentSuccessRatio);
+		var ratioAndStatus = A3(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$tupleify, contentSuccessRatio, themeBasedOnRange);
+		var addProgressBar = A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$appendIfSuccess, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$progressBar, ratioAndStatus);
 		var addTargetLength = A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$appendIfSuccess,
 			function (tuple) {
@@ -9896,68 +9928,52 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$textWordPr
 						_0: _elm_lang$html$Html_Attributes$class('control'),
 						_1: {ctor: '[]'}
 					},
-					{
-						ctor: '::',
-						_0: A2(
-							_elm_lang$html$Html$div,
-							{
-								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$class('tags has-addons'),
-								_1: {ctor: '[]'}
-							},
-							A3(
-								_elm_lang$core$Basics$flip,
-								F2(
-									function (x, y) {
-										return A2(_elm_lang$core$Basics_ops['++'], x, y);
-									}),
+					addProgressBar(
+						{
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$div,
 								{
 									ctor: '::',
-									_0: A2(
-										_elm_lang$html$Html$span,
-										{
-											ctor: '::',
-											_0: _elm_lang$html$Html_Attributes$class('tag is-light'),
-											_1: {ctor: '[]'}
-										},
-										{
-											ctor: '::',
-											_0: _elm_lang$html$Html$text(' words'),
-											_1: {ctor: '[]'}
-										}),
+									_0: _elm_lang$html$Html_Attributes$class('tags has-addons'),
 									_1: {ctor: '[]'}
 								},
-								addTargetLength(
+								A3(
+									_elm_lang$core$Basics$flip,
+									F2(
+										function (x, y) {
+											return A2(_elm_lang$core$Basics_ops['++'], x, y);
+										}),
 									{
 										ctor: '::',
 										_0: A2(
 											_elm_lang$html$Html$span,
-											addTagTheme(
-												{ctor: '[]'}),
-											addContentLength(
-												{ctor: '[]'})),
+											{
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$class('tag is-light'),
+												_1: {ctor: '[]'}
+											},
+											{
+												ctor: '::',
+												_0: _elm_lang$html$Html$text(' words'),
+												_1: {ctor: '[]'}
+											}),
 										_1: {ctor: '[]'}
-									}))),
-						_1: {ctor: '[]'}
-					}),
-				_1: {
-					ctor: '::',
-					_0: A2(
-						_elm_lang$html$Html$progress,
-						addRatio(
-							addProgressTheme(
-								{
-									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$max('100'),
-									_1: {ctor: '[]'}
-								})),
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html$text('37%'),
+									},
+									addTargetLength(
+										{
+											ctor: '::',
+											_0: A2(
+												_elm_lang$html$Html$span,
+												addTagTheme(
+													{ctor: '[]'}),
+												addContentLength(
+													{ctor: '[]'})),
+											_1: {ctor: '[]'}
+										}))),
 							_1: {ctor: '[]'}
-						}),
-					_1: {ctor: '[]'}
-				}
+						})),
+				_1: {ctor: '[]'}
 			});
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$displayTextInfo = F4(
