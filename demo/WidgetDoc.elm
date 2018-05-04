@@ -40,7 +40,7 @@ textAreaWidgetDoc =
         , createKey ui_successMinWords ZeroOrOne [ "30", "60", "90", "-5" ] englishSummarySuccessMinWords
         , createKey ui_successMaxWords ZeroOrOne [ "31", "61", "91", "-5" ] englishSummarySuccessMaxWords
         , createKey ui_dangerMinWords ZeroOrOne [ "20", "50", "80", "-5" ] englishSummaryDangerMinWords
-        , createKey ui_dangerMaxWords ZeroOrOne [ "21", "51", "81", "-5" ] englishSummaryDangerMaxWords
+        , createKey ui_dangerMaxWords ZeroOrOne [ "21", "51", "120", "-5" ] englishSummaryDangerMaxWords
         , createKey ui_placeholder ZeroOrOne [ "Some placeholder", "プレースホルダ" ] englishSummaryPlaceholder
         , createKey ui_label ZeroOrOne [ "Some label", "ラベル", "ضع الكلمة المناسبة" ] englishSummaryLabel
         , createKey ui_help ZeroOrOne [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "助けて" ] englishSummaryHelp

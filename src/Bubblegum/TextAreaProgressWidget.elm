@@ -86,7 +86,7 @@ textWordProgressBar adapter userSettings settings state =
                     (addContentLength [])
                  ]
                     |> addTargetLength
-                    |> flip (++) [ span [ class "tag is-dark" ] [ text " words" ] ]
+                    |> flip (++) [ span [ class "tag is-light" ] [ text " words" ] ]
                 )
             ]
         , progress

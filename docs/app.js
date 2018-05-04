@@ -9908,7 +9908,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$textWordPr
 										_elm_lang$html$Html$span,
 										{
 											ctor: '::',
-											_0: _elm_lang$html$Html_Attributes$class('tag is-dark'),
+											_0: _elm_lang$html$Html_Attributes$class('tag is-light'),
 											_1: {ctor: '[]'}
 										},
 										{
@@ -10559,7 +10559,7 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 												_0: '51',
 												_1: {
 													ctor: '::',
-													_0: '81',
+													_0: '120',
 													_1: {
 														ctor: '::',
 														_0: '-5',
