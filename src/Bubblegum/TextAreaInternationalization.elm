@@ -26,5 +26,26 @@ translateWord language howMany =
         "en" ->
             pickTranslation ( "word", "words" )
 
+        "ja" ->
+            pickTranslation ( "ワード", "言葉" )
+
+        "ar" ->
+            pickTranslation ( "كلمة", "كلمات" )
+
+        "fr" ->
+            pickTranslation ( "mot", "mots" )
+
+        "es" ->
+            pickTranslation ( "palabra", "palabras" )
+
+        "it" ->
+            pickTranslation ( "parola", "parole" )
+
+        "de" ->
+            pickTranslation ( "wort", "wörter" )
+
+        "zh" ->
+            pickTranslation ( "字", "话" )
+
         _ ->
             pickTranslation ( "word", "words" )

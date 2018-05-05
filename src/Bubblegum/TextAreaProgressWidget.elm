@@ -87,6 +87,7 @@ textWordProgressBar adapter userSettings settings state =
         ratioAndStatus =
             Outcome.map2 tupleify contentSuccessRatio themeBasedOnRange
 
+        -- optional html to display
         addTagTheme =
             appendAttributeIfSuccess class (themeBasedOnRange |> Validation.addStringPrefix "tag ")
 
@@ -134,7 +135,7 @@ displayCharsProgress adapter userSettings settings state =
             [ span [ class "tag is-info" ]
                 (appendContentLength [])
             , span [ class "tag is-dark" ]
-                [ text "/ 200 chars" ]
+                [ text "/ 200" ]
             ]
         ]
 

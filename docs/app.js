@@ -9758,12 +9758,34 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaInternationalization$tran
 		};
 		var languageCode = A2(_elm_lang$core$String$left, 2, language);
 		var _p0 = languageCode;
-		if (_p0 === 'en') {
-			return pickTranslation(
-				{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-		} else {
-			return pickTranslation(
-				{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+		switch (_p0) {
+			case 'en':
+				return pickTranslation(
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'ja':
+				return pickTranslation(
+					{ctor: '_Tuple2', _0: 'ワード', _1: '言葉'});
+			case 'ar':
+				return pickTranslation(
+					{ctor: '_Tuple2', _0: 'كلمة', _1: 'كلمات'});
+			case 'fr':
+				return pickTranslation(
+					{ctor: '_Tuple2', _0: 'mot', _1: 'mots'});
+			case 'es':
+				return pickTranslation(
+					{ctor: '_Tuple2', _0: 'palabra', _1: 'palabras'});
+			case 'it':
+				return pickTranslation(
+					{ctor: '_Tuple2', _0: 'parola', _1: 'parole'});
+			case 'de':
+				return pickTranslation(
+					{ctor: '_Tuple2', _0: 'wort', _1: 'wörter'});
+			case 'zh':
+				return pickTranslation(
+					{ctor: '_Tuple2', _0: '字', _1: '话'});
+			default:
+				return pickTranslation(
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
 		}
 	});
 
@@ -9820,7 +9842,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$displayCha
 								},
 								{
 									ctor: '::',
-									_0: _elm_lang$html$Html$text('/ 200 chars'),
+									_0: _elm_lang$html$Html$text('/ 200'),
 									_1: {ctor: '[]'}
 								}),
 							_1: {ctor: '[]'}
