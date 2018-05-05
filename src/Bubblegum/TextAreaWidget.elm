@@ -25,12 +25,24 @@ import String exposing (lines, words)
 calculateRows : String -> String
 calculateRows content =
     let
-        carriageReturns = content |> lines |> List.length
-        numberOfChars = content |> String.length
-        numberOfAvgLines = numberOfChars // 80
-        numberOfLines = carriageReturns + numberOfAvgLines + 1
+        carriageReturns =
+            content |> lines |> List.length
+
+        numberOfChars =
+            content |> String.length
+
+        numberOfAvgLines =
+            numberOfChars // 80
+
+        numberOfLines =
+            carriageReturns + numberOfAvgLines + 1
     in
-        toString (if numberOfLines < 40 then numberOfLines else 40)
+    toString
+        (if numberOfLines < 40 then
+            numberOfLines
+         else
+            40
+        )
 
 
 {-| The core representation of a field.

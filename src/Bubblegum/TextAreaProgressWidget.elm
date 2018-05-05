@@ -6,10 +6,12 @@ import Bubblegum.Entity.StateEntity as StateEntity
 import Bubblegum.Entity.Validation as Validation
 import Bubblegum.TextAreaAdapter as TextAreaAdapter
 import Bubblegum.TextAreaHelper exposing (..)
+import Bubblegum.TextAreaInternationalization exposing (translateWord)
 import Debug
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import List
+import Maybe
 import Tuple exposing (first, second)
 
 
@@ -27,23 +29,30 @@ successRatio : Int -> ( Int, Int ) -> String
 successRatio size range =
     calculateRatio (first range) size |> toString
 
-tupleify: a -> b -> (a, b)
-tupleify a b = (a, b)
+
+tupleify : a -> b -> ( a, b )
+tupleify a b =
+    ( a, b )
+
+
 
 {-
    The pogress bar is available only if a number of words has been defined for measuring progress
 -}
 
 
-progressBar : (String , String) -> Html msg
+progressBar : ( String, String ) -> Html msg
 progressBar tuple =
-    progress [ class ("progress is-small " ++ (second tuple)), Html.Attributes.max "100", value (first tuple) ]
-        [ text ((first tuple) ++ "%") ]
+    progress [ class ("progress is-small " ++ second tuple), Html.Attributes.max "100", value (first tuple) ]
+        [ text (first tuple ++ "%") ]
 
 
 textWordProgressBar : TextAreaAdapter.Model msg -> SettingsEntity.Model -> SettingsEntity.Model -> StateEntity.Model -> Html msg
 textWordProgressBar adapter userSettings settings state =
     let
+        editingLanguage =
+            getEditingLanguageOrEnglish userSettings
+
         optSuccessWordRange =
             getSuccessWordRange settings
 
@@ -55,6 +64,9 @@ textWordProgressBar adapter userSettings settings state =
 
         contentWordLength =
             getContent state |> Outcome.map (\c -> String.words c |> List.length)
+
+        labelForWord =
+            contentWordLength |> Outcome.map (translateWord editingLanguage) |> Outcome.toMaybe |> Maybe.withDefault ""
 
         contentWithinSuccessRange =
             Outcome.map2 successRange contentWordLength optSuccessWordRange
@@ -94,7 +106,7 @@ textWordProgressBar adapter userSettings settings state =
                     (addContentLength [])
                  ]
                     |> addTargetLength
-                    |> flip (++) [ span [ class "tag is-light" ] [ text " words" ] ]
+                    |> flip (++) [ span [ class "tag is-light" ] [ " " ++ labelForWord |> text ] ]
                 )
              ]
                 |> addProgressBar

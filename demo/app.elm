@@ -15,11 +15,12 @@ import Bubblegum.Entity.Attribute exposing (deleteAttributeByKey, replaceAttribu
 import Bubblegum.Entity.SettingsEntity as SettingsEntity
 import Bubblegum.Entity.StateEntity as StateEntity
 import Bubblegum.TextAreaVocabulary exposing (..)
+import Debug
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import WidgetBuilder exposing (viewTextAreaWidget)
 import WidgetDoc exposing (..)
-import Debug
+
 
 main =
     Html.beginnerProgram
@@ -31,6 +32,7 @@ main =
 
 
 -- UPDATE
+
 
 update : AppMsg -> AppModel -> AppModel
 update msg model =

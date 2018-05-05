@@ -8552,19 +8552,30 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$isValid = function
 		return false;
 	}
 };
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$toMaybe = function (outcome) {
+	var _p3 = outcome;
+	switch (_p3.ctor) {
+		case 'None':
+			return _elm_lang$core$Maybe$Nothing;
+		case 'Warning':
+			return _elm_lang$core$Maybe$Nothing;
+		default:
+			return _elm_lang$core$Maybe$Just(_p3._0);
+	}
+};
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning = function (a) {
 	return {ctor: 'Warning', _0: a};
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$or = F2(
 	function (ma, mb) {
-		var _p3 = ma;
-		switch (_p3.ctor) {
+		var _p4 = ma;
+		switch (_p4.ctor) {
 			case 'None':
 				return mb;
 			case 'Valid':
 				return ma;
 			default:
-				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(_p3._0);
+				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(_p4._0);
 		}
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$None = {ctor: 'None'};
@@ -8573,107 +8584,107 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Valid = function (
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$withDefault = F2(
 	function (def, outcome) {
-		var _p4 = outcome;
-		switch (_p4.ctor) {
-			case 'Valid':
-				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Valid(_p4._0);
-			case 'None':
-				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Valid(def);
-			default:
-				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(_p4._0);
-		}
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map = F2(
-	function (func, ra) {
-		var _p5 = ra;
+		var _p5 = outcome;
 		switch (_p5.ctor) {
 			case 'Valid':
-				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Valid(
-					func(_p5._0));
+				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Valid(_p5._0);
 			case 'None':
-				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$None;
+				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Valid(def);
 			default:
 				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(_p5._0);
 		}
 	});
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map = F2(
+	function (func, ra) {
+		var _p6 = ra;
+		switch (_p6.ctor) {
+			case 'Valid':
+				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Valid(
+					func(_p6._0));
+			case 'None':
+				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$None;
+			default:
+				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(_p6._0);
+		}
+	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2 = F3(
 	function (func, ra, rb) {
-		var _p6 = {ctor: '_Tuple2', _0: ra, _1: rb};
-		_v6_6:
+		var _p7 = {ctor: '_Tuple2', _0: ra, _1: rb};
+		_v7_6:
 		do {
-			switch (_p6._0.ctor) {
+			switch (_p7._0.ctor) {
 				case 'Valid':
-					switch (_p6._1.ctor) {
+					switch (_p7._1.ctor) {
 						case 'Valid':
 							return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Valid(
-								A2(func, _p6._0._0, _p6._1._0));
+								A2(func, _p7._0._0, _p7._1._0));
 						case 'None':
 							return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$None;
 						default:
-							break _v6_6;
+							break _v7_6;
 					}
 				case 'None':
-					switch (_p6._1.ctor) {
+					switch (_p7._1.ctor) {
 						case 'None':
 							return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$None;
 						case 'Valid':
 							return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$None;
 						default:
-							break _v6_6;
+							break _v7_6;
 					}
 				default:
-					if (_p6._1.ctor === 'Warning') {
+					if (_p7._1.ctor === 'Warning') {
 						return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(
-							A2(_elm_lang$core$Basics_ops['++'], _p6._0._0, _p6._1._0));
+							A2(_elm_lang$core$Basics_ops['++'], _p7._0._0, _p7._1._0));
 					} else {
-						return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(_p6._0._0);
+						return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(_p7._0._0);
 					}
 			}
 		} while(false);
-		return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(_p6._1._0);
+		return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(_p7._1._0);
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check = F3(
 	function (checker, warnMsg, ra) {
-		var _p7 = ra;
-		switch (_p7.ctor) {
+		var _p8 = ra;
+		switch (_p8.ctor) {
 			case 'None':
 				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$None;
 			case 'Warning':
-				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(_p7._0);
+				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(_p8._0);
 			default:
-				var _p8 = _p7._0;
-				return checker(_p8) ? _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Valid(_p8) : _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(warnMsg);
+				var _p9 = _p8._0;
+				return checker(_p9) ? _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Valid(_p9) : _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(warnMsg);
 		}
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$checkOrNone = F2(
 	function (checker, ra) {
-		var _p9 = ra;
-		switch (_p9.ctor) {
+		var _p10 = ra;
+		switch (_p10.ctor) {
 			case 'None':
 				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$None;
 			case 'Warning':
-				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(_p9._0);
+				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(_p10._0);
 			default:
-				var _p10 = _p9._0;
-				return checker(_p10) ? _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Valid(_p10) : _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$None;
+				var _p11 = _p10._0;
+				return checker(_p11) ? _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Valid(_p11) : _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$None;
 		}
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$trueMapToConstant = F2(
 	function ($const, outcome) {
-		var _p11 = outcome;
-		switch (_p11.ctor) {
+		var _p12 = outcome;
+		switch (_p12.ctor) {
 			case 'None':
 				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$None;
 			case 'Warning':
-				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(_p11._0);
+				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(_p12._0);
 			default:
-				return _p11._0 ? _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Valid($const) : _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$None;
+				return _p12._0 ? _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Valid($const) : _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$None;
 		}
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$fromMaybe = function (maybe) {
-	var _p12 = maybe;
-	if (_p12.ctor === 'Just') {
-		return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Valid(_p12._0);
+	var _p13 = maybe;
+	if (_p13.ctor === 'Just') {
+		return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Valid(_p13._0);
 	} else {
 		return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$None;
 	}
@@ -9643,6 +9654,16 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$isDisabled = funct
 	return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asBool(
 		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_disabled, state.attributes));
 };
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getEditingLanguageOrEnglish = function (state) {
+	return A2(
+		_elm_lang$core$Maybe$withDefault,
+		'en-GB',
+		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$toMaybe(
+			A2(
+				_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange,
+				{ctor: '_Tuple2', _0: 2, _1: 10},
+				A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_editingLanguage, state.attributes))));
+};
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$findIntRange = F2(
 	function (keyTuple, attributes) {
 		return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asIntRange(
@@ -9729,6 +9750,22 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getHelp = function
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$titleCharRange,
 		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_help, settings.attributes));
 };
+
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaInternationalization$translateWord = F2(
+	function (language, howMany) {
+		var pickTranslation = function (singularOrPlural) {
+			return (_elm_lang$core$Native_Utils.cmp(howMany, 2) < 0) ? _elm_lang$core$Tuple$first(singularOrPlural) : _elm_lang$core$Tuple$second(singularOrPlural);
+		};
+		var languageCode = A2(_elm_lang$core$String$left, 2, language);
+		var _p0 = languageCode;
+		if (_p0 === 'en') {
+			return pickTranslation(
+				{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+		} else {
+			return pickTranslation(
+				{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+		}
+	});
 
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$displayCharsProgress = F4(
 	function (adapter, userSettings, settings, state) {
@@ -9916,6 +9953,15 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$textWordPr
 					});
 			},
 			optSuccessWordRange);
+		var editingLanguage = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getEditingLanguageOrEnglish(userSettings);
+		var labelForWord = A2(
+			_elm_lang$core$Maybe$withDefault,
+			'',
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$toMaybe(
+				A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map,
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaInternationalization$translateWord(editingLanguage),
+					contentWordLength)));
 		return A2(
 			_elm_lang$html$Html$div,
 			{ctor: '[]'},
@@ -9955,7 +10001,8 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$textWordPr
 											},
 											{
 												ctor: '::',
-												_0: _elm_lang$html$Html$text(' words'),
+												_0: _elm_lang$html$Html$text(
+													A2(_elm_lang$core$Basics_ops['++'], ' ', labelForWord)),
 												_1: {ctor: '[]'}
 											}),
 										_1: {ctor: '[]'}

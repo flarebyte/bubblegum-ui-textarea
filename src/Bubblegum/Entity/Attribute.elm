@@ -117,4 +117,4 @@ replaceAttributeByKey key values attributes =
         existingOrNew =
             findAttributeByKey key attributes |> Maybe.withDefault { blankAttribute | key = key }
     in
-    deleteAttributeByKey key attributes |>  (++) [ { existingOrNew | values = values } ]
+    deleteAttributeByKey key attributes |> (++) [ { existingOrNew | values = values } ]

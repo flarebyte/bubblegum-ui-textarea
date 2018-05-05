@@ -167,3 +167,11 @@ getContent : SettingsEntity.Model -> Outcome String
 getContent state =
     findString ui_content state.attributes
         |> Validation.withinStringCharsRange charRange
+
+
+getEditingLanguageOrEnglish : SettingsEntity.Model -> String
+getEditingLanguageOrEnglish state =
+    findString ui_editingLanguage state.attributes
+        |> Validation.withinStringCharsRange ( 2, 10 )
+        |> Outcome.toMaybe
+        |> Maybe.withDefault "en-GB"

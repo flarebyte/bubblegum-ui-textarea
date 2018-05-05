@@ -150,6 +150,19 @@ fromMaybe maybe =
             None
 
 
+toMaybe : Outcome a -> Maybe a
+toMaybe outcome =
+    case outcome of
+        None ->
+            Nothing
+
+        Warning msg ->
+            Nothing
+
+        Valid value ->
+            Just value
+
+
 isValid : Outcome a -> Bool
 isValid outcome =
     case outcome of

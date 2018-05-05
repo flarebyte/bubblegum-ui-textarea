@@ -9,7 +9,7 @@ reset:
 	rm -rf tests/elm-stuff
 	rm -rf docs
 
-build: test build-directory js html
+build: beautify test build-directory js html
 
 install:
 	elm-package install -y
@@ -24,6 +24,10 @@ js:
 
 test:
 	cd tests && elm-test Main.elm
+
+beautify:
+	elm-format src/ --yes
+	elm-format demo/ --yes
 
 html:
 	cp $(DEMO)/index.html $(DOCS)/index.html

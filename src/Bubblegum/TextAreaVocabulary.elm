@@ -182,6 +182,7 @@ ui_audioDescriptionActive =
 englishSummaryAudioDescriptionActive =
     "Play audio description when available"
 
+
 ui_accessibilityHighContrastActive =
     "ui:accessibility-high-contrast-active"
 
@@ -189,14 +190,18 @@ ui_accessibilityHighContrastActive =
 englishSummaryAccessibilityHighContrastActive =
     "High contrast is preferred whenever possible"
 
+
 ui_accessibilityLargeText =
     "ui:accessibility-large-text"
+
 
 englishSummaryAccessibilityLargeText =
     "Large text is preferred whenever possible"
 
+
 ui_accessibilityNoKeyboard =
     "ui:accessibility-no-keyboard"
+
 
 englishSummaryAccessibilityNoKeyboard =
     "The user does not use a keyboard"
