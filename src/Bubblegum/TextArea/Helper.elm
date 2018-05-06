@@ -14,11 +14,59 @@ import Bubblegum.Entity.Validation as Validation
 import Bubblegum.TextArea.Vocabulary exposing (..)
 import Html as Html exposing (Attribute)
 import Html.Attributes as Attributes exposing (attribute)
+import List
 import Maybe exposing (..)
+import String exposing (lines, words)
+import Tuple exposing (first, second)
+
+
+successRange : Int -> ( Int, Int ) -> Bool
+successRange size range =
+    (size >= first range) && (size < second range)
+
+
+dangerRange : Int -> ( Int, Int ) -> Bool
+dangerRange size range =
+    not (successRange size range)
+
+
+successRatio : Int -> ( Int, Int ) -> String
+successRatio size range =
+    calculateRatio (first range) size |> toString
+
+
+tupleify : a -> b -> ( a, b )
+tupleify a b =
+    ( a, b )
 
 
 titleCharRange =
     ( 1, 70 )
+
+
+{-| rows = number of lines + lines of with an average 80 chars
+-}
+calculateRows : String -> String
+calculateRows content =
+    let
+        carriageReturns =
+            content |> lines |> List.length
+
+        numberOfChars =
+            content |> String.length
+
+        numberOfAvgLines =
+            numberOfChars // 80
+
+        numberOfLines =
+            carriageReturns + numberOfAvgLines + 1
+    in
+    toString
+        (if numberOfLines < 40 then
+            numberOfLines
+         else
+            40
+        )
 
 
 
