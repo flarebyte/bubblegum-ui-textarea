@@ -86,8 +86,9 @@ textWordProgressBar adapter userSettings settings state =
         addLabelForWord =
             flip (++) [ tag { text = labelForWord, style = "is-light" } ]
     in
-    div []
-        ([] |> addContentLength |> addTargetLength |> addLabelForWord |> tags |> List.singleton)
+    div [] 
+        <| List.singleton <| tags 
+        <| ([] |> addContentLength |> addTargetLength |> addLabelForWord)
 
 
 
