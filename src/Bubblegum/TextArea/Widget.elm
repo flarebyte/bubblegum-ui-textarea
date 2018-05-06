@@ -14,11 +14,9 @@ import Bubblegum.TextArea.Adapter as TextAreaAdapter
 import Bubblegum.TextArea.BulmaHelper exposing (..)
 import Bubblegum.TextArea.Helper exposing (..)
 import Bubblegum.TextArea.Internationalization exposing (translateWord)
-import Debug
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onClick, onInput, onMouseEnter, onMouseOut)
-import List
 import Maybe
 import String exposing (lines, words)
 import Tuple exposing (first, second)
@@ -45,7 +43,7 @@ textWordProgressBar adapter userSettings settings state =
             getDangerWordRange settings
 
         contentWordLength =
-            getContent state |> Outcome.map (\c -> String.words c |> List.length)
+            getContent state |> Outcome.map numberOfWords
 
         labelForWord =
             contentWordLength |> Outcome.map (translateWord userLanguage) |> Outcome.toMaybe |> Maybe.withDefault ""
@@ -58,9 +56,8 @@ textWordProgressBar adapter userSettings settings state =
 
         themeBasedOnRange =
             Outcome.or
-                (contentWithinSuccessRange |> Outcome.checkOrNone identity |> Outcome.trueMapToConstant "is-success" |> Debug.log "A")
-                (contentWithinDangerRange |> Outcome.checkOrNone identity |> Outcome.trueMapToConstant "is-danger" |> Debug.log "B")
-                |> Debug.log "C"
+                (contentWithinSuccessRange |> Outcome.checkOrNone identity |> Outcome.trueMapToConstant "is-success")
+                (contentWithinDangerRange |> Outcome.checkOrNone identity |> Outcome.trueMapToConstant "is-danger")
                 |> Outcome.withDefault "is-info"
 
         contentSuccessRatio =
@@ -77,10 +74,10 @@ textWordProgressBar adapter userSettings settings state =
             appendIfSuccess progressBar ratioAndStatus
 
         addContentLength =
-            appendIfSuccess (\v -> text (toString v)) (contentWordLength |> Debug.log "contentWordLength")
+            appendIfSuccess (\v -> text (toString v)) contentWordLength
 
         addTargetLength =
-            appendIfSuccess (\tuple -> tagWithIcon (first tuple |> toString) "tag is-dark" "fa-bullseye" "has-text-info") optSuccessWordRange
+            appendIfSuccess (\tuple -> tag { text = first tuple |> toString, style = "is-dark" }) optSuccessWordRange
     in
     div []
         [ div [ class "control" ]

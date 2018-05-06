@@ -93,6 +93,11 @@ limit100 value =
         value
 
 
+numberOfWords : String -> Int
+numberOfWords someWord =
+    String.words someWord |> List.length
+
+
 {-| The core representation of a field.
 -}
 calculateRatio : Int -> Int -> Int
