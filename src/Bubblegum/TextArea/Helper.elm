@@ -12,8 +12,6 @@ import Bubblegum.Entity.SettingsEntity as SettingsEntity
 import Bubblegum.Entity.StateEntity as StateEntity
 import Bubblegum.Entity.Validation as Validation
 import Bubblegum.TextArea.Vocabulary exposing (..)
-import Html as Html exposing (Attribute)
-import Html.Attributes as Attributes exposing (attribute)
 import List
 import Maybe exposing (..)
 import String exposing (lines, words)
@@ -40,6 +38,7 @@ tupleify a b =
     ( a, b )
 
 
+titleCharRange : ( Int, Int )
 titleCharRange =
     ( 1, 70 )
 
@@ -73,14 +72,17 @@ calculateRows content =
 -- The new title length is 70 characters before Google will truncate the title with ellipses
 
 
+keywordCharRange : ( Int, Int )
 keywordCharRange =
     ( 1, 30 )
 
 
+charRange : ( Int, Int )
 charRange =
     ( 0, 60000 )
 
 
+wordRange : ( Int, Int )
 wordRange =
     ( 0, 12000 )
 
@@ -94,8 +96,8 @@ limit100 value =
 
 
 numberOfWords : String -> Int
-numberOfWords someWord =
-    String.words someWord |> List.length
+numberOfWords someText =
+    String.words someText |> List.length
 
 
 {-| The core representation of a field.
@@ -188,32 +190,6 @@ isDisabled : StateEntity.Model -> Outcome Bool
 isDisabled state =
     findString ui_disabled state.attributes
         |> Validation.asBool
-
-
-appendIfSuccess : (a -> Html.Html msg) -> Outcome a -> List (Html.Html msg) -> List (Html.Html msg)
-appendIfSuccess ifSuccess outcome htmlList =
-    case outcome of
-        None ->
-            htmlList
-
-        Warning warn ->
-            htmlList ++ [ Html.div [ Attributes.class "is-not-invisible" ] [ Html.text warn ] ]
-
-        Valid success ->
-            htmlList ++ [ ifSuccess success ]
-
-
-appendAttributeIfSuccess : (a -> Attribute msg) -> Outcome a -> List (Attribute msg) -> List (Attribute msg)
-appendAttributeIfSuccess ifSuccess outcome attributes =
-    case outcome of
-        None ->
-            attributes
-
-        Warning warn ->
-            attributes ++ [ attribute "bubblegum-warn" warn ]
-
-        Valid success ->
-            attributes ++ [ ifSuccess success ]
 
 
 getContent : SettingsEntity.Model -> Outcome String

@@ -6,10 +6,10 @@ module Bubblegum.TextArea.BulmaHelper exposing (..)
 
 -}
 
+import Bubblegum.Entity.Outcome as Outcome exposing (..)
 import Html exposing (..)
-import Html.Attributes exposing (..)
+import Html.Attributes as Attributes exposing (..)
 import List
-import Maybe
 import String exposing (join, lines, words)
 import Tuple exposing (first, second)
 
@@ -18,6 +18,32 @@ type alias StyledText =
     { text : String
     , style : String
     }
+
+
+appendHtmlIfSuccess : (a -> Html.Html msg) -> Outcome a -> List (Html.Html msg) -> List (Html.Html msg)
+appendHtmlIfSuccess ifSuccess outcome htmlList =
+    case outcome of
+        None ->
+            htmlList
+
+        Warning warn ->
+            htmlList ++ [ div [ Attributes.class "is-not-invisible" ] [ text warn ] ]
+
+        Valid success ->
+            htmlList ++ [ ifSuccess success ]
+
+
+appendAttributeIfSuccess : (a -> Attribute msg) -> Outcome a -> List (Attribute msg) -> List (Attribute msg)
+appendAttributeIfSuccess ifSuccess outcome attributes =
+    case outcome of
+        None ->
+            attributes
+
+        Warning warn ->
+            attributes ++ [ attribute "data-bubblegum-warn" warn ]
+
+        Valid success ->
+            attributes ++ [ ifSuccess success ]
 
 
 styleTextInt : Int -> String -> StyledText
@@ -44,7 +70,7 @@ asClass3 a b c =
 
 progressBar : ( String, String ) -> Html msg
 progressBar tuple =
-    progress [ second tuple |> asClass3 "progress" "is-small", Html.Attributes.max "100", first tuple |> value ]
+    progress [ second tuple |> asClass3 "progress" "is-small", Attributes.max "100", first tuple |> value ]
         [ text (first tuple ++ "%") ]
 
 
@@ -64,6 +90,9 @@ tag tagInfo =
 
 tags : List (Html msg) -> Html msg
 tags list =
-    div [ class "control" ]
-        [ div [ class "tags has-addons" ] list
-        ]
+    div [ class "tags has-addons" ] list
+
+
+groupFields : List (Html msg) -> Html msg
+groupFields list =
+    div [ class "field is-grouped is-grouped-multiline" ] list

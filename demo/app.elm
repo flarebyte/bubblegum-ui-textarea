@@ -22,6 +22,7 @@ import WidgetBuilder exposing (viewWidget)
 import WidgetDoc exposing (..)
 
 
+main : Program Never AppModel AppMsg
 main =
     Html.beginnerProgram
         { model = AppModel.reset

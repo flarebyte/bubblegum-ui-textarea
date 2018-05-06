@@ -9,7 +9,6 @@ module Bubblegum.TextArea.Widget exposing (view)
 import Bubblegum.Entity.Outcome as Outcome exposing (..)
 import Bubblegum.Entity.SettingsEntity as SettingsEntity
 import Bubblegum.Entity.StateEntity as StateEntity
-import Bubblegum.Entity.Validation as Validation
 import Bubblegum.TextArea.Adapter as TextAreaAdapter
 import Bubblegum.TextArea.BulmaHelper exposing (..)
 import Bubblegum.TextArea.Helper exposing (..)
@@ -27,8 +26,8 @@ import Tuple exposing (first, second)
 -}
 
 
-textWordProgressBar : TextAreaAdapter.Model msg -> SettingsEntity.Model -> SettingsEntity.Model -> StateEntity.Model -> Html msg
-textWordProgressBar adapter userSettings settings state =
+displayTextInfo : TextAreaAdapter.Model msg -> SettingsEntity.Model -> SettingsEntity.Model -> StateEntity.Model -> Html msg
+displayTextInfo adapter userSettings settings state =
     let
         userLanguage =
             getUserLanguageOrEnglish userSettings
@@ -36,95 +35,99 @@ textWordProgressBar adapter userSettings settings state =
         optSuccessWordRange =
             getSuccessWordRange settings
 
-        hasWordTarget =
-            optSuccessWordRange |> Outcome.isValid
-
         optDangerWordRange =
             getDangerWordRange settings
 
-        contentWordLength =
-            getContent state |> Outcome.map numberOfWords
-
-        labelForWord =
-            contentWordLength |> Outcome.map (translateWord userLanguage) |> Outcome.toMaybe |> Maybe.withDefault ""
-
-        contentWithinSuccessRange =
-            Outcome.map2 successRange contentWordLength optSuccessWordRange
-
-        contentWithinDangerRange =
-            Outcome.map2 dangerRange contentWordLength optDangerWordRange
-
-        themeBasedOnRange =
-            Outcome.or
-                (contentWithinSuccessRange |> Outcome.checkOrNone identity |> Outcome.trueMapToConstant "is-success")
-                (contentWithinDangerRange |> Outcome.checkOrNone identity |> Outcome.trueMapToConstant "is-danger")
-                |> Outcome.withDefault "is-info"
-
-        contentSuccessRatio =
-            Outcome.map2 successRatio contentWordLength optSuccessWordRange
-
-        ratioAndStatus =
-            Outcome.map2 tupleify contentSuccessRatio themeBasedOnRange
-
-        contentWordLengthAndStatus =
-            Outcome.map2 styleTextInt contentWordLength themeBasedOnRange
-
-        -- optional html to display
-        addTagTheme =
-            appendAttributeIfSuccess class (themeBasedOnRange |> Validation.addStringPrefix "tag ")
-
-        addProgressBar =
-            appendIfSuccess progressBar ratioAndStatus
-
-        addContentLength =
-            -- appendIfSuccess (\v -> text (toString v)) contentWordLength
-            appendIfSuccess tag contentWordLengthAndStatus
-
-        addTargetLength =
-            appendIfSuccess (\tuple -> tag { text = first tuple |> toString, style = "is-dark" }) optSuccessWordRange
-
-        addLabelForWord =
-            flip (++) [ tag { text = labelForWord, style = "is-light" } ]
-    in
-    div [] 
-        <| List.singleton <| tags 
-        <| ([] |> addContentLength |> addTargetLength |> addLabelForWord)
-
-
-
--- |> addProgressBar
-
-
-displayCharsProgress : TextAreaAdapter.Model msg -> SettingsEntity.Model -> SettingsEntity.Model -> StateEntity.Model -> Html msg
-displayCharsProgress adapter userSettings settings state =
-    let
         optSuccessCharRange =
             getSuccessCharRange settings
 
         optDangerCharRange =
             getDangerCharRange settings
 
-        contentLength =
+        contentWordLength =
+            getContent state |> Outcome.map numberOfWords
+
+        contentCharLength =
             getContent state |> Outcome.map String.length
 
-        appendContentLength =
-            appendIfSuccess (\v -> text (toString v)) contentLength
+        labelForWord =
+            contentWordLength |> Outcome.map (translateWord userLanguage) |> Outcome.toMaybe |> Maybe.withDefault ""
+
+        contentWordWithinSuccessRange =
+            Outcome.map2 successRange contentWordLength optSuccessWordRange
+
+        contentWordWithinDangerRange =
+            Outcome.map2 dangerRange contentWordLength optDangerWordRange
+
+        contentCharWithinSuccessRange =
+            Outcome.map2 successRange contentCharLength optSuccessCharRange
+
+        contentCharWithinDangerRange =
+            Outcome.map2 dangerRange contentCharLength optDangerCharRange
+
+        themeWordBasedOnRange =
+            Outcome.or
+                (contentWordWithinSuccessRange |> Outcome.checkOrNone identity |> Outcome.trueMapToConstant "is-success")
+                (contentWordWithinDangerRange |> Outcome.checkOrNone identity |> Outcome.trueMapToConstant "is-danger")
+                |> Outcome.withDefault "is-info"
+
+        themeCharBasedOnRange =
+            Outcome.or
+                (contentCharWithinSuccessRange |> Outcome.checkOrNone identity |> Outcome.trueMapToConstant "is-success")
+                (contentCharWithinDangerRange |> Outcome.checkOrNone identity |> Outcome.trueMapToConstant "is-danger")
+                |> Outcome.withDefault "is-info"
+
+        contentWordSuccessRatio =
+            Outcome.map2 successRatio contentWordLength optSuccessWordRange
+
+        contentCharSuccessRatio =
+            Outcome.map2 successRatio contentCharLength optSuccessWordRange
+
+        wordRatioAndStatus =
+            Outcome.map2 tupleify contentWordSuccessRatio themeWordBasedOnRange
+
+        charRatioAndStatus =
+            Outcome.map2 tupleify contentCharSuccessRatio themeCharBasedOnRange
+
+        wordLengthAndStatus =
+            Outcome.map2 styleTextInt contentWordLength themeWordBasedOnRange
+
+        charLengthAndStatus =
+            Outcome.map2 styleTextInt contentCharLength themeCharBasedOnRange
+
+        -- optional html to display
+        -- Char counter
+        addCharContentLength =
+            appendHtmlIfSuccess tag charLengthAndStatus
+
+        addCharTargetLength =
+            appendHtmlIfSuccess (\tuple -> tag { text = first tuple |> toString, style = "is-dark" }) optSuccessCharRange
+
+        addCharProgressBar =
+            appendHtmlIfSuccess progressBar charRatioAndStatus
+
+        addCharInfo =
+            tags <| ([] |> addCharContentLength |> addCharTargetLength)
+
+        -- Word counter
+        addWordContentLength =
+            appendHtmlIfSuccess tag wordLengthAndStatus
+
+        addWordTargetLength =
+            appendHtmlIfSuccess (\tuple -> tag { text = first tuple |> toString, style = "is-dark" }) optSuccessWordRange
+
+        addWordProgressBar =
+            appendHtmlIfSuccess progressBar wordRatioAndStatus
+
+        addLabelForWord =
+            flip (++) [ tag { text = labelForWord, style = "is-light" } ]
+
+        addWordInfo =
+            tags <| ([] |> addWordContentLength |> addWordTargetLength |> addLabelForWord)
     in
-    div [ class "control" ]
-        [ div [ class "tags has-addons" ]
-            [ span [ class "tag is-info" ]
-                (appendContentLength [])
-            , span [ class "tag is-dark" ]
-                [ text "/ 200" ]
-            ]
-        ]
-
-
-displayTextInfo : TextAreaAdapter.Model msg -> SettingsEntity.Model -> SettingsEntity.Model -> StateEntity.Model -> Html msg
-displayTextInfo adapter userSettings settings state =
-    div [ class "field is-grouped is-grouped-multiline" ]
-        [ displayCharsProgress adapter userSettings settings state
-        , textWordProgressBar adapter userSettings settings state
+    groupFields
+        [ div [ class "control" ] (addWordInfo |> List.singleton |> addWordProgressBar)
+        , div [ class "control" ] (addCharInfo |> List.singleton |> addCharProgressBar)
         ]
 
 
