@@ -159,12 +159,20 @@ englishSummaryRightToLeftEditing =
     "Right to left editing support"
 
 
-ui_editingLanguage =
-    "ui:editing-language"
+ui_userLanguage =
+    "ui:user-language"
 
 
-englishSummaryEditingLanguage =
-    "Language used by the editor"
+englishSummaryUserLanguage =
+    "Language used by the user"
+
+
+ui_contentLanguage =
+    "ui:content-language"
+
+
+englishSummaryContentLanguage =
+    "Language of the content"
 
 
 ui_keyboardShortcutsActive =

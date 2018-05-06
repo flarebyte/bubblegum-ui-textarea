@@ -47,11 +47,23 @@ progressBar tuple =
         [ text (first tuple ++ "%") ]
 
 
+tagWithIcon : String -> String -> String -> String -> Html msg
+tagWithIcon tagName tagStyle iconName iconStyle =
+    div [ class "tags has-addons" ]
+        [ span [ class ("tag " ++ tagStyle) ]
+            [ text tagName ]
+        , span [ class ("icon " ++ iconStyle) ]
+            [ i [ class ("fas " ++ iconName) ]
+                []
+            ]
+        ]
+
+
 textWordProgressBar : TextAreaAdapter.Model msg -> SettingsEntity.Model -> SettingsEntity.Model -> StateEntity.Model -> Html msg
 textWordProgressBar adapter userSettings settings state =
     let
-        editingLanguage =
-            getEditingLanguageOrEnglish userSettings
+        userLanguage =
+            getUserLanguageOrEnglish userSettings
 
         optSuccessWordRange =
             getSuccessWordRange settings
@@ -66,7 +78,7 @@ textWordProgressBar adapter userSettings settings state =
             getContent state |> Outcome.map (\c -> String.words c |> List.length)
 
         labelForWord =
-            contentWordLength |> Outcome.map (translateWord editingLanguage) |> Outcome.toMaybe |> Maybe.withDefault ""
+            contentWordLength |> Outcome.map (translateWord userLanguage) |> Outcome.toMaybe |> Maybe.withDefault ""
 
         contentWithinSuccessRange =
             Outcome.map2 successRange contentWordLength optSuccessWordRange
@@ -98,7 +110,7 @@ textWordProgressBar adapter userSettings settings state =
             appendIfSuccess (\v -> text (toString v)) (contentWordLength |> Debug.log "contentWordLength")
 
         addTargetLength =
-            appendIfSuccess (\tuple -> span [ class "tag is-dark" ] [ text (first tuple |> toString) ]) optSuccessWordRange
+            appendIfSuccess (\tuple -> tagWithIcon (first tuple |> toString) "tag is-dark" "fa-bullseye" "has-text-info") optSuccessWordRange
     in
     div []
         [ div [ class "control" ]

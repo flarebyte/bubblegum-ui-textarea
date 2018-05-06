@@ -24,7 +24,8 @@ textAreaWidgetDoc : WidgetDoc
 textAreaWidgetDoc =
     { meta = WidgetPackageJson.meta
     , userSettings =
-        [ createKey ui_editingLanguage ZeroOrOne [ "en-GB", "ja", "ar", "unknown" ] englishSummaryEditingLanguage
+        [ createKey ui_userLanguage ZeroOrOne [ "en-GB", "ja", "ar", "unknown" ] englishSummaryUserLanguage
+        , createKey ui_contentLanguage ZeroOrOne [ "en-GB", "ja", "ar", "unknown" ] englishSummaryContentLanguage
         , createKey ui_rightToLeftEditing ZeroOrOne [ "false", "true", "unknown" ] englishSummaryRightToLeftEditing
         , createKey ui_keyboardShortcutsActive ZeroOrOne [ "false", "true", "unknown" ] englishSummaryKeyboardShortcutsActive
         , createKey ui_audioDescriptionActive ZeroOrOne [ "false", "true", "unknown" ] englishSummaryAudioDescriptionActive
