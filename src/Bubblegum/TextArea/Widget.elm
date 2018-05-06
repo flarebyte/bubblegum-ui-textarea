@@ -66,6 +66,9 @@ textWordProgressBar adapter userSettings settings state =
         ratioAndStatus =
             Outcome.map2 tupleify contentSuccessRatio themeBasedOnRange
 
+        contentWordLengthAndStatus =
+            Outcome.map2 styleTextInt contentWordLength themeBasedOnRange
+
         -- optional html to display
         addTagTheme =
             appendAttributeIfSuccess class (themeBasedOnRange |> Validation.addStringPrefix "tag ")
@@ -74,19 +77,22 @@ textWordProgressBar adapter userSettings settings state =
             appendIfSuccess progressBar ratioAndStatus
 
         addContentLength =
-            appendIfSuccess (\v -> text (toString v)) contentWordLength
+            -- appendIfSuccess (\v -> text (toString v)) contentWordLength
+            appendIfSuccess tag contentWordLengthAndStatus
 
         addTargetLength =
             appendIfSuccess (\tuple -> tag { text = first tuple |> toString, style = "is-dark" }) optSuccessWordRange
+
+        addLabelForWord =
+            flip (++) [ tag { text = labelForWord, style = "is-light" } ]
     in
     div []
         [ div [ class "control" ]
             ([ div [ class "tags has-addons" ]
-                ([ span ([] |> addTagTheme)
-                    (addContentLength [])
-                 ]
+                ([]
+                    |> addContentLength
                     |> addTargetLength
-                    |> flip (++) [ span [ class "tag is-light" ] [ " " ++ labelForWord |> text ] ]
+                    |> addLabelForWord
                 )
              ]
                 |> addProgressBar

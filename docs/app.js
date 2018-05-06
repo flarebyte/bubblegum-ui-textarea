@@ -9658,6 +9658,13 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$progressBar 
 			_1: {ctor: '[]'}
 		});
 };
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$styleTextInt = F2(
+	function (number, status) {
+		return {
+			text: _elm_lang$core$Basics$toString(number),
+			style: status
+		};
+	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$StyledText = F2(
 	function (a, b) {
 		return {text: a, style: b};
@@ -10025,13 +10032,6 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$textWordProgressB
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map,
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$numberOfWords,
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getContent(state));
-		var addContentLength = A2(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$appendIfSuccess,
-			function (v) {
-				return _elm_lang$html$Html$text(
-					_elm_lang$core$Basics$toString(v));
-			},
-			contentWordLength);
 		var optDangerWordRange = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getDangerWordRange(settings);
 		var contentWithinDangerRange = A3(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$dangerRange, contentWordLength, optDangerWordRange);
 		var optSuccessWordRange = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getSuccessWordRange(settings);
@@ -10050,6 +10050,8 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$textWordProgressB
 					_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$trueMapToConstant,
 					'is-danger',
 					A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$checkOrNone, _elm_lang$core$Basics$identity, contentWithinDangerRange))));
+		var contentWordLengthAndStatus = A3(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$styleTextInt, contentWordLength, themeBasedOnRange);
+		var addContentLength = A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$appendIfSuccess, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tag, contentWordLengthAndStatus);
 		var addTagTheme = A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$appendAttributeIfSuccess,
 			_elm_lang$html$Html_Attributes$class,
@@ -10077,6 +10079,18 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$textWordProgressB
 					_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map,
 					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateWord(userLanguage),
 					contentWordLength)));
+		var addLabelForWord = A2(
+			_elm_lang$core$Basics$flip,
+			F2(
+				function (x, y) {
+					return A2(_elm_lang$core$Basics_ops['++'], x, y);
+				}),
+			{
+				ctor: '::',
+				_0: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tag(
+					{text: labelForWord, style: 'is-light'}),
+				_1: {ctor: '[]'}
+			});
 		return A2(
 			_elm_lang$html$Html$div,
 			{ctor: '[]'},
@@ -10099,40 +10113,10 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$textWordProgressB
 									_0: _elm_lang$html$Html_Attributes$class('tags has-addons'),
 									_1: {ctor: '[]'}
 								},
-								A3(
-									_elm_lang$core$Basics$flip,
-									F2(
-										function (x, y) {
-											return A2(_elm_lang$core$Basics_ops['++'], x, y);
-										}),
-									{
-										ctor: '::',
-										_0: A2(
-											_elm_lang$html$Html$span,
-											{
-												ctor: '::',
-												_0: _elm_lang$html$Html_Attributes$class('tag is-light'),
-												_1: {ctor: '[]'}
-											},
-											{
-												ctor: '::',
-												_0: _elm_lang$html$Html$text(
-													A2(_elm_lang$core$Basics_ops['++'], ' ', labelForWord)),
-												_1: {ctor: '[]'}
-											}),
-										_1: {ctor: '[]'}
-									},
+								addLabelForWord(
 									addTargetLength(
-										{
-											ctor: '::',
-											_0: A2(
-												_elm_lang$html$Html$span,
-												addTagTheme(
-													{ctor: '[]'}),
-												addContentLength(
-													{ctor: '[]'})),
-											_1: {ctor: '[]'}
-										}))),
+										addContentLength(
+											{ctor: '[]'})))),
 							_1: {ctor: '[]'}
 						})),
 				_1: {ctor: '[]'}

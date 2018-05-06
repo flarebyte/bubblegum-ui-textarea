@@ -20,6 +20,13 @@ type alias StyledText =
     }
 
 
+styleTextInt : Int -> String -> StyledText
+styleTextInt number status =
+    { text = toString number
+    , style = status
+    }
+
+
 asClass : List String -> Attribute msg
 asClass list =
     List.reverse list |> join " " |> class
@@ -57,4 +64,6 @@ tag tagInfo =
 
 tags : List StyledText -> Html msg
 tags list =
-    list |> List.map tag |> div [ class "tags has-addons" ]
+    list
+        |> List.map tag
+        |> div [ class "tags has-addons" ]
