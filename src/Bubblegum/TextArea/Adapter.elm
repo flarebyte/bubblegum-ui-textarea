@@ -1,4 +1,4 @@
-module Bubblegum.TextAreaAdapter exposing (Model)
+module Bubblegum.TextArea.Adapter exposing (Model)
 
 {-| Setting key
 

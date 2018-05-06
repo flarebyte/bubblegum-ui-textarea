@@ -2,12 +2,12 @@ module Tests exposing (..)
 
 import Test exposing (describe, test, Test)
 import Expect
-import Bubblegum.TextAreaWidget
+import Bubblegum.TextArea.Widget
 
 
 all : Test
 all =
-    describe "TextAreaWidget.view"
+    describe "TextArea.Widget.view"
         [ describe "view" <|
             [ test "do we need unit tests" <|
                 \() ->

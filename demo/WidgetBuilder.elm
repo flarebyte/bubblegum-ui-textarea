@@ -1,18 +1,18 @@
-module WidgetBuilder exposing (viewTextAreaWidget)
+module WidgetBuilder exposing (viewWidget)
 
 import AppModel exposing (AppModel)
 import AppMsg exposing (AppMsg(..))
-import Bubblegum.TextAreaAdapter as TextAreaAdapter
-import Bubblegum.TextAreaWidget as TextAreaWidget
+import Bubblegum.TextArea.Adapter as Adapter
+import Bubblegum.TextArea.Widget as Widget
 import Html exposing (..)
 
 
-adapter : TextAreaAdapter.Model AppMsg
+adapter : Adapter.Model AppMsg
 adapter =
     { onInput = OnInputContent
     }
 
 
-viewTextAreaWidget : AppModel -> Html AppMsg
-viewTextAreaWidget model =
-    TextAreaWidget.view adapter model.userSettings model.settings model.state
+viewWidget : AppModel -> Html AppMsg
+viewWidget model =
+    Widget.view adapter model.userSettings model.settings model.state

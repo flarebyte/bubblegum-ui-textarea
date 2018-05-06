@@ -4,7 +4,7 @@ import AppModel exposing (AppModel, getSettings)
 import AppMsg exposing (AppMsg(..))
 import AttributeDoc exposing (AttributeDoc, Cardinality(..), createKey)
 import Bubblegum.Entity.Attribute exposing (findAttributeFirstValueByKey)
-import Bubblegum.TextAreaVocabulary exposing (..)
+import Bubblegum.TextArea.Vocabulary exposing (..)
 import Debug
 import Html exposing (..)
 import Html.Attributes exposing (..)

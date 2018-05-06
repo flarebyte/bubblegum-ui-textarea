@@ -1,4 +1,4 @@
-module Bubblegum.TextAreaHelper exposing (..)
+module Bubblegum.TextArea.Helper exposing (..)
 
 {-| Setting key
 
@@ -11,7 +11,7 @@ import Bubblegum.Entity.Outcome as Outcome exposing (..)
 import Bubblegum.Entity.SettingsEntity as SettingsEntity
 import Bubblegum.Entity.StateEntity as StateEntity
 import Bubblegum.Entity.Validation as Validation
-import Bubblegum.TextAreaVocabulary exposing (..)
+import Bubblegum.TextArea.Vocabulary exposing (..)
 import Html as Html exposing (Attribute)
 import Html.Attributes as Attributes exposing (attribute)
 import Maybe exposing (..)

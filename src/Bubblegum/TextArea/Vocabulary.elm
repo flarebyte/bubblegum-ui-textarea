@@ -1,4 +1,4 @@
-module Bubblegum.TextAreaVocabulary exposing (..)
+module Bubblegum.TextArea.Vocabulary exposing (..)
 
 {-| Setting key
 

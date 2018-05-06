@@ -14,11 +14,11 @@ import AppMsg exposing (AppMsg(..))
 import Bubblegum.Entity.Attribute exposing (deleteAttributeByKey, replaceAttributeByKey)
 import Bubblegum.Entity.SettingsEntity as SettingsEntity
 import Bubblegum.Entity.StateEntity as StateEntity
-import Bubblegum.TextAreaVocabulary exposing (..)
+import Bubblegum.TextArea.Vocabulary exposing (..)
 import Debug
 import Html exposing (..)
 import Html.Attributes exposing (..)
-import WidgetBuilder exposing (viewTextAreaWidget)
+import WidgetBuilder exposing (viewWidget)
 import WidgetDoc exposing (..)
 
 
@@ -64,7 +64,7 @@ view model =
         , div [ class "container" ] [ p [] [ text " ... " ] ]
         , div [ class "columns" ]
             [ div [ class "column is-three-fifths" ]
-                [ viewTextAreaWidget model ]
+                [ viewWidget model ]
             , div [ class "column" ]
                 [ viewSettings model ]
             ]

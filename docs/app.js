@@ -8848,56 +8848,56 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_StateEntity$Model = functi
 	return {attributes: a};
 };
 
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryAccessibilityNoKeyboard = 'The user does not use a keyboard';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_accessibilityNoKeyboard = 'ui:accessibility-no-keyboard';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryAccessibilityLargeText = 'Large text is preferred whenever possible';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_accessibilityLargeText = 'ui:accessibility-large-text';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryAccessibilityHighContrastActive = 'High contrast is preferred whenever possible';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_accessibilityHighContrastActive = 'ui:accessibility-high-contrast-active';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryAudioDescriptionActive = 'Play audio description when available';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_audioDescriptionActive = 'ui:audio-description-active';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryKeyboardShortcutsActive = 'Shortcuts for the keyboard are active';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_keyboardShortcutsActive = 'ui:keyboard-shortcuts-active';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryContentLanguage = 'Language of the content';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_contentLanguage = 'ui:content-language';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryUserLanguage = 'Language used by the user';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_userLanguage = 'ui:user-language';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryRightToLeftEditing = 'Right to left editing support';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_rightToLeftEditing = 'ui:right-to-left-editing';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryContent = 'The content of the input';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_content = 'ui:content';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryDisable = 'The input is disabled';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_disabled = 'ui:disabled';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryReadOnly = 'The input can only be read';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_readOnly = 'ui:read-only';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryInputState = 'The possible states for an input';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_inputState = 'ui:input-state';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryInputSize = 'The size on screen of an input';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_inputSize = 'ui:input-size';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryIcon = 'An icon to be displayed alongside an input';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_icon = 'ui:icon';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryHelp = 'Some help tip related to an input';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_help = 'ui:help';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryLabel = 'The label related to an input';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_label = 'ui:label';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryPlaceholder = 'A placeholder to be display in the input';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_placeholder = 'ui:placeholder';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryDangerMaxWords = 'The maximum number of words for a successful contribution';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_dangerMaxWords = 'ui:danger-maximum-words';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryDangerMinWords = 'The number of words at which a contribution is too brief';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_dangerMinWords = 'ui:danger-minimum-words';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummarySuccessMaxWords = 'The maximum number of words for a successful contribution';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_successMaxWords = 'ui:success-maximum-words';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummarySuccessMinWords = 'The minimum number of words for a successful contribution';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_successMinWords = 'ui:success-minimum-words';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryDangerMaxChars = 'The number of chars at which a contribution starts to become too exhaustive';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_dangerMaxChars = 'ui:danger-maximum-chars';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryDangerMinChars = 'The number of chars at which a contribution is too brief';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_dangerMinChars = 'ui:danger-minimum-chars';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummarySuccessMaxChars = 'The maximum number of chars for a successful contribution';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_successMaxChars = 'ui:success-maximum-chars';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummarySuccessMinChars = 'The minimum number of chars for a successful contribution';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_successMinChars = 'ui:success-minimum-chars';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryAccessibilityNoKeyboard = 'The user does not use a keyboard';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_accessibilityNoKeyboard = 'ui:accessibility-no-keyboard';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryAccessibilityLargeText = 'Large text is preferred whenever possible';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_accessibilityLargeText = 'ui:accessibility-large-text';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryAccessibilityHighContrastActive = 'High contrast is preferred whenever possible';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_accessibilityHighContrastActive = 'ui:accessibility-high-contrast-active';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryAudioDescriptionActive = 'Play audio description when available';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_audioDescriptionActive = 'ui:audio-description-active';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryKeyboardShortcutsActive = 'Shortcuts for the keyboard are active';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_keyboardShortcutsActive = 'ui:keyboard-shortcuts-active';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryContentLanguage = 'Language of the content';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentLanguage = 'ui:content-language';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryUserLanguage = 'Language used by the user';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_userLanguage = 'ui:user-language';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryRightToLeftEditing = 'Right to left editing support';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_rightToLeftEditing = 'ui:right-to-left-editing';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryContent = 'The content of the input';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_content = 'ui:content';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryDisable = 'The input is disabled';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_disabled = 'ui:disabled';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryReadOnly = 'The input can only be read';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_readOnly = 'ui:read-only';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryInputState = 'The possible states for an input';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_inputState = 'ui:input-state';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryInputSize = 'The size on screen of an input';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_inputSize = 'ui:input-size';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryIcon = 'An icon to be displayed alongside an input';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_icon = 'ui:icon';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryHelp = 'Some help tip related to an input';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_help = 'ui:help';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryLabel = 'The label related to an input';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_label = 'ui:label';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryPlaceholder = 'A placeholder to be display in the input';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_placeholder = 'ui:placeholder';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryDangerMaxWords = 'The maximum number of words for a successful contribution';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMaxWords = 'ui:danger-maximum-words';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryDangerMinWords = 'The number of words at which a contribution is too brief';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMinWords = 'ui:danger-minimum-words';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummarySuccessMaxWords = 'The maximum number of words for a successful contribution';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMaxWords = 'ui:success-maximum-words';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummarySuccessMinWords = 'The minimum number of words for a successful contribution';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMinWords = 'ui:success-minimum-words';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryDangerMaxChars = 'The number of chars at which a contribution starts to become too exhaustive';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMaxChars = 'ui:danger-maximum-chars';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryDangerMinChars = 'The number of chars at which a contribution is too brief';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMinChars = 'ui:danger-minimum-chars';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummarySuccessMaxChars = 'The maximum number of chars for a successful contribution';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMaxChars = 'ui:success-maximum-chars';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummarySuccessMinChars = 'The minimum number of chars for a successful contribution';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMinChars = 'ui:success-minimum-chars';
 
 var _flarebyte$bubblegum_ui_textarea$Ipsum$ipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mauris dolor, suscipit at nulla a, molestie scelerisque lectus. Nullam quis leo a felis auctor mollis ac vel turpis. Praesent eleifend ut sem et hendrerit. Vivamus sagittis tortor ipsum, eu suscipit lectus accumsan a. Vivamus elit ante, ornare vitae sem at, ornare eleifend nibh. Mauris venenatis nunc sit amet leo aliquam, in ornare quam vehicula. Morbi consequat ante sed felis semper egestas. Donec efficitur suscipit ipsum vitae ultrices. Quisque eget vehicula odio. Aliquam vitae posuere mauris. Nulla ac pulvinar felis. Integer odio libero, vulputate in erat in, tristique cursus erat.';
 
@@ -8911,7 +8911,7 @@ var _flarebyte$bubblegum_ui_textarea$AppModel$reset = {
 	state: {
 		attributes: A3(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$replaceAttributeByKey,
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_content,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_content,
 			{
 				ctor: '::',
 				_0: A2(
@@ -8988,7 +8988,7 @@ var _flarebyte$bubblegum_ui_textarea$AppMsg$OnInputContent = function (a) {
 	return {ctor: 'OnInputContent', _0: a};
 };
 
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaAdapter$Model = function (a) {
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Adapter$Model = function (a) {
 	return {onInput: a};
 };
 
@@ -9544,7 +9544,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asSingle = func
 			outcome));
 };
 
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$appendAttributeIfSuccess = F3(
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$appendAttributeIfSuccess = F3(
 	function (ifSuccess, outcome, attributes) {
 		var _p0 = outcome;
 		switch (_p0.ctor) {
@@ -9570,7 +9570,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$appendAttributeIfS
 					});
 		}
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$appendIfSuccess = F3(
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$appendIfSuccess = F3(
 	function (ifSuccess, outcome, htmlList) {
 		var _p1 = outcome;
 		switch (_p1.ctor) {
@@ -9607,12 +9607,12 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$appendIfSuccess = 
 					});
 		}
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$findString = F2(
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$findString = F2(
 	function (key, attributes) {
 		return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asSingle(
 			A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findOutcomeByKey, key, attributes));
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getInputSize = function (settings) {
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getInputSize = function (settings) {
 	return A2(
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$matchEnum,
 		{
@@ -9628,9 +9628,9 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getInputSize = fun
 				}
 			}
 		},
-		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_inputSize, settings.attributes));
+		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_inputSize, settings.attributes));
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getInputState = function (state) {
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getInputState = function (state) {
 	return A2(
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$matchEnum,
 		{
@@ -9646,17 +9646,17 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getInputState = fu
 				}
 			}
 		},
-		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_inputState, state.attributes));
+		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_inputState, state.attributes));
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$isReadOnly = function (state) {
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$isReadOnly = function (state) {
 	return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asBool(
-		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_readOnly, state.attributes));
+		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_readOnly, state.attributes));
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$isDisabled = function (state) {
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$isDisabled = function (state) {
 	return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asBool(
-		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_disabled, state.attributes));
+		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_disabled, state.attributes));
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getUserLanguageOrEnglish = function (state) {
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getUserLanguageOrEnglish = function (state) {
 	return A2(
 		_elm_lang$core$Maybe$withDefault,
 		'en-GB',
@@ -9664,9 +9664,9 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getUserLanguageOrE
 			A2(
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange,
 				{ctor: '_Tuple2', _0: 2, _1: 10},
-				A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_userLanguage, state.attributes))));
+				A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_userLanguage, state.attributes))));
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getContentLanguageOrEnglish = function (state) {
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getContentLanguageOrEnglish = function (state) {
 	return A2(
 		_elm_lang$core$Maybe$withDefault,
 		'en-GB',
@@ -9674,96 +9674,96 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getContentLanguage
 			A2(
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange,
 				{ctor: '_Tuple2', _0: 2, _1: 10},
-				A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_userLanguage, state.attributes))));
+				A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_userLanguage, state.attributes))));
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$findIntRange = F2(
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$findIntRange = F2(
 	function (keyTuple, attributes) {
 		return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asIntRange(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asIntTuple(
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asTuple(
 					A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findOutcomeByKeyTuple, keyTuple, attributes))));
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$limit100 = function (value) {
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$limit100 = function (value) {
 	return (_elm_lang$core$Native_Utils.cmp(value, 100) > 0) ? 100 : value;
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$calculateRatio = F2(
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$calculateRatio = F2(
 	function (target, value) {
-		return _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$limit100(
+		return _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$limit100(
 			_elm_lang$core$Basics$round(
 				(_elm_lang$core$Basics$toFloat(value) / _elm_lang$core$Basics$toFloat(target)) * 100));
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$wordRange = {ctor: '_Tuple2', _0: 0, _1: 12000};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getSuccessWordRange = function (settings) {
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$wordRange = {ctor: '_Tuple2', _0: 0, _1: 12000};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getSuccessWordRange = function (settings) {
 	return A2(
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinIntRange,
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$wordRange,
+		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$wordRange,
 		A2(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$findIntRange,
-			{ctor: '_Tuple2', _0: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_successMinWords, _1: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_successMaxWords},
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$findIntRange,
+			{ctor: '_Tuple2', _0: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMinWords, _1: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMaxWords},
 			settings.attributes));
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getDangerWordRange = function (settings) {
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getDangerWordRange = function (settings) {
 	return A2(
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinIntRange,
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$wordRange,
+		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$wordRange,
 		A2(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$findIntRange,
-			{ctor: '_Tuple2', _0: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_dangerMinWords, _1: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_dangerMaxWords},
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$findIntRange,
+			{ctor: '_Tuple2', _0: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMinWords, _1: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMaxWords},
 			settings.attributes));
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$charRange = {ctor: '_Tuple2', _0: 0, _1: 60000};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getSuccessCharRange = function (settings) {
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$charRange = {ctor: '_Tuple2', _0: 0, _1: 60000};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getSuccessCharRange = function (settings) {
 	return A2(
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinIntRange,
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$charRange,
+		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$charRange,
 		A2(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$findIntRange,
-			{ctor: '_Tuple2', _0: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_successMinChars, _1: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_successMaxChars},
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$findIntRange,
+			{ctor: '_Tuple2', _0: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMinChars, _1: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMaxChars},
 			settings.attributes));
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getDangerCharRange = function (settings) {
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getDangerCharRange = function (settings) {
 	return A2(
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinIntRange,
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$charRange,
+		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$charRange,
 		A2(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$findIntRange,
-			{ctor: '_Tuple2', _0: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_dangerMinChars, _1: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_dangerMaxChars},
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$findIntRange,
+			{ctor: '_Tuple2', _0: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMinChars, _1: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMaxChars},
 			settings.attributes));
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getContent = function (state) {
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getContent = function (state) {
 	return A2(
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange,
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$charRange,
-		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_content, state.attributes));
+		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$charRange,
+		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_content, state.attributes));
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$keywordCharRange = {ctor: '_Tuple2', _0: 1, _1: 30};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getIcon = function (settings) {
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$keywordCharRange = {ctor: '_Tuple2', _0: 1, _1: 30};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getIcon = function (settings) {
 	return A2(
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange,
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$keywordCharRange,
-		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_icon, settings.attributes));
+		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$keywordCharRange,
+		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_icon, settings.attributes));
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$titleCharRange = {ctor: '_Tuple2', _0: 1, _1: 70};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getPlaceholder = function (settings) {
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$titleCharRange = {ctor: '_Tuple2', _0: 1, _1: 70};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getPlaceholder = function (settings) {
 	return A2(
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange,
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$titleCharRange,
-		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_placeholder, settings.attributes));
+		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$titleCharRange,
+		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_placeholder, settings.attributes));
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getLabel = function (settings) {
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getLabel = function (settings) {
 	return A2(
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange,
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$titleCharRange,
-		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_label, settings.attributes));
+		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$titleCharRange,
+		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_label, settings.attributes));
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getHelp = function (settings) {
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getHelp = function (settings) {
 	return A2(
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange,
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$titleCharRange,
-		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_help, settings.attributes));
+		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$titleCharRange,
+		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_help, settings.attributes));
 };
 
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaInternationalization$translateWord = F2(
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateWord = F2(
 	function (language, howMany) {
 		var pickTranslation = function (singularOrPlural) {
 			return (_elm_lang$core$Native_Utils.cmp(howMany, 2) < 0) ? _elm_lang$core$Tuple$first(singularOrPlural) : _elm_lang$core$Tuple$second(singularOrPlural);
@@ -9801,21 +9801,30 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaInternationalization$tran
 		}
 	});
 
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$displayCharsProgress = F4(
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$calculateRows = function (content) {
+	var numberOfChars = _elm_lang$core$String$length(content);
+	var numberOfAvgLines = (numberOfChars / 80) | 0;
+	var carriageReturns = _elm_lang$core$List$length(
+		_elm_lang$core$String$lines(content));
+	var numberOfLines = (carriageReturns + numberOfAvgLines) + 1;
+	return _elm_lang$core$Basics$toString(
+		(_elm_lang$core$Native_Utils.cmp(numberOfLines, 40) < 0) ? numberOfLines : 40);
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayCharsProgress = F4(
 	function (adapter, userSettings, settings, state) {
 		var contentLength = A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map,
 			_elm_lang$core$String$length,
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getContent(state));
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getContent(state));
 		var appendContentLength = A2(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$appendIfSuccess,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$appendIfSuccess,
 			function (v) {
 				return _elm_lang$html$Html$text(
 					_elm_lang$core$Basics$toString(v));
 			},
 			contentLength);
-		var optDangerCharRange = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getDangerCharRange(settings);
-		var optSuccessCharRange = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getSuccessCharRange(settings);
+		var optDangerCharRange = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getDangerCharRange(settings);
+		var optSuccessCharRange = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getSuccessCharRange(settings);
 		return A2(
 			_elm_lang$html$Html$div,
 			{
@@ -9863,7 +9872,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$displayCha
 				_1: {ctor: '[]'}
 			});
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$tagWithIcon = F4(
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$tagWithIcon = F4(
 	function (tagName, tagStyle, iconName, iconStyle) {
 		return A2(
 			_elm_lang$html$Html$div,
@@ -9914,7 +9923,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$tagWithIco
 				}
 			});
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$progressBar = function (tuple) {
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$progressBar = function (tuple) {
 	return A2(
 		_elm_lang$html$Html$progress,
 		{
@@ -9945,19 +9954,19 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$progressBa
 			_1: {ctor: '[]'}
 		});
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$tupleify = F2(
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$tupleify = F2(
 	function (a, b) {
 		return {ctor: '_Tuple2', _0: a, _1: b};
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$successRatio = F2(
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$successRatio = F2(
 	function (size, range) {
 		return _elm_lang$core$Basics$toString(
 			A2(
-				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$calculateRatio,
+				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$calculateRatio,
 				_elm_lang$core$Tuple$first(range),
 				size));
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$successRange = F2(
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$successRange = F2(
 	function (size, range) {
 		return (_elm_lang$core$Native_Utils.cmp(
 			size,
@@ -9965,11 +9974,11 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$successRan
 			size,
 			_elm_lang$core$Tuple$second(range)) < 0);
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$dangerRange = F2(
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$dangerRange = F2(
 	function (size, range) {
-		return !A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$successRange, size, range);
+		return !A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$successRange, size, range);
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$textWordProgressBar = F4(
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$textWordProgressBar = F4(
 	function (adapter, userSettings, settings, state) {
 		var contentWordLength = A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map,
@@ -9977,19 +9986,19 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$textWordPr
 				return _elm_lang$core$List$length(
 					_elm_lang$core$String$words(c));
 			},
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getContent(state));
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getContent(state));
 		var addContentLength = A2(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$appendIfSuccess,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$appendIfSuccess,
 			function (v) {
 				return _elm_lang$html$Html$text(
 					_elm_lang$core$Basics$toString(v));
 			},
 			A2(_elm_lang$core$Debug$log, 'contentWordLength', contentWordLength));
-		var optDangerWordRange = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getDangerWordRange(settings);
-		var contentWithinDangerRange = A3(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$dangerRange, contentWordLength, optDangerWordRange);
-		var optSuccessWordRange = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getSuccessWordRange(settings);
+		var optDangerWordRange = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getDangerWordRange(settings);
+		var contentWithinDangerRange = A3(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$dangerRange, contentWordLength, optDangerWordRange);
+		var optSuccessWordRange = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getSuccessWordRange(settings);
 		var hasWordTarget = _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$isValid(optSuccessWordRange);
-		var contentWithinSuccessRange = A3(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$successRange, contentWordLength, optSuccessWordRange);
+		var contentWithinSuccessRange = A3(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$successRange, contentWordLength, optSuccessWordRange);
 		var themeBasedOnRange = A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$withDefault,
 			'is-info',
@@ -10013,17 +10022,17 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$textWordPr
 							'is-danger',
 							A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$checkOrNone, _elm_lang$core$Basics$identity, contentWithinDangerRange))))));
 		var addTagTheme = A2(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$appendAttributeIfSuccess,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$appendAttributeIfSuccess,
 			_elm_lang$html$Html_Attributes$class,
 			A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$addStringPrefix, 'tag ', themeBasedOnRange));
-		var contentSuccessRatio = A3(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$successRatio, contentWordLength, optSuccessWordRange);
-		var ratioAndStatus = A3(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$tupleify, contentSuccessRatio, themeBasedOnRange);
-		var addProgressBar = A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$appendIfSuccess, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$progressBar, ratioAndStatus);
+		var contentSuccessRatio = A3(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$successRatio, contentWordLength, optSuccessWordRange);
+		var ratioAndStatus = A3(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$tupleify, contentSuccessRatio, themeBasedOnRange);
+		var addProgressBar = A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$appendIfSuccess, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$progressBar, ratioAndStatus);
 		var addTargetLength = A2(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$appendIfSuccess,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$appendIfSuccess,
 			function (tuple) {
 				return A4(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$tagWithIcon,
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$tagWithIcon,
 					_elm_lang$core$Basics$toString(
 						_elm_lang$core$Tuple$first(tuple)),
 					'tag is-dark',
@@ -10031,14 +10040,14 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$textWordPr
 					'has-text-info');
 			},
 			optSuccessWordRange);
-		var userLanguage = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getUserLanguageOrEnglish(userSettings);
+		var userLanguage = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getUserLanguageOrEnglish(userSettings);
 		var labelForWord = A2(
 			_elm_lang$core$Maybe$withDefault,
 			'',
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$toMaybe(
 				A2(
 					_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map,
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaInternationalization$translateWord(userLanguage),
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateWord(userLanguage),
 					contentWordLength)));
 		return A2(
 			_elm_lang$html$Html$div,
@@ -10101,7 +10110,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$textWordPr
 				_1: {ctor: '[]'}
 			});
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$displayTextInfo = F4(
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayTextInfo = F4(
 	function (adapter, userSettings, settings, state) {
 		return A2(
 			_elm_lang$html$Html$div,
@@ -10112,41 +10121,31 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$displayTex
 			},
 			{
 				ctor: '::',
-				_0: A4(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$displayCharsProgress, adapter, userSettings, settings, state),
+				_0: A4(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayCharsProgress, adapter, userSettings, settings, state),
 				_1: {
 					ctor: '::',
-					_0: A4(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$textWordProgressBar, adapter, userSettings, settings, state),
+					_0: A4(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$textWordProgressBar, adapter, userSettings, settings, state),
 					_1: {ctor: '[]'}
 				}
 			});
 	});
-
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaWidget$calculateRows = function (content) {
-	var numberOfChars = _elm_lang$core$String$length(content);
-	var numberOfAvgLines = (numberOfChars / 80) | 0;
-	var carriageReturns = _elm_lang$core$List$length(
-		_elm_lang$core$String$lines(content));
-	var numberOfLines = (carriageReturns + numberOfAvgLines) + 1;
-	return _elm_lang$core$Basics$toString(
-		(_elm_lang$core$Native_Utils.cmp(numberOfLines, 40) < 0) ? numberOfLines : 40);
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaWidget$view = F4(
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$view = F4(
 	function (adapter, userSettings, settings, state) {
 		var addRows = A2(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$appendAttributeIfSuccess,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$appendAttributeIfSuccess,
 			_elm_lang$html$Html_Attributes$attribute('rows'),
 			A2(
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map,
-				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaWidget$calculateRows,
-				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getContent(state)));
+				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$calculateRows,
+				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getContent(state)));
 		var addValue = A2(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$appendAttributeIfSuccess,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$appendAttributeIfSuccess,
 			_elm_lang$html$Html_Attributes$value,
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getContent(state));
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getContent(state));
 		var addPlaceholder = A2(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$appendAttributeIfSuccess,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$appendAttributeIfSuccess,
 			_elm_lang$html$Html_Attributes$placeholder,
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaHelper$getPlaceholder(settings));
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getPlaceholder(settings));
 		return A2(
 			_elm_lang$html$Html$div,
 			{
@@ -10173,15 +10172,15 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaWidget$view = F4(
 					{ctor: '[]'}),
 				_1: {
 					ctor: '::',
-					_0: A4(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaProgressWidget$displayTextInfo, adapter, userSettings, settings, state),
+					_0: A4(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayTextInfo, adapter, userSettings, settings, state),
 					_1: {ctor: '[]'}
 				}
 			});
 	});
 
 var _flarebyte$bubblegum_ui_textarea$WidgetBuilder$adapter = {onInput: _flarebyte$bubblegum_ui_textarea$AppMsg$OnInputContent};
-var _flarebyte$bubblegum_ui_textarea$WidgetBuilder$viewTextAreaWidget = function (model) {
-	return A4(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaWidget$view, _flarebyte$bubblegum_ui_textarea$WidgetBuilder$adapter, model.userSettings, model.settings, model.state);
+var _flarebyte$bubblegum_ui_textarea$WidgetBuilder$viewWidget = function (model) {
+	return A4(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$view, _flarebyte$bubblegum_ui_textarea$WidgetBuilder$adapter, model.userSettings, model.settings, model.state);
 };
 
 var _flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey = F4(
@@ -10377,7 +10376,7 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 		ctor: '::',
 		_0: A4(
 			_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_userLanguage,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_userLanguage,
 			_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 			{
 				ctor: '::',
@@ -10396,12 +10395,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 					}
 				}
 			},
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryUserLanguage),
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryUserLanguage),
 		_1: {
 			ctor: '::',
 			_0: A4(
 				_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_contentLanguage,
+				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentLanguage,
 				_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 				{
 					ctor: '::',
@@ -10420,12 +10419,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 						}
 					}
 				},
-				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryContentLanguage),
+				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryContentLanguage),
 			_1: {
 				ctor: '::',
 				_0: A4(
 					_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_rightToLeftEditing,
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_rightToLeftEditing,
 					_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 					{
 						ctor: '::',
@@ -10440,12 +10439,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 							}
 						}
 					},
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryRightToLeftEditing),
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryRightToLeftEditing),
 				_1: {
 					ctor: '::',
 					_0: A4(
 						_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-						_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_keyboardShortcutsActive,
+						_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_keyboardShortcutsActive,
 						_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 						{
 							ctor: '::',
@@ -10460,12 +10459,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 								}
 							}
 						},
-						_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryKeyboardShortcutsActive),
+						_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryKeyboardShortcutsActive),
 					_1: {
 						ctor: '::',
 						_0: A4(
 							_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-							_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_audioDescriptionActive,
+							_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_audioDescriptionActive,
 							_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 							{
 								ctor: '::',
@@ -10480,12 +10479,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 									}
 								}
 							},
-							_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryAudioDescriptionActive),
+							_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryAudioDescriptionActive),
 						_1: {
 							ctor: '::',
 							_0: A4(
 								_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-								_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_accessibilityHighContrastActive,
+								_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_accessibilityHighContrastActive,
 								_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 								{
 									ctor: '::',
@@ -10500,12 +10499,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 										}
 									}
 								},
-								_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryAccessibilityHighContrastActive),
+								_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryAccessibilityHighContrastActive),
 							_1: {
 								ctor: '::',
 								_0: A4(
 									_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-									_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_accessibilityLargeText,
+									_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_accessibilityLargeText,
 									_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 									{
 										ctor: '::',
@@ -10520,12 +10519,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 											}
 										}
 									},
-									_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryAccessibilityLargeText),
+									_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryAccessibilityLargeText),
 								_1: {
 									ctor: '::',
 									_0: A4(
 										_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-										_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_accessibilityNoKeyboard,
+										_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_accessibilityNoKeyboard,
 										_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 										{
 											ctor: '::',
@@ -10540,7 +10539,7 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 												}
 											}
 										},
-										_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryAccessibilityNoKeyboard),
+										_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryAccessibilityNoKeyboard),
 									_1: {ctor: '[]'}
 								}
 							}
@@ -10554,7 +10553,7 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 		ctor: '::',
 		_0: A4(
 			_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_successMinChars,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMinChars,
 			_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 			{
 				ctor: '::',
@@ -10573,12 +10572,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 					}
 				}
 			},
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummarySuccessMinChars),
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummarySuccessMinChars),
 		_1: {
 			ctor: '::',
 			_0: A4(
 				_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_successMaxChars,
+				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMaxChars,
 				_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 				{
 					ctor: '::',
@@ -10597,12 +10596,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 						}
 					}
 				},
-				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummarySuccessMaxChars),
+				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummarySuccessMaxChars),
 			_1: {
 				ctor: '::',
 				_0: A4(
 					_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_dangerMinChars,
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMinChars,
 					_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 					{
 						ctor: '::',
@@ -10621,12 +10620,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 							}
 						}
 					},
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryDangerMinChars),
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryDangerMinChars),
 				_1: {
 					ctor: '::',
 					_0: A4(
 						_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-						_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_dangerMaxChars,
+						_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMaxChars,
 						_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 						{
 							ctor: '::',
@@ -10645,12 +10644,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 								}
 							}
 						},
-						_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryDangerMaxChars),
+						_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryDangerMaxChars),
 					_1: {
 						ctor: '::',
 						_0: A4(
 							_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-							_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_successMinWords,
+							_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMinWords,
 							_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 							{
 								ctor: '::',
@@ -10669,12 +10668,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 									}
 								}
 							},
-							_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummarySuccessMinWords),
+							_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummarySuccessMinWords),
 						_1: {
 							ctor: '::',
 							_0: A4(
 								_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-								_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_successMaxWords,
+								_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMaxWords,
 								_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 								{
 									ctor: '::',
@@ -10693,12 +10692,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 										}
 									}
 								},
-								_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummarySuccessMaxWords),
+								_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummarySuccessMaxWords),
 							_1: {
 								ctor: '::',
 								_0: A4(
 									_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-									_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_dangerMinWords,
+									_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMinWords,
 									_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 									{
 										ctor: '::',
@@ -10717,12 +10716,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 											}
 										}
 									},
-									_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryDangerMinWords),
+									_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryDangerMinWords),
 								_1: {
 									ctor: '::',
 									_0: A4(
 										_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-										_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_dangerMaxWords,
+										_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMaxWords,
 										_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 										{
 											ctor: '::',
@@ -10741,12 +10740,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 												}
 											}
 										},
-										_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryDangerMaxWords),
+										_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryDangerMaxWords),
 									_1: {
 										ctor: '::',
 										_0: A4(
 											_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-											_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_placeholder,
+											_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_placeholder,
 											_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 											{
 												ctor: '::',
@@ -10757,12 +10756,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 													_1: {ctor: '[]'}
 												}
 											},
-											_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryPlaceholder),
+											_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryPlaceholder),
 										_1: {
 											ctor: '::',
 											_0: A4(
 												_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-												_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_label,
+												_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_label,
 												_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 												{
 													ctor: '::',
@@ -10777,12 +10776,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 														}
 													}
 												},
-												_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryLabel),
+												_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryLabel),
 											_1: {
 												ctor: '::',
 												_0: A4(
 													_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-													_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_help,
+													_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_help,
 													_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 													{
 														ctor: '::',
@@ -10793,12 +10792,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 															_1: {ctor: '[]'}
 														}
 													},
-													_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryHelp),
+													_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryHelp),
 												_1: {
 													ctor: '::',
 													_0: A4(
 														_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-														_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_icon,
+														_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_icon,
 														_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 														{
 															ctor: '::',
@@ -10809,12 +10808,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 																_1: {ctor: '[]'}
 															}
 														},
-														_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryIcon),
+														_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryIcon),
 													_1: {
 														ctor: '::',
 														_0: A4(
 															_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-															_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_inputSize,
+															_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_inputSize,
 															_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 															{
 																ctor: '::',
@@ -10833,12 +10832,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 																	}
 																}
 															},
-															_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryInputSize),
+															_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryInputSize),
 														_1: {
 															ctor: '::',
 															_0: A4(
 																_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-																_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_inputState,
+																_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_inputState,
 																_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 																{
 																	ctor: '::',
@@ -10857,12 +10856,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 																		}
 																	}
 																},
-																_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryInputState),
+																_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryInputState),
 															_1: {
 																ctor: '::',
 																_0: A4(
 																	_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-																	_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_readOnly,
+																	_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_readOnly,
 																	_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 																	{
 																		ctor: '::',
@@ -10877,7 +10876,7 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 																			}
 																		}
 																	},
-																	_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$englishSummaryReadOnly),
+																	_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryReadOnly),
 																_1: {ctor: '[]'}
 															}
 														}
@@ -11054,7 +11053,7 @@ var _flarebyte$bubblegum_ui_textarea$App$view = function (model) {
 								},
 								{
 									ctor: '::',
-									_0: _flarebyte$bubblegum_ui_textarea$WidgetBuilder$viewTextAreaWidget(model),
+									_0: _flarebyte$bubblegum_ui_textarea$WidgetBuilder$viewWidget(model),
 									_1: {ctor: '[]'}
 								}),
 							_1: {
@@ -11114,7 +11113,7 @@ var _flarebyte$bubblegum_ui_textarea$App$update = F2(
 						model.state,
 						A3(
 							_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$replaceAttributeByKey,
-							_flarebyte$bubblegum_ui_textarea$Bubblegum_TextAreaVocabulary$ui_content,
+							_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_content,
 							{
 								ctor: '::',
 								_0: _p0._0,

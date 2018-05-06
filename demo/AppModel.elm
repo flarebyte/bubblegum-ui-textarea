@@ -3,7 +3,7 @@ module AppModel exposing (..)
 import Bubblegum.Entity.Attribute as Attribute exposing (replaceAttributeByKey)
 import Bubblegum.Entity.SettingsEntity as SettingsEntity
 import Bubblegum.Entity.StateEntity as StateEntity
-import Bubblegum.TextAreaVocabulary exposing (..)
+import Bubblegum.TextArea.Vocabulary exposing (..)
 import Ipsum exposing (ipsum)
 
 

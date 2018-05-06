@@ -1,4 +1,4 @@
-module Bubblegum.TextAreaInternationalization exposing (translateWord)
+module Bubblegum.TextArea.Internationalization exposing (translateWord)
 
 {-| Setting key
 
