@@ -96,3 +96,15 @@ tags list =
 groupFields : List (Html msg) -> Html msg
 groupFields list =
     div [ class "field is-grouped is-grouped-multiline" ] list
+
+
+mainBox : List (Html msg) -> Html msg
+mainBox list =
+    div [ class "box is-marginless is-paddingless is-shadowless has-addons" ]
+        [ div [ class "field" ] list
+        ]
+
+
+widgetLabel : String -> Html msg
+widgetLabel widgetText =
+    label [ class "label" ] [ text widgetText ]

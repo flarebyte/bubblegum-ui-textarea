@@ -151,14 +151,6 @@ englishSummaryContent =
     "The content of the input"
 
 
-ui_rightToLeftEditing =
-    "ui:right-to-left-editing"
-
-
-englishSummaryRightToLeftEditing =
-    "Right to left editing support"
-
-
 ui_userLanguage =
     "ui:user-language"
 
@@ -173,6 +165,22 @@ ui_contentLanguage =
 
 englishSummaryContentLanguage =
     "Language of the content"
+
+
+ui_userRightToLeft =
+    "ui:user-right-to-left"
+
+
+englishSummaryContentRightToLeft =
+    "Right to left is used for the content"
+
+
+ui_contentRightToLeft =
+    "ui:content-right-to-left"
+
+
+englishSummaryUserRightToLeft =
+    "Right to left editing is used by the user"
 
 
 ui_keyboardShortcutsActive =

@@ -105,6 +105,9 @@ displayTextInfo adapter userSettings settings state =
 view : TextAreaAdapter.Model msg -> SettingsEntity.Model -> SettingsEntity.Model -> StateEntity.Model -> Html msg
 view adapter userSettings settings state =
     let
+        optLabel =
+            getLabel settings
+
         addPlaceholder =
             appendAttributeIfSuccess placeholder (getPlaceholder settings)
 
@@ -113,16 +116,23 @@ view adapter userSettings settings state =
 
         addRows =
             appendAttributeIfSuccess (attribute "rows") (getContent state |> Outcome.map calculateRows)
+
+        addLabel =
+            appendHtmlIfSuccess widgetLabel optLabel
     in
-    div [ class "box is-marginless is-paddingless is-shadowless has-addons" ]
-        [ textarea
-            ([ class "textarea is-marginless is-paddingless is-shadowless"
-             , onInput adapter.onInput
-             ]
-                |> addPlaceholder
-                |> addValue
-                |> addRows
-            )
-            []
-        , displayTextInfo adapter userSettings settings state
-        ]
+    mainBox
+        (addLabel []
+            ++ [ div [ class "control" ]
+                    [ textarea
+                        ([ class "textarea is-marginless is-paddingless is-shadowless"
+                         , onInput adapter.onInput
+                         ]
+                            |> addPlaceholder
+                            |> addValue
+                            |> addRows
+                        )
+                        []
+                    , displayTextInfo adapter userSettings settings state
+                    ]
+               ]
+        )

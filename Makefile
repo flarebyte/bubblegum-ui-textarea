@@ -20,7 +20,7 @@ build-directory:
 	mkdir -p $(DOCS)
 
 js:
-	pushd demo && elm-make --warn App.elm --output ../$(DOCS)/app.js
+	pushd demo && elm-make App.elm --output ../$(DOCS)/app.js
 
 test:
 	cd tests && elm-test Main.elm

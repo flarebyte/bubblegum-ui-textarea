@@ -26,7 +26,8 @@ textAreaWidgetDoc =
     , userSettings =
         [ createKey ui_userLanguage ZeroOrOne [ "en-GB", "ja", "ar", "unknown" ] englishSummaryUserLanguage
         , createKey ui_contentLanguage ZeroOrOne [ "en-GB", "ja", "ar", "unknown" ] englishSummaryContentLanguage
-        , createKey ui_rightToLeftEditing ZeroOrOne [ "false", "true", "unknown" ] englishSummaryRightToLeftEditing
+        , createKey ui_userRightToLeft ZeroOrOne [ "false", "true", "unknown" ] englishSummaryUserRightToLeft
+        , createKey ui_contentRightToLeft ZeroOrOne [ "false", "true", "unknown" ] englishSummaryContentRightToLeft
         , createKey ui_keyboardShortcutsActive ZeroOrOne [ "false", "true", "unknown" ] englishSummaryKeyboardShortcutsActive
         , createKey ui_audioDescriptionActive ZeroOrOne [ "false", "true", "unknown" ] englishSummaryAudioDescriptionActive
         , createKey ui_accessibilityHighContrastActive ZeroOrOne [ "false", "true", "unknown" ] englishSummaryAccessibilityHighContrastActive

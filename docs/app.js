@@ -8858,12 +8858,14 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummar
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_audioDescriptionActive = 'ui:audio-description-active';
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryKeyboardShortcutsActive = 'Shortcuts for the keyboard are active';
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_keyboardShortcutsActive = 'ui:keyboard-shortcuts-active';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryUserRightToLeft = 'Right to left editing is used by the user';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentRightToLeft = 'ui:content-right-to-left';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryContentRightToLeft = 'Right to left is used for the content';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_userRightToLeft = 'ui:user-right-to-left';
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryContentLanguage = 'Language of the content';
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentLanguage = 'ui:content-language';
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryUserLanguage = 'Language used by the user';
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_userLanguage = 'ui:user-language';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryRightToLeftEditing = 'Right to left editing support';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_rightToLeftEditing = 'ui:right-to-left-editing';
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryContent = 'The content of the input';
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_content = 'ui:content';
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryDisable = 'The input is disabled';
@@ -8992,6 +8994,41 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Adapter$Model = function
 	return {onInput: a};
 };
 
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$widgetLabel = function (widgetText) {
+	return A2(
+		_elm_lang$html$Html$label,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('label'),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html$text(widgetText),
+			_1: {ctor: '[]'}
+		});
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$mainBox = function (list) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('box is-marginless is-paddingless is-shadowless has-addons'),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$div,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('field'),
+					_1: {ctor: '[]'}
+				},
+				list),
+			_1: {ctor: '[]'}
+		});
+};
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$groupFields = function (list) {
 	return A2(
 		_elm_lang$html$Html$div,
@@ -9812,6 +9849,14 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getContentLanguag
 				{ctor: '_Tuple2', _0: 2, _1: 10},
 				A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_userLanguage, state.attributes))));
 };
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$isUserRightToLeft = function (state) {
+	return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asBool(
+		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_userRightToLeft, state.attributes));
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$isContentRightToLeft = function (state) {
+	return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asBool(
+		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentRightToLeft, state.attributes));
+};
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$findIntRange = F2(
 	function (keyTuple, attributes) {
 		return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asIntRange(
@@ -10130,36 +10175,47 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$view = F4(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendAttributeIfSuccess,
 			_elm_lang$html$Html_Attributes$placeholder,
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getPlaceholder(settings));
-		return A2(
-			_elm_lang$html$Html$div,
-			{
-				ctor: '::',
-				_0: _elm_lang$html$Html_Attributes$class('box is-marginless is-paddingless is-shadowless has-addons'),
-				_1: {ctor: '[]'}
-			},
-			{
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$textarea,
-					addRows(
-						addValue(
-							addPlaceholder(
-								{
-									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$class('textarea is-marginless is-paddingless is-shadowless'),
-									_1: {
-										ctor: '::',
-										_0: _elm_lang$html$Html_Events$onInput(adapter.onInput),
-										_1: {ctor: '[]'}
-									}
-								}))),
+		var optLabel = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getLabel(settings);
+		var addLabel = A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendHtmlIfSuccess, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$widgetLabel, optLabel);
+		return _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$mainBox(
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				addLabel(
 					{ctor: '[]'}),
-				_1: {
+				{
 					ctor: '::',
-					_0: A4(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayTextInfo, adapter, userSettings, settings, state),
+					_0: A2(
+						_elm_lang$html$Html$div,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class('control'),
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$textarea,
+								addRows(
+									addValue(
+										addPlaceholder(
+											{
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$class('textarea is-marginless is-paddingless is-shadowless'),
+												_1: {
+													ctor: '::',
+													_0: _elm_lang$html$Html_Events$onInput(adapter.onInput),
+													_1: {ctor: '[]'}
+												}
+											}))),
+								{ctor: '[]'}),
+							_1: {
+								ctor: '::',
+								_0: A4(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayTextInfo, adapter, userSettings, settings, state),
+								_1: {ctor: '[]'}
+							}
+						}),
 					_1: {ctor: '[]'}
-				}
-			});
+				}));
 	});
 
 var _flarebyte$bubblegum_ui_textarea$WidgetBuilder$adapter = {onInput: _flarebyte$bubblegum_ui_textarea$AppMsg$OnInputContent};
@@ -10408,7 +10464,7 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 				ctor: '::',
 				_0: A4(
 					_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_rightToLeftEditing,
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_userRightToLeft,
 					_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 					{
 						ctor: '::',
@@ -10423,12 +10479,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 							}
 						}
 					},
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryRightToLeftEditing),
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryUserRightToLeft),
 				_1: {
 					ctor: '::',
 					_0: A4(
 						_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-						_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_keyboardShortcutsActive,
+						_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentRightToLeft,
 						_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 						{
 							ctor: '::',
@@ -10443,12 +10499,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 								}
 							}
 						},
-						_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryKeyboardShortcutsActive),
+						_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryContentRightToLeft),
 					_1: {
 						ctor: '::',
 						_0: A4(
 							_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-							_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_audioDescriptionActive,
+							_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_keyboardShortcutsActive,
 							_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 							{
 								ctor: '::',
@@ -10463,12 +10519,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 									}
 								}
 							},
-							_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryAudioDescriptionActive),
+							_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryKeyboardShortcutsActive),
 						_1: {
 							ctor: '::',
 							_0: A4(
 								_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-								_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_accessibilityHighContrastActive,
+								_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_audioDescriptionActive,
 								_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 								{
 									ctor: '::',
@@ -10483,12 +10539,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 										}
 									}
 								},
-								_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryAccessibilityHighContrastActive),
+								_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryAudioDescriptionActive),
 							_1: {
 								ctor: '::',
 								_0: A4(
 									_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-									_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_accessibilityLargeText,
+									_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_accessibilityHighContrastActive,
 									_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 									{
 										ctor: '::',
@@ -10503,12 +10559,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 											}
 										}
 									},
-									_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryAccessibilityLargeText),
+									_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryAccessibilityHighContrastActive),
 								_1: {
 									ctor: '::',
 									_0: A4(
 										_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-										_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_accessibilityNoKeyboard,
+										_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_accessibilityLargeText,
 										_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 										{
 											ctor: '::',
@@ -10523,8 +10579,29 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 												}
 											}
 										},
-										_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryAccessibilityNoKeyboard),
-									_1: {ctor: '[]'}
+										_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryAccessibilityLargeText),
+									_1: {
+										ctor: '::',
+										_0: A4(
+											_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
+											_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_accessibilityNoKeyboard,
+											_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
+											{
+												ctor: '::',
+												_0: 'false',
+												_1: {
+													ctor: '::',
+													_0: 'true',
+													_1: {
+														ctor: '::',
+														_0: 'unknown',
+														_1: {ctor: '[]'}
+													}
+												}
+											},
+											_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$englishSummaryAccessibilityNoKeyboard),
+										_1: {ctor: '[]'}
+									}
 								}
 							}
 						}

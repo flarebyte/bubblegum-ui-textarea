@@ -220,3 +220,15 @@ getContentLanguageOrEnglish state =
         |> Validation.withinStringCharsRange ( 2, 10 )
         |> Outcome.toMaybe
         |> Maybe.withDefault "en-GB"
+
+
+isUserRightToLeft : StateEntity.Model -> Outcome Bool
+isUserRightToLeft state =
+    findString ui_userRightToLeft state.attributes
+        |> Validation.asBool
+
+
+isContentRightToLeft : StateEntity.Model -> Outcome Bool
+isContentRightToLeft state =
+    findString ui_contentRightToLeft state.attributes
+        |> Validation.asBool
