@@ -9544,6 +9544,27 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asSingle = func
 			outcome));
 };
 
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tags = function (list) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('control'),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$div,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('tags has-addons'),
+					_1: {ctor: '[]'}
+				},
+				list),
+			_1: {ctor: '[]'}
+		});
+};
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$asClass = function (list) {
 	return _elm_lang$html$Html_Attributes$class(
 		A2(
@@ -9599,16 +9620,6 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tag = functi
 			_0: _elm_lang$html$Html$text(tagInfo.text),
 			_1: {ctor: '[]'}
 		});
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tags = function (list) {
-	return A2(
-		_elm_lang$html$Html$div,
-		{
-			ctor: '::',
-			_0: _elm_lang$html$Html_Attributes$class('tags has-addons'),
-			_1: {ctor: '[]'}
-		},
-		A2(_elm_lang$core$List$map, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tag, list));
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$asClass3 = F3(
 	function (a, b, c) {
@@ -10094,33 +10105,12 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$textWordProgressB
 		return A2(
 			_elm_lang$html$Html$div,
 			{ctor: '[]'},
-			{
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$div,
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class('control'),
-						_1: {ctor: '[]'}
-					},
-					addProgressBar(
-						{
-							ctor: '::',
-							_0: A2(
-								_elm_lang$html$Html$div,
-								{
-									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$class('tags has-addons'),
-									_1: {ctor: '[]'}
-								},
-								addLabelForWord(
-									addTargetLength(
-										addContentLength(
-											{ctor: '[]'})))),
-							_1: {ctor: '[]'}
-						})),
-				_1: {ctor: '[]'}
-			});
+			_elm_lang$core$List$singleton(
+				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tags(
+					addLabelForWord(
+						addTargetLength(
+							addContentLength(
+								{ctor: '[]'}))))));
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayTextInfo = F4(
 	function (adapter, userSettings, settings, state) {

@@ -62,8 +62,8 @@ tag tagInfo =
         [ text tagInfo.text ]
 
 
-tags : List StyledText -> Html msg
+tags : List (Html msg) -> Html msg
 tags list =
-    list
-        |> List.map tag
-        |> div [ class "tags has-addons" ]
+    div [ class "control" ]
+        [ div [ class "tags has-addons" ] list
+        ]

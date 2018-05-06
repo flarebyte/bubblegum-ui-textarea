@@ -87,17 +87,11 @@ textWordProgressBar adapter userSettings settings state =
             flip (++) [ tag { text = labelForWord, style = "is-light" } ]
     in
     div []
-        [ div [ class "control" ]
-            ([ div [ class "tags has-addons" ]
-                ([]
-                    |> addContentLength
-                    |> addTargetLength
-                    |> addLabelForWord
-                )
-             ]
-                |> addProgressBar
-            )
-        ]
+        ([] |> addContentLength |> addTargetLength |> addLabelForWord |> tags |> List.singleton)
+
+
+
+-- |> addProgressBar
 
 
 displayCharsProgress : TextAreaAdapter.Model msg -> SettingsEntity.Model -> SettingsEntity.Model -> StateEntity.Model -> Html msg
