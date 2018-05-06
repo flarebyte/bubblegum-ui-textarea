@@ -93,6 +93,18 @@ tags list =
     div [ class "tags has-addons" ] list
 
 
+infoText : String -> StyledText
+infoText text =
+    { text = text
+    , style = "is-dark"
+    }
+
+
+tagsInfo : List String -> Html msg
+tagsInfo list =
+    list |> List.map infoText |> List.map tag |> div [ class "tags" ]
+
+
 groupFields : List (Html msg) -> Html msg
 groupFields list =
     div [ class "field is-grouped is-grouped-multiline" ] list

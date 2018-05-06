@@ -9039,6 +9039,9 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$groupFields 
 		},
 		list);
 };
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$infoText = function (text) {
+	return {text: text, style: 'is-dark'};
+};
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tags = function (list) {
 	return A2(
 		_elm_lang$html$Html$div,
@@ -9104,6 +9107,19 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tag = functi
 			_0: _elm_lang$html$Html$text(tagInfo.text),
 			_1: {ctor: '[]'}
 		});
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tagsInfo = function (list) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('tags'),
+			_1: {ctor: '[]'}
+		},
+		A2(
+			_elm_lang$core$List$map,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tag,
+			A2(_elm_lang$core$List$map, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$infoText, list)));
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$asClass3 = F3(
 	function (a, b, c) {
@@ -10037,6 +10053,16 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$tra
 
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayTextInfo = F4(
 	function (adapter, userSettings, settings, state) {
+		var addTagsInfo = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tagsInfo(
+			{
+				ctor: '::',
+				_0: 'alpha',
+				_1: {
+					ctor: '::',
+					_0: 'beta',
+					_1: {ctor: '[]'}
+				}
+			});
 		var contentCharLength = A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map,
 			_elm_lang$core$String$length,
@@ -10154,7 +10180,22 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayTextInfo =
 						},
 						addCharProgressBar(
 							_elm_lang$core$List$singleton(addCharInfo))),
-					_1: {ctor: '[]'}
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$div,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class('control'),
+								_1: {ctor: '[]'}
+							},
+							{
+								ctor: '::',
+								_0: addTagsInfo,
+								_1: {ctor: '[]'}
+							}),
+						_1: {ctor: '[]'}
+					}
 				}
 			});
 	});

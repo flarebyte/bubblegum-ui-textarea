@@ -93,10 +93,14 @@ displayTextInfo adapter userSettings settings state =
 
         addWordInfo =
             tags <| ([] |> addWordContentLength |> addWordTargetLength |> addLabelForWord)
+
+        addTagsInfo =
+            tagsInfo [ "alpha", "beta" ]
     in
     groupFields
         [ div [ class "control" ] (addWordInfo |> List.singleton |> addWordProgressBar)
         , div [ class "control" ] (addCharInfo |> List.singleton |> addCharProgressBar)
+        , div [ class "control" ] [ addTagsInfo ]
         ]
 
 
