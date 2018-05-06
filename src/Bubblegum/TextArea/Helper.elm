@@ -100,6 +100,14 @@ numberOfWords someText =
     String.words someText |> List.length
 
 
+themeProgress : Outcome Bool -> Outcome Bool -> Outcome String
+themeProgress a b =
+    Outcome.or
+        (a |> Outcome.checkOrNone identity |> Outcome.trueMapToConstant "is-success")
+        (b |> Outcome.checkOrNone identity |> Outcome.trueMapToConstant "is-danger")
+        |> Outcome.withDefault "is-info"
+
+
 {-| The core representation of a field.
 -}
 calculateRatio : Int -> Int -> Int
