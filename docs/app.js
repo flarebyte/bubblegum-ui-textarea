@@ -10191,7 +10191,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayTextInfo =
 							},
 							{
 								ctor: '::',
-								_0: _elm_lang$html$Html$text('............................................'),
+								_0: _elm_lang$html$Html$text('    '),
 								_1: {ctor: '[]'}
 							}),
 						_1: {

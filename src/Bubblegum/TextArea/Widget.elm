@@ -100,7 +100,7 @@ displayTextInfo adapter userSettings settings state =
     groupFields
         [ div [ class "control" ] (addWordInfo |> List.singleton |> addWordProgressBar)
         , div [ class "control" ] (addCharInfo |> List.singleton |> addCharProgressBar)
-        , div [ class "control" ] [ text "............................................" ]
+        , div [ class "control" ] [ text "    " ]
         , div [ class "control" ] [ addTagsInfo ]
         ]
 
