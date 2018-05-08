@@ -57,7 +57,7 @@ textAreaWidgetDoc =
 viewHeader =
     div []
         [ h1 [ class "title" ]
-            [ text textAreaWidgetDoc.meta.exposed ]
+            [ text (textAreaWidgetDoc.meta.exposedModules |> List.head |> Maybe.withDefault "?") ]
         , h2 [ class "subtitle" ]
             [ text textAreaWidgetDoc.meta.summary ]
         ]

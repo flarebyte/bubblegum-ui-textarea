@@ -10300,10 +10300,20 @@ var _flarebyte$bubblegum_ui_textarea$AttributeDoc$OnlyOne = {ctor: 'OnlyOne'};
 
 var _flarebyte$bubblegum_ui_textarea$PackageJson$Model = F5(
 	function (a, b, c, d, e) {
-		return {version: a, summary: b, repository: c, license: d, exposed: e};
+		return {version: a, summary: b, repository: c, license: d, exposedModules: e};
 	});
 
-var _flarebyte$bubblegum_ui_textarea$WidgetPackageJson$meta = {version: '', summary: 'Summary', repository: '', license: '', exposed: 'Exposed'};
+var _flarebyte$bubblegum_ui_textarea$WidgetPackageJson$meta = {
+	version: '1.0.0',
+	summary: 'TextArea widget for the Bubblegum UI toolkit.',
+	repository: 'https://github.com/flarebyte/bubblegum-ui-textarea.git',
+	license: 'BSD3',
+	exposedModules: {
+		ctor: '::',
+		_0: 'Bubblegum.TextArea.Widget',
+		_1: {ctor: '[]'}
+	}
+};
 
 var _flarebyte$bubblegum_ui_textarea$WidgetDoc$viewSelectedBox = F2(
 	function (isUserSettings, key) {
@@ -11025,7 +11035,11 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$viewHeader = A2(
 			},
 			{
 				ctor: '::',
-				_0: _elm_lang$html$Html$text(_flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc.meta.exposed),
+				_0: _elm_lang$html$Html$text(
+					A2(
+						_elm_lang$core$Maybe$withDefault,
+						'?',
+						_elm_lang$core$List$head(_flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc.meta.exposedModules))),
 				_1: {ctor: '[]'}
 			}),
 		_1: {

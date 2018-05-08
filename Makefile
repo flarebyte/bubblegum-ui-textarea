@@ -36,6 +36,9 @@ html:
 doc:
 	elm-make --docs=documentation.json
 
+meta:
+	cd demo && python convert-package.py
+
 diff:
 	elm-package diff
 

@@ -6,5 +6,5 @@ type alias Model =
     , summary : String
     , repository : String
     , license : String
-    , exposed : String
+    , exposedModules : List String
     }
