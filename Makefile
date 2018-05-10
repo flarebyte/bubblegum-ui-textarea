@@ -39,6 +39,9 @@ doc:
 meta:
 	cd demo && python convert-package.py
 
+generate:
+	cd demo && python generate-vocabulary.py
+
 diff:
 	elm-package diff
 

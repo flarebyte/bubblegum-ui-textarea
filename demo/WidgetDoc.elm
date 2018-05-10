@@ -48,8 +48,6 @@ textAreaWidgetDoc =
         , createKey ui_help ZeroOrOne [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "助けて" ] englishSummaryHelp
         , createKey ui_icon ZeroOrOne [ "fa-desktop", "fa-microchip" ] englishSummaryIcon
         , createKey ui_inputSize ZeroOrOne [ "is-small", "is-medium", "is-large", "bad value" ] englishSummaryInputSize
-        , createKey ui_inputState ZeroOrOne [ "is-hovered", "is-focused", "is-loading", "bad value" ] englishSummaryInputState
-        , createKey ui_readOnly ZeroOrOne [ "true", "false", "weird" ] englishSummaryReadOnly
         ]
     }
 
