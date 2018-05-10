@@ -6,7 +6,7 @@ from string import Template
 
 filename = "ui-keys.csv"
 
-## Key Description
+## Vocabulary
 
 headerVocabulary = """
 module Bubblegum.TextArea.Vocabulary exposing (..)
@@ -37,6 +37,25 @@ templateKeyDescription = """
 desc$nameCamel: String
 desc$nameCamel =
     "$description"    
+"""
+
+## Vocabulary Helper
+
+headerVocabularyHelper = """
+module Bubblegum.TextArea.VocabularyHelper exposing (..)
+
+{-| Helpers for accessing settings (generated)
+
+-}
+
+"""
+templateVocabularyHelper = """
+{-|  $description -}
+get$nameCamel : SettingsEntity.Model -> Outcome String
+get$nameCamel settings =
+    findString ui_$nameCamel settings.attributes
+        |> Validation.withinStringCharsRange titleCharRange
+    
 """
 
 def camelCase(st):
@@ -83,9 +102,19 @@ def createKeyDescription():
             file.write(formatTemplate(templateKeyDescription, row))
     file.close()    
 
+def createVocabularyHelper():
+    content = readCsv()
+    file = open("../src/Bubblegum/TextArea/VocabularyHelper.elm", "w")
+    file.write(headerVocabulary)
+    for row in content:
+        if len(row) == 3 :
+            file.write(formatTemplate(templateVocabularyHelper, row))
+    file.close()    
+
 def main(argv):
     createVocabulary()
     createKeyDescription()
+    createVocabularyHelper()
     
 
 if __name__ == "__main__":
