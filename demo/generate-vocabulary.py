@@ -66,12 +66,21 @@ module Bubblegum.TextArea.VocabularyHelper exposing (..)
 -}
 
 """
-templateVocabularyHelper = """
+templateVocabularyHelperString = """
 {-|  $description -}
 get$nameCamel : SettingsEntity.Model -> Outcome String
 get$nameCamel settings =
     findString ui_$nameCamel settings.attributes
         |> Validation.withinStringCharsRange $rangeRestriction
+    
+"""
+
+templateVocabularyHelperBool = """
+{-|  $description -}
+get$nameCamel : SettingsEntity.Model -> Outcome Bool
+get$nameCamel settings =
+    findString ui_$nameCamel settings.attributes
+        |> Validation.asBool
     
 """
 
@@ -133,7 +142,12 @@ def createVocabularyHelper():
     file.write(headerVocabulary)
     for row in content:
         if len(row) > 2 :
-            file.write(formatTemplate(templateVocabularyHelper, row))
+            nameField, descriptionField, signatureField, extra = row
+            if  signatureField.strip() == "Bool":
+                file.write(formatTemplate(templateVocabularyHelperBool, row))
+            if  signatureField.strip() == "String":
+                file.write(formatTemplate(templateVocabularyHelperString, row))
+                
     file.close()    
 
 def main(argv):
