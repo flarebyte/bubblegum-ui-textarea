@@ -6,23 +6,28 @@ module Bubblegum.TextArea.HelperLimits exposing (..)
 
 -}
 
-limitTitleCharRange : ( Int, Int )
-limitTitleCharRange =
-    ( 1, 70 )
+limitSmallRange : ( Int, Int )
+limitSmallRange =
+    ( 0, 32 )
 
+limitMediumRange : ( Int, Int )
+limitMediumRange =
+    ( 0, 128 )
 
-limitKeywordCharRange : ( Int, Int )
-limitKeywordCharRange =
-    ( 1, 30 )
-
-
-limitCharRange : ( Int, Int )
-limitCharRange =
+limitVeryLargeRange : ( Int, Int )
+limitVeryLargeRange =
     ( 0, 60000 )
 
+limitSmallRangeNotEmpty : ( Int, Int )
+limitSmallRangeNotEmpty =
+    ( 1, 32 )
 
-limitWordRange : ( Int, Int )
-limitWordRange =
-    ( 0, 12000 )
+limitMediumRangeNotEmpty : ( Int, Int )
+limitMediumRangeNotEmpty =
+    ( 1, 128 )
+
+limitVeryLargeRangeNotEmpty : ( Int, Int )
+limitVeryLargeRangeNotEmpty =
+    ( 1, 60000 )
 
 

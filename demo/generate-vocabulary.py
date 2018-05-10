@@ -6,6 +6,23 @@ from string import Template
 
 filename = "ui-keys.csv"
 
+def checkRangeRestriction(extra):
+    if "small!" in extra:
+        return "limitSmallRangeNotEmpty"
+    elif "small" in extra:
+        return "limitSmallRange"
+    elif "medium!" in extra:
+        return "limitMediumRangeNotEmpty"
+    elif "medium" in extra:
+        return "limitMediumRange"
+    elif "very-large!" in extra:
+        return "limitVeryLargeRangeNotEmpty"
+    elif "very-large" in extra:
+        return "limitVeryLargeRange"
+    else:
+        return None
+
+
 ## Vocabulary
 
 headerVocabulary = """
@@ -54,7 +71,7 @@ templateVocabularyHelper = """
 get$nameCamel : SettingsEntity.Model -> Outcome String
 get$nameCamel settings =
     findString ui_$nameCamel settings.attributes
-        |> Validation.withinStringCharsRange titleCharRange
+        |> Validation.withinStringCharsRange $rangeRestriction
     
 """
 
@@ -75,13 +92,21 @@ def readCsv():
     return results
 
 def formatTemplate(template, row):
-        nameField, descriptionField, signatureField = row
+        nameField, descriptionField, signatureField, extra = row
         name = nameField.strip()
         description = descriptionField.strip()
         signature = signatureField.strip()
         namecamel = camelCase(name)
         nameCamel = camelCaseUpper(name)
-        return Template(template).substitute(name=name, description=description, signature=signature, namecamel=namecamel, nameCamel=nameCamel)
+        rangeRestriction=checkRangeRestriction(extra)
+        return Template(template).substitute(
+            name=name,
+            description=description,
+            signature=signature,
+            namecamel=namecamel,
+            nameCamel=nameCamel,
+            rangeRestriction=rangeRestriction
+            )
     
 
 def createVocabulary():
@@ -89,7 +114,7 @@ def createVocabulary():
     file = open("../src/Bubblegum/TextArea/Vocabulary.elm", "w")
     file.write(headerVocabulary)
     for row in content:
-        if len(row) == 3 :
+        if len(row) > 2 :
             file.write(formatTemplate(templateVocabulary, row))
     file.close()    
 
@@ -98,7 +123,7 @@ def createKeyDescription():
     file = open("KeyDescription.elm", "w")
     file.write(headerKeyDescription)
     for row in content:
-        if len(row) == 3 :
+        if len(row) > 2 :
             file.write(formatTemplate(templateKeyDescription, row))
     file.close()    
 
@@ -107,7 +132,7 @@ def createVocabularyHelper():
     file = open("../src/Bubblegum/TextArea/VocabularyHelper.elm", "w")
     file.write(headerVocabulary)
     for row in content:
-        if len(row) == 3 :
+        if len(row) > 2 :
             file.write(formatTemplate(templateVocabularyHelper, row))
     file.close()    
 
