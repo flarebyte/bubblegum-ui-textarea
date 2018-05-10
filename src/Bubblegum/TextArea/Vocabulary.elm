@@ -1,223 +1,122 @@
+
 module Bubblegum.TextArea.Vocabulary exposing (..)
 
-{-| Setting key
-
-@docs Model
+{-| List of keys used for the settings (generated)
 
 -}
 
 
-ui_successMinChars =
+{-|  The minimum number of characters needed for successful content. (Int) -}
+ui_successMinimumChars: String
+ui_successMinimumChars =
     "ui:success-minimum-chars"
 
-
-englishSummarySuccessMinChars =
-    "The minimum number of chars for a successful contribution"
-
-
-ui_successMaxChars =
+{-|  The maximum number of characters needed for successful content. (Int) -}
+ui_successMaximumChars: String
+ui_successMaximumChars =
     "ui:success-maximum-chars"
 
-
-englishSummarySuccessMaxChars =
-    "The maximum number of chars for a successful contribution"
-
-
-ui_dangerMinChars =
+{-|  Warning when under the minimum number of characters. (Int) -}
+ui_dangerMinimumChars: String
+ui_dangerMinimumChars =
     "ui:danger-minimum-chars"
 
-
-englishSummaryDangerMinChars =
-    "The number of chars at which a contribution is too brief"
-
-
-ui_dangerMaxChars =
+{-|  Warning when over the maximum number of characters. (Int) -}
+ui_dangerMaximumChars: String
+ui_dangerMaximumChars =
     "ui:danger-maximum-chars"
 
-
-englishSummaryDangerMaxChars =
-    "The number of chars at which a contribution starts to become too exhaustive"
-
-
-ui_successMinWords =
+{-|  The minimum number of words needed for successful content. (Int) -}
+ui_successMinimumWords: String
+ui_successMinimumWords =
     "ui:success-minimum-words"
 
-
-englishSummarySuccessMinWords =
-    "The minimum number of words for a successful contribution"
-
-
-ui_successMaxWords =
+{-|  The maximum number of words needed for successful content. (Int) -}
+ui_successMaximumWords: String
+ui_successMaximumWords =
     "ui:success-maximum-words"
 
-
-englishSummarySuccessMaxWords =
-    "The maximum number of words for a successful contribution"
-
-
-ui_dangerMinWords =
+{-|  Warning when under the minimum number of words. (Int) -}
+ui_dangerMinimumWords: String
+ui_dangerMinimumWords =
     "ui:danger-minimum-words"
 
-
-englishSummaryDangerMinWords =
-    "The number of words at which a contribution is too brief"
-
-
-ui_dangerMaxWords =
+{-|  Warning when over the maximum number of words. (Int) -}
+ui_dangerMaximumWords: String
+ui_dangerMaximumWords =
     "ui:danger-maximum-words"
 
-
-englishSummaryDangerMaxWords =
-    "The maximum number of words for a successful contribution"
-
-
+{-|  Short hint describing the expected content. (String) -}
+ui_placeholder: String
 ui_placeholder =
     "ui:placeholder"
 
-
-englishSummaryPlaceholder =
-    "A placeholder to be display in the input"
-
-
+{-|  Label related to the field. (String) -}
+ui_label: String
 ui_label =
     "ui:label"
 
-
-englishSummaryLabel =
-    "The label related to an input"
-
-
+{-|  Some help tip related to the field. (String) -}
+ui_help: String
 ui_help =
     "ui:help"
 
+{-|  Help message to highlight an issue with the content. (String) -}
+ui_dangerHelp: String
+ui_dangerHelp =
+    "ui:danger-help"
 
-englishSummaryHelp =
-    "Some help tip related to an input"
-
-
+{-|  An icon to be displayed alongside the field. (String) -}
+ui_icon: String
 ui_icon =
     "ui:icon"
 
-
-englishSummaryIcon =
-    "An icon to be displayed alongside an input"
-
-
-ui_inputSize =
-    "ui:input-size"
-
-
-
--- is-small, is-medium, is-large
-
-
-englishSummaryInputSize =
-    "The size on screen of an input"
-
-
-ui_inputState =
-    "ui:input-state"
-
-
-
--- is-hovered, is-focused, is-loading
-
-
-englishSummaryInputState =
-    "The possible states for an input"
-
-
-ui_readOnly =
-    "ui:read-only"
-
-
-englishSummaryReadOnly =
-    "The input can only be read"
-
-
-ui_disabled =
-    "ui:disabled"
-
-
-englishSummaryDisable =
-    "The input is disabled"
-
-
+{-|  The content of the field. (String) -}
+ui_content: String
 ui_content =
     "ui:content"
 
-
-englishSummaryContent =
-    "The content of the input"
-
-
+{-|  Language used by the user. (String) -}
+ui_userLanguage: String
 ui_userLanguage =
     "ui:user-language"
 
-
-englishSummaryUserLanguage =
-    "Language used by the user"
-
-
+{-|  Language of the content. (String) -}
+ui_contentLanguage: String
 ui_contentLanguage =
     "ui:content-language"
 
-
-englishSummaryContentLanguage =
-    "Language of the content"
-
-
+{-|  Whether the user is using right to left. (Bool) -}
+ui_userRightToLeft: String
 ui_userRightToLeft =
     "ui:user-right-to-left"
 
-
-englishSummaryContentRightToLeft =
-    "Right to left is used for the content"
-
-
+{-|  Whether the content requires right to left. (Bool) -}
+ui_contentRightToLeft: String
 ui_contentRightToLeft =
     "ui:content-right-to-left"
 
-
-englishSummaryUserRightToLeft =
-    "Right to left editing is used by the user"
-
-
-ui_keyboardShortcutsActive =
-    "ui:keyboard-shortcuts-active"
-
-
-englishSummaryKeyboardShortcutsActive =
-    "Shortcuts for the keyboard are active"
-
-
-ui_audioDescriptionActive =
-    "ui:audio-description-active"
-
-
-englishSummaryAudioDescriptionActive =
-    "Play audio description when available"
-
-
-ui_accessibilityHighContrastActive =
-    "ui:accessibility-high-contrast-active"
-
-
-englishSummaryAccessibilityHighContrastActive =
-    "High contrast is preferred whenever possible"
-
-
+{-|  Whether the user would prefer large text. (Bool) -}
+ui_accessibilityLargeText: String
 ui_accessibilityLargeText =
     "ui:accessibility-large-text"
 
+{-|  Tag used to describe the field. (List String) -}
+ui_tag: String
+ui_tag =
+    "ui:tag"
 
-englishSummaryAccessibilityLargeText =
-    "Large text is preferred whenever possible"
+{-|  Tag representing a successful facet of the content. (List String) -}
+ui_successTag: String
+ui_successTag =
+    "ui:success-tag"
 
+{-|  Tag representing a warning aspect of the content. (List String) -}
+ui_warningTag: String
+ui_warningTag =
+    "ui:warning-tag"
 
-ui_accessibilityNoKeyboard =
-    "ui:accessibility-no-keyboard"
-
-
-englishSummaryAccessibilityNoKeyboard =
-    "The user does not use a keyboard"
+{-|  Tag representing a dangerous aspect of the content. (List String) -}
+ui_dangerTag: String
+ui_dangerTag =
+    "ui:danger-tag"

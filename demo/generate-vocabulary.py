@@ -6,15 +6,37 @@ from string import Template
 
 filename = "ui-keys.csv"
 
+## Key Description
+
 headerVocabulary = """
 module Bubblegum.TextArea.Vocabulary exposing (..)
 
+{-| List of keys used for the settings (generated)
+
+-}
+
 """
 templateVocabulary = """
-{-|  $description. -}
+{-|  $description. ($signature) -}
 ui_$namecamel: String
 ui_$namecamel =
     "ui:$name"
+"""
+
+## Key Description
+
+headerKeyDescription = """
+module KeyDescription exposing (..)
+
+{-| List of descriptions for the keys used for the settings (generated)
+
+-}
+
+"""
+templateKeyDescription = """
+desc$nameCamel: String
+desc$nameCamel =
+    "$description"    
 """
 
 def camelCase(st):
@@ -45,15 +67,25 @@ def formatTemplate(template, row):
 
 def createVocabulary():
     content = readCsv()
-    file = open("../src/Bubblegum/TextArea/Vocabulary2.elm", "w")
+    file = open("../src/Bubblegum/TextArea/Vocabulary.elm", "w")
     file.write(headerVocabulary)
     for row in content:
         if len(row) == 3 :
             file.write(formatTemplate(templateVocabulary, row))
     file.close()    
 
+def createKeyDescription():
+    content = readCsv()
+    file = open("KeyDescription.elm", "w")
+    file.write(headerKeyDescription)
+    for row in content:
+        if len(row) == 3 :
+            file.write(formatTemplate(templateKeyDescription, row))
+    file.close()    
+
 def main(argv):
     createVocabulary()
+    createKeyDescription()
     
 
 if __name__ == "__main__":
