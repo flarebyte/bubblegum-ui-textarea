@@ -1,0 +1,115 @@
+module WidgetDocView exposing (..)
+
+import AppModel exposing (AppModel, getSettings)
+import AppMsg exposing (AppMsg(..))
+import AttributeDoc exposing (AttributeDoc, Cardinality(..), createKey)
+import Bubblegum.Entity.Attribute exposing (findAttributeFirstValueByKey)
+import Html exposing (..)
+import Html.Attributes exposing (..)
+import Html.Events exposing (onClick)
+import WidgetDocData exposing (textAreaWidgetDoc)
+
+
+viewHeader : Html msg
+viewHeader =
+    div []
+        [ h1 [ class "title" ]
+            [ text (textAreaWidgetDoc.meta.exposedModules |> List.head |> Maybe.withDefault "?") ]
+        , h2 [ class "subtitle" ]
+            [ text textAreaWidgetDoc.meta.summary
+            ]
+        , div
+            [ class "field is-grouped is-grouped-multiline" ]
+            [ div [ class "control" ]
+                [ div [ class "tags has-addons" ]
+                    [ span [ class "tag is-dark" ]
+                        [ text "version" ]
+                    , span [ class "tag is-info" ]
+                        [ text textAreaWidgetDoc.meta.version ]
+                    ]
+                ]
+            , div [ class "control" ]
+                [ div [ class "tags has-addons" ]
+                    [ span [ class "tag is-dark" ]
+                        [ text "license" ]
+                    , span [ class "tag is-success" ]
+                        [ text textAreaWidgetDoc.meta.license ]
+                    ]
+                ]
+            , div [ class "control" ]
+                [ a [ class "button is-small", href textAreaWidgetDoc.meta.repository ]
+                    [ span [ class "icon is-small" ]
+                        [ i [ class "fab fa-github" ]
+                            []
+                        ]
+                    , span []
+                        [ text "GitHub" ]
+                    ]
+                ]
+            ]
+        ]
+
+
+viewRadioItem : Bool -> String -> Maybe String -> String -> Html AppMsg
+viewRadioItem isUserSettings key actual value =
+    let
+        labelStyle =
+            actual
+                |> Maybe.map
+                    (\v ->
+                        if v == value then
+                            "has-text-success has-text-weight-bold"
+                        else
+                            ""
+                    )
+                |> Maybe.withDefault ""
+    in
+    label [ class "radio" ]
+        [ input [ name key, type_ "radio", onClick (OnSelectSetting isUserSettings key value) ]
+            []
+        , span [ class labelStyle ] [ text value ]
+        ]
+
+
+viewSelectedBox : Bool -> String -> Html AppMsg
+viewSelectedBox isUserSettings key =
+    button [ class "button", onClick (OnActivateSetting isUserSettings key) ]
+        [ span [ class "icon is-small" ]
+            [ i [ class "fas fa-trash" ]
+                []
+            ]
+        ]
+
+
+viewRadioSettings : AppModel -> Bool -> AttributeDoc -> Html AppMsg
+viewRadioSettings model isUserSettings attrDoc =
+    let
+        actualSettings =
+            getSettings isUserSettings model
+
+        actualValue =
+            findAttributeFirstValueByKey attrDoc.key (actualSettings.attributes |> Debug.log "actual")
+    in
+    attrDoc.suggestions |> List.map (viewRadioItem isUserSettings attrDoc.key actualValue) |> div [ class "control" ]
+
+
+viewRadioSettingsWithLabel : AppModel -> Bool -> AttributeDoc -> Html AppMsg
+viewRadioSettingsWithLabel model isUserSettings attrDoc =
+    div [ class "field" ]
+        [ label [ class "label" ]
+            [ text attrDoc.key ]
+        , viewRadioSettings model isUserSettings attrDoc
+        , viewSelectedBox isUserSettings attrDoc.key
+        , p [ class "help is-info" ]
+            [ text attrDoc.description ]
+        ]
+
+
+viewSettings : AppModel -> Html AppMsg
+viewSettings model =
+    div [ class "box scrollable" ]
+        [ h3 [ class "title" ] [ text "User Settings" ]
+        , div [ class "box" ] (textAreaWidgetDoc.userSettings |> List.map (viewRadioSettingsWithLabel model True))
+        , h3 [ class "title" ] [ text "Settings" ]
+        , div [ class "box" ] (textAreaWidgetDoc.settings |> List.map (viewRadioSettingsWithLabel model False))
+        ]

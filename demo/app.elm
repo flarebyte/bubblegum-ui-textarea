@@ -19,7 +19,7 @@ import Debug
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import WidgetBuilder exposing (viewWidget)
-import WidgetDoc exposing (..)
+import WidgetDocView exposing (..)
 
 
 main : Program Never AppModel AppMsg

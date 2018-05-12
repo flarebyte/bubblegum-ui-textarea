@@ -10262,6 +10262,11 @@ var _flarebyte$bubblegum_ui_textarea$PackageJson$Model = F5(
 		return {version: a, summary: b, repository: c, license: d, exposedModules: e};
 	});
 
+var _flarebyte$bubblegum_ui_textarea$WidgetDoc$WidgetDoc = F3(
+	function (a, b, c) {
+		return {meta: a, userSettings: b, settings: c};
+	});
+
 var _flarebyte$bubblegum_ui_textarea$WidgetPackageJson$meta = {
 	version: '1.0.0',
 	summary: 'TextArea widget for the Bubblegum UI toolkit.',
@@ -10274,168 +10279,7 @@ var _flarebyte$bubblegum_ui_textarea$WidgetPackageJson$meta = {
 	}
 };
 
-var _flarebyte$bubblegum_ui_textarea$WidgetDoc$viewSelectedBox = F2(
-	function (isUserSettings, key) {
-		return A2(
-			_elm_lang$html$Html$button,
-			{
-				ctor: '::',
-				_0: _elm_lang$html$Html_Attributes$class('button'),
-				_1: {
-					ctor: '::',
-					_0: _elm_lang$html$Html_Events$onClick(
-						A2(_flarebyte$bubblegum_ui_textarea$AppMsg$OnActivateSetting, isUserSettings, key)),
-					_1: {ctor: '[]'}
-				}
-			},
-			{
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$span,
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class('icon is-small'),
-						_1: {ctor: '[]'}
-					},
-					{
-						ctor: '::',
-						_0: A2(
-							_elm_lang$html$Html$i,
-							{
-								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$class('fas fa-trash'),
-								_1: {ctor: '[]'}
-							},
-							{ctor: '[]'}),
-						_1: {ctor: '[]'}
-					}),
-				_1: {ctor: '[]'}
-			});
-	});
-var _flarebyte$bubblegum_ui_textarea$WidgetDoc$viewRadioItem = F4(
-	function (isUserSettings, key, actual, value) {
-		var labelStyle = A2(
-			_elm_lang$core$Maybe$withDefault,
-			'',
-			A2(
-				_elm_lang$core$Maybe$map,
-				function (v) {
-					return _elm_lang$core$Native_Utils.eq(v, value) ? 'has-text-success has-text-weight-bold' : '';
-				},
-				actual));
-		return A2(
-			_elm_lang$html$Html$label,
-			{
-				ctor: '::',
-				_0: _elm_lang$html$Html_Attributes$class('radio'),
-				_1: {ctor: '[]'}
-			},
-			{
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$input,
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$name(key),
-						_1: {
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$type_('radio'),
-							_1: {
-								ctor: '::',
-								_0: _elm_lang$html$Html_Events$onClick(
-									A3(_flarebyte$bubblegum_ui_textarea$AppMsg$OnSelectSetting, isUserSettings, key, value)),
-								_1: {ctor: '[]'}
-							}
-						}
-					},
-					{ctor: '[]'}),
-				_1: {
-					ctor: '::',
-					_0: A2(
-						_elm_lang$html$Html$span,
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class(labelStyle),
-							_1: {ctor: '[]'}
-						},
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html$text(value),
-							_1: {ctor: '[]'}
-						}),
-					_1: {ctor: '[]'}
-				}
-			});
-	});
-var _flarebyte$bubblegum_ui_textarea$WidgetDoc$viewRadioSettings = F3(
-	function (model, isUserSettings, attrDoc) {
-		var actualSettings = A2(_flarebyte$bubblegum_ui_textarea$AppModel$getSettings, isUserSettings, model);
-		var actualValue = A2(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findAttributeFirstValueByKey,
-			attrDoc.key,
-			A2(_elm_lang$core$Debug$log, 'actual', actualSettings.attributes));
-		return A2(
-			_elm_lang$html$Html$div,
-			{
-				ctor: '::',
-				_0: _elm_lang$html$Html_Attributes$class('control'),
-				_1: {ctor: '[]'}
-			},
-			A2(
-				_elm_lang$core$List$map,
-				A3(_flarebyte$bubblegum_ui_textarea$WidgetDoc$viewRadioItem, isUserSettings, attrDoc.key, actualValue),
-				attrDoc.suggestions));
-	});
-var _flarebyte$bubblegum_ui_textarea$WidgetDoc$viewRadioSettingsWithLabel = F3(
-	function (model, isUserSettings, attrDoc) {
-		return A2(
-			_elm_lang$html$Html$div,
-			{
-				ctor: '::',
-				_0: _elm_lang$html$Html_Attributes$class('field'),
-				_1: {ctor: '[]'}
-			},
-			{
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$label,
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class('label'),
-						_1: {ctor: '[]'}
-					},
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html$text(attrDoc.key),
-						_1: {ctor: '[]'}
-					}),
-				_1: {
-					ctor: '::',
-					_0: A3(_flarebyte$bubblegum_ui_textarea$WidgetDoc$viewRadioSettings, model, isUserSettings, attrDoc),
-					_1: {
-						ctor: '::',
-						_0: A2(_flarebyte$bubblegum_ui_textarea$WidgetDoc$viewSelectedBox, isUserSettings, attrDoc.key),
-						_1: {
-							ctor: '::',
-							_0: A2(
-								_elm_lang$html$Html$p,
-								{
-									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$class('help is-info'),
-									_1: {ctor: '[]'}
-								},
-								{
-									ctor: '::',
-									_0: _elm_lang$html$Html$text(attrDoc.description),
-									_1: {ctor: '[]'}
-								}),
-							_1: {ctor: '[]'}
-						}
-					}
-				}
-			});
-	});
-var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
+var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 	meta: _flarebyte$bubblegum_ui_textarea$WidgetPackageJson$meta,
 	userSettings: {
 		ctor: '::',
@@ -10808,7 +10652,237 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc = {
 		}
 	}
 };
-var _flarebyte$bubblegum_ui_textarea$WidgetDoc$viewHeader = A2(
+
+var _flarebyte$bubblegum_ui_textarea$WidgetDocView$viewSelectedBox = F2(
+	function (isUserSettings, key) {
+		return A2(
+			_elm_lang$html$Html$button,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class('button'),
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$html$Html_Events$onClick(
+						A2(_flarebyte$bubblegum_ui_textarea$AppMsg$OnActivateSetting, isUserSettings, key)),
+					_1: {ctor: '[]'}
+				}
+			},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$span,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('icon is-small'),
+						_1: {ctor: '[]'}
+					},
+					{
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$i,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class('fas fa-trash'),
+								_1: {ctor: '[]'}
+							},
+							{ctor: '[]'}),
+						_1: {ctor: '[]'}
+					}),
+				_1: {ctor: '[]'}
+			});
+	});
+var _flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioItem = F4(
+	function (isUserSettings, key, actual, value) {
+		var labelStyle = A2(
+			_elm_lang$core$Maybe$withDefault,
+			'',
+			A2(
+				_elm_lang$core$Maybe$map,
+				function (v) {
+					return _elm_lang$core$Native_Utils.eq(v, value) ? 'has-text-success has-text-weight-bold' : '';
+				},
+				actual));
+		return A2(
+			_elm_lang$html$Html$label,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class('radio'),
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$input,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$name(key),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$type_('radio'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Events$onClick(
+									A3(_flarebyte$bubblegum_ui_textarea$AppMsg$OnSelectSetting, isUserSettings, key, value)),
+								_1: {ctor: '[]'}
+							}
+						}
+					},
+					{ctor: '[]'}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$span,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class(labelStyle),
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text(value),
+							_1: {ctor: '[]'}
+						}),
+					_1: {ctor: '[]'}
+				}
+			});
+	});
+var _flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioSettings = F3(
+	function (model, isUserSettings, attrDoc) {
+		var actualSettings = A2(_flarebyte$bubblegum_ui_textarea$AppModel$getSettings, isUserSettings, model);
+		var actualValue = A2(
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findAttributeFirstValueByKey,
+			attrDoc.key,
+			A2(_elm_lang$core$Debug$log, 'actual', actualSettings.attributes));
+		return A2(
+			_elm_lang$html$Html$div,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class('control'),
+				_1: {ctor: '[]'}
+			},
+			A2(
+				_elm_lang$core$List$map,
+				A3(_flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioItem, isUserSettings, attrDoc.key, actualValue),
+				attrDoc.suggestions));
+	});
+var _flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioSettingsWithLabel = F3(
+	function (model, isUserSettings, attrDoc) {
+		return A2(
+			_elm_lang$html$Html$div,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class('field'),
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$label,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('label'),
+						_1: {ctor: '[]'}
+					},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text(attrDoc.key),
+						_1: {ctor: '[]'}
+					}),
+				_1: {
+					ctor: '::',
+					_0: A3(_flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioSettings, model, isUserSettings, attrDoc),
+					_1: {
+						ctor: '::',
+						_0: A2(_flarebyte$bubblegum_ui_textarea$WidgetDocView$viewSelectedBox, isUserSettings, attrDoc.key),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$p,
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$class('help is-info'),
+									_1: {ctor: '[]'}
+								},
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html$text(attrDoc.description),
+									_1: {ctor: '[]'}
+								}),
+							_1: {ctor: '[]'}
+						}
+					}
+				}
+			});
+	});
+var _flarebyte$bubblegum_ui_textarea$WidgetDocView$viewSettings = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('box scrollable'),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$h3,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('title'),
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text('User Settings'),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$div,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('box'),
+						_1: {ctor: '[]'}
+					},
+					A2(
+						_elm_lang$core$List$map,
+						A2(_flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioSettingsWithLabel, model, true),
+						_flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc.userSettings)),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$h3,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class('title'),
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text('Settings'),
+							_1: {ctor: '[]'}
+						}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$div,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class('box'),
+								_1: {ctor: '[]'}
+							},
+							A2(
+								_elm_lang$core$List$map,
+								A2(_flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioSettingsWithLabel, model, false),
+								_flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc.settings)),
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		});
+};
+var _flarebyte$bubblegum_ui_textarea$WidgetDocView$viewHeader = A2(
 	_elm_lang$html$Html$div,
 	{ctor: '[]'},
 	{
@@ -10826,7 +10900,7 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$viewHeader = A2(
 					A2(
 						_elm_lang$core$Maybe$withDefault,
 						'?',
-						_elm_lang$core$List$head(_flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc.meta.exposedModules))),
+						_elm_lang$core$List$head(_flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc.meta.exposedModules))),
 				_1: {ctor: '[]'}
 			}),
 		_1: {
@@ -10840,7 +10914,7 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$viewHeader = A2(
 				},
 				{
 					ctor: '::',
-					_0: _elm_lang$html$Html$text(_flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc.meta.summary),
+					_0: _elm_lang$html$Html$text(_flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc.meta.summary),
 					_1: {ctor: '[]'}
 				}),
 			_1: {
@@ -10895,7 +10969,7 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$viewHeader = A2(
 												},
 												{
 													ctor: '::',
-													_0: _elm_lang$html$Html$text(_flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc.meta.version),
+													_0: _elm_lang$html$Html$text(_flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc.meta.version),
 													_1: {ctor: '[]'}
 												}),
 											_1: {ctor: '[]'}
@@ -10946,7 +11020,7 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$viewHeader = A2(
 													},
 													{
 														ctor: '::',
-														_0: _elm_lang$html$Html$text(_flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc.meta.license),
+														_0: _elm_lang$html$Html$text(_flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc.meta.license),
 														_1: {ctor: '[]'}
 													}),
 												_1: {ctor: '[]'}
@@ -10972,7 +11046,7 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$viewHeader = A2(
 												_0: _elm_lang$html$Html_Attributes$class('button is-small'),
 												_1: {
 													ctor: '::',
-													_0: _elm_lang$html$Html_Attributes$href(_flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc.meta.repository),
+													_0: _elm_lang$html$Html_Attributes$href(_flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc.meta.repository),
 													_1: {ctor: '[]'}
 												}
 											},
@@ -11020,78 +11094,6 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDoc$viewHeader = A2(
 			}
 		}
 	});
-var _flarebyte$bubblegum_ui_textarea$WidgetDoc$viewSettings = function (model) {
-	return A2(
-		_elm_lang$html$Html$div,
-		{
-			ctor: '::',
-			_0: _elm_lang$html$Html_Attributes$class('box scrollable'),
-			_1: {ctor: '[]'}
-		},
-		{
-			ctor: '::',
-			_0: A2(
-				_elm_lang$html$Html$h3,
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html_Attributes$class('title'),
-					_1: {ctor: '[]'}
-				},
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html$text('User Settings'),
-					_1: {ctor: '[]'}
-				}),
-			_1: {
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$div,
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class('box'),
-						_1: {ctor: '[]'}
-					},
-					A2(
-						_elm_lang$core$List$map,
-						A2(_flarebyte$bubblegum_ui_textarea$WidgetDoc$viewRadioSettingsWithLabel, model, true),
-						_flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc.userSettings)),
-				_1: {
-					ctor: '::',
-					_0: A2(
-						_elm_lang$html$Html$h3,
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('title'),
-							_1: {ctor: '[]'}
-						},
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html$text('Settings'),
-							_1: {ctor: '[]'}
-						}),
-					_1: {
-						ctor: '::',
-						_0: A2(
-							_elm_lang$html$Html$div,
-							{
-								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$class('box'),
-								_1: {ctor: '[]'}
-							},
-							A2(
-								_elm_lang$core$List$map,
-								A2(_flarebyte$bubblegum_ui_textarea$WidgetDoc$viewRadioSettingsWithLabel, model, false),
-								_flarebyte$bubblegum_ui_textarea$WidgetDoc$textAreaWidgetDoc.settings)),
-						_1: {ctor: '[]'}
-					}
-				}
-			}
-		});
-};
-var _flarebyte$bubblegum_ui_textarea$WidgetDoc$WidgetDoc = F3(
-	function (a, b, c) {
-		return {meta: a, userSettings: b, settings: c};
-	});
 
 var _flarebyte$bubblegum_ui_textarea$App$view = function (model) {
 	return A2(
@@ -11103,7 +11105,7 @@ var _flarebyte$bubblegum_ui_textarea$App$view = function (model) {
 		},
 		{
 			ctor: '::',
-			_0: _flarebyte$bubblegum_ui_textarea$WidgetDoc$viewHeader,
+			_0: _flarebyte$bubblegum_ui_textarea$WidgetDocView$viewHeader,
 			_1: {
 				ctor: '::',
 				_0: A2(
@@ -11159,7 +11161,7 @@ var _flarebyte$bubblegum_ui_textarea$App$view = function (model) {
 									},
 									{
 										ctor: '::',
-										_0: _flarebyte$bubblegum_ui_textarea$WidgetDoc$viewSettings(model),
+										_0: _flarebyte$bubblegum_ui_textarea$WidgetDocView$viewSettings(model),
 										_1: {ctor: '[]'}
 									}),
 								_1: {ctor: '[]'}
