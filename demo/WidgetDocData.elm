@@ -27,11 +27,13 @@ textAreaWidgetDoc =
         , createKey ui_label ZeroOrOne [ "Some label", "ラベル", "ضع الكلمة المناسبة", "other" ] descLabel
         , createKey ui_help ZeroOrOne [ "Lorem ipsum dolor sit amet consectetur adipiscing elit.", "助けて", "other" ] descHelp
         , createKey ui_dangerHelp ZeroOrOne [ "do not do this", "other" ] descDangerHelp
-        , createKey ui_content ZeroOrOne [ "some content", "other" ] descContent
         , createKey ui_contentLanguage ZeroOrOne [ "en-GB", "ja", "ar", "other" ] descContentLanguage
         , createKey ui_contentRightToLeft ZeroOrOne [ "true", "false", "other" ] descContentRightToLeft
         , createKey ui_accessibilityLargeText ZeroOrOne [ "true", "false", "other" ] descAccessibilityLargeText
         , createKey ui_tag ZeroOrOne [ "it", "learning", "elm", "other" ] descTag
+        ]
+    , stateAttributes =
+        [ createKey ui_content ZeroOrOne [ "some content", "other" ] descContent
         , createKey ui_successTag ZeroOrOne [ "spelling", "concise", "italian", "other" ] descSuccessTag
         , createKey ui_warningTag ZeroOrOne [ "grammar", "synonyms", "other" ] descWarningTag
         , createKey ui_dangerTag ZeroOrOne [ "sensitive", "save", "other" ] descDangerTag

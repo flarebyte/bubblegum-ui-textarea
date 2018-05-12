@@ -252,7 +252,17 @@ def createWidgetDocData():
     for row in content:
         if len(row) > 2:
             nameField, descriptionField, signatureField, extraField, examplesField = row
-            if not "user" in nameField:
+            if not "user" in nameField and not "state" in extraField:
+                content = prefixWithComa("createKey", withComa, formatTemplate(templateWidgetDocDataString, row))
+                file.write(content)
+                withComa = True
+    file.write("\n  ]\n  , stateAttributes = [\n")     
+    content = readCsv(ui_keys_csv)   
+    withComa = False
+    for row in content:
+        if len(row) > 2:
+            nameField, descriptionField, signatureField, extraField, examplesField = row
+            if "state" in extraField:
                 content = prefixWithComa("createKey", withComa, formatTemplate(templateWidgetDocDataString, row))
                 file.write(content)
                 withComa = True

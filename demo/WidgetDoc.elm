@@ -8,4 +8,5 @@ type alias WidgetDoc =
     { meta : PackageJson.Model
     , userSettings : List AttributeDoc
     , settings : List AttributeDoc
+    , stateAttributes : List AttributeDoc
     }
