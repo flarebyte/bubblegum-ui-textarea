@@ -14,66 +14,102 @@ import Bubblegum.TextArea.HelperLimits exposing (..)
 {-|  Short hint describing the expected content -}
 getPlaceholder : SettingsEntity.Model -> Outcome String
 getPlaceholder settings =
-    findString ui_Placeholder settings.attributes
+    findString ui_placeholder settings.attributes
         |> Validation.withinStringCharsRange limitMediumRangeNotEmpty
            
 
 {-|  Label related to the field -}
 getLabel : SettingsEntity.Model -> Outcome String
 getLabel settings =
-    findString ui_Label settings.attributes
+    findString ui_label settings.attributes
         |> Validation.withinStringCharsRange limitMediumRangeNotEmpty
            
 
 {-|  Some help tip related to the field -}
 getHelp : SettingsEntity.Model -> Outcome String
 getHelp settings =
-    findString ui_Help settings.attributes
+    findString ui_help settings.attributes
         |> Validation.withinStringCharsRange limitMediumRangeNotEmpty
            
 
 {-|  Help message to highlight an issue with the content -}
 getDangerHelp : SettingsEntity.Model -> Outcome String
 getDangerHelp settings =
-    findString ui_DangerHelp settings.attributes
+    findString ui_dangerHelp settings.attributes
         |> Validation.withinStringCharsRange limitMediumRangeNotEmpty
            
 
 {-|  The content of the field -}
 getContent : SettingsEntity.Model -> Outcome String
 getContent settings =
-    findString ui_Content settings.attributes
+    findString ui_content settings.attributes
         |> Validation.withinStringCharsRange limitVeryLargeRange
            
 
 {-|  Language used by the user -}
 getUserLanguage : SettingsEntity.Model -> Outcome String
 getUserLanguage settings =
-    findString ui_UserLanguage settings.attributes
+    findString ui_userLanguage settings.attributes
         |> Validation.withinStringCharsRange limitSmallRangeNotEmpty
            
 
 {-|  Language of the content -}
 getContentLanguage : SettingsEntity.Model -> Outcome String
 getContentLanguage settings =
-    findString ui_ContentLanguage settings.attributes
+    findString ui_contentLanguage settings.attributes
         |> Validation.withinStringCharsRange limitSmallRangeNotEmpty
            
 
 {-|  Whether the user is using right to left -}
-getUserRightToLeft : SettingsEntity.Model -> Outcome Bool
-getUserRightToLeft settings =
-    findBool ui_UserRightToLeft settings.attributes
+isUserRightToLeft : SettingsEntity.Model -> Outcome Bool
+isUserRightToLeft settings =
+    findBool ui_userRightToLeft settings.attributes
 
 
 {-|  Whether the content requires right to left -}
-getContentRightToLeft : SettingsEntity.Model -> Outcome Bool
-getContentRightToLeft settings =
-    findBool ui_ContentRightToLeft settings.attributes
+isContentRightToLeft : SettingsEntity.Model -> Outcome Bool
+isContentRightToLeft settings =
+    findBool ui_contentRightToLeft settings.attributes
 
 
 {-|  Whether the user would prefer large text -}
-getAccessibilityLargeText : SettingsEntity.Model -> Outcome Bool
-getAccessibilityLargeText settings =
-    findBool ui_AccessibilityLargeText settings.attributes
+isAccessibilityLargeText : SettingsEntity.Model -> Outcome Bool
+isAccessibilityLargeText settings =
+    findBool ui_accessibilityLargeText settings.attributes
+
+
+{-|  The range of characters accepted for successful content -}
+
+getSuccessCharRange: SettingsEntity.Model -> Outcome ( Int, Int )
+getSuccessCharRange settings =
+    findIntRange ( ui_successMinChars, ui_successMaxChars ) settings.attributes
+        |> Validation.withinIntRange charRange
+
+
+
+{-|  The range of characters triggering a warning -}
+
+getDangerCharRange: SettingsEntity.Model -> Outcome ( Int, Int )
+getDangerCharRange settings =
+    findIntRange ( ui_dangerMinChars, ui_dangerMaxChars ) settings.attributes
+        |> Validation.withinIntRange charRange
+
+
+
+{-|  The range of words accepted for successful content -}
+
+getSuccessWordRange: SettingsEntity.Model -> Outcome ( Int, Int )
+getSuccessWordRange settings =
+    findIntRange ( ui_successMinWords, ui_successMaxWords ) settings.attributes
+        |> Validation.withinIntRange wordRange
+
+
+
+{-|  The range of words triggering a warning -}
+
+getDangerWordRange: SettingsEntity.Model -> Outcome ( Int, Int )
+getDangerWordRange settings =
+    findIntRange ( ui_dangerMinWords, ui_dangerMaxWords ) settings.attributes
+        |> Validation.withinIntRange wordRange
+
 

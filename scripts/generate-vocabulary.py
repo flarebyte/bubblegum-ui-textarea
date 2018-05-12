@@ -4,7 +4,8 @@ import sys
 import csv
 from string import Template
 
-filename = "ui-keys.csv"
+ui_keys_csv = "ui-keys.csv"
+ui_range_keys_csv = "ui-range-keys.csv"
 
 def checkRangeRestriction(extra):
     if "small!" in extra:
@@ -79,16 +80,27 @@ templateVocabularyHelperString = """
 {-|  $description -}
 get$nameCamel : SettingsEntity.Model -> Outcome String
 get$nameCamel settings =
-    findString ui_$nameCamel settings.attributes
+    findString ui_$namecamel settings.attributes
         |> Validation.withinStringCharsRange $rangeRestriction
            
 """
 
 templateVocabularyHelperBool = """
 {-|  $description -}
-get$nameCamel : SettingsEntity.Model -> Outcome Bool
-get$nameCamel settings =
-    findBool ui_$nameCamel settings.attributes
+is$nameCamel : SettingsEntity.Model -> Outcome Bool
+is$nameCamel settings =
+    findBool ui_$namecamel settings.attributes
+
+"""
+
+templateVocabularyHelperIntRange = """
+{-|  $description -}
+
+$methodName: SettingsEntity.Model -> Outcome ( Int, Int )
+$methodName settings =
+    findIntRange ( $minKey, $maxKey ) settings.attributes
+        |> Validation.withinIntRange $unitRange
+
 
 """
 
@@ -100,7 +112,7 @@ def camelCaseUpper(st):
     camel = camelCase(st.strip())
     return camel[0].upper() + camel[1:]
 
-def readCsv(): 
+def readCsv(filename): 
     results = []
     with open(filename) as data_file:    
         csvreader = csv.reader(data_file)
@@ -124,10 +136,22 @@ def formatTemplate(template, row):
             nameCamel=nameCamel,
             rangeRestriction=rangeRestriction
             )
+
+def formatRangeTemplate(template, row):
+        kindField, unitField, descriptionField = row
+        kind = kindField.strip()
+        unit = unitField.strip()
+        return Template(template).substitute(
+            methodName="get{}{}Range".format(camelCaseUpper(kind),camelCaseUpper(unit)),
+            minKey="ui_{}Min{}s".format(camelCase(kind),camelCaseUpper(unit)),
+            maxKey="ui_{}Max{}s".format(camelCase(kind),camelCaseUpper(unit)),
+            unitRange="{}Range".format(unit),
+            description=descriptionField.strip(),
+            )
     
 
 def createVocabulary():
-    content = readCsv()
+    content = readCsv(ui_keys_csv)
     file = open("../src/Bubblegum/TextArea/Vocabulary.elm", "w")
     file.write(headerVocabulary)
     for row in content:
@@ -136,7 +160,7 @@ def createVocabulary():
     file.close()    
 
 def createKeyDescription():
-    content = readCsv()
+    content = readCsv(ui_keys_csv)
     file = open("KeyDescription.elm", "w")
     file.write(headerKeyDescription)
     for row in content:
@@ -145,7 +169,8 @@ def createKeyDescription():
     file.close()    
 
 def createVocabularyHelper():
-    content = readCsv()
+    content = readCsv(ui_keys_csv)
+    rangeContent = readCsv(ui_range_keys_csv)
     file = open("../src/Bubblegum/TextArea/VocabularyHelper.elm", "w")
     file.write(headerVocabularyHelper)
     for row in content:
@@ -155,6 +180,9 @@ def createVocabularyHelper():
                 file.write(formatTemplate(templateVocabularyHelperBool, row))
             if  signatureField.strip() == "String":
                 file.write(formatTemplate(templateVocabularyHelperString, row))
+    for row in rangeContent:
+        if len(row) > 2 :
+            file.write(formatRangeTemplate(templateVocabularyHelperIntRange, row))
                 
     file.close()    
 

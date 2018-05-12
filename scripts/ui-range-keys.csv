@@ -1,26 +1,5 @@
-success-minimum-chars,The minimum number of characters needed for successful content,Int,settings
-success-maximum-chars,The maximum number of characters needed for successful content,Int,settings
-danger-minimum-chars,Warning when under the minimum number of characters,Int,settings
-danger-maximum-chars,Warning when over the maximum number of characters,Int,settings
-success-minimum-words,The minimum number of words needed for successful content,Int,settings
-success-maximum-words,The maximum number of words needed for successful content,Int,settings
-danger-minimum-words,Warning when under the minimum number of words,Int,settings 
-danger-maximum-words,Warning when over the maximum number of words,Int,settings
-placeholder,Short hint describing the expected content,String,medium!
-label,Label related to the field,String,medium!
-help,Some help tip related to the field,String,medium!
-danger-help,Help message to highlight an issue with the content,String,medium!
-icon,An icon to be displayed alongside the field,String,small!
-content,The content of the field,String,state very-large 
-user-language,Language used by the user,String,small!
-content-language,Language of the content,String,small!
-user-right-to-left,Whether the user is using right to left,Bool,settings
-content-right-to-left,Whether the content requires right to left,Bool,settings
-accessibility-large-text,Whether the user would prefer large text,Bool,settings
-tag,Tag used to describe the field,List String,small!
-success-tag,Tag representing a successful facet of the content,List String,small!
-warning-tag,Tag representing a warning aspect of the content,List String,small!
-danger-tag,Tag representing a dangerous aspect of the content,List String,small!
-
-
+success,char,The range of characters accepted for successful content
+danger,char,The range of characters triggering a warning
+success,word,The range of words accepted for successful content
+danger,word,The range of words triggering a warning
 
