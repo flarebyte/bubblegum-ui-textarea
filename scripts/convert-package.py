@@ -21,7 +21,7 @@ def convertStringArray(name, content):
 
 def main(argv):
     content = readJson()
-    file = open("WidgetPackageJson.elm", "w") 
+    file = open("../demo/WidgetPackageJson.elm", "w") 
     file.write("module WidgetPackageJson exposing (meta)\n\n")
     file.write("import PackageJson\n\n")
     file.write("meta : PackageJson.Model\n")

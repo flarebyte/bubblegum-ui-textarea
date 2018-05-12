@@ -37,10 +37,10 @@ doc:
 	elm-make --docs=documentation.json
 
 meta:
-	cd demo && python convert-package.py
+	cd scripts && python convert-package.py
 
 generate:
-	cd demo && python generate-vocabulary.py
+	cd scripts && python generate-vocabulary.py
 
 diff:
 	elm-package diff
