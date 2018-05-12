@@ -1,7 +1,9 @@
 
 module Bubblegum.TextArea.Vocabulary exposing (..)
 
-{-| List of keys used for the settings (generated)
+{-| List of keys used for the settings
+
+    **Generated** by generate-vocabulary.py
 
 -}
 
@@ -65,11 +67,6 @@ ui_help =
 ui_dangerHelp: String
 ui_dangerHelp =
     "ui:danger-help"
-
-{-|  An icon to be displayed alongside the field. (String) -}
-ui_icon: String
-ui_icon =
-    "ui:icon"
 
 {-|  The content of the field. (String) -}
 ui_content: String

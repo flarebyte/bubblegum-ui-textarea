@@ -28,7 +28,9 @@ def checkRangeRestriction(extra):
 headerVocabulary = """
 module Bubblegum.TextArea.Vocabulary exposing (..)
 
-{-| List of keys used for the settings (generated)
+{-| List of keys used for the settings
+
+    **Generated** by generate-vocabulary.py
 
 -}
 
@@ -45,7 +47,9 @@ ui_$namecamel =
 headerKeyDescription = """
 module KeyDescription exposing (..)
 
-{-| List of descriptions for the keys used for the settings (generated)
+{-| List of descriptions for the keys used for the settings
+
+    **Generated** by generate-vocabulary.py
 
 -}
 
@@ -61,9 +65,14 @@ desc$nameCamel =
 headerVocabularyHelper = """
 module Bubblegum.TextArea.VocabularyHelper exposing (..)
 
-{-| Helpers for accessing settings (generated)
+{-| Helpers for accessing settings
+ 
+    **Generated** by generate-vocabulary.py
 
 -}
+
+import Bubblegum.TextArea.EntityHelper exposing (..)
+import Bubblegum.TextArea.HelperLimits exposing (..)
 
 """
 templateVocabularyHelperString = """
@@ -72,16 +81,15 @@ get$nameCamel : SettingsEntity.Model -> Outcome String
 get$nameCamel settings =
     findString ui_$nameCamel settings.attributes
         |> Validation.withinStringCharsRange $rangeRestriction
-    
+           
 """
 
 templateVocabularyHelperBool = """
 {-|  $description -}
 get$nameCamel : SettingsEntity.Model -> Outcome Bool
 get$nameCamel settings =
-    findString ui_$nameCamel settings.attributes
-        |> Validation.asBool
-    
+    findBool ui_$nameCamel settings.attributes
+
 """
 
 def camelCase(st):
@@ -139,7 +147,7 @@ def createKeyDescription():
 def createVocabularyHelper():
     content = readCsv()
     file = open("../src/Bubblegum/TextArea/VocabularyHelper.elm", "w")
-    file.write(headerVocabulary)
+    file.write(headerVocabularyHelper)
     for row in content:
         if len(row) > 2 :
             nameField, descriptionField, signatureField, extra = row

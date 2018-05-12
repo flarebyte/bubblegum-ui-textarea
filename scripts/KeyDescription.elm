@@ -1,7 +1,9 @@
 
 module KeyDescription exposing (..)
 
-{-| List of descriptions for the keys used for the settings (generated)
+{-| List of descriptions for the keys used for the settings
+
+    **Generated** by generate-vocabulary.py
 
 -}
 
@@ -53,10 +55,6 @@ descHelp =
 descDangerHelp: String
 descDangerHelp =
     "Help message to highlight an issue with the content"    
-
-descIcon: String
-descIcon =
-    "An icon to be displayed alongside the field"    
 
 descContent: String
 descContent =
