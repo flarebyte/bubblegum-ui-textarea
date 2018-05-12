@@ -9,6 +9,7 @@ import Debug
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onClick)
+import KeyDescription exposing (..)
 import PackageJson
 import WidgetPackageJson
 
@@ -24,30 +25,24 @@ textAreaWidgetDoc : WidgetDoc
 textAreaWidgetDoc =
     { meta = WidgetPackageJson.meta
     , userSettings =
-        [ createKey ui_userLanguage ZeroOrOne [ "en-GB", "ja", "ar", "unknown" ] englishSummaryUserLanguage
-        , createKey ui_contentLanguage ZeroOrOne [ "en-GB", "ja", "ar", "unknown" ] englishSummaryContentLanguage
-        , createKey ui_userRightToLeft ZeroOrOne [ "false", "true", "unknown" ] englishSummaryUserRightToLeft
-        , createKey ui_contentRightToLeft ZeroOrOne [ "false", "true", "unknown" ] englishSummaryContentRightToLeft
-        , createKey ui_keyboardShortcutsActive ZeroOrOne [ "false", "true", "unknown" ] englishSummaryKeyboardShortcutsActive
-        , createKey ui_audioDescriptionActive ZeroOrOne [ "false", "true", "unknown" ] englishSummaryAudioDescriptionActive
-        , createKey ui_accessibilityHighContrastActive ZeroOrOne [ "false", "true", "unknown" ] englishSummaryAccessibilityHighContrastActive
-        , createKey ui_accessibilityLargeText ZeroOrOne [ "false", "true", "unknown" ] englishSummaryAccessibilityLargeText
-        , createKey ui_accessibilityNoKeyboard ZeroOrOne [ "false", "true", "unknown" ] englishSummaryAccessibilityNoKeyboard
+        [ createKey ui_userLanguage ZeroOrOne [ "en-GB", "ja", "ar", "unknown" ] descUserLanguage
+        , createKey ui_contentLanguage ZeroOrOne [ "en-GB", "ja", "ar", "unknown" ] descContentLanguage
+        , createKey ui_userRightToLeft ZeroOrOne [ "false", "true", "unknown" ] descUserRightToLeft
+        , createKey ui_contentRightToLeft ZeroOrOne [ "false", "true", "unknown" ] descContentRightToLeft
+        , createKey ui_accessibilityLargeText ZeroOrOne [ "false", "true", "unknown" ] descAccessibilityLargeText
         ]
     , settings =
-        [ createKey ui_successMinChars ZeroOrOne [ "30", "60", "90", "-5" ] englishSummarySuccessMinChars
-        , createKey ui_successMaxChars ZeroOrOne [ "31", "61", "91", "-5" ] englishSummarySuccessMaxChars
-        , createKey ui_dangerMinChars ZeroOrOne [ "20", "50", "80", "-5" ] englishSummaryDangerMinChars
-        , createKey ui_dangerMaxChars ZeroOrOne [ "21", "51", "81", "-5" ] englishSummaryDangerMaxChars
-        , createKey ui_successMinWords ZeroOrOne [ "30", "60", "90", "-5" ] englishSummarySuccessMinWords
-        , createKey ui_successMaxWords ZeroOrOne [ "31", "61", "91", "-5" ] englishSummarySuccessMaxWords
-        , createKey ui_dangerMinWords ZeroOrOne [ "20", "50", "80", "-5" ] englishSummaryDangerMinWords
-        , createKey ui_dangerMaxWords ZeroOrOne [ "21", "51", "120", "-5" ] englishSummaryDangerMaxWords
-        , createKey ui_placeholder ZeroOrOne [ "Some placeholder", "プレースホルダ" ] englishSummaryPlaceholder
-        , createKey ui_label ZeroOrOne [ "Some label", "ラベル", "ضع الكلمة المناسبة" ] englishSummaryLabel
-        , createKey ui_help ZeroOrOne [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "助けて" ] englishSummaryHelp
-        , createKey ui_icon ZeroOrOne [ "fa-desktop", "fa-microchip" ] englishSummaryIcon
-        , createKey ui_inputSize ZeroOrOne [ "is-small", "is-medium", "is-large", "bad value" ] englishSummaryInputSize
+        [ createKey ui_successMinimumChars ZeroOrOne [ "30", "60", "90", "-5" ] descSuccessMinimumChars
+        , createKey ui_successMaximumChars ZeroOrOne [ "31", "61", "91", "-5" ] descSuccessMaximumChars
+        , createKey ui_dangerMinimumChars ZeroOrOne [ "20", "50", "80", "-5" ] descDangerMinimumChars
+        , createKey ui_dangerMaximumChars ZeroOrOne [ "21", "51", "81", "-5" ] descDangerMaximumChars
+        , createKey ui_successMinimumWords ZeroOrOne [ "30", "60", "90", "-5" ] descSuccessMinimumWords
+        , createKey ui_successMaximumWords ZeroOrOne [ "31", "61", "91", "-5" ] descSuccessMaximumWords
+        , createKey ui_dangerMinimumWords ZeroOrOne [ "20", "50", "80", "-5" ] descDangerMinimumWords
+        , createKey ui_dangerMaximumWords ZeroOrOne [ "21", "51", "120", "-5" ] descDangerMaximumWords
+        , createKey ui_placeholder ZeroOrOne [ "Some placeholder", "プレースホルダ" ] descPlaceholder
+        , createKey ui_label ZeroOrOne [ "Some label", "ラベル", "ضع الكلمة المناسبة" ] descLabel
+        , createKey ui_help ZeroOrOne [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "助けて" ] descHelp
         ]
     }
 

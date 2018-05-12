@@ -1,7 +1,6 @@
 module Bubblegum.Entity.Validation
     exposing
-        ( 
-        asBool
+        ( asBool
         , asFloat
         , asFloatRange
         , asFloatTuple
@@ -141,6 +140,7 @@ matchEnum enum outcome =
 stringStartsWith : String -> Outcome String -> Outcome String
 stringStartsWith prefix outcome =
     Outcome.check (\v -> String.startsWith prefix v) ("unsatisfied-constraint:starts-with:" ++ prefix) outcome
+
 
 stringEndsWith : String -> Outcome String -> Outcome String
 stringEndsWith suffix outcome =

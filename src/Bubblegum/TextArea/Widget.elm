@@ -13,6 +13,7 @@ import Bubblegum.TextArea.Adapter as TextAreaAdapter
 import Bubblegum.TextArea.BulmaHelper exposing (..)
 import Bubblegum.TextArea.Helper exposing (..)
 import Bubblegum.TextArea.Internationalization exposing (translateWord)
+import Bubblegum.TextArea.VocabularyHelper exposing (..)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onClick, onInput, onMouseEnter, onMouseOut)

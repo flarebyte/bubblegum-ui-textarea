@@ -19,4 +19,3 @@ import Tuple exposing (first, second)
 addStringPrefix : String -> Outcome String -> Outcome String
 addStringPrefix prefix outcome =
     Outcome.map (\v -> prefix ++ v) outcome
-

@@ -72,8 +72,12 @@ module Bubblegum.TextArea.VocabularyHelper exposing (..)
 
 -}
 
+import Bubblegum.Entity.Validation as Validation
+import Bubblegum.Entity.SettingsEntity as SettingsEntity
+import Bubblegum.Entity.Outcome as Outcome exposing (..)
 import Bubblegum.TextArea.EntityHelper exposing (..)
 import Bubblegum.TextArea.HelperLimits exposing (..)
+import Bubblegum.TextArea.Vocabulary exposing (..)
 
 """
 templateVocabularyHelperString = """
@@ -99,7 +103,7 @@ templateVocabularyHelperIntRange = """
 $methodName: SettingsEntity.Model -> Outcome ( Int, Int )
 $methodName settings =
     findIntRange ( $minKey, $maxKey ) settings.attributes
-        |> Validation.withinIntRange $unitRange
+        |> Validation.withinIntRange limitVeryLargeRangeNotEmpty
 
 
 """
@@ -143,9 +147,8 @@ def formatRangeTemplate(template, row):
         unit = unitField.strip()
         return Template(template).substitute(
             methodName="get{}{}Range".format(camelCaseUpper(kind),camelCaseUpper(unit)),
-            minKey="ui_{}Min{}s".format(camelCase(kind),camelCaseUpper(unit)),
-            maxKey="ui_{}Max{}s".format(camelCase(kind),camelCaseUpper(unit)),
-            unitRange="{}Range".format(unit),
+            minKey="ui_{}Minimum{}s".format(camelCase(kind),camelCaseUpper(unit)),
+            maxKey="ui_{}Maximum{}s".format(camelCase(kind),camelCaseUpper(unit)),
             description=descriptionField.strip(),
             )
     
