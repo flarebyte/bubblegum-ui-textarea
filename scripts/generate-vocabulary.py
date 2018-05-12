@@ -119,6 +119,11 @@ import KeyDescription exposing (..)
 import WidgetDoc exposing (..)
 import WidgetPackageJson
 
+{-| Some examples of settings for the demo.
+ 
+    **Generated** by generate-vocabulary.py
+
+-}
 
 textAreaWidgetDoc : WidgetDoc
 textAreaWidgetDoc =

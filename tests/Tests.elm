@@ -1,16 +1,10 @@
 module Tests exposing (..)
 
 import Test exposing (describe, test, Test)
-import Expect
-import Bubblegum.TextArea.Widget
-
+import WidgetCreateTests as WidgetCreateTests
 
 all : Test
 all =
-    describe "TextArea.Widget.view"
-        [ describe "view" <|
-            [ test "do we need unit tests" <|
-                \() ->
-                    Expect.equal True True
-            ]
+    Test.concat
+        [ WidgetCreateTests.all
         ]
