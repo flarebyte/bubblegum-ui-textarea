@@ -127,7 +127,7 @@ textAreaWidgetDoc =
 """
 
 
-templateWidgetDocDataString = """ createKey ui_$namecamel ZeroOrOne [ $examples ] desc$nameCamel
+templateWidgetDocDataString = """  createKey ui_$namecamel ZeroOrOne [ $examples ] desc$nameCamel
 """
 def camelCase(st):
     output = ''.join(x for x in st.strip().title() if x.isalpha())
@@ -246,7 +246,7 @@ def createWidgetDocData():
                 content = prefixWithComa("createKey", withComa, formatTemplate(templateWidgetDocDataString, row))
                 file.write(content)
                 withComa = True
-    file.write(", settings = [\n")     
+    file.write("\n  ]\n  , settings = [\n")     
     content = readCsv(ui_keys_csv)   
     withComa = False
     for row in content:

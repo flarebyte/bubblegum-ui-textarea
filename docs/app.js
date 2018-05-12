@@ -10243,7 +10243,6 @@ var _flarebyte$bubblegum_ui_textarea$KeyDescription$descUserRightToLeft = 'Wheth
 var _flarebyte$bubblegum_ui_textarea$KeyDescription$descContentLanguage = 'Language of the content';
 var _flarebyte$bubblegum_ui_textarea$KeyDescription$descUserLanguage = 'Language used by the user';
 var _flarebyte$bubblegum_ui_textarea$KeyDescription$descContent = 'The content of the field';
-var _flarebyte$bubblegum_ui_textarea$KeyDescription$descIcon = 'An icon to be displayed alongside the field';
 var _flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerHelp = 'Help message to highlight an issue with the content';
 var _flarebyte$bubblegum_ui_textarea$KeyDescription$descHelp = 'Some help tip related to the field';
 var _flarebyte$bubblegum_ui_textarea$KeyDescription$descLabel = 'Label related to the field';
@@ -10298,7 +10297,7 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 						_0: 'ar',
 						_1: {
 							ctor: '::',
-							_0: 'unknown',
+							_0: 'other',
 							_1: {ctor: '[]'}
 						}
 					}
@@ -10309,90 +10308,23 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 			ctor: '::',
 			_0: A4(
 				_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentLanguage,
+				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_userRightToLeft,
 				_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 				{
 					ctor: '::',
-					_0: 'en-GB',
+					_0: 'true',
 					_1: {
-						ctor: '::',
-						_0: 'ja',
-						_1: {
-							ctor: '::',
-							_0: 'ar',
-							_1: {
-								ctor: '::',
-								_0: 'unknown',
-								_1: {ctor: '[]'}
-							}
-						}
-					}
-				},
-				_flarebyte$bubblegum_ui_textarea$KeyDescription$descContentLanguage),
-			_1: {
-				ctor: '::',
-				_0: A4(
-					_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_userRightToLeft,
-					_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
-					{
 						ctor: '::',
 						_0: 'false',
 						_1: {
 							ctor: '::',
-							_0: 'true',
-							_1: {
-								ctor: '::',
-								_0: 'unknown',
-								_1: {ctor: '[]'}
-							}
+							_0: 'other',
+							_1: {ctor: '[]'}
 						}
-					},
-					_flarebyte$bubblegum_ui_textarea$KeyDescription$descUserRightToLeft),
-				_1: {
-					ctor: '::',
-					_0: A4(
-						_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-						_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentRightToLeft,
-						_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
-						{
-							ctor: '::',
-							_0: 'false',
-							_1: {
-								ctor: '::',
-								_0: 'true',
-								_1: {
-									ctor: '::',
-									_0: 'unknown',
-									_1: {ctor: '[]'}
-								}
-							}
-						},
-						_flarebyte$bubblegum_ui_textarea$KeyDescription$descContentRightToLeft),
-					_1: {
-						ctor: '::',
-						_0: A4(
-							_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-							_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_accessibilityLargeText,
-							_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
-							{
-								ctor: '::',
-								_0: 'false',
-								_1: {
-									ctor: '::',
-									_0: 'true',
-									_1: {
-										ctor: '::',
-										_0: 'unknown',
-										_1: {ctor: '[]'}
-									}
-								}
-							},
-							_flarebyte$bubblegum_ui_textarea$KeyDescription$descAccessibilityLargeText),
-						_1: {ctor: '[]'}
 					}
-				}
-			}
+				},
+				_flarebyte$bubblegum_ui_textarea$KeyDescription$descUserRightToLeft),
+			_1: {ctor: '[]'}
 		}
 	},
 	settings: {
@@ -10403,17 +10335,29 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 			_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 			{
 				ctor: '::',
-				_0: '30',
+				_0: '0',
 				_1: {
 					ctor: '::',
-					_0: '60',
+					_0: '20',
 					_1: {
 						ctor: '::',
-						_0: '90',
+						_0: '40',
 						_1: {
 							ctor: '::',
-							_0: '-5',
-							_1: {ctor: '[]'}
+							_0: '80',
+							_1: {
+								ctor: '::',
+								_0: '160',
+								_1: {
+									ctor: '::',
+									_0: '320',
+									_1: {
+										ctor: '::',
+										_0: '-5',
+										_1: {ctor: '[]'}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -10427,17 +10371,29 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 				_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 				{
 					ctor: '::',
-					_0: '31',
+					_0: '0',
 					_1: {
 						ctor: '::',
-						_0: '61',
+						_0: '20',
 						_1: {
 							ctor: '::',
-							_0: '91',
+							_0: '40',
 							_1: {
 								ctor: '::',
-								_0: '-5',
-								_1: {ctor: '[]'}
+								_0: '80',
+								_1: {
+									ctor: '::',
+									_0: '160',
+									_1: {
+										ctor: '::',
+										_0: '320',
+										_1: {
+											ctor: '::',
+											_0: '-5',
+											_1: {ctor: '[]'}
+										}
+									}
+								}
 							}
 						}
 					}
@@ -10451,17 +10407,29 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 					_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 					{
 						ctor: '::',
-						_0: '20',
+						_0: '0',
 						_1: {
 							ctor: '::',
-							_0: '50',
+							_0: '20',
 							_1: {
 								ctor: '::',
-								_0: '80',
+								_0: '40',
 								_1: {
 									ctor: '::',
-									_0: '-5',
-									_1: {ctor: '[]'}
+									_0: '80',
+									_1: {
+										ctor: '::',
+										_0: '160',
+										_1: {
+											ctor: '::',
+											_0: '320',
+											_1: {
+												ctor: '::',
+												_0: '-5',
+												_1: {ctor: '[]'}
+											}
+										}
+									}
 								}
 							}
 						}
@@ -10475,17 +10443,29 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 						_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 						{
 							ctor: '::',
-							_0: '21',
+							_0: '0',
 							_1: {
 								ctor: '::',
-								_0: '51',
+								_0: '20',
 								_1: {
 									ctor: '::',
-									_0: '81',
+									_0: '40',
 									_1: {
 										ctor: '::',
-										_0: '-5',
-										_1: {ctor: '[]'}
+										_0: '80',
+										_1: {
+											ctor: '::',
+											_0: '160',
+											_1: {
+												ctor: '::',
+												_0: '320',
+												_1: {
+													ctor: '::',
+													_0: '-5',
+													_1: {ctor: '[]'}
+												}
+											}
+										}
 									}
 								}
 							}
@@ -10499,17 +10479,29 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 							_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 							{
 								ctor: '::',
-								_0: '30',
+								_0: '0',
 								_1: {
 									ctor: '::',
-									_0: '60',
+									_0: '20',
 									_1: {
 										ctor: '::',
-										_0: '90',
+										_0: '40',
 										_1: {
 											ctor: '::',
-											_0: '-5',
-											_1: {ctor: '[]'}
+											_0: '80',
+											_1: {
+												ctor: '::',
+												_0: '160',
+												_1: {
+													ctor: '::',
+													_0: '320',
+													_1: {
+														ctor: '::',
+														_0: '-5',
+														_1: {ctor: '[]'}
+													}
+												}
+											}
 										}
 									}
 								}
@@ -10523,17 +10515,29 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 								_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 								{
 									ctor: '::',
-									_0: '31',
+									_0: '0',
 									_1: {
 										ctor: '::',
-										_0: '61',
+										_0: '20',
 										_1: {
 											ctor: '::',
-											_0: '91',
+											_0: '40',
 											_1: {
 												ctor: '::',
-												_0: '-5',
-												_1: {ctor: '[]'}
+												_0: '80',
+												_1: {
+													ctor: '::',
+													_0: '160',
+													_1: {
+														ctor: '::',
+														_0: '320',
+														_1: {
+															ctor: '::',
+															_0: '-5',
+															_1: {ctor: '[]'}
+														}
+													}
+												}
 											}
 										}
 									}
@@ -10547,17 +10551,29 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 									_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 									{
 										ctor: '::',
-										_0: '20',
+										_0: '0',
 										_1: {
 											ctor: '::',
-											_0: '50',
+											_0: '20',
 											_1: {
 												ctor: '::',
-												_0: '80',
+												_0: '40',
 												_1: {
 													ctor: '::',
-													_0: '-5',
-													_1: {ctor: '[]'}
+													_0: '80',
+													_1: {
+														ctor: '::',
+														_0: '160',
+														_1: {
+															ctor: '::',
+															_0: '320',
+															_1: {
+																ctor: '::',
+																_0: '-5',
+																_1: {ctor: '[]'}
+															}
+														}
+													}
 												}
 											}
 										}
@@ -10571,17 +10587,29 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 										_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 										{
 											ctor: '::',
-											_0: '21',
+											_0: '0',
 											_1: {
 												ctor: '::',
-												_0: '51',
+												_0: '20',
 												_1: {
 													ctor: '::',
-													_0: '120',
+													_0: '40',
 													_1: {
 														ctor: '::',
-														_0: '-5',
-														_1: {ctor: '[]'}
+														_0: '80',
+														_1: {
+															ctor: '::',
+															_0: '160',
+															_1: {
+																ctor: '::',
+																_0: '320',
+																_1: {
+																	ctor: '::',
+																	_0: '-5',
+																	_1: {ctor: '[]'}
+																}
+															}
+														}
 													}
 												}
 											}
@@ -10599,7 +10627,11 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 												_1: {
 													ctor: '::',
 													_0: 'プレースホルダ',
-													_1: {ctor: '[]'}
+													_1: {
+														ctor: '::',
+														_0: 'other',
+														_1: {ctor: '[]'}
+													}
 												}
 											},
 											_flarebyte$bubblegum_ui_textarea$KeyDescription$descPlaceholder),
@@ -10618,7 +10650,11 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 														_1: {
 															ctor: '::',
 															_0: 'ضع الكلمة المناسبة',
-															_1: {ctor: '[]'}
+															_1: {
+																ctor: '::',
+																_0: 'other',
+																_1: {ctor: '[]'}
+															}
 														}
 													}
 												},
@@ -10631,15 +10667,212 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 													_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 													{
 														ctor: '::',
-														_0: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+														_0: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
 														_1: {
 															ctor: '::',
 															_0: '助けて',
-															_1: {ctor: '[]'}
+															_1: {
+																ctor: '::',
+																_0: 'other',
+																_1: {ctor: '[]'}
+															}
 														}
 													},
 													_flarebyte$bubblegum_ui_textarea$KeyDescription$descHelp),
-												_1: {ctor: '[]'}
+												_1: {
+													ctor: '::',
+													_0: A4(
+														_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
+														_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerHelp,
+														_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
+														{
+															ctor: '::',
+															_0: 'do not do this',
+															_1: {
+																ctor: '::',
+																_0: 'other',
+																_1: {ctor: '[]'}
+															}
+														},
+														_flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerHelp),
+													_1: {
+														ctor: '::',
+														_0: A4(
+															_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
+															_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_content,
+															_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
+															{
+																ctor: '::',
+																_0: 'some content',
+																_1: {
+																	ctor: '::',
+																	_0: 'other',
+																	_1: {ctor: '[]'}
+																}
+															},
+															_flarebyte$bubblegum_ui_textarea$KeyDescription$descContent),
+														_1: {
+															ctor: '::',
+															_0: A4(
+																_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
+																_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentLanguage,
+																_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
+																{
+																	ctor: '::',
+																	_0: 'en-GB',
+																	_1: {
+																		ctor: '::',
+																		_0: 'ja',
+																		_1: {
+																			ctor: '::',
+																			_0: 'ar',
+																			_1: {
+																				ctor: '::',
+																				_0: 'other',
+																				_1: {ctor: '[]'}
+																			}
+																		}
+																	}
+																},
+																_flarebyte$bubblegum_ui_textarea$KeyDescription$descContentLanguage),
+															_1: {
+																ctor: '::',
+																_0: A4(
+																	_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
+																	_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentRightToLeft,
+																	_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
+																	{
+																		ctor: '::',
+																		_0: 'true',
+																		_1: {
+																			ctor: '::',
+																			_0: 'false',
+																			_1: {
+																				ctor: '::',
+																				_0: 'other',
+																				_1: {ctor: '[]'}
+																			}
+																		}
+																	},
+																	_flarebyte$bubblegum_ui_textarea$KeyDescription$descContentRightToLeft),
+																_1: {
+																	ctor: '::',
+																	_0: A4(
+																		_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
+																		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_accessibilityLargeText,
+																		_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
+																		{
+																			ctor: '::',
+																			_0: 'true',
+																			_1: {
+																				ctor: '::',
+																				_0: 'false',
+																				_1: {
+																					ctor: '::',
+																					_0: 'other',
+																					_1: {ctor: '[]'}
+																				}
+																			}
+																		},
+																		_flarebyte$bubblegum_ui_textarea$KeyDescription$descAccessibilityLargeText),
+																	_1: {
+																		ctor: '::',
+																		_0: A4(
+																			_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
+																			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_tag,
+																			_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
+																			{
+																				ctor: '::',
+																				_0: 'it',
+																				_1: {
+																					ctor: '::',
+																					_0: 'learning',
+																					_1: {
+																						ctor: '::',
+																						_0: 'elm',
+																						_1: {
+																							ctor: '::',
+																							_0: 'other',
+																							_1: {ctor: '[]'}
+																						}
+																					}
+																				}
+																			},
+																			_flarebyte$bubblegum_ui_textarea$KeyDescription$descTag),
+																		_1: {
+																			ctor: '::',
+																			_0: A4(
+																				_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
+																				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successTag,
+																				_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
+																				{
+																					ctor: '::',
+																					_0: 'spelling',
+																					_1: {
+																						ctor: '::',
+																						_0: 'concise',
+																						_1: {
+																							ctor: '::',
+																							_0: 'italian',
+																							_1: {
+																								ctor: '::',
+																								_0: 'other',
+																								_1: {ctor: '[]'}
+																							}
+																						}
+																					}
+																				},
+																				_flarebyte$bubblegum_ui_textarea$KeyDescription$descSuccessTag),
+																			_1: {
+																				ctor: '::',
+																				_0: A4(
+																					_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
+																					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_warningTag,
+																					_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
+																					{
+																						ctor: '::',
+																						_0: 'grammar',
+																						_1: {
+																							ctor: '::',
+																							_0: 'synonyms',
+																							_1: {
+																								ctor: '::',
+																								_0: 'other',
+																								_1: {ctor: '[]'}
+																							}
+																						}
+																					},
+																					_flarebyte$bubblegum_ui_textarea$KeyDescription$descWarningTag),
+																				_1: {
+																					ctor: '::',
+																					_0: A4(
+																						_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
+																						_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerTag,
+																						_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
+																						{
+																							ctor: '::',
+																							_0: 'sensitive',
+																							_1: {
+																								ctor: '::',
+																								_0: 'save',
+																								_1: {
+																									ctor: '::',
+																									_0: 'other',
+																									_1: {ctor: '[]'}
+																								}
+																							}
+																						},
+																						_flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerTag),
+																					_1: {ctor: '[]'}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
 											}
 										}
 									}
