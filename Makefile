@@ -23,7 +23,7 @@ js:
 	pushd demo && elm-make App.elm --output ../$(DOCS)/app.js
 
 test:
-	cd tests && elm-test Main.elm
+	elm-test
 
 beautify:
 	elm-format src/ --yes

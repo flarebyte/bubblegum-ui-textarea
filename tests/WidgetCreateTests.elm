@@ -1,8 +1,12 @@
-module Example exposing (..)
+module WidgetCreateTests exposing (..)
 
 import Expect exposing (Expectation)
 import Fuzz exposing (Fuzzer, int, list, string)
 import Test exposing (..)
+import Bubblegum.TextArea.Widget as Widget
+import Bubblegum.Entity.SettingsEntity as SettingsEntity
+import Bubblegum.Entity.StateEntity as StateEntity
+import Bubblegum.TextArea.Vocabulary exposing (..)
 
 
 suite : Test
