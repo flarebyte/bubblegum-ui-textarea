@@ -108,8 +108,13 @@ viewRadioSettingsWithLabel model isUserSettings attrDoc =
 viewSettings : AppModel -> Html AppMsg
 viewSettings model =
     div [ class "box scrollable" ]
-        [ h3 [ class "title" ] [ text "User Settings" ]
+        [ h3 [ class "title is-3" ] [ text "State" ]
+        , h4 [ class "subtitle is-4" ] [ text "Attributes that can be changed at runtime" ]
+        , div [ class "box" ] (textAreaWidgetDoc.stateAttributes |> List.map (viewRadioSettingsWithLabel model True))
+        , h3 [ class "title is-3" ] [ text "User Settings" ]
+        , h4 [ class "subtitle is-4" ] [ text "Attributes attached to the current profile" ]
         , div [ class "box" ] (textAreaWidgetDoc.userSettings |> List.map (viewRadioSettingsWithLabel model True))
-        , h3 [ class "title" ] [ text "Settings" ]
+        , h3 [ class "title is-3" ] [ text "Settings" ]
+        , h4 [ class "subtitle is-4" ] [ text "Attributes of the widget" ]
         , div [ class "box" ] (textAreaWidgetDoc.settings |> List.map (viewRadioSettingsWithLabel model False))
         ]

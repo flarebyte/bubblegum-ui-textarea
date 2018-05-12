@@ -11062,55 +11062,129 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocView$viewSettings = function (mode
 				_elm_lang$html$Html$h3,
 				{
 					ctor: '::',
-					_0: _elm_lang$html$Html_Attributes$class('title'),
+					_0: _elm_lang$html$Html_Attributes$class('title is-3'),
 					_1: {ctor: '[]'}
 				},
 				{
 					ctor: '::',
-					_0: _elm_lang$html$Html$text('User Settings'),
+					_0: _elm_lang$html$Html$text('State'),
 					_1: {ctor: '[]'}
 				}),
 			_1: {
 				ctor: '::',
 				_0: A2(
-					_elm_lang$html$Html$div,
+					_elm_lang$html$Html$h4,
 					{
 						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class('box'),
+						_0: _elm_lang$html$Html_Attributes$class('subtitle is-4'),
 						_1: {ctor: '[]'}
 					},
-					A2(
-						_elm_lang$core$List$map,
-						A2(_flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioSettingsWithLabel, model, true),
-						_flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc.userSettings)),
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text('Attributes that can be changed at runtime'),
+						_1: {ctor: '[]'}
+					}),
 				_1: {
 					ctor: '::',
 					_0: A2(
-						_elm_lang$html$Html$h3,
+						_elm_lang$html$Html$div,
 						{
 							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('title'),
+							_0: _elm_lang$html$Html_Attributes$class('box'),
 							_1: {ctor: '[]'}
 						},
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html$text('Settings'),
-							_1: {ctor: '[]'}
-						}),
+						A2(
+							_elm_lang$core$List$map,
+							A2(_flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioSettingsWithLabel, model, true),
+							_flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc.stateAttributes)),
 					_1: {
 						ctor: '::',
 						_0: A2(
-							_elm_lang$html$Html$div,
+							_elm_lang$html$Html$h3,
 							{
 								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$class('box'),
+								_0: _elm_lang$html$Html_Attributes$class('title is-3'),
 								_1: {ctor: '[]'}
 							},
-							A2(
-								_elm_lang$core$List$map,
-								A2(_flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioSettingsWithLabel, model, false),
-								_flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc.settings)),
-						_1: {ctor: '[]'}
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text('User Settings'),
+								_1: {ctor: '[]'}
+							}),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$h4,
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$class('subtitle is-4'),
+									_1: {ctor: '[]'}
+								},
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html$text('Attributes attached to the current profile'),
+									_1: {ctor: '[]'}
+								}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$div,
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$class('box'),
+										_1: {ctor: '[]'}
+									},
+									A2(
+										_elm_lang$core$List$map,
+										A2(_flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioSettingsWithLabel, model, true),
+										_flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc.userSettings)),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_elm_lang$html$Html$h3,
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$class('title is-3'),
+											_1: {ctor: '[]'}
+										},
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html$text('Settings'),
+											_1: {ctor: '[]'}
+										}),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_elm_lang$html$Html$h4,
+											{
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$class('subtitle is-4'),
+												_1: {ctor: '[]'}
+											},
+											{
+												ctor: '::',
+												_0: _elm_lang$html$Html$text('Attributes of the widget'),
+												_1: {ctor: '[]'}
+											}),
+										_1: {
+											ctor: '::',
+											_0: A2(
+												_elm_lang$html$Html$div,
+												{
+													ctor: '::',
+													_0: _elm_lang$html$Html_Attributes$class('box'),
+													_1: {ctor: '[]'}
+												},
+												A2(
+													_elm_lang$core$List$map,
+													A2(_flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioSettingsWithLabel, model, false),
+													_flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc.settings)),
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						}
 					}
 				}
 			}
