@@ -1,12 +1,6 @@
 module WidgetCreateTests exposing (..)
 
-import Expect exposing (Expectation)
-import Fuzz exposing (Fuzzer, int, list, string, intRange)
-import Test.Html.Query as Query
-import Test.Html.Selector as Selector
 import Test exposing (..)
-import Html exposing (..)
-import Bubblegum.TextArea.Widget as Widget
 import WidgetTestData exposing (..)
 
 
