@@ -214,7 +214,7 @@ fuzzyNotDangerMinimumWords= Fuzz.oneOf [
     ]
 
 selectorsDangerMinimumWords : List Selector
-selectorsDangerMinimumWords = [ Selector.classes ["tag", "is-danger"], Selector.attribute (attribute "aria-label" "number of characters") ]
+selectorsDangerMinimumWords = [ Selector.classes ["tag", "is-danger"], Selector.attribute (attribute "aria-label" "number of words") ]
 
 -- Warning when over the maximum number of words
 withSettingsDangerMaximumWords: Int -> SettingsEntity.Model
