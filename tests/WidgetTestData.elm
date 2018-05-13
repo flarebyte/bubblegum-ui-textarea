@@ -73,7 +73,7 @@ withSettingsSuccessMinimumChars: Int -> SettingsEntity.Model
 withSettingsSuccessMinimumChars value = {
     attributes = [
         attr ui_successMinimumChars (value |> toString)
-        , attr ui_successMinimumChars (value + 100 |> toString)
+        , attr ui_successMaximumChars (value + 100 |> toString)
     ]
  }
 
