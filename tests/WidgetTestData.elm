@@ -81,7 +81,10 @@ fuzzySuccessMinimumChars : Fuzzer Int
 fuzzySuccessMinimumChars=intRange 1 10000  
 
 fuzzyNotSuccessMinimumChars : Fuzzer Int
-fuzzyNotSuccessMinimumChars=intRange 70000 1000000
+fuzzyNotSuccessMinimumChars= Fuzz.oneOf [
+        intRange -70000 -1
+        , intRange 70000 1000000
+    ]
 
 selectorsSuccessMinimumChars : List Selector
 selectorsSuccessMinimumChars = [ Selector.tag "progress" ]
