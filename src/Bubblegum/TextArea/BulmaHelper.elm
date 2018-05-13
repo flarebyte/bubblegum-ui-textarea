@@ -27,7 +27,7 @@ appendHtmlIfSuccess ifSuccess outcome htmlList =
             htmlList
 
         Warning warn ->
-            htmlList ++ [ div [ Attributes.class "is-not-invisible" ] [ text warn ] ]
+            htmlList ++ [ div [ Attributes.class "is-invisible warning" ] [ text warn ] ]
 
         Valid success ->
             htmlList ++ [ ifSuccess success ]
