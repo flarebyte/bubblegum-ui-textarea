@@ -60,10 +60,10 @@ displayTextInfo adapter userSettings settings state =
             Outcome.map2 tupleify (Outcome.map2 successRatio contentCharLength optSuccessCharRange) themeCharBasedOnRange
 
         wordLengthAndStatus =
-            Outcome.map2 styleTextInt contentWordLength themeWordBasedOnRange
+            Outcome.map2 styleTextWord contentWordLength themeWordBasedOnRange
 
         charLengthAndStatus =
-            Outcome.map2 styleTextInt contentCharLength themeCharBasedOnRange
+            Outcome.map2 styleTextChar contentCharLength themeCharBasedOnRange
 
         -- optional html to display
         -- Char counter
@@ -71,7 +71,7 @@ displayTextInfo adapter userSettings settings state =
             appendHtmlIfSuccess tag charLengthAndStatus
 
         addCharTargetLength =
-            appendHtmlIfSuccess (\tuple -> tag { text = first tuple |> toString, style = "is-dark" }) optSuccessCharRange
+            appendHtmlIfSuccess (\tuple -> tag { text = first tuple |> toString, style = "is-dark", ariaLabel = "minimum number of characters expected" }) optSuccessCharRange
 
         addCharProgressBar =
             appendHtmlIfSuccess progressBar charRatioAndStatus
@@ -84,13 +84,13 @@ displayTextInfo adapter userSettings settings state =
             appendHtmlIfSuccess tag wordLengthAndStatus
 
         addWordTargetLength =
-            appendHtmlIfSuccess (\tuple -> tag { text = first tuple |> toString, style = "is-dark" }) optSuccessWordRange
+            appendHtmlIfSuccess (\tuple -> tag { text = first tuple |> toString, style = "is-dark", ariaLabel = "minimum number of words expected" }) optSuccessWordRange
 
         addWordProgressBar =
             appendHtmlIfSuccess progressBar wordRatioAndStatus
 
         addLabelForWord =
-            flip (++) [ tag { text = labelForWord, style = "is-light" } ]
+            flip (++) [ tag { text = labelForWord, style = "is-light", ariaLabel = "unit" } ]
 
         addWordInfo =
             tags <| ([] |> addWordContentLength |> addWordTargetLength |> addLabelForWord)
@@ -99,10 +99,10 @@ displayTextInfo adapter userSettings settings state =
             tagsInfo [ "alpha", "beta" ]
     in
     groupFields
-        [ div [ class "control" ] (addWordInfo |> List.singleton |> addWordProgressBar)
-        , div [ class "control" ] (addCharInfo |> List.singleton |> addCharProgressBar)
+        [ div [ class "bubblegum-textarea__wordinfo control" ] (addWordInfo |> List.singleton |> addWordProgressBar)
+        , div [ class "bubblegum-textarea__charinfo control" ] (addCharInfo |> List.singleton |> addCharProgressBar)
         , div [ class "control" ] [ text "    " ]
-        , div [ class "control" ] [ addTagsInfo ]
+        , div [ class "bubblegum-textarea__tagsinfo control" ] [ addTagsInfo ]
         ]
 
 
@@ -130,7 +130,7 @@ view adapter userSettings settings state =
         (addLabel []
             ++ [ div [ class "control" ]
                     [ textarea
-                        ([ class "textarea is-marginless is-paddingless is-shadowless"
+                        ([ class "bubblegum-textarea__input textarea is-marginless is-paddingless is-shadowless"
                          , onInput adapter.onInput
                          ]
                             |> addPlaceholder

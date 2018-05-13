@@ -17,6 +17,7 @@ import Tuple exposing (first, second)
 type alias StyledText =
     { text : String
     , style : String
+    , ariaLabel : String
     }
 
 
@@ -46,10 +47,19 @@ appendAttributeIfSuccess ifSuccess outcome attributes =
             attributes ++ [ ifSuccess success ]
 
 
-styleTextInt : Int -> String -> StyledText
-styleTextInt number status =
+styleTextChar : Int -> String -> StyledText
+styleTextChar number status =
     { text = toString number
     , style = status
+    , ariaLabel = "number of characters"
+    }
+
+
+styleTextWord : Int -> String -> StyledText
+styleTextWord number status =
+    { text = toString number
+    , style = status
+    , ariaLabel = "number of words"
     }
 
 
@@ -84,7 +94,7 @@ styledIcon iconName iconTextStyle =
 
 tag : StyledText -> Html msg
 tag tagInfo =
-    span [ asClass2 "tag" tagInfo.style ]
+    span [ asClass2 "tag" tagInfo.style, attribute "aria-label" tagInfo.ariaLabel ]
         [ text tagInfo.text ]
 
 
@@ -97,6 +107,7 @@ infoText : String -> StyledText
 infoText text =
     { text = text
     , style = "is-dark"
+    , ariaLabel = "Tag"
     }
 
 
@@ -112,7 +123,7 @@ groupFields list =
 
 mainBox : List (Html msg) -> Html msg
 mainBox list =
-    div [ class "box is-marginless is-paddingless is-shadowless has-addons" ]
+    div [ class "bubblegum-textarea__widget box is-marginless is-paddingless is-shadowless has-addons" ]
         [ div [ class "field" ] list
         ]
 

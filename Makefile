@@ -9,7 +9,7 @@ reset:
 	rm -rf tests/elm-stuff
 	rm -rf docs
 
-build: beautify test build-directory js html
+build: beautify build-directory js html
 
 install:
 	elm-package install -y
