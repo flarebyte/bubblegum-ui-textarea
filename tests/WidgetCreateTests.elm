@@ -1,5 +1,3 @@
-
-
 module WidgetCreateTests exposing (..)
 
 {-| Unit tests for testing the view of the Widget

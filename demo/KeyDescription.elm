@@ -1,4 +1,3 @@
-
 module KeyDescription exposing (..)
 
 {-| List of descriptions for the keys used for the settings
@@ -8,90 +7,111 @@ module KeyDescription exposing (..)
 -}
 
 
-descSuccessMinimumChars: String
+descSuccessMinimumChars : String
 descSuccessMinimumChars =
-    "The minimum number of characters needed for successful content"    
+    "The minimum number of characters needed for successful content"
 
-descSuccessMaximumChars: String
+
+descSuccessMaximumChars : String
 descSuccessMaximumChars =
-    "The maximum number of characters needed for successful content"    
+    "The maximum number of characters needed for successful content"
 
-descDangerMinimumChars: String
+
+descDangerMinimumChars : String
 descDangerMinimumChars =
-    "Warning when under the minimum number of characters"    
+    "Warning when under the minimum number of characters"
 
-descDangerMaximumChars: String
+
+descDangerMaximumChars : String
 descDangerMaximumChars =
-    "Warning when over the maximum number of characters"    
+    "Warning when over the maximum number of characters"
 
-descSuccessMinimumWords: String
+
+descSuccessMinimumWords : String
 descSuccessMinimumWords =
-    "The minimum number of words needed for successful content"    
+    "The minimum number of words needed for successful content"
 
-descSuccessMaximumWords: String
+
+descSuccessMaximumWords : String
 descSuccessMaximumWords =
-    "The maximum number of words needed for successful content"    
+    "The maximum number of words needed for successful content"
 
-descDangerMinimumWords: String
+
+descDangerMinimumWords : String
 descDangerMinimumWords =
-    "Warning when under the minimum number of words"    
+    "Warning when under the minimum number of words"
 
-descDangerMaximumWords: String
+
+descDangerMaximumWords : String
 descDangerMaximumWords =
-    "Warning when over the maximum number of words"    
+    "Warning when over the maximum number of words"
 
-descPlaceholder: String
+
+descPlaceholder : String
 descPlaceholder =
-    "Short hint describing the expected content"    
+    "Short hint describing the expected content"
 
-descLabel: String
+
+descLabel : String
 descLabel =
-    "Label related to the field"    
+    "Label related to the field"
 
-descHelp: String
+
+descHelp : String
 descHelp =
-    "Some help tip related to the field"    
+    "Some help tip related to the field"
 
-descDangerHelp: String
+
+descDangerHelp : String
 descDangerHelp =
-    "Help message to highlight an issue with the content"    
+    "Help message to highlight an issue with the content"
 
-descContent: String
+
+descContent : String
 descContent =
-    "The content of the field"    
+    "The content of the field"
 
-descUserLanguage: String
+
+descUserLanguage : String
 descUserLanguage =
-    "Language used by the user"    
+    "Language used by the user"
 
-descContentLanguage: String
+
+descContentLanguage : String
 descContentLanguage =
-    "Language of the content"    
+    "Language of the content"
 
-descUserRightToLeft: String
+
+descUserRightToLeft : String
 descUserRightToLeft =
-    "Whether the user is using right to left"    
+    "Whether the user is using right to left"
 
-descContentRightToLeft: String
+
+descContentRightToLeft : String
 descContentRightToLeft =
-    "Whether the content requires right to left"    
+    "Whether the content requires right to left"
 
-descAccessibilityLargeText: String
+
+descAccessibilityLargeText : String
 descAccessibilityLargeText =
-    "Whether the user would prefer large text"    
+    "Whether the user would prefer large text"
 
-descTag: String
+
+descTag : String
 descTag =
-    "Tag used to describe the field"    
+    "Tag used to describe the field"
 
-descSuccessTag: String
+
+descSuccessTag : String
 descSuccessTag =
-    "Tag representing a successful facet of the content"    
+    "Tag representing a successful facet of the content"
 
-descWarningTag: String
+
+descWarningTag : String
 descWarningTag =
-    "Tag representing a warning aspect of the content"    
+    "Tag representing a warning aspect of the content"
 
-descDangerTag: String
+
+descDangerTag : String
 descDangerTag =
-    "Tag representing a dangerous aspect of the content"    
+    "Tag representing a dangerous aspect of the content"

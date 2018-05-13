@@ -155,7 +155,6 @@ suite =
     describe "The Widget module"
         [ describe "Widget.view"
             [
-
 """
 
 templateWidgetCreateTestsSettingsCorrect = """
@@ -169,6 +168,11 @@ templateWidgetCreateTestsSettingsWrong = """
                 \\value -> viewWidget (withSettings$nameCamel value) defaultState
                     |> findWarningDiv           
 """
+
+templateTemp = """
+
+"""
+
 
 footerWidgetCreateTests = """
             ]
