@@ -337,7 +337,7 @@ def isSettings(row):
 def createWidgetCreateTests():
     content = readCsv(ui_keys_csv)
     rangeContent = readCsv(ui_range_keys_csv)
-    file = open("../tests/WidgetCreateTest2.elm", "w")
+    file = open("../tests/WidgetCreateTests.elm", "w")
     file.write(headerWidgetCreateTests)
     withComa = False
     for row in content:
