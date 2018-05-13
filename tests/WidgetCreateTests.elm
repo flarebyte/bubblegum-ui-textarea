@@ -14,17 +14,12 @@ suite : Test
 suite =
     describe "The Widget module"
         [ describe "Widget.view"
-            [ fuzz (intRange 1 10000) "restores the original string if you run it again" <|
-                \number ->
-                    viewWidget (withSettingsSuccessMinimumChars number) defaultState
-                        |> Query.fromHtml
-                        |> Query.findAll [ Selector.tag "progress" ]
-                        |> Query.count (Expect.equal 1)
-              , fuzz (intRange 70000 1000000) " the original string if you run it again" <|
-                \number ->
-                    viewWidget (withSettingsSuccessMinimumChars number) defaultState
-                        |> Query.fromHtml
-                        |> Query.findAll [ Selector.class "warning" ]
-                        |> Query.count (Expect.atLeast 1)          
+            [ fuzz fuzzySuccessMinimumChars "restores the original string if you run it again" <|
+                \number -> viewWidget (withSettingsSuccessMinimumChars number) defaultState 
+                    |> findComponent selectorsSuccessMinimumChars
+
+              , fuzz fuzzyNotSuccessMinimumChars " the original string if you run it again" <|
+                \number -> viewWidget (withSettingsSuccessMinimumChars number) defaultState
+                    |> findWarningDiv
             ]
         ]

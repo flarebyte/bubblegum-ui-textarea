@@ -5,11 +5,16 @@ module WidgetTestData exposing (..)
 -}
 
 import Html exposing (..)
+import Expect exposing (Expectation)
+import Test.Html.Selector as Selector
 import Bubblegum.TextArea.Adapter as Adapter
 import Bubblegum.TextArea.Widget as Widget
 import Bubblegum.Entity.SettingsEntity as SettingsEntity
 import Bubblegum.Entity.StateEntity as StateEntity
 import Bubblegum.Entity.Attribute as Attribute
+import Fuzz exposing (Fuzzer, int, list, string, intRange)
+import Test.Html.Query as Query
+import Test.Html.Selector as Selector exposing(Selector)
 import Bubblegum.TextArea.Vocabulary exposing (..)
 
 
@@ -49,17 +54,37 @@ withStateContent value =
         ]
     }          
 
+
+viewWidget : SettingsEntity.Model -> StateEntity.Model -> Html.Html TestMsg
+viewWidget settings state = 
+    Widget.view defaultAdapter defaultUserSettings settings state
+
+
+findComponent:  List Selector-> Html.Html TestMsg -> Expectation 
+findComponent selectors html= 
+    html |> Query.fromHtml |> Query.findAll selectors |> Query.count (Expect.equal 1)
+
+findWarningDiv: Html.Html TestMsg -> Expectation 
+findWarningDiv html = 
+    html |> Query.fromHtml |> Query.findAll [ Selector.class "warning" ] |> Query.count (Expect.atLeast 1)
+
+-- SuccessMinimumChars
 withSettingsSuccessMinimumChars: Int -> SettingsEntity.Model
 withSettingsSuccessMinimumChars value = {
     attributes = [
         attr ui_successMinimumChars (value |> toString)
         , attr ui_successMaximumChars (value + 100 |> toString)
     ]
- } 
+ }
 
-viewWidget : SettingsEntity.Model -> StateEntity.Model -> Html.Html TestMsg
-viewWidget settings state = 
-    Widget.view defaultAdapter defaultUserSettings settings state
+fuzzySuccessMinimumChars : Fuzzer Int
+fuzzySuccessMinimumChars=intRange 1 10000  
+
+fuzzyNotSuccessMinimumChars : Fuzzer Int
+fuzzyNotSuccessMinimumChars=intRange 70000 1000000
+
+selectorsSuccessMinimumChars : List Selector
+selectorsSuccessMinimumChars = [ Selector.tag "progress" ]
 
 -- private
 
