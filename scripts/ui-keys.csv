@@ -9,13 +9,13 @@ danger-maximum-words,Warning when over the maximum number of words,Int,,
 placeholder,Short hint describing the expected content,String,medium!,Some placeholder;プレースホルダ
 label,Label related to the field,String,medium!,Some label;ラベル;ضع الكلمة المناسبة
 help,Some help tip related to the field,String,medium!,Lorem ipsum dolor sit amet consectetur adipiscing elit.;助けて
-danger-help,Help message to highlight an issue with the content,String,medium!,do not do this
+danger-help,Help message to highlight an issue with the content,String,medium! state,do not do this
 content,The content of the field,String,state very-large,some content 
 user-language,Language used by the user,String,small!,en-GB;ja;ar
-content-language,Language of the content,String,small!,en-GB;ja;ar
+content-language,Language of the content,String,small! user,en-GB;ja;ar
 user-right-to-left,Whether the user is using right to left,Bool,,
-content-right-to-left,Whether the content requires right to left,Bool,,
-accessibility-large-text,Whether the user would prefer large text,Bool,,
+content-right-to-left,Whether the content requires right to left,Bool,user,
+accessibility-large-text,Whether the user would prefer large text,Bool,user,
 tag,Tag used to describe the field,List String,small!,it;learning;elm
 success-tag,Tag representing a successful facet of the content,List String,small! state,spelling;concise;italian
 warning-tag,Tag representing a warning aspect of the content,List String,small! state,grammar;synonyms

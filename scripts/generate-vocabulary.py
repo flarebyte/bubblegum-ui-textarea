@@ -134,6 +134,47 @@ textAreaWidgetDoc =
 
 templateWidgetDocDataString = """  createKey ui_$namecamel ZeroOrOne [ $examples ] desc$nameCamel
 """
+
+# WidgetCreateTests
+
+headerWidgetCreateTests = """
+
+module WidgetCreateTests exposing (..)
+
+{-| Unit tests for testing the view of the Widget
+
+    **Generated** by generate-vocabulary.py
+    
+-}
+import Test exposing (..)
+import WidgetTestData exposing (..)
+
+
+suite : Test
+suite =
+    describe "The Widget module"
+        [ describe "Widget.view"
+            [
+
+"""
+
+templateWidgetCreateTestsSettingsCorrect = """
+                fuzz fuzzy$nameCamel "Correct settings for $description" <|
+                \\value -> viewWidget (withSettings$nameCamel value) defaultState 
+                    |> findComponent selectors$nameCamel
+           
+"""
+templateWidgetCreateTestsSettingsWrong = """
+              , fuzz fuzzyNot$nameCamel "Wrong settings for $description" <|
+                \\value -> viewWidget (withSettings$nameCamel value) defaultState
+                    |> findWarningDiv           
+"""
+
+footerWidgetCreateTests = """
+            ]
+        ]
+"""
+
 def camelCase(st):
     output = ''.join(x for x in st.strip().title() if x.isalpha())
     return output[0].lower() + output[1:]
@@ -276,11 +317,45 @@ def createWidgetDocData():
     file.close()    
 
 
+def isUserSettings(row):
+    nameField, descriptionField, signatureField, extraField, examplesField = row
+    if "user" in nameField or "user" in extraField:
+        return True
+    else:
+        return False
+
+def isState(row):
+    nameField, descriptionField, signatureField, extraField, examplesField = row
+    if  "state" in extraField:
+        return True
+    else:
+        return False
+
+def isSettings(row):
+    return not (isUserSettings(row) or isState(row))        
+
+def createWidgetCreateTests():
+    content = readCsv(ui_keys_csv)
+    rangeContent = readCsv(ui_range_keys_csv)
+    file = open("../tests/WidgetCreateTest2.elm", "w")
+    file.write(headerWidgetCreateTests)
+    withComa = False
+    for row in content:
+        if len(row) > 2 :
+            if isSettings(row):
+                content = prefixWithComa("fuzz ", withComa, formatTemplate(templateWidgetCreateTestsSettingsCorrect, row))
+                file.write(content)
+                file.write(formatTemplate(templateWidgetCreateTestsSettingsWrong, row))
+                withComa = True
+    file.write(footerWidgetCreateTests)            
+    file.close()    
+
 def main(argv):
     createVocabulary()
     createKeyDescription()
     createVocabularyHelper()
     createWidgetDocData()
+    createWidgetCreateTests()
     
 if __name__ == "__main__":
    main(sys.argv[1:])
