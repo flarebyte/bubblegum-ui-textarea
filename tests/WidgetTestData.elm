@@ -5,6 +5,7 @@ module WidgetTestData exposing (..)
 -}
 
 import Html exposing (..)
+import Html.Attributes as Attributes exposing (..)
 import Expect exposing (Expectation)
 import Test.Html.Selector as Selector
 import Bubblegum.TextArea.Adapter as Adapter
@@ -115,12 +116,12 @@ withSettingsDangerMinimumChars: Int -> SettingsEntity.Model
 withSettingsDangerMinimumChars value = {
     attributes = [
         attr ui_dangerMinimumChars (value |> toString)
-        , attr ui_dangerMaximumChars (value + 100 |> toString)
+        , attr ui_dangerMaximumChars (value + 50 |> toString)
     ]
  }
 
 fuzzyDangerMinimumChars : Fuzzer Int
-fuzzyDangerMinimumChars=intRange 1 10000  
+fuzzyDangerMinimumChars=intRange 1 200  
 
 fuzzyNotDangerMinimumChars : Fuzzer Int
 fuzzyNotDangerMinimumChars= Fuzz.oneOf [
@@ -129,7 +130,7 @@ fuzzyNotDangerMinimumChars= Fuzz.oneOf [
     ]
 
 selectorsDangerMinimumChars : List Selector
-selectorsDangerMinimumChars = [ Selector.tag "progress" ]
+selectorsDangerMinimumChars = [ Selector.classes ["tag", "is-danger"], Selector.attribute (attribute "aria-label" "number of characters") ]
 
 -- Warning when over the maximum number of characters
 withSettingsDangerMaximumChars: Int -> SettingsEntity.Model
@@ -141,7 +142,7 @@ withSettingsDangerMaximumChars value = {
  }
 
 fuzzyDangerMaximumChars : Fuzzer Int
-fuzzyDangerMaximumChars=intRange 1 10000  
+fuzzyDangerMaximumChars=intRange 1 200  
 
 fuzzyNotDangerMaximumChars : Fuzzer Int
 fuzzyNotDangerMaximumChars= Fuzz.oneOf [
@@ -150,7 +151,7 @@ fuzzyNotDangerMaximumChars= Fuzz.oneOf [
     ]
 
 selectorsDangerMaximumChars : List Selector
-selectorsDangerMaximumChars = [ Selector.tag "progress" ]
+selectorsDangerMaximumChars = [ Selector.classes ["tag", "is-danger"], Selector.attribute (attribute "aria-label" "number of characters") ]
 
 -- The minimum number of words needed for successful content
 withSettingsSuccessMinimumWords: Int -> SettingsEntity.Model
@@ -199,12 +200,12 @@ withSettingsDangerMinimumWords: Int -> SettingsEntity.Model
 withSettingsDangerMinimumWords value = {
     attributes = [
         attr ui_dangerMinimumWords (value |> toString)
-        , attr ui_dangerMaximumWords (value + 100 |> toString)
+        , attr ui_dangerMaximumWords (value + 20 |> toString)
     ]
  }
 
 fuzzyDangerMinimumWords : Fuzzer Int
-fuzzyDangerMinimumWords=intRange 1 10000  
+fuzzyDangerMinimumWords=intRange 1 10  
 
 fuzzyNotDangerMinimumWords : Fuzzer Int
 fuzzyNotDangerMinimumWords= Fuzz.oneOf [
@@ -213,19 +214,19 @@ fuzzyNotDangerMinimumWords= Fuzz.oneOf [
     ]
 
 selectorsDangerMinimumWords : List Selector
-selectorsDangerMinimumWords = [ Selector.tag "progress" ]
+selectorsDangerMinimumWords = [ Selector.classes ["tag", "is-danger"], Selector.attribute (attribute "aria-label" "number of characters") ]
 
 -- Warning when over the maximum number of words
 withSettingsDangerMaximumWords: Int -> SettingsEntity.Model
 withSettingsDangerMaximumWords value = {
     attributes = [
         attr ui_dangerMinimumWords (value |> toString)
-        , attr ui_dangerMaximumWords (value + 100 |> toString)
+        , attr ui_dangerMaximumWords (value + 20 |> toString)
     ]
  }
 
 fuzzyDangerMaximumWords : Fuzzer Int
-fuzzyDangerMaximumWords=intRange 1 10000  
+fuzzyDangerMaximumWords=intRange 1 30  
 
 fuzzyNotDangerMaximumWords : Fuzzer Int
 fuzzyNotDangerMaximumWords= Fuzz.oneOf [
@@ -234,7 +235,7 @@ fuzzyNotDangerMaximumWords= Fuzz.oneOf [
     ]
 
 selectorsDangerMaximumWords : List Selector
-selectorsDangerMaximumWords = [ Selector.tag "progress" ]
+selectorsDangerMaximumWords = [ Selector.classes ["tag", "is-danger"], Selector.attribute (attribute "aria-label" "number of words") ]
 
 -- Short hint describing the expected content
 withSettingsPlaceholder: Int -> SettingsEntity.Model
