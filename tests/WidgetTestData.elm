@@ -269,7 +269,7 @@ fuzzyNotLabel : Fuzzer Int
 fuzzyNotLabel= intRange 300 400 
 
 selectorsLabel : List Selector
-selectorsLabel = [ Selector.tag "progress" ]
+selectorsLabel = [ Selector.class "label" ]
 
 -- Some help tip related to the field
 withSettingsHelp: Int -> SettingsEntity.Model
@@ -303,7 +303,7 @@ fuzzyNotTag : Fuzzer Int
 fuzzyNotTag= intRange 300 400
 
 selectorsTag : List Selector
-selectorsTag = [ Selector.tag "progress" ]
+selectorsTag = [ Selector.attribute (attribute "aria-label" "tag") ]
 
 -- private
 

@@ -107,7 +107,7 @@ infoText : String -> StyledText
 infoText text =
     { text = text
     , style = "is-dark"
-    , ariaLabel = "Tag"
+    , ariaLabel = "tag"
     }
 
 
