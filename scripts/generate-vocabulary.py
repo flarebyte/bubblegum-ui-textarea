@@ -89,6 +89,13 @@ get$nameCamel settings =
            
 """
 
+templateVocabularyHelperListString = """
+{-|  $description -}
+get$nameCamel : SettingsEntity.Model -> Outcome (List String)
+get$nameCamel settings =
+    findListString ui_$namecamel settings.attributes
+"""
+
 templateVocabularyHelperBool = """
 {-|  $description -}
 is$nameCamel : SettingsEntity.Model -> Outcome Bool
@@ -260,6 +267,28 @@ def createKeyDescription():
             file.write(formatTemplate(templateKeyDescription, row))
     file.close()    
 
+
+def isBool(row):
+    nameField, descriptionField, signatureField, extraField, examplesField = row
+    if  signatureField.strip() == "Bool":
+        return True
+    else:
+        return False
+
+def isString(row):
+    nameField, descriptionField, signatureField, extraField, examplesField = row
+    if  signatureField.strip() == "String":
+        return True
+    else:
+        return False
+
+def isListString(row):
+    nameField, descriptionField, signatureField, extraField, examplesField = row
+    if  signatureField.strip() == "List String":
+        return True
+    else:
+        return False       
+
 def createVocabularyHelper():
     content = readCsv(ui_keys_csv)
     rangeContent = readCsv(ui_range_keys_csv)
@@ -267,11 +296,12 @@ def createVocabularyHelper():
     file.write(headerVocabularyHelper)
     for row in content:
         if len(row) > 2 :
-            nameField, descriptionField, signatureField, extraField, examplesField = row
-            if  signatureField.strip() == "Bool":
+            if isBool(row):
                 file.write(formatTemplate(templateVocabularyHelperBool, row))
-            if  signatureField.strip() == "String":
+            if isString(row):
                 file.write(formatTemplate(templateVocabularyHelperString, row))
+            if isListString(row):
+                file.write(formatTemplate(templateVocabularyHelperListString, row))
     for row in rangeContent:
         if len(row) > 2 :
             file.write(formatRangeTemplate(templateVocabularyHelperIntRange, row))

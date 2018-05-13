@@ -35,3 +35,8 @@ limitMediumRangeNotEmpty =
 limitVeryLargeRangeNotEmpty : ( Int, Int )
 limitVeryLargeRangeNotEmpty =
     ( 1, 60000 )
+
+
+limitList : Int
+limitList =
+    8

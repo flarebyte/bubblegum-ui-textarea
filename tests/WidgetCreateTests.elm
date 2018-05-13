@@ -1,3 +1,5 @@
+
+
 module WidgetCreateTests exposing (..)
 
 {-| Unit tests for testing the view of the Widget
@@ -14,7 +16,6 @@ suite =
     describe "The Widget module"
         [ describe "Widget.view"
             [
-
 
                 fuzz fuzzySuccessMinimumChars "Correct settings for The minimum number of characters needed for successful content" <|
                 \value -> viewWidget (withSettingsSuccessMinimumChars value) defaultState 

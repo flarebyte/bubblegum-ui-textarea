@@ -91,6 +91,34 @@ isAccessibilityLargeText settings =
     findBool ui_accessibilityLargeText settings.attributes
 
 
+{-| Tag used to describe the field
+-}
+getTag : SettingsEntity.Model -> Outcome (List String)
+getTag settings =
+    findListString ui_tag settings.attributes
+
+
+{-| Tag representing a successful facet of the content
+-}
+getSuccessTag : SettingsEntity.Model -> Outcome (List String)
+getSuccessTag settings =
+    findListString ui_successTag settings.attributes
+
+
+{-| Tag representing a warning aspect of the content
+-}
+getWarningTag : SettingsEntity.Model -> Outcome (List String)
+getWarningTag settings =
+    findListString ui_warningTag settings.attributes
+
+
+{-| Tag representing a dangerous aspect of the content
+-}
+getDangerTag : SettingsEntity.Model -> Outcome (List String)
+getDangerTag settings =
+    findListString ui_dangerTag settings.attributes
+
+
 {-| The range of characters accepted for successful content
 -}
 getSuccessCharRange : SettingsEntity.Model -> Outcome ( Int, Int )

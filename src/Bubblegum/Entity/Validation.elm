@@ -11,6 +11,10 @@ module Bubblegum.Entity.Validation
         , asTuple
         , asUnique
         , listEqual
+        , listLessThan
+        , listMoreThan
+        , listStrictlyLessThan
+        , listStrictlyMoreThan
         , matchAbsoluteUrl
         , matchCompactUri
         , matchEnum
