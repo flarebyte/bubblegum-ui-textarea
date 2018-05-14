@@ -6,7 +6,7 @@ success-minimum-words,The minimum number of words needed for successful content,
 success-maximum-words,The maximum number of words needed for successful content,Int,,
 danger-minimum-words,Warning when under the minimum number of words,Int,, 
 danger-maximum-words,Warning when over the maximum number of words,Int,,
-placeholder,Short hint describing the expected content,String,medium!,Some placeholder;プレースホルダ
+placeholder,Short hint describing the expected content,String,medium! attribute,Some placeholder;プレースホルダ
 label,Label related to the field,String,medium!,Some label;ラベル;ضع الكلمة المناسبة
 help,Some help tip related to the field,String,medium!,Lorem ipsum dolor sit amet consectetur adipiscing elit.;助けて
 danger-help,Help message to highlight an issue with the content,String,medium! state,do not do this

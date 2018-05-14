@@ -92,9 +92,9 @@ suite =
                     |> findComponent selectorsPlaceholder
            
 
-              , fuzz fuzzyNotPlaceholder "Wrong settings for Short hint describing the expected content" <|
-                \value -> viewWidget (withSettingsPlaceholder value) defaultState
-                    |> findComponent selectorsNotPlaceholder           
+             , fuzz fuzzyNotPlaceholder "Wrong settings for Short hint describing the expected content" <|
+                \value -> viewWidget (withSettingsPlaceholder value) defaultState 
+                    |> findComponent selectorsNotPlaceholder
 
                 , fuzz fuzzyLabel "Correct settings for Label related to the field" <|
                 \value -> viewWidget (withSettingsLabel value) defaultState 

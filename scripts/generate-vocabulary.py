@@ -144,8 +144,7 @@ templateWidgetDocDataString = """  createKey ui_$namecamel ZeroOrOne [ $examples
 
 # WidgetCreateTests
 
-headerWidgetCreateTests = """
-module WidgetCreateTests exposing (..)
+headerWidgetCreateTests = """module WidgetCreateTests exposing (..)
 
 {-| Unit tests for testing the view of the Widget
 
@@ -175,6 +174,11 @@ templateWidgetCreateTestsSettingsWrong = """
                     |> findWarningDiv           
 """
 
+templateWidgetCreateTestsSettingsWrongAttr = """
+             , fuzz fuzzyNot$nameCamel "Wrong settings for $description" <|
+                \\value -> viewWidget (withSettings$nameCamel value) defaultState 
+                    |> findComponent selectorsNot$nameCamel
+"""
 templateTemp = """
 
 """
@@ -364,6 +368,13 @@ def isState(row):
     else:
         return False
 
+def isAttribute(row):
+    nameField, descriptionField, signatureField, extraField, examplesField = row
+    if  "attribute" in extraField:
+        return True
+    else:
+        return False
+
 def isSettings(row):
     return not (isUserSettings(row) or isState(row))        
 
@@ -378,7 +389,10 @@ def createWidgetCreateTests():
             if isSettings(row):
                 content = prefixWithComa("fuzz ", withComa, formatTemplate(templateWidgetCreateTestsSettingsCorrect, row))
                 file.write(content)
-                file.write(formatTemplate(templateWidgetCreateTestsSettingsWrong, row))
+                if isAttribute(row):
+                    file.write(formatTemplate(templateWidgetCreateTestsSettingsWrongAttr, row))
+                else:
+                    file.write(formatTemplate(templateWidgetCreateTestsSettingsWrong, row))
                 withComa = True
     file.write(footerWidgetCreateTests)            
     file.close()    
