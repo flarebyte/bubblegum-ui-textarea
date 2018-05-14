@@ -131,3 +131,9 @@ mainBox list =
 widgetLabel : String -> Html msg
 widgetLabel widgetText =
     label [ class "label" ] [ text widgetText ]
+
+
+infoHelp : String -> Html msg
+infoHelp helpText =
+    p [ asClass2 "help" "is-info" ]
+        [ text helpText ]

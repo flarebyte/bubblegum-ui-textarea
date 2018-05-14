@@ -111,9 +111,6 @@ displayTextInfo adapter userSettings settings state =
 view : TextAreaAdapter.Model msg -> SettingsEntity.Model -> SettingsEntity.Model -> StateEntity.Model -> Html msg
 view adapter userSettings settings state =
     let
-        optLabel =
-            getLabel settings
-
         addPlaceholder =
             appendAttributeIfSuccess placeholder (getPlaceholder settings)
 
@@ -124,7 +121,10 @@ view adapter userSettings settings state =
             appendAttributeIfSuccess (attribute "rows") (getContent state |> Outcome.map calculateRows)
 
         addLabel =
-            appendHtmlIfSuccess widgetLabel optLabel
+            appendHtmlIfSuccess widgetLabel (getLabel settings)
+
+        addHelp =
+            appendHtmlIfSuccess infoHelp (getHelp settings)
     in
     mainBox
         (addLabel []
@@ -141,4 +141,5 @@ view adapter userSettings settings state =
                     , displayTextInfo adapter userSettings settings state
                     ]
                ]
+            |> addHelp
         )

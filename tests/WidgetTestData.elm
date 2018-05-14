@@ -290,7 +290,7 @@ fuzzyNotHelp : Fuzzer Int
 fuzzyNotHelp= intRange 300 400 
 
 selectorsHelp : List Selector
-selectorsHelp = [ Selector.tag "progress" ]
+selectorsHelp = [ Selector.classes ["help", "is-info"] ]
 
 -- Tag used to describe the field
 withSettingsTag: Int -> SettingsEntity.Model
