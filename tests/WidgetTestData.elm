@@ -245,14 +245,18 @@ withSettingsPlaceholder value = {
     ]
  }
 
+-- a bit of a hack. Would be nice if we would not have to specify the exact value for placeholder.
 fuzzyPlaceholder : Fuzzer Int
-fuzzyPlaceholder=intRange 1 50 
+fuzzyPlaceholder=intRange 50 50 
 
 fuzzyNotPlaceholder : Fuzzer Int
 fuzzyNotPlaceholder= intRange 300 500 
 
 selectorsPlaceholder : List Selector
-selectorsPlaceholder = [ Selector.tag "progress" ]
+selectorsPlaceholder = [ Selector.class "bubblegum-textarea__input", Selector.attribute (attribute "placeholder" (createString 50))]
+
+selectorsNotPlaceholder : List Selector
+selectorsNotPlaceholder = [ Selector.class "bubblegum-textarea__input", Selector.attribute (attribute "data-bubblegum-warn" "unsatisfied-constraint:within-string-chars-range:(1,128)")]
 
 -- Label related to the field
 withSettingsLabel: Int -> SettingsEntity.Model

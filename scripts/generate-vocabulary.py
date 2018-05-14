@@ -145,7 +145,6 @@ templateWidgetDocDataString = """  createKey ui_$namecamel ZeroOrOne [ $examples
 # WidgetCreateTests
 
 headerWidgetCreateTests = """
-
 module WidgetCreateTests exposing (..)
 
 {-| Unit tests for testing the view of the Widget

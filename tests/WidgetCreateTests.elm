@@ -1,5 +1,3 @@
-
-
 module WidgetCreateTests exposing (..)
 
 {-| Unit tests for testing the view of the Widget
@@ -96,7 +94,7 @@ suite =
 
               , fuzz fuzzyNotPlaceholder "Wrong settings for Short hint describing the expected content" <|
                 \value -> viewWidget (withSettingsPlaceholder value) defaultState
-                    |> findWarningDiv           
+                    |> findComponent selectorsNotPlaceholder           
 
                 , fuzz fuzzyLabel "Correct settings for Label related to the field" <|
                 \value -> viewWidget (withSettingsLabel value) defaultState 
