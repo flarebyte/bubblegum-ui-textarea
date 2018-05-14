@@ -9368,17 +9368,35 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$matchListSize =
 			_elm_lang$core$List$length(list),
 			expected);
 	});
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$helperCharsRange = F2(
+	function (range, str) {
+		return (_elm_lang$core$Native_Utils.cmp(
+			_elm_lang$core$String$length(str),
+			_elm_lang$core$Tuple$first(range)) > -1) && (_elm_lang$core$Native_Utils.cmp(
+			_elm_lang$core$String$length(str),
+			_elm_lang$core$Tuple$second(range)) < 0);
+	});
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinListStringCharsRange = F2(
+	function (range, outcome) {
+		return A3(
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
+			function (list) {
+				return A2(
+					_elm_lang$core$List$all,
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$helperCharsRange(range),
+					list);
+			},
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				'unsatisfied-constraint:within-list-string-chars-range:',
+				_elm_lang$core$Basics$toString(range)),
+			outcome);
+	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange = F2(
 	function (range, outcome) {
 		return A3(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			function (t) {
-				return (_elm_lang$core$Native_Utils.cmp(
-					_elm_lang$core$String$length(t),
-					_elm_lang$core$Tuple$first(range)) > -1) && (_elm_lang$core$Native_Utils.cmp(
-					_elm_lang$core$String$length(t),
-					_elm_lang$core$Tuple$second(range)) < 0);
-			},
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$helperCharsRange(range),
 			A2(
 				_elm_lang$core$Basics_ops['++'],
 				'unsatisfied-constraint:within-string-chars-range:',
@@ -9795,9 +9813,12 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitSmallR
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findListString = F2(
 	function (key, attributes) {
 		return A2(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$listLessThan,
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitList,
-			A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findOutcomeByKey, key, attributes));
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinListStringCharsRange,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitSmallRangeNotEmpty,
+			A2(
+				_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$listLessThan,
+				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitList,
+				A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findOutcomeByKey, key, attributes)));
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findString = F2(
 	function (key, attributes) {
@@ -10035,16 +10056,10 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$tra
 
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayTextInfo = F4(
 	function (adapter, userSettings, settings, state) {
-		var addTagsInfo = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tagsInfo(
-			{
-				ctor: '::',
-				_0: 'alpha',
-				_1: {
-					ctor: '::',
-					_0: 'beta',
-					_1: {ctor: '[]'}
-				}
-			});
+		var addTagsInfo = A2(
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendHtmlIfSuccess,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tagsInfo,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getTag(settings));
 		var contentCharLength = A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map,
 			_elm_lang$core$String$length,
@@ -10187,11 +10202,8 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayTextInfo =
 									_0: _elm_lang$html$Html_Attributes$class('bubblegum-textarea__tagsinfo control'),
 									_1: {ctor: '[]'}
 								},
-								{
-									ctor: '::',
-									_0: addTagsInfo,
-									_1: {ctor: '[]'}
-								}),
+								addTagsInfo(
+									{ctor: '[]'})),
 							_1: {ctor: '[]'}
 						}
 					}

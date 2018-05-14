@@ -301,7 +301,7 @@ withSettingsTag value = {
  }
 
 fuzzyTag : Fuzzer Int
-fuzzyTag=intRange 10 50
+fuzzyTag=intRange 1 30
 
 fuzzyNotTag : Fuzzer Int
 fuzzyNotTag= intRange 300 400

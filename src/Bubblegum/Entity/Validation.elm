@@ -25,6 +25,7 @@ module Bubblegum.Entity.Validation
         , stringStartsWith
         , withinFloatRange
         , withinIntRange
+        , withinListStringCharsRange
         , withinStringCharsRange
         )
 
@@ -231,11 +232,21 @@ withinFloatRange range outcome =
 
 withinStringCharsRange : ( Int, Int ) -> Outcome String -> Outcome String
 withinStringCharsRange range outcome =
-    Outcome.check (\t -> (String.length t >= first range) && (String.length t < second range)) ("unsatisfied-constraint:within-string-chars-range:" ++ toString range) outcome
+    Outcome.check (helperCharsRange range) ("unsatisfied-constraint:within-string-chars-range:" ++ toString range) outcome
+
+
+withinListStringCharsRange : ( Int, Int ) -> Outcome (List String) -> Outcome (List String)
+withinListStringCharsRange range outcome =
+    Outcome.check (\list -> List.all (helperCharsRange range) list) ("unsatisfied-constraint:within-list-string-chars-range:" ++ toString range) outcome
 
 
 
 -- private
+
+
+helperCharsRange : ( Int, Int ) -> String -> Bool
+helperCharsRange range str =
+    (String.length str >= first range) && (String.length str < second range)
 
 
 matchListSize : Int -> List String -> Bool
