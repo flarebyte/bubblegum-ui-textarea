@@ -96,13 +96,13 @@ displayTextInfo adapter userSettings settings state =
             tags <| ([] |> addWordContentLength |> addWordTargetLength |> addLabelForWord)
 
         addTagsInfo =
-            tagsInfo [ "alpha", "beta" ]
+            appendHtmlIfSuccess tagsInfo (getTag settings)
     in
     groupFields
         [ div [ class "bubblegum-textarea__wordinfo control" ] (addWordInfo |> List.singleton |> addWordProgressBar)
         , div [ class "bubblegum-textarea__charinfo control" ] (addCharInfo |> List.singleton |> addCharProgressBar)
         , div [ class "control" ] [ text "    " ]
-        , div [ class "bubblegum-textarea__tagsinfo control" ] [ addTagsInfo ]
+        , div [ class "bubblegum-textarea__tagsinfo control" ] ([] |> addTagsInfo)
         ]
 
 
