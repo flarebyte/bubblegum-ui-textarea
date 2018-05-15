@@ -62,9 +62,10 @@ viewWidgetWithSettings settings =
 
 viewWidgetWithUserSettings : SettingsEntity.Model -> Html.Html TestMsg
 viewWidgetWithUserSettings userSettings = 
-    Widget.view defaultAdapter userSettings defaultSettings defaultState
-
-
+    div [] [
+        Widget.view defaultAdapter userSettings defaultSettings defaultState
+    ]
+    
 findComponent:  List Selector-> Html.Html TestMsg -> Expectation 
 findComponent selectors html= 
     html |> Query.fromHtml |> Query.findAll selectors |> Query.count (Expect.equal 1)
@@ -314,21 +315,32 @@ selectorsTag : List Selector
 selectorsTag = [ Selector.attribute (attribute "aria-label" "tag") ]
 
 -- Language used by the user
+
+createLanguageOrRandom: Int -> String
+createLanguageOrRandom number =
+    if number == 1 then
+        "es"
+    else
+        createString number
+
 withUserSettingsUserLanguage: Int -> SettingsEntity.Model
 withUserSettingsUserLanguage value = {
     attributes = [
-        attr ui_userLanguage (createString value)
+        attr ui_userLanguage (createLanguageOrRandom value)
     ]
  }
 
 fuzzyUserLanguage : Fuzzer Int
-fuzzyUserLanguage=intRange 10 50  
+fuzzyUserLanguage=intRange 1 1  
 
 fuzzyNotUserLanguage : Fuzzer Int
-fuzzyNotUserLanguage= intRange 300 400 
+fuzzyNotUserLanguage= intRange 50 1000 
 
 selectorsUserLanguage : List Selector
-selectorsUserLanguage = [ Selector.class "label" ]
+selectorsUserLanguage = [ Selector.class "bubblegum-textarea__widget", Selector.attribute (Attributes.lang "es") ]
+
+selectorsNotUserLanguage : List Selector
+selectorsNotUserLanguage = [ Selector.class "bubblegum-textarea__widget", Selector.attribute (attribute "data-bubblegum-warn" "unsatisfied-constraint:within-string-chars-range:(1,32)") ]
 
 
 -- Language of the content
@@ -348,6 +360,9 @@ fuzzyNotContentLanguage= intRange 300 400
 selectorsContentLanguage : List Selector
 selectorsContentLanguage = [ Selector.class "label" ]
 
+selectorsNotContentLanguage : List Selector
+selectorsNotContentLanguage = [ Selector.class "label" ]
+
 
 -- Whether the user is using right to left
 withUserSettingsUserRightToLeft: Int -> SettingsEntity.Model
@@ -366,6 +381,9 @@ fuzzyNotUserRightToLeft= intRange 300 400
 selectorsUserRightToLeft : List Selector
 selectorsUserRightToLeft = [ Selector.class "label" ]
 
+selectorsNotUserRightToLeft : List Selector
+selectorsNotUserRightToLeft = [ Selector.class "label" ]
+
 
 -- Whether the content requires right to left
 withUserSettingsContentRightToLeft: Int -> SettingsEntity.Model
@@ -383,6 +401,9 @@ fuzzyNotContentRightToLeft= intRange 300 400
 
 selectorsContentRightToLeft : List Selector
 selectorsContentRightToLeft = [ Selector.class "label" ]
+
+selectorsNotContentRightToLeft : List Selector
+selectorsNotContentRightToLeft = [ Selector.class "label" ]
 
 
 -- Whether the user would prefer large text

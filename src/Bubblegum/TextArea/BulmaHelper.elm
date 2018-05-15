@@ -121,9 +121,9 @@ groupFields list =
     div [ class "field is-grouped is-grouped-multiline" ] list
 
 
-mainBox : List (Html msg) -> Html msg
-mainBox list =
-    div [ class "bubblegum-textarea__widget box is-marginless is-paddingless is-shadowless has-addons" ]
+mainBox : Outcome String -> List (Html msg) -> Html msg
+mainBox language list =
+    div ([ class "bubblegum-textarea__widget box is-marginless is-paddingless is-shadowless has-addons" ] |> appendAttributeIfSuccess lang language)
         [ div [ class "field" ] list
         ]
 

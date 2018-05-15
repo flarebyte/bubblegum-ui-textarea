@@ -11,10 +11,10 @@ label,Label related to the field,String,medium!,Some label;ラベル;ضع الك
 help,Some help tip related to the field,String,medium!,Lorem ipsum dolor sit amet consectetur adipiscing elit.;助けて
 danger-help,Help message to highlight an issue with the content,String,medium! state,do not do this
 content,The content of the field,String,state very-large,some content 
-user-language,Language used by the user,String,small!,en-GB;ja;ar
-content-language,Language of the content,String,small! user,en-GB;ja;ar
-user-right-to-left,Whether the user is using right to left,Bool,,
-content-right-to-left,Whether the content requires right to left,Bool,user,
+user-language,Language used by the user,String,small! attribute,en-GB;ja;ar
+content-language,Language of the content,String,small! user attribute,en-GB;ja;ar
+user-right-to-left,Whether the user is using right to left,Bool,attribute,
+content-right-to-left,Whether the content requires right to left,Bool,user attribute,
 accessibility-large-text,Whether the user would prefer large text,Bool,user,
 tag,Tag used to describe the field,List String,small!,it;learning;elm
 success-tag,Tag representing a successful facet of the content,List String,small! state,spelling;concise;italian

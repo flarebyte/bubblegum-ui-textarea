@@ -8978,27 +8978,6 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$widgetLabel 
 			_1: {ctor: '[]'}
 		});
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$mainBox = function (list) {
-	return A2(
-		_elm_lang$html$Html$div,
-		{
-			ctor: '::',
-			_0: _elm_lang$html$Html_Attributes$class('bubblegum-textarea__widget box is-marginless is-paddingless is-shadowless has-addons'),
-			_1: {ctor: '[]'}
-		},
-		{
-			ctor: '::',
-			_0: A2(
-				_elm_lang$html$Html$div,
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html_Attributes$class('field'),
-					_1: {ctor: '[]'}
-				},
-				list),
-			_1: {ctor: '[]'}
-		});
-};
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$groupFields = function (list) {
 	return A2(
 		_elm_lang$html$Html$div,
@@ -9198,6 +9177,32 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendAttrib
 						_1: {ctor: '[]'}
 					});
 		}
+	});
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$mainBox = F2(
+	function (language, list) {
+		return A2(
+			_elm_lang$html$Html$div,
+			A3(
+				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendAttributeIfSuccess,
+				_elm_lang$html$Html_Attributes$lang,
+				language,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('bubblegum-textarea__widget box is-marginless is-paddingless is-shadowless has-addons'),
+					_1: {ctor: '[]'}
+				}),
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$div,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('field'),
+						_1: {ctor: '[]'}
+					},
+					list),
+				_1: {ctor: '[]'}
+			});
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendHtmlIfSuccess = F3(
 	function (ifSuccess, outcome, htmlList) {
@@ -10235,7 +10240,9 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$view = F4(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendAttributeIfSuccess,
 			_elm_lang$html$Html_Attributes$placeholder,
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getPlaceholder(settings));
-		return _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$mainBox(
+		return A2(
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$mainBox,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getUserLanguage(userSettings),
 			addHelp(
 				A2(
 					_elm_lang$core$Basics_ops['++'],

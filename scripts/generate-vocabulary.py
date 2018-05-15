@@ -166,7 +166,6 @@ templateWidgetCreateTestsSettingsCorrect = """
                 fuzz fuzzy$nameCamel "Correct settings for $description" <|
                 \\value -> viewWidgetWithSettings (withSettings$nameCamel value)
                     |> findComponent selectors$nameCamel
-           
 """
 templateWidgetCreateTestsSettingsWrong = """
               , fuzz fuzzyNot$nameCamel "Wrong settings for $description" <|
@@ -184,7 +183,6 @@ templateWidgetCreateTestsUserSettingsCorrect = """
                 fuzz fuzzy$nameCamel "Correct settings for $description" <|
                 \\value -> viewWidgetWithUserSettings (withUserSettings$nameCamel value)
                     |> findComponent selectors$nameCamel
-           
 """
 templateWidgetCreateTestsUserSettingsWrong = """
               , fuzz fuzzyNot$nameCamel "Wrong settings for $description" <|
