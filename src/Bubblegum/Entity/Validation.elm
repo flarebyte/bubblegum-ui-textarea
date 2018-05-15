@@ -319,23 +319,11 @@ floatOrZero value =
     String.toFloat value |> Result.withDefault 0
 
 
-trueList =
-    [ "true", "ok", "yes", "y", "t" ]
-
-
-falseList =
-    [ "false", "ko", "no", "n", "f" ]
-
-
-trueFalseList =
-    trueList ++ falseList
-
-
 stringToBool : String -> Bool
 stringToBool value =
-    List.member (String.toLower value) trueList
+    value == "true"
 
-
+-- https://www.w3.org/TR/xmlschema-2/#boolean
 isBool : String -> Bool
 isBool value =
-    List.member (String.toLower value) trueFalseList
+    List.member (String.toLower value) ["true", "false"]

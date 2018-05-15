@@ -367,45 +367,54 @@ selectorsNotContentLanguage = [ Selector.class "bubblegum-textarea__input",
 
 
 -- Whether the user is using right to left
+createTrueOrRandom: Int -> String
+createTrueOrRandom number =
+    if number == 1 then
+        "true"
+    else
+        createString number
+
 withUserSettingsUserRightToLeft: Int -> SettingsEntity.Model
 withUserSettingsUserRightToLeft value = {
     attributes = [
-        attr ui_userRightToLeft (createString value)
+        attr ui_userRightToLeft (createTrueOrRandom value)
     ]
  }
 
 fuzzyUserRightToLeft : Fuzzer Int
-fuzzyUserRightToLeft=intRange 10 50  
+fuzzyUserRightToLeft=intRange 1 1
 
 fuzzyNotUserRightToLeft : Fuzzer Int
-fuzzyNotUserRightToLeft= intRange 300 400 
+fuzzyNotUserRightToLeft= intRange 3 1000 
 
 selectorsUserRightToLeft : List Selector
-selectorsUserRightToLeft = [ Selector.class "label" ]
+selectorsUserRightToLeft = [ Selector.class "bubblegum-textarea__widget", Selector.attribute (Attributes.dir "rtl") ]
 
 selectorsNotUserRightToLeft : List Selector
-selectorsNotUserRightToLeft = [ Selector.class "label" ]
+selectorsNotUserRightToLeft = [ Selector.class "bubblegum-textarea__widget", 
+    Selector.attribute (attribute "data-bubblegum-warn" "unsatisfied-constraint:bool") ]
 
 
 -- Whether the content requires right to left
 withUserSettingsContentRightToLeft: Int -> SettingsEntity.Model
 withUserSettingsContentRightToLeft value = {
     attributes = [
-        attr ui_contentRightToLeft (createString value)
+        attr ui_contentRightToLeft (createTrueOrRandom value)
     ]
  }
 
 fuzzyContentRightToLeft : Fuzzer Int
-fuzzyContentRightToLeft=intRange 10 50  
+fuzzyContentRightToLeft= intRange 1 1
 
 fuzzyNotContentRightToLeft : Fuzzer Int
-fuzzyNotContentRightToLeft= intRange 300 400 
+fuzzyNotContentRightToLeft= intRange 3 1000
 
 selectorsContentRightToLeft : List Selector
-selectorsContentRightToLeft = [ Selector.class "label" ]
+selectorsContentRightToLeft = [ Selector.class "bubblegum-textarea__input", Selector.attribute (Attributes.dir "rtl") ]
 
 selectorsNotContentRightToLeft : List Selector
-selectorsNotContentRightToLeft = [ Selector.class "label" ]
+selectorsNotContentRightToLeft = [ Selector.class "bubblegum-textarea__input", 
+    Selector.attribute (attribute "data-bubblegum-warn" "unsatisfied-constraint:bool") ]
 
 
 -- Whether the user would prefer large text

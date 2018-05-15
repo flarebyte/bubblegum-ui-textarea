@@ -129,7 +129,7 @@ view adapter userSettings settings state =
         addHelp =
             appendHtmlIfSuccess infoHelp (getHelp settings)
     in
-    mainBox (getUserLanguage userSettings)
+    mainBox (getUserLanguage userSettings) (isUserRightToLeft userSettings)
         (addLabel []
             ++ [ div [ class "control" ]
                     [ textarea
