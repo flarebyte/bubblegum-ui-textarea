@@ -84,13 +84,6 @@ isContentRightToLeft settings =
     findBool ui_contentRightToLeft settings.attributes
 
 
-{-| Whether the user would prefer large text
--}
-isAccessibilityLargeText : SettingsEntity.Model -> Outcome Bool
-isAccessibilityLargeText settings =
-    findBool ui_accessibilityLargeText settings.attributes
-
-
 {-| Tag used to describe the field
 -}
 getTag : SettingsEntity.Model -> Outcome (List String)

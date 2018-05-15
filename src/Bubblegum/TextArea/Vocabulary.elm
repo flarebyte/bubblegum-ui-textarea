@@ -126,13 +126,6 @@ ui_contentRightToLeft =
     "ui:content-right-to-left"
 
 
-{-| Whether the user would prefer large text. (Bool)
--}
-ui_accessibilityLargeText : String
-ui_accessibilityLargeText =
-    "ui:accessibility-large-text"
-
-
 {-| Tag used to describe the field. (List String)
 -}
 ui_tag : String

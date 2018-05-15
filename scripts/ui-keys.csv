@@ -15,7 +15,6 @@ user-language,Language used by the user,String,small! attribute,en-GB;ja;ar
 content-language,Language of the content,String,small! user attribute,en-GB;ja;ar
 user-right-to-left,Whether the user is using right to left,Bool,attribute,
 content-right-to-left,Whether the content requires right to left,Bool,user attribute,
-accessibility-large-text,Whether the user would prefer large text,Bool,user,
 tag,Tag used to describe the field,List String,small!,it;learning;elm
 success-tag,Tag representing a successful facet of the content,List String,small! state,spelling;concise;italian
 warning-tag,Tag representing a warning aspect of the content,List String,small! state,grammar;synonyms

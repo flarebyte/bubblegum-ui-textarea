@@ -135,14 +135,6 @@ suite =
                 \value -> viewWidgetWithUserSettings (withUserSettingsContentRightToLeft value) 
                     |> findComponent selectorsNotContentRightToLeft
 
-                , fuzz fuzzyAccessibilityLargeText "Correct settings for Whether the user would prefer large text" <|
-                \value -> viewWidgetWithUserSettings (withUserSettingsAccessibilityLargeText value)
-                    |> findComponent selectorsAccessibilityLargeText
-
-              , fuzz fuzzyNotAccessibilityLargeText "Wrong settings for Whether the user would prefer large text" <|
-                \value -> viewWidgetWithUserSettings (withUserSettingsAccessibilityLargeText value)
-                    |> findWarningDiv           
-
                 , fuzz fuzzyTag "Correct settings for Tag used to describe the field" <|
                 \value -> viewWidgetWithSettings (withSettingsTag value)
                     |> findComponent selectorsTag

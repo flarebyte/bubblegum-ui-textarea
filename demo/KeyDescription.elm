@@ -92,11 +92,6 @@ descContentRightToLeft =
     "Whether the content requires right to left"
 
 
-descAccessibilityLargeText : String
-descAccessibilityLargeText =
-    "Whether the user would prefer large text"
-
-
 descTag : String
 descTag =
     "Tag used to describe the field"

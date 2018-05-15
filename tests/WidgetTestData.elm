@@ -416,25 +416,6 @@ selectorsNotContentRightToLeft : List Selector
 selectorsNotContentRightToLeft = [ Selector.class "bubblegum-textarea__input", 
     Selector.attribute (attribute "data-bubblegum-warn" "unsatisfied-constraint:bool") ]
 
-
--- Whether the user would prefer large text
-withUserSettingsAccessibilityLargeText: Int -> SettingsEntity.Model
-withUserSettingsAccessibilityLargeText value = {
-    attributes = [
-        attr ui_accessibilityLargeText (createString value)
-    ]
- }
-
-fuzzyAccessibilityLargeText : Fuzzer Int
-fuzzyAccessibilityLargeText=intRange 10 50  
-
-fuzzyNotAccessibilityLargeText : Fuzzer Int
-fuzzyNotAccessibilityLargeText= intRange 300 400 
-
-selectorsAccessibilityLargeText : List Selector
-selectorsAccessibilityLargeText = [ Selector.class "label" ]
-
-
 -- private
 
 attr: String -> String -> Attribute.Model

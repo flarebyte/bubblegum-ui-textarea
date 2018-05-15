@@ -20,7 +20,6 @@ textAreaWidgetDoc =
         , createKey ui_contentLanguage ZeroOrOne [ "en-GB", "ja", "ar", "other" ] descContentLanguage
         , createKey ui_userRightToLeft ZeroOrOne [ "true", "false", "other" ] descUserRightToLeft
         , createKey ui_contentRightToLeft ZeroOrOne [ "true", "false", "other" ] descContentRightToLeft
-        , createKey ui_accessibilityLargeText ZeroOrOne [ "true", "false", "other" ] descAccessibilityLargeText
         ]
     , settings =
         [ createKey ui_successMinimumChars ZeroOrOne [ "0", "20", "40", "80", "160", "320", "-5" ] descSuccessMinimumChars

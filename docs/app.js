@@ -8852,7 +8852,6 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerTag 
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_warningTag = 'ui:warning-tag';
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successTag = 'ui:success-tag';
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_tag = 'ui:tag';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_accessibilityLargeText = 'ui:accessibility-large-text';
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentRightToLeft = 'ui:content-right-to-left';
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_userRightToLeft = 'ui:user-right-to-left';
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentLanguage = 'ui:content-language';
@@ -9860,9 +9859,6 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getSucc
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getTag = function (settings) {
 	return A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findListString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_tag, settings.attributes);
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$isAccessibilityLargeText = function (settings) {
-	return A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findBool, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_accessibilityLargeText, settings.attributes);
-};
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$isContentRightToLeft = function (settings) {
 	return A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findBool, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentRightToLeft, settings.attributes);
 };
@@ -10295,7 +10291,6 @@ var _flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerTag = 'Tag represe
 var _flarebyte$bubblegum_ui_textarea$KeyDescription$descWarningTag = 'Tag representing a warning aspect of the content';
 var _flarebyte$bubblegum_ui_textarea$KeyDescription$descSuccessTag = 'Tag representing a successful facet of the content';
 var _flarebyte$bubblegum_ui_textarea$KeyDescription$descTag = 'Tag used to describe the field';
-var _flarebyte$bubblegum_ui_textarea$KeyDescription$descAccessibilityLargeText = 'Whether the user would prefer large text';
 var _flarebyte$bubblegum_ui_textarea$KeyDescription$descContentRightToLeft = 'Whether the content requires right to left';
 var _flarebyte$bubblegum_ui_textarea$KeyDescription$descUserRightToLeft = 'Whether the user is using right to left';
 var _flarebyte$bubblegum_ui_textarea$KeyDescription$descContentLanguage = 'Language of the content';
@@ -10426,28 +10421,7 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 							}
 						},
 						_flarebyte$bubblegum_ui_textarea$KeyDescription$descContentRightToLeft),
-					_1: {
-						ctor: '::',
-						_0: A4(
-							_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-							_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_accessibilityLargeText,
-							_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
-							{
-								ctor: '::',
-								_0: 'true',
-								_1: {
-									ctor: '::',
-									_0: 'false',
-									_1: {
-										ctor: '::',
-										_0: 'other',
-										_1: {ctor: '[]'}
-									}
-								}
-							},
-							_flarebyte$bubblegum_ui_textarea$KeyDescription$descAccessibilityLargeText),
-						_1: {ctor: '[]'}
-					}
+					_1: {ctor: '[]'}
 				}
 			}
 		}
