@@ -46,15 +46,7 @@ defaultState = {
         attr ui_content ipsum
     ]
  }          
-
-withStateContent: String -> StateEntity.Model
-withStateContent value =
-    {
-        attributes = [
-            attr ui_content value
-        ]
-    }          
-
+      
 
 viewWidgetWithSettings : SettingsEntity.Model -> Html.Html TestMsg
 viewWidgetWithSettings settings = 
@@ -65,6 +57,12 @@ viewWidgetWithUserSettings userSettings =
     div [] [
         Widget.view defaultAdapter userSettings defaultSettings defaultState
     ]
+
+viewWidgetWithState : StateEntity.Model -> Html.Html TestMsg
+viewWidgetWithState state = 
+    div [] [
+        Widget.view defaultAdapter defaultUserSettings defaultSettings state
+    ]    
     
 findComponent:  List Selector-> Html.Html TestMsg -> Expectation 
 findComponent selectors html= 
@@ -415,6 +413,91 @@ selectorsContentRightToLeft = [ Selector.class "bubblegum-textarea__input", Sele
 selectorsNotContentRightToLeft : List Selector
 selectorsNotContentRightToLeft = [ Selector.class "bubblegum-textarea__input", 
     Selector.attribute (attribute "data-bubblegum-warn" "unsatisfied-constraint:bool") ]
+
+-- Help message to highlight an issue with the content
+withStateDangerHelp: Int -> SettingsEntity.Model
+withStateDangerHelp value = {
+    attributes = [
+        attr ui_tag (createString value)
+    ]
+ }
+
+fuzzyDangerHelp : Fuzzer Int
+fuzzyDangerHelp=intRange 1 30
+
+fuzzyNotDangerHelp : Fuzzer Int
+fuzzyNotDangerHelp= intRange 300 400
+
+selectorsDangerHelp : List Selector
+selectorsDangerHelp = [ Selector.attribute (attribute "title" "tag") ]
+
+-- The content of the field
+withStateContent: Int -> SettingsEntity.Model
+withStateContent value = {
+    attributes = [
+        attr ui_tag (createString value)
+    ]
+ }
+
+fuzzyContent : Fuzzer Int
+fuzzyContent=intRange 1 30
+
+fuzzyNotContent : Fuzzer Int
+fuzzyNotContent= intRange 300 400
+
+selectorsContent : List Selector
+selectorsContent = [ Selector.attribute (attribute "title" "tag") ]
+
+-- Tag representing a successful facet of the content
+withStateSuccessTag: Int -> SettingsEntity.Model
+withStateSuccessTag value = {
+    attributes = [
+        attr ui_tag (createString value)
+    ]
+ }
+
+fuzzySuccessTag : Fuzzer Int
+fuzzySuccessTag=intRange 1 30
+
+fuzzyNotSuccessTag : Fuzzer Int
+fuzzyNotSuccessTag= intRange 300 400
+
+selectorsSuccessTag : List Selector
+selectorsSuccessTag = [ Selector.attribute (attribute "title" "tag") ]
+
+-- Tag representing a warning aspect of the content
+withStateWarningTag: Int -> SettingsEntity.Model
+withStateWarningTag value = {
+    attributes = [
+        attr ui_tag (createString value)
+    ]
+ }
+
+fuzzyWarningTag : Fuzzer Int
+fuzzyWarningTag=intRange 1 30
+
+fuzzyNotWarningTag : Fuzzer Int
+fuzzyNotWarningTag= intRange 300 400
+
+selectorsWarningTag : List Selector
+selectorsWarningTag = [ Selector.attribute (attribute "title" "tag") ]
+
+-- Tag representing a dangerous aspect of the content
+withStateDangerTag: Int -> SettingsEntity.Model
+withStateDangerTag value = {
+    attributes = [
+        attr ui_tag (createString value)
+    ]
+ }
+
+fuzzyDangerTag : Fuzzer Int
+fuzzyDangerTag=intRange 1 30
+
+fuzzyNotDangerTag : Fuzzer Int
+fuzzyNotDangerTag= intRange 300 400
+
+selectorsDangerTag : List Selector
+selectorsDangerTag = [ Selector.attribute (attribute "title" "tag") ]
 
 -- private
 

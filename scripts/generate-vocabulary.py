@@ -196,7 +196,41 @@ templateWidgetCreateTestsUserSettingsWrongAttr = """
                     |> findComponent selectorsNot$nameCamel
 """
 
+templateWidgetCreateTestsStateCorrect = """
+                fuzz fuzzy$nameCamel "Correct settings for $description" <|
+                \\value -> viewWidgetWithState (withState$nameCamel value)
+                    |> findComponent selectors$nameCamel
+"""
+templateWidgetCreateTestsStateWrong = """
+              , fuzz fuzzyNot$nameCamel "Wrong settings for $description" <|
+                \\value -> viewWidgetWithState (withState$nameCamel value)
+                    |> findWarningDiv           
+"""
+
+templateWidgetCreateTestsStateWrongAttr = """
+             , fuzz fuzzyNot$nameCamel "Wrong settings for $description" <|
+                \\value -> viewWidgetWithState (withState$nameCamel value) 
+                    |> findComponent selectorsNot$nameCamel
+"""
+
 templateTemp = """
+-- $description
+withState$nameCamel: Int -> SettingsEntity.Model
+withState$nameCamel value = {
+    attributes = [
+        attr ui_tag (createString value)
+    ]
+ }
+
+fuzzy$nameCamel : Fuzzer Int
+fuzzy$nameCamel=intRange 1 30
+
+fuzzyNot$nameCamel : Fuzzer Int
+fuzzyNot$nameCamel= intRange 300 400
+
+selectors$nameCamel : List Selector
+selectors$nameCamel = [ Selector.attribute (attribute "title" "tag") ]
+
 """
 
 
@@ -414,6 +448,15 @@ def createWidgetCreateTests():
                     file.write(formatTemplate(templateWidgetCreateTestsUserSettingsWrongAttr, row))
                 else:
                     file.write(formatTemplate(templateWidgetCreateTestsUserSettingsWrong, row))
+                withComa = True
+            if isState(row):
+                content = prefixWithComa("fuzz ", withComa, formatTemplate(templateWidgetCreateTestsStateCorrect, row))
+                file.write(content)
+                if isAttribute(row):
+                    file.write(formatTemplate(templateWidgetCreateTestsStateWrongAttr, row))
+                else:
+                    file.write(formatTemplate(templateWidgetCreateTestsStateWrong, row))
+                print(formatTemplate(templateTemp, row))
                 withComa = True
     file.write(footerWidgetCreateTests)            
     file.close()    

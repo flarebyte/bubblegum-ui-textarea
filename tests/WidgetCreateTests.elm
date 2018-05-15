@@ -103,6 +103,22 @@ suite =
                 \value -> viewWidgetWithSettings (withSettingsHelp value)
                     |> findWarningDiv           
 
+                , fuzz fuzzyDangerHelp "Correct settings for Help message to highlight an issue with the content" <|
+                \value -> viewWidgetWithState (withStateDangerHelp value)
+                    |> findComponent selectorsDangerHelp
+
+              , fuzz fuzzyNotDangerHelp "Wrong settings for Help message to highlight an issue with the content" <|
+                \value -> viewWidgetWithState (withStateDangerHelp value)
+                    |> findWarningDiv           
+
+                , fuzz fuzzyContent "Correct settings for The content of the field" <|
+                \value -> viewWidgetWithState (withStateContent value)
+                    |> findComponent selectorsContent
+
+              , fuzz fuzzyNotContent "Wrong settings for The content of the field" <|
+                \value -> viewWidgetWithState (withStateContent value)
+                    |> findWarningDiv           
+
                 , fuzz fuzzyUserLanguage "Correct settings for Language used by the user" <|
                 \value -> viewWidgetWithUserSettings (withUserSettingsUserLanguage value)
                     |> findComponent selectorsUserLanguage
@@ -141,6 +157,30 @@ suite =
 
               , fuzz fuzzyNotTag "Wrong settings for Tag used to describe the field" <|
                 \value -> viewWidgetWithSettings (withSettingsTag value)
+                    |> findWarningDiv           
+
+                , fuzz fuzzySuccessTag "Correct settings for Tag representing a successful facet of the content" <|
+                \value -> viewWidgetWithState (withStateSuccessTag value)
+                    |> findComponent selectorsSuccessTag
+
+              , fuzz fuzzyNotSuccessTag "Wrong settings for Tag representing a successful facet of the content" <|
+                \value -> viewWidgetWithState (withStateSuccessTag value)
+                    |> findWarningDiv           
+
+                , fuzz fuzzyWarningTag "Correct settings for Tag representing a warning aspect of the content" <|
+                \value -> viewWidgetWithState (withStateWarningTag value)
+                    |> findComponent selectorsWarningTag
+
+              , fuzz fuzzyNotWarningTag "Wrong settings for Tag representing a warning aspect of the content" <|
+                \value -> viewWidgetWithState (withStateWarningTag value)
+                    |> findWarningDiv           
+
+                , fuzz fuzzyDangerTag "Correct settings for Tag representing a dangerous aspect of the content" <|
+                \value -> viewWidgetWithState (withStateDangerTag value)
+                    |> findComponent selectorsDangerTag
+
+              , fuzz fuzzyNotDangerTag "Wrong settings for Tag representing a dangerous aspect of the content" <|
+                \value -> viewWidgetWithState (withStateDangerTag value)
                     |> findWarningDiv           
 
             ]
