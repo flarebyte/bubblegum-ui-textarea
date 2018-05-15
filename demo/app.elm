@@ -46,7 +46,7 @@ update msg model =
         OnSelectSetting isUser key value ->
             replaceAttributeByKey key [ value ] (getSettingsAttributes isUser model)
                 |> SettingsEntity.asAttributesIn (getSettings isUser model)
-                |> asSettingsIn isUser (model |> Debug.log "MODEL")
+                |> asSettingsIn isUser model
 
         OnActivateSetting isUser key ->
             deleteAttributeByKey key (getSettingsAttributes isUser model)
