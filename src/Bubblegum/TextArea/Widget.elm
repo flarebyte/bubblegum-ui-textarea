@@ -117,6 +117,9 @@ view adapter userSettings settings state =
         addContentLanguage =
             appendAttributeIfSuccess lang (getContentLanguage userSettings)
 
+        addContentRtl =
+             appendAttributeIfSuccess dir <| (isContentRightToLeft userSettings |> Outcome.map rtlOrLtr)
+        
         addValue =
             appendAttributeIfSuccess value (getContent state)
 
@@ -138,6 +141,7 @@ view adapter userSettings settings state =
                          ]
                             |> addPlaceholder
                             |> addContentLanguage
+                            |> addContentRtl
                             |> addValue
                             |> addRows
                         )
