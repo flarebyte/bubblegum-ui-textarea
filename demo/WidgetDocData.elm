@@ -17,7 +17,10 @@ textAreaWidgetDoc =
     { meta = WidgetPackageJson.meta
     , userSettings =
         [ createKey ui_userLanguage ZeroOrOne [ "en-GB", "ja", "ar", "other" ] descUserLanguage
+        , createKey ui_contentLanguage ZeroOrOne [ "en-GB", "ja", "ar", "other" ] descContentLanguage
         , createKey ui_userRightToLeft ZeroOrOne [ "true", "false", "other" ] descUserRightToLeft
+        , createKey ui_contentRightToLeft ZeroOrOne [ "true", "false", "other" ] descContentRightToLeft
+        , createKey ui_accessibilityLargeText ZeroOrOne [ "true", "false", "other" ] descAccessibilityLargeText
         ]
     , settings =
         [ createKey ui_successMinimumChars ZeroOrOne [ "0", "20", "40", "80", "160", "320", "-5" ] descSuccessMinimumChars
@@ -31,9 +34,6 @@ textAreaWidgetDoc =
         , createKey ui_placeholder ZeroOrOne [ "Some placeholder", "プレースホルダ", "other" ] descPlaceholder
         , createKey ui_label ZeroOrOne [ "Some label", "ラベル", "ضع الكلمة المناسبة", "other" ] descLabel
         , createKey ui_help ZeroOrOne [ "Lorem ipsum dolor sit amet consectetur adipiscing elit.", "助けて", "other" ] descHelp
-        , createKey ui_contentLanguage ZeroOrOne [ "en-GB", "ja", "ar", "other" ] descContentLanguage
-        , createKey ui_contentRightToLeft ZeroOrOne [ "true", "false", "other" ] descContentRightToLeft
-        , createKey ui_accessibilityLargeText ZeroOrOne [ "true", "false", "other" ] descAccessibilityLargeText
         , createKey ui_tag ZeroOrOne [ "it", "learning", "elm", "other" ] descTag
         ]
     , stateAttributes =

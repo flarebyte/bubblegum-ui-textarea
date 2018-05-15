@@ -16,111 +16,156 @@ suite =
             [
 
                 fuzz fuzzySuccessMinimumChars "Correct settings for The minimum number of characters needed for successful content" <|
-                \value -> viewWidget (withSettingsSuccessMinimumChars value) defaultState 
+                \value -> viewWidgetWithSettings (withSettingsSuccessMinimumChars value)
                     |> findComponent selectorsSuccessMinimumChars
            
 
               , fuzz fuzzyNotSuccessMinimumChars "Wrong settings for The minimum number of characters needed for successful content" <|
-                \value -> viewWidget (withSettingsSuccessMinimumChars value) defaultState
+                \value -> viewWidgetWithSettings (withSettingsSuccessMinimumChars value)
                     |> findWarningDiv           
 
                 , fuzz fuzzySuccessMaximumChars "Correct settings for The maximum number of characters needed for successful content" <|
-                \value -> viewWidget (withSettingsSuccessMaximumChars value) defaultState 
+                \value -> viewWidgetWithSettings (withSettingsSuccessMaximumChars value)
                     |> findComponent selectorsSuccessMaximumChars
            
 
               , fuzz fuzzyNotSuccessMaximumChars "Wrong settings for The maximum number of characters needed for successful content" <|
-                \value -> viewWidget (withSettingsSuccessMaximumChars value) defaultState
+                \value -> viewWidgetWithSettings (withSettingsSuccessMaximumChars value)
                     |> findWarningDiv           
 
                 , fuzz fuzzyDangerMinimumChars "Correct settings for Warning when under the minimum number of characters" <|
-                \value -> viewWidget (withSettingsDangerMinimumChars value) defaultState 
+                \value -> viewWidgetWithSettings (withSettingsDangerMinimumChars value)
                     |> findComponent selectorsDangerMinimumChars
            
 
               , fuzz fuzzyNotDangerMinimumChars "Wrong settings for Warning when under the minimum number of characters" <|
-                \value -> viewWidget (withSettingsDangerMinimumChars value) defaultState
+                \value -> viewWidgetWithSettings (withSettingsDangerMinimumChars value)
                     |> findWarningDiv           
 
                 , fuzz fuzzyDangerMaximumChars "Correct settings for Warning when over the maximum number of characters" <|
-                \value -> viewWidget (withSettingsDangerMaximumChars value) defaultState 
+                \value -> viewWidgetWithSettings (withSettingsDangerMaximumChars value)
                     |> findComponent selectorsDangerMaximumChars
            
 
               , fuzz fuzzyNotDangerMaximumChars "Wrong settings for Warning when over the maximum number of characters" <|
-                \value -> viewWidget (withSettingsDangerMaximumChars value) defaultState
+                \value -> viewWidgetWithSettings (withSettingsDangerMaximumChars value)
                     |> findWarningDiv           
 
                 , fuzz fuzzySuccessMinimumWords "Correct settings for The minimum number of words needed for successful content" <|
-                \value -> viewWidget (withSettingsSuccessMinimumWords value) defaultState 
+                \value -> viewWidgetWithSettings (withSettingsSuccessMinimumWords value)
                     |> findComponent selectorsSuccessMinimumWords
            
 
               , fuzz fuzzyNotSuccessMinimumWords "Wrong settings for The minimum number of words needed for successful content" <|
-                \value -> viewWidget (withSettingsSuccessMinimumWords value) defaultState
+                \value -> viewWidgetWithSettings (withSettingsSuccessMinimumWords value)
                     |> findWarningDiv           
 
                 , fuzz fuzzySuccessMaximumWords "Correct settings for The maximum number of words needed for successful content" <|
-                \value -> viewWidget (withSettingsSuccessMaximumWords value) defaultState 
+                \value -> viewWidgetWithSettings (withSettingsSuccessMaximumWords value)
                     |> findComponent selectorsSuccessMaximumWords
            
 
               , fuzz fuzzyNotSuccessMaximumWords "Wrong settings for The maximum number of words needed for successful content" <|
-                \value -> viewWidget (withSettingsSuccessMaximumWords value) defaultState
+                \value -> viewWidgetWithSettings (withSettingsSuccessMaximumWords value)
                     |> findWarningDiv           
 
                 , fuzz fuzzyDangerMinimumWords "Correct settings for Warning when under the minimum number of words" <|
-                \value -> viewWidget (withSettingsDangerMinimumWords value) defaultState 
+                \value -> viewWidgetWithSettings (withSettingsDangerMinimumWords value)
                     |> findComponent selectorsDangerMinimumWords
            
 
               , fuzz fuzzyNotDangerMinimumWords "Wrong settings for Warning when under the minimum number of words" <|
-                \value -> viewWidget (withSettingsDangerMinimumWords value) defaultState
+                \value -> viewWidgetWithSettings (withSettingsDangerMinimumWords value)
                     |> findWarningDiv           
 
                 , fuzz fuzzyDangerMaximumWords "Correct settings for Warning when over the maximum number of words" <|
-                \value -> viewWidget (withSettingsDangerMaximumWords value) defaultState 
+                \value -> viewWidgetWithSettings (withSettingsDangerMaximumWords value)
                     |> findComponent selectorsDangerMaximumWords
            
 
               , fuzz fuzzyNotDangerMaximumWords "Wrong settings for Warning when over the maximum number of words" <|
-                \value -> viewWidget (withSettingsDangerMaximumWords value) defaultState
+                \value -> viewWidgetWithSettings (withSettingsDangerMaximumWords value)
                     |> findWarningDiv           
 
                 , fuzz fuzzyPlaceholder "Correct settings for Short hint describing the expected content" <|
-                \value -> viewWidget (withSettingsPlaceholder value) defaultState 
+                \value -> viewWidgetWithSettings (withSettingsPlaceholder value)
                     |> findComponent selectorsPlaceholder
            
 
              , fuzz fuzzyNotPlaceholder "Wrong settings for Short hint describing the expected content" <|
-                \value -> viewWidget (withSettingsPlaceholder value) defaultState 
+                \value -> viewWidgetWithSettings (withSettingsPlaceholder value)
                     |> findComponent selectorsNotPlaceholder
 
                 , fuzz fuzzyLabel "Correct settings for Label related to the field" <|
-                \value -> viewWidget (withSettingsLabel value) defaultState 
+                \value -> viewWidgetWithSettings (withSettingsLabel value)
                     |> findComponent selectorsLabel
            
 
               , fuzz fuzzyNotLabel "Wrong settings for Label related to the field" <|
-                \value -> viewWidget (withSettingsLabel value) defaultState
+                \value -> viewWidgetWithSettings (withSettingsLabel value)
                     |> findWarningDiv           
 
                 , fuzz fuzzyHelp "Correct settings for Some help tip related to the field" <|
-                \value -> viewWidget (withSettingsHelp value) defaultState 
+                \value -> viewWidgetWithSettings (withSettingsHelp value)
                     |> findComponent selectorsHelp
            
 
               , fuzz fuzzyNotHelp "Wrong settings for Some help tip related to the field" <|
-                \value -> viewWidget (withSettingsHelp value) defaultState
+                \value -> viewWidgetWithSettings (withSettingsHelp value)
+                    |> findWarningDiv           
+
+                , fuzz fuzzyUserLanguage "Correct settings for Language used by the user" <|
+                \value -> viewWidgetWithUserSettings (withUserSettingsUserLanguage value)
+                    |> findComponent selectorsUserLanguage
+           
+
+              , fuzz fuzzyNotUserLanguage "Wrong settings for Language used by the user" <|
+                \value -> viewWidgetWithUserSettings (withUserSettingsUserLanguage value)
+                    |> findWarningDiv           
+
+                , fuzz fuzzyContentLanguage "Correct settings for Language of the content" <|
+                \value -> viewWidgetWithUserSettings (withUserSettingsContentLanguage value)
+                    |> findComponent selectorsContentLanguage
+           
+
+              , fuzz fuzzyNotContentLanguage "Wrong settings for Language of the content" <|
+                \value -> viewWidgetWithUserSettings (withUserSettingsContentLanguage value)
+                    |> findWarningDiv           
+
+                , fuzz fuzzyUserRightToLeft "Correct settings for Whether the user is using right to left" <|
+                \value -> viewWidgetWithUserSettings (withUserSettingsUserRightToLeft value)
+                    |> findComponent selectorsUserRightToLeft
+           
+
+              , fuzz fuzzyNotUserRightToLeft "Wrong settings for Whether the user is using right to left" <|
+                \value -> viewWidgetWithUserSettings (withUserSettingsUserRightToLeft value)
+                    |> findWarningDiv           
+
+                , fuzz fuzzyContentRightToLeft "Correct settings for Whether the content requires right to left" <|
+                \value -> viewWidgetWithUserSettings (withUserSettingsContentRightToLeft value)
+                    |> findComponent selectorsContentRightToLeft
+           
+
+              , fuzz fuzzyNotContentRightToLeft "Wrong settings for Whether the content requires right to left" <|
+                \value -> viewWidgetWithUserSettings (withUserSettingsContentRightToLeft value)
+                    |> findWarningDiv           
+
+                , fuzz fuzzyAccessibilityLargeText "Correct settings for Whether the user would prefer large text" <|
+                \value -> viewWidgetWithUserSettings (withUserSettingsAccessibilityLargeText value)
+                    |> findComponent selectorsAccessibilityLargeText
+           
+
+              , fuzz fuzzyNotAccessibilityLargeText "Wrong settings for Whether the user would prefer large text" <|
+                \value -> viewWidgetWithUserSettings (withUserSettingsAccessibilityLargeText value)
                     |> findWarningDiv           
 
                 , fuzz fuzzyTag "Correct settings for Tag used to describe the field" <|
-                \value -> viewWidget (withSettingsTag value) defaultState 
+                \value -> viewWidgetWithSettings (withSettingsTag value)
                     |> findComponent selectorsTag
            
 
               , fuzz fuzzyNotTag "Wrong settings for Tag used to describe the field" <|
-                \value -> viewWidget (withSettingsTag value) defaultState
+                \value -> viewWidgetWithSettings (withSettingsTag value)
                     |> findWarningDiv           
 
             ]

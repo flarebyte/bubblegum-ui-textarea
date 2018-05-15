@@ -56,9 +56,13 @@ withStateContent value =
     }          
 
 
-viewWidget : SettingsEntity.Model -> StateEntity.Model -> Html.Html TestMsg
-viewWidget settings state = 
-    Widget.view defaultAdapter defaultUserSettings settings state
+viewWidgetWithSettings : SettingsEntity.Model -> Html.Html TestMsg
+viewWidgetWithSettings settings = 
+    Widget.view defaultAdapter defaultUserSettings settings defaultState
+
+viewWidgetWithUserSettings : SettingsEntity.Model -> Html.Html TestMsg
+viewWidgetWithUserSettings userSettings = 
+    Widget.view defaultAdapter userSettings defaultSettings defaultState
 
 
 findComponent:  List Selector-> Html.Html TestMsg -> Expectation 
@@ -308,6 +312,96 @@ fuzzyNotTag= intRange 300 400
 
 selectorsTag : List Selector
 selectorsTag = [ Selector.attribute (attribute "aria-label" "tag") ]
+
+-- Language used by the user
+withUserSettingsUserLanguage: Int -> SettingsEntity.Model
+withUserSettingsUserLanguage value = {
+    attributes = [
+        attr ui_userLanguage (createString value)
+    ]
+ }
+
+fuzzyUserLanguage : Fuzzer Int
+fuzzyUserLanguage=intRange 10 50  
+
+fuzzyNotUserLanguage : Fuzzer Int
+fuzzyNotUserLanguage= intRange 300 400 
+
+selectorsUserLanguage : List Selector
+selectorsUserLanguage = [ Selector.class "label" ]
+
+
+-- Language of the content
+withUserSettingsContentLanguage: Int -> SettingsEntity.Model
+withUserSettingsContentLanguage value = {
+    attributes = [
+        attr ui_contentLanguage (createString value)
+    ]
+ }
+
+fuzzyContentLanguage : Fuzzer Int
+fuzzyContentLanguage=intRange 10 50  
+
+fuzzyNotContentLanguage : Fuzzer Int
+fuzzyNotContentLanguage= intRange 300 400 
+
+selectorsContentLanguage : List Selector
+selectorsContentLanguage = [ Selector.class "label" ]
+
+
+-- Whether the user is using right to left
+withUserSettingsUserRightToLeft: Int -> SettingsEntity.Model
+withUserSettingsUserRightToLeft value = {
+    attributes = [
+        attr ui_userRightToLeft (createString value)
+    ]
+ }
+
+fuzzyUserRightToLeft : Fuzzer Int
+fuzzyUserRightToLeft=intRange 10 50  
+
+fuzzyNotUserRightToLeft : Fuzzer Int
+fuzzyNotUserRightToLeft= intRange 300 400 
+
+selectorsUserRightToLeft : List Selector
+selectorsUserRightToLeft = [ Selector.class "label" ]
+
+
+-- Whether the content requires right to left
+withUserSettingsContentRightToLeft: Int -> SettingsEntity.Model
+withUserSettingsContentRightToLeft value = {
+    attributes = [
+        attr ui_contentRightToLeft (createString value)
+    ]
+ }
+
+fuzzyContentRightToLeft : Fuzzer Int
+fuzzyContentRightToLeft=intRange 10 50  
+
+fuzzyNotContentRightToLeft : Fuzzer Int
+fuzzyNotContentRightToLeft= intRange 300 400 
+
+selectorsContentRightToLeft : List Selector
+selectorsContentRightToLeft = [ Selector.class "label" ]
+
+
+-- Whether the user would prefer large text
+withUserSettingsAccessibilityLargeText: Int -> SettingsEntity.Model
+withUserSettingsAccessibilityLargeText value = {
+    attributes = [
+        attr ui_accessibilityLargeText (createString value)
+    ]
+ }
+
+fuzzyAccessibilityLargeText : Fuzzer Int
+fuzzyAccessibilityLargeText=intRange 10 50  
+
+fuzzyNotAccessibilityLargeText : Fuzzer Int
+fuzzyNotAccessibilityLargeText= intRange 300 400 
+
+selectorsAccessibilityLargeText : List Selector
+selectorsAccessibilityLargeText = [ Selector.class "label" ]
+
 
 -- private
 

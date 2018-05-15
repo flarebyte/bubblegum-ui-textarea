@@ -164,23 +164,41 @@ suite =
 
 templateWidgetCreateTestsSettingsCorrect = """
                 fuzz fuzzy$nameCamel "Correct settings for $description" <|
-                \\value -> viewWidget (withSettings$nameCamel value) defaultState 
+                \\value -> viewWidgetWithSettings (withSettings$nameCamel value)
                     |> findComponent selectors$nameCamel
            
 """
 templateWidgetCreateTestsSettingsWrong = """
               , fuzz fuzzyNot$nameCamel "Wrong settings for $description" <|
-                \\value -> viewWidget (withSettings$nameCamel value) defaultState
+                \\value -> viewWidgetWithSettings (withSettings$nameCamel value)
                     |> findWarningDiv           
 """
 
 templateWidgetCreateTestsSettingsWrongAttr = """
              , fuzz fuzzyNot$nameCamel "Wrong settings for $description" <|
-                \\value -> viewWidget (withSettings$nameCamel value) defaultState 
+                \\value -> viewWidgetWithSettings (withSettings$nameCamel value)
                     |> findComponent selectorsNot$nameCamel
 """
-templateTemp = """
 
+templateWidgetCreateTestsUserSettingsCorrect = """
+                fuzz fuzzy$nameCamel "Correct settings for $description" <|
+                \\value -> viewWidgetWithUserSettings (withUserSettings$nameCamel value)
+                    |> findComponent selectors$nameCamel
+           
+"""
+templateWidgetCreateTestsUserSettingsWrong = """
+              , fuzz fuzzyNot$nameCamel "Wrong settings for $description" <|
+                \\value -> viewWidgetWithUserSettings (withUserSettings$nameCamel value)
+                    |> findWarningDiv           
+"""
+
+templateWidgetCreateTestsUserSettingsWrongAttr = """
+             , fuzz fuzzyNot$nameCamel "Wrong settings for $description" <|
+                \\value -> viewWidgetWithUserSettings (withUserSettings$nameCamel value) 
+                    |> findComponent selectorsNot$nameCamel
+"""
+
+templateTemp = """
 """
 
 
@@ -324,8 +342,7 @@ def createWidgetDocData():
     withComa = False
     for row in content:        
         if len(row) > 2:
-            nameField, descriptionField, signatureField, extraField, examplesField = row
-            if "user" in nameField:
+            if isUserSettings(row):
                 content = prefixWithComa("createKey", withComa, formatTemplate(templateWidgetDocDataString, row))
                 file.write(content)
                 withComa = True
@@ -334,8 +351,7 @@ def createWidgetDocData():
     withComa = False
     for row in content:
         if len(row) > 2:
-            nameField, descriptionField, signatureField, extraField, examplesField = row
-            if not "user" in nameField and not "state" in extraField:
+            if isSettings(row):
                 content = prefixWithComa("createKey", withComa, formatTemplate(templateWidgetDocDataString, row))
                 file.write(content)
                 withComa = True
@@ -344,8 +360,7 @@ def createWidgetDocData():
     withComa = False
     for row in content:
         if len(row) > 2:
-            nameField, descriptionField, signatureField, extraField, examplesField = row
-            if "state" in extraField:
+            if isState(row):
                 content = prefixWithComa("createKey", withComa, formatTemplate(templateWidgetDocDataString, row))
                 file.write(content)
                 withComa = True
@@ -393,6 +408,14 @@ def createWidgetCreateTests():
                     file.write(formatTemplate(templateWidgetCreateTestsSettingsWrongAttr, row))
                 else:
                     file.write(formatTemplate(templateWidgetCreateTestsSettingsWrong, row))
+                withComa = True
+            if isUserSettings(row):
+                content = prefixWithComa("fuzz ", withComa, formatTemplate(templateWidgetCreateTestsUserSettingsCorrect, row))
+                file.write(content)
+                if isAttribute(row):
+                    file.write(formatTemplate(templateWidgetCreateTestsUserSettingsWrongAttr, row))
+                else:
+                    file.write(formatTemplate(templateWidgetCreateTestsUserSettingsWrong, row))
                 withComa = True
     file.write(footerWidgetCreateTests)            
     file.close()    
