@@ -8978,6 +8978,9 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$widgetLabel 
 			_1: {ctor: '[]'}
 		});
 };
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$rtlOrLtr = function (value) {
+	return value ? 'rtl' : 'ltr';
+};
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$groupFields = function (list) {
 	return A2(
 		_elm_lang$html$Html$div,
@@ -9178,19 +9181,23 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendAttrib
 					});
 		}
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$mainBox = F2(
-	function (language, list) {
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$mainBox = F3(
+	function (language, rtl, list) {
 		return A2(
 			_elm_lang$html$Html$div,
 			A3(
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendAttributeIfSuccess,
-				_elm_lang$html$Html_Attributes$lang,
-				language,
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html_Attributes$class('bubblegum-textarea__widget box is-marginless is-paddingless is-shadowless has-addons'),
-					_1: {ctor: '[]'}
-				}),
+				_elm_lang$html$Html_Attributes$dir,
+				A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$rtlOrLtr, rtl),
+				A3(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendAttributeIfSuccess,
+					_elm_lang$html$Html_Attributes$lang,
+					language,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('bubblegum-textarea__widget box is-marginless is-paddingless is-shadowless has-addons'),
+						_1: {ctor: '[]'}
+					})),
 			{
 				ctor: '::',
 				_0: A2(
@@ -9246,60 +9253,22 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$StyledText =
 		return {text: a, style: b, ariaLabel: c};
 	});
 
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$falseList = {
-	ctor: '::',
-	_0: 'false',
-	_1: {
-		ctor: '::',
-		_0: 'ko',
-		_1: {
-			ctor: '::',
-			_0: 'no',
-			_1: {
-				ctor: '::',
-				_0: 'n',
-				_1: {
-					ctor: '::',
-					_0: 'f',
-					_1: {ctor: '[]'}
-				}
-			}
-		}
-	}
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$trueList = {
-	ctor: '::',
-	_0: 'true',
-	_1: {
-		ctor: '::',
-		_0: 'ok',
-		_1: {
-			ctor: '::',
-			_0: 'yes',
-			_1: {
-				ctor: '::',
-				_0: 'y',
-				_1: {
-					ctor: '::',
-					_0: 't',
-					_1: {ctor: '[]'}
-				}
-			}
-		}
-	}
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$trueFalseList = A2(_elm_lang$core$Basics_ops['++'], _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$trueList, _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$falseList);
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$isBool = function (value) {
 	return A2(
 		_elm_lang$core$List$member,
 		_elm_lang$core$String$toLower(value),
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$trueFalseList);
+		{
+			ctor: '::',
+			_0: 'true',
+			_1: {
+				ctor: '::',
+				_0: 'false',
+				_1: {ctor: '[]'}
+			}
+		});
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$stringToBool = function (value) {
-	return A2(
-		_elm_lang$core$List$member,
-		_elm_lang$core$String$toLower(value),
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$trueList);
+	return _elm_lang$core$Native_Utils.eq(value, 'true');
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$floatOrZero = function (value) {
 	return A2(
@@ -10236,17 +10205,25 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$view = F4(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendAttributeIfSuccess,
 			_elm_lang$html$Html_Attributes$value,
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getContent(state));
+		var addContentRtl = A2(
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendAttributeIfSuccess,
+			_elm_lang$html$Html_Attributes$dir,
+			A2(
+				_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map,
+				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$rtlOrLtr,
+				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$isContentRightToLeft(userSettings)));
 		var addContentLanguage = A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendAttributeIfSuccess,
 			_elm_lang$html$Html_Attributes$lang,
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getContentLanguage(settings));
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getContentLanguage(userSettings));
 		var addPlaceholder = A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendAttributeIfSuccess,
 			_elm_lang$html$Html_Attributes$placeholder,
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getPlaceholder(settings));
-		return A2(
+		return A3(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$mainBox,
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getUserLanguage(userSettings),
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$isUserRightToLeft(userSettings),
 			addHelp(
 				A2(
 					_elm_lang$core$Basics_ops['++'],
@@ -10267,17 +10244,18 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$view = F4(
 									_elm_lang$html$Html$textarea,
 									addRows(
 										addValue(
-											addContentLanguage(
-												addPlaceholder(
-													{
-														ctor: '::',
-														_0: _elm_lang$html$Html_Attributes$class('bubblegum-textarea__input textarea is-marginless is-paddingless is-shadowless'),
-														_1: {
+											addContentRtl(
+												addContentLanguage(
+													addPlaceholder(
+														{
 															ctor: '::',
-															_0: _elm_lang$html$Html_Events$onInput(adapter.onInput),
-															_1: {ctor: '[]'}
-														}
-													})))),
+															_0: _elm_lang$html$Html_Attributes$class('bubblegum-textarea__input textarea is-marginless is-paddingless is-shadowless'),
+															_1: {
+																ctor: '::',
+																_0: _elm_lang$html$Html_Events$onInput(adapter.onInput),
+																_1: {ctor: '[]'}
+															}
+														}))))),
 									{ctor: '[]'}),
 								_1: {
 									ctor: '::',

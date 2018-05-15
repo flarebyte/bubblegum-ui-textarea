@@ -323,7 +323,11 @@ stringToBool : String -> Bool
 stringToBool value =
     value == "true"
 
+
+
 -- https://www.w3.org/TR/xmlschema-2/#boolean
+
+
 isBool : String -> Bool
 isBool value =
-    List.member (String.toLower value) ["true", "false"]
+    List.member (String.toLower value) [ "true", "false" ]

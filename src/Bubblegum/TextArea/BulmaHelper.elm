@@ -120,19 +120,22 @@ groupFields : List (Html msg) -> Html msg
 groupFields list =
     div [ class "field is-grouped is-grouped-multiline" ] list
 
-rtlOrLtr: Bool -> String
+
+rtlOrLtr : Bool -> String
 rtlOrLtr value =
     if value then
         "rtl"
     else
         "ltr"
 
+
 mainBox : Outcome String -> Outcome Bool -> List (Html msg) -> Html msg
 mainBox language rtl list =
-    div ([ class "bubblegum-textarea__widget box is-marginless is-paddingless is-shadowless has-addons" ] 
-    |> appendAttributeIfSuccess lang language
-    |> appendAttributeIfSuccess dir (rtl |> Outcome.map rtlOrLtr)
-    )
+    div
+        ([ class "bubblegum-textarea__widget box is-marginless is-paddingless is-shadowless has-addons" ]
+            |> appendAttributeIfSuccess lang language
+            |> appendAttributeIfSuccess dir (rtl |> Outcome.map rtlOrLtr)
+        )
         [ div [ class "field" ] list
         ]
 

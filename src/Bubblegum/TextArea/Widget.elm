@@ -118,8 +118,8 @@ view adapter userSettings settings state =
             appendAttributeIfSuccess lang (getContentLanguage userSettings)
 
         addContentRtl =
-             appendAttributeIfSuccess dir <| (isContentRightToLeft userSettings |> Outcome.map rtlOrLtr)
-        
+            appendAttributeIfSuccess dir <| (isContentRightToLeft userSettings |> Outcome.map rtlOrLtr)
+
         addValue =
             appendAttributeIfSuccess value (getContent state)
 
@@ -132,7 +132,8 @@ view adapter userSettings settings state =
         addHelp =
             appendHtmlIfSuccess infoHelp (getHelp settings)
     in
-    mainBox (getUserLanguage userSettings) (isUserRightToLeft userSettings)
+    mainBox (getUserLanguage userSettings)
+        (isUserRightToLeft userSettings)
         (addLabel []
             ++ [ div [ class "control" ]
                     [ textarea
