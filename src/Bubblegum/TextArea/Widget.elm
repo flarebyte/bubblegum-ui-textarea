@@ -114,6 +114,9 @@ view adapter userSettings settings state =
         addPlaceholder =
             appendAttributeIfSuccess placeholder (getPlaceholder settings)
 
+        addContentLanguage =
+            appendAttributeIfSuccess lang (getContentLanguage userSettings)
+
         addValue =
             appendAttributeIfSuccess value (getContent state)
 
@@ -134,6 +137,7 @@ view adapter userSettings settings state =
                          , onInput adapter.onInput
                          ]
                             |> addPlaceholder
+                            |> addContentLanguage
                             |> addValue
                             |> addRows
                         )

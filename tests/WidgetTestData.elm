@@ -340,28 +340,30 @@ selectorsUserLanguage : List Selector
 selectorsUserLanguage = [ Selector.class "bubblegum-textarea__widget", Selector.attribute (Attributes.lang "es") ]
 
 selectorsNotUserLanguage : List Selector
-selectorsNotUserLanguage = [ Selector.class "bubblegum-textarea__widget", Selector.attribute (attribute "data-bubblegum-warn" "unsatisfied-constraint:within-string-chars-range:(1,32)") ]
+selectorsNotUserLanguage = [ Selector.class "bubblegum-textarea__widget", 
+    Selector.attribute (attribute "data-bubblegum-warn" "unsatisfied-constraint:within-string-chars-range:(1,32)") ]
 
 
 -- Language of the content
 withUserSettingsContentLanguage: Int -> SettingsEntity.Model
 withUserSettingsContentLanguage value = {
     attributes = [
-        attr ui_contentLanguage (createString value)
+        attr ui_contentLanguage (createLanguageOrRandom value)
     ]
  }
 
 fuzzyContentLanguage : Fuzzer Int
-fuzzyContentLanguage=intRange 10 50  
+fuzzyContentLanguage=intRange 1 1
 
 fuzzyNotContentLanguage : Fuzzer Int
-fuzzyNotContentLanguage= intRange 300 400 
+fuzzyNotContentLanguage= intRange 100 400 
 
 selectorsContentLanguage : List Selector
-selectorsContentLanguage = [ Selector.class "label" ]
+selectorsContentLanguage = [ Selector.class "bubblegum-textarea__input", Selector.attribute (Attributes.lang "es") ]
 
 selectorsNotContentLanguage : List Selector
-selectorsNotContentLanguage = [ Selector.class "label" ]
+selectorsNotContentLanguage = [ Selector.class "bubblegum-textarea__input", 
+    Selector.attribute (attribute "data-bubblegum-warn" "unsatisfied-constraint:within-string-chars-range:(1,32)") ]
 
 
 -- Whether the user is using right to left

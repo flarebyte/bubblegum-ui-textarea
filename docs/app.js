@@ -10236,6 +10236,10 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$view = F4(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendAttributeIfSuccess,
 			_elm_lang$html$Html_Attributes$value,
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getContent(state));
+		var addContentLanguage = A2(
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendAttributeIfSuccess,
+			_elm_lang$html$Html_Attributes$lang,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getContentLanguage(settings));
 		var addPlaceholder = A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendAttributeIfSuccess,
 			_elm_lang$html$Html_Attributes$placeholder,
@@ -10263,16 +10267,17 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$view = F4(
 									_elm_lang$html$Html$textarea,
 									addRows(
 										addValue(
-											addPlaceholder(
-												{
-													ctor: '::',
-													_0: _elm_lang$html$Html_Attributes$class('bubblegum-textarea__input textarea is-marginless is-paddingless is-shadowless'),
-													_1: {
+											addContentLanguage(
+												addPlaceholder(
+													{
 														ctor: '::',
-														_0: _elm_lang$html$Html_Events$onInput(adapter.onInput),
-														_1: {ctor: '[]'}
-													}
-												}))),
+														_0: _elm_lang$html$Html_Attributes$class('bubblegum-textarea__input textarea is-marginless is-paddingless is-shadowless'),
+														_1: {
+															ctor: '::',
+															_0: _elm_lang$html$Html_Events$onInput(adapter.onInput),
+															_1: {ctor: '[]'}
+														}
+													})))),
 									{ctor: '[]'}),
 								_1: {
 									ctor: '::',
