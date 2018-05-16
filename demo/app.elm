@@ -48,10 +48,20 @@ update msg model =
                 |> SettingsEntity.asAttributesIn (getSettings isUser model)
                 |> asSettingsIn isUser model
 
+        OnSelectState key value ->
+            replaceAttributeByKey key [ value ] (getStateAttributes model)
+                |> StateEntity.asAttributesIn (getState model)
+                |> asStateIn model
+
         OnActivateSetting isUser key ->
             deleteAttributeByKey key (getSettingsAttributes isUser model)
                 |> SettingsEntity.asAttributesIn (getSettings isUser model)
                 |> asSettingsIn isUser model
+
+        OnActivateState key ->
+            deleteAttributeByKey key (getStateAttributes model)
+                |> StateEntity.asAttributesIn (getState model)
+                |> asStateIn model
 
 
 

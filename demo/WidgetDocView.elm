@@ -1,6 +1,6 @@
 module WidgetDocView exposing (..)
 
-import AppModel exposing (AppModel, getSettings)
+import AppModel exposing (AppModel, getSettings, getState)
 import AppMsg exposing (AppMsg(..))
 import AttributeDoc exposing (AttributeDoc, Cardinality(..), createKey)
 import Bubblegum.Entity.Attribute exposing (findAttributeFirstValueByKey)
@@ -8,6 +8,12 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onClick)
 import WidgetDocData exposing (textAreaWidgetDoc)
+
+
+type Change
+    = SettingsChange
+    | UserSettingChange
+    | StateChange
 
 
 viewHeader : Html msg
@@ -71,9 +77,40 @@ viewRadioItem isUserSettings key actual value =
         ]
 
 
+viewRadioItemForState : String -> Maybe String -> String -> Html AppMsg
+viewRadioItemForState key actual value =
+    let
+        labelStyle =
+            actual
+                |> Maybe.map
+                    (\v ->
+                        if v == value then
+                            "has-text-success has-text-weight-bold"
+                        else
+                            ""
+                    )
+                |> Maybe.withDefault ""
+    in
+    label [ class "radio" ]
+        [ input [ name key, type_ "radio", onClick (OnSelectState key value) ]
+            []
+        , span [ class labelStyle ] [ text value ]
+        ]
+
+
 viewSelectedBox : Bool -> String -> Html AppMsg
 viewSelectedBox isUserSettings key =
     button [ class "button", onClick (OnActivateSetting isUserSettings key) ]
+        [ span [ class "icon is-small" ]
+            [ i [ class "fas fa-trash" ]
+                []
+            ]
+        ]
+
+
+viewSelectedBoxForState : String -> Html AppMsg
+viewSelectedBoxForState key =
+    button [ class "button", onClick (OnActivateState key) ]
         [ span [ class "icon is-small" ]
             [ i [ class "fas fa-trash" ]
                 []
@@ -88,9 +125,21 @@ viewRadioSettings model isUserSettings attrDoc =
             getSettings isUserSettings model
 
         actualValue =
-            findAttributeFirstValueByKey attrDoc.key (actualSettings.attributes |> Debug.log "actual")
+            findAttributeFirstValueByKey attrDoc.key actualSettings.attributes
     in
     attrDoc.suggestions |> List.map (viewRadioItem isUserSettings attrDoc.key actualValue) |> div [ class "control" ]
+
+
+viewRadioSettingsForState : AppModel -> AttributeDoc -> Html AppMsg
+viewRadioSettingsForState model attrDoc =
+    let
+        actualState =
+            getState model
+
+        actualValue =
+            findAttributeFirstValueByKey attrDoc.key actualState.attributes
+    in
+    attrDoc.suggestions |> List.map (viewRadioItemForState attrDoc.key actualValue) |> div [ class "control" ]
 
 
 viewRadioSettingsWithLabel : AppModel -> Bool -> AttributeDoc -> Html AppMsg
@@ -100,6 +149,18 @@ viewRadioSettingsWithLabel model isUserSettings attrDoc =
             [ text attrDoc.key ]
         , viewRadioSettings model isUserSettings attrDoc
         , viewSelectedBox isUserSettings attrDoc.key
+        , p [ class "help is-info" ]
+            [ text attrDoc.description ]
+        ]
+
+
+viewRadioSettingsWithLabelForState : AppModel -> AttributeDoc -> Html AppMsg
+viewRadioSettingsWithLabelForState model attrDoc =
+    div [ class "field" ]
+        [ label [ class "label" ]
+            [ text attrDoc.key ]
+        , viewRadioSettingsForState model attrDoc
+        , viewSelectedBoxForState attrDoc.key
         , p [ class "help is-info" ]
             [ text attrDoc.description ]
         ]

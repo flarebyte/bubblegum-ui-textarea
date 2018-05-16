@@ -8913,6 +8913,15 @@ var _flarebyte$bubblegum_ui_textarea$AppModel$setState = F2(
 			{state: state});
 	});
 var _flarebyte$bubblegum_ui_textarea$AppModel$asStateIn = _elm_lang$core$Basics$flip(_flarebyte$bubblegum_ui_textarea$AppModel$setState);
+var _flarebyte$bubblegum_ui_textarea$AppModel$getState = function (model) {
+	return model.state;
+};
+var _flarebyte$bubblegum_ui_textarea$AppModel$getStateAttributes = function (model) {
+	return function (_) {
+		return _.attributes;
+	}(
+		_flarebyte$bubblegum_ui_textarea$AppModel$getState(model));
+};
 var _flarebyte$bubblegum_ui_textarea$AppModel$getSettings = F2(
 	function (isUserSettings, model) {
 		return isUserSettings ? model.userSettings : model.settings;
@@ -8947,9 +8956,16 @@ var _flarebyte$bubblegum_ui_textarea$AppModel$AppModel = F3(
 		return {userSettings: a, settings: b, state: c};
 	});
 
+var _flarebyte$bubblegum_ui_textarea$AppMsg$OnActivateState = function (a) {
+	return {ctor: 'OnActivateState', _0: a};
+};
 var _flarebyte$bubblegum_ui_textarea$AppMsg$OnActivateSetting = F2(
 	function (a, b) {
 		return {ctor: 'OnActivateSetting', _0: a, _1: b};
+	});
+var _flarebyte$bubblegum_ui_textarea$AppMsg$OnSelectState = F2(
+	function (a, b) {
+		return {ctor: 'OnSelectState', _0: a, _1: b};
 	});
 var _flarebyte$bubblegum_ui_textarea$AppMsg$OnSelectSetting = F3(
 	function (a, b, c) {
@@ -10919,6 +10935,43 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 	}
 };
 
+var _flarebyte$bubblegum_ui_textarea$WidgetDocView$viewSelectedBoxForState = function (key) {
+	return A2(
+		_elm_lang$html$Html$button,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('button'),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$html$Html_Events$onClick(
+					_flarebyte$bubblegum_ui_textarea$AppMsg$OnActivateState(key)),
+				_1: {ctor: '[]'}
+			}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$span,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('icon is-small'),
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$i,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class('fas fa-trash'),
+							_1: {ctor: '[]'}
+						},
+						{ctor: '[]'}),
+					_1: {ctor: '[]'}
+				}),
+			_1: {ctor: '[]'}
+		});
+};
 var _flarebyte$bubblegum_ui_textarea$WidgetDocView$viewSelectedBox = F2(
 	function (isUserSettings, key) {
 		return A2(
@@ -10955,6 +11008,126 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocView$viewSelectedBox = F2(
 						_1: {ctor: '[]'}
 					}),
 				_1: {ctor: '[]'}
+			});
+	});
+var _flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioItemForState = F3(
+	function (key, actual, value) {
+		var labelStyle = A2(
+			_elm_lang$core$Maybe$withDefault,
+			'',
+			A2(
+				_elm_lang$core$Maybe$map,
+				function (v) {
+					return _elm_lang$core$Native_Utils.eq(v, value) ? 'has-text-success has-text-weight-bold' : '';
+				},
+				actual));
+		return A2(
+			_elm_lang$html$Html$label,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class('radio'),
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$input,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$name(key),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$type_('radio'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Events$onClick(
+									A2(_flarebyte$bubblegum_ui_textarea$AppMsg$OnSelectState, key, value)),
+								_1: {ctor: '[]'}
+							}
+						}
+					},
+					{ctor: '[]'}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$span,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class(labelStyle),
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text(value),
+							_1: {ctor: '[]'}
+						}),
+					_1: {ctor: '[]'}
+				}
+			});
+	});
+var _flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioSettingsForState = F2(
+	function (model, attrDoc) {
+		var actualState = _flarebyte$bubblegum_ui_textarea$AppModel$getState(model);
+		var actualValue = A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findAttributeFirstValueByKey, attrDoc.key, actualState.attributes);
+		return A2(
+			_elm_lang$html$Html$div,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class('control'),
+				_1: {ctor: '[]'}
+			},
+			A2(
+				_elm_lang$core$List$map,
+				A2(_flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioItemForState, attrDoc.key, actualValue),
+				attrDoc.suggestions));
+	});
+var _flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioSettingsWithLabelForState = F2(
+	function (model, attrDoc) {
+		return A2(
+			_elm_lang$html$Html$div,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class('field'),
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$label,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('label'),
+						_1: {ctor: '[]'}
+					},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text(attrDoc.key),
+						_1: {ctor: '[]'}
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(_flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioSettingsForState, model, attrDoc),
+					_1: {
+						ctor: '::',
+						_0: _flarebyte$bubblegum_ui_textarea$WidgetDocView$viewSelectedBoxForState(attrDoc.key),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$p,
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$class('help is-info'),
+									_1: {ctor: '[]'}
+								},
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html$text(attrDoc.description),
+									_1: {ctor: '[]'}
+								}),
+							_1: {ctor: '[]'}
+						}
+					}
+				}
 			});
 	});
 var _flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioItem = F4(
@@ -11015,10 +11188,7 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioItem = F4(
 var _flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioSettings = F3(
 	function (model, isUserSettings, attrDoc) {
 		var actualSettings = A2(_flarebyte$bubblegum_ui_textarea$AppModel$getSettings, isUserSettings, model);
-		var actualValue = A2(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findAttributeFirstValueByKey,
-			attrDoc.key,
-			A2(_elm_lang$core$Debug$log, 'actual', actualSettings.attributes));
+		var actualValue = A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findAttributeFirstValueByKey, attrDoc.key, actualSettings.attributes);
 		return A2(
 			_elm_lang$html$Html$div,
 			{
@@ -11434,6 +11604,9 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocView$viewHeader = A2(
 			}
 		}
 	});
+var _flarebyte$bubblegum_ui_textarea$WidgetDocView$StateChange = {ctor: 'StateChange'};
+var _flarebyte$bubblegum_ui_textarea$WidgetDocView$UserSettingChange = {ctor: 'UserSettingChange'};
+var _flarebyte$bubblegum_ui_textarea$WidgetDocView$SettingsChange = {ctor: 'SettingsChange'};
 
 var _flarebyte$bubblegum_ui_textarea$App$view = function (model) {
 	return A2(
@@ -11559,7 +11732,7 @@ var _flarebyte$bubblegum_ui_textarea$App$update = F2(
 				return A3(
 					_flarebyte$bubblegum_ui_textarea$AppModel$asSettingsIn,
 					_p1,
-					A2(_elm_lang$core$Debug$log, 'MODEL', model),
+					model,
 					A2(
 						_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_SettingsEntity$asAttributesIn,
 						A2(_flarebyte$bubblegum_ui_textarea$AppModel$getSettings, _p1, model),
@@ -11572,7 +11745,23 @@ var _flarebyte$bubblegum_ui_textarea$App$update = F2(
 								_1: {ctor: '[]'}
 							},
 							A2(_flarebyte$bubblegum_ui_textarea$AppModel$getSettingsAttributes, _p1, model))));
-			default:
+			case 'OnSelectState':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$AppModel$asStateIn,
+					model,
+					A2(
+						_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_StateEntity$asAttributesIn,
+						_flarebyte$bubblegum_ui_textarea$AppModel$getState(model),
+						A3(
+							_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$replaceAttributeByKey,
+							_p0._0,
+							{
+								ctor: '::',
+								_0: _p0._1,
+								_1: {ctor: '[]'}
+							},
+							_flarebyte$bubblegum_ui_textarea$AppModel$getStateAttributes(model))));
+			case 'OnActivateSetting':
 				var _p2 = _p0._0;
 				return A3(
 					_flarebyte$bubblegum_ui_textarea$AppModel$asSettingsIn,
@@ -11585,6 +11774,17 @@ var _flarebyte$bubblegum_ui_textarea$App$update = F2(
 							_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$deleteAttributeByKey,
 							_p0._1,
 							A2(_flarebyte$bubblegum_ui_textarea$AppModel$getSettingsAttributes, _p2, model))));
+			default:
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$AppModel$asStateIn,
+					model,
+					A2(
+						_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_StateEntity$asAttributesIn,
+						_flarebyte$bubblegum_ui_textarea$AppModel$getState(model),
+						A2(
+							_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$deleteAttributeByKey,
+							_p0._0,
+							_flarebyte$bubblegum_ui_textarea$AppModel$getStateAttributes(model))));
 		}
 	});
 var _flarebyte$bubblegum_ui_textarea$App$main = _elm_lang$html$Html$beginnerProgram(

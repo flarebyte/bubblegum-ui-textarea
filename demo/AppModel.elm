@@ -50,9 +50,19 @@ getSettings isUserSettings model =
         model.settings
 
 
+getState : AppModel -> SettingsEntity.Model
+getState model =
+    model.state
+
+
 getSettingsAttributes : Bool -> AppModel -> List Attribute.Model
 getSettingsAttributes isUserSettings model =
     getSettings isUserSettings model |> .attributes
+
+
+getStateAttributes : AppModel -> List Attribute.Model
+getStateAttributes model =
+    getState model |> .attributes
 
 
 setState : StateEntity.Model -> AppModel -> AppModel
