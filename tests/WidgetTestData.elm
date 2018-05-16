@@ -418,7 +418,7 @@ selectorsNotContentRightToLeft = [ Selector.class "bubblegum-textarea__input",
 withStateDangerHelp: Int -> SettingsEntity.Model
 withStateDangerHelp value = {
     attributes = [
-        attr ui_tag (createString value)
+        attr ui_dangerHelp (createString value)
     ]
  }
 
@@ -429,7 +429,7 @@ fuzzyNotDangerHelp : Fuzzer Int
 fuzzyNotDangerHelp= intRange 300 400
 
 selectorsDangerHelp : List Selector
-selectorsDangerHelp = [ Selector.attribute (attribute "title" "tag") ]
+selectorsDangerHelp = [ Selector.classes ["help", "is-danger"] ]
 
 -- The content of the field
 withStateContent: Int -> SettingsEntity.Model

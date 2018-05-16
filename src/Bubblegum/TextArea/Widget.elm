@@ -131,6 +131,9 @@ view adapter userSettings settings state =
 
         addHelp =
             appendHtmlIfSuccess infoHelp (getHelp settings)
+
+        addDangerHelp =
+            appendHtmlIfSuccess dangerHelp (getDangerHelp state)
     in
     mainBox (getUserLanguage userSettings)
         (isUserRightToLeft userSettings)
@@ -150,5 +153,6 @@ view adapter userSettings settings state =
                     , displayTextInfo adapter userSettings settings state
                     ]
                ]
+            |> addDangerHelp
             |> addHelp
         )

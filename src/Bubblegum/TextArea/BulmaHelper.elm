@@ -149,3 +149,9 @@ infoHelp : String -> Html msg
 infoHelp helpText =
     p [ asClass2 "help" "is-info" ]
         [ text helpText ]
+
+
+dangerHelp : String -> Html msg
+dangerHelp helpText =
+    p [ asClass2 "help" "is-danger" ]
+        [ text helpText ]
