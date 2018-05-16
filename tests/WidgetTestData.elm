@@ -13,7 +13,7 @@ import Bubblegum.TextArea.Widget as Widget
 import Bubblegum.Entity.SettingsEntity as SettingsEntity
 import Bubblegum.Entity.StateEntity as StateEntity
 import Bubblegum.Entity.Attribute as Attribute
-import Fuzz exposing (Fuzzer, int, list, string, intRange)
+import Fuzz exposing (Fuzzer, int, list, string, intRange, constant)
 import Test.Html.Query as Query
 import Test.Html.Selector as Selector exposing(Selector)
 import Bubblegum.TextArea.Vocabulary exposing (..)
@@ -21,6 +21,15 @@ import Bubblegum.TextArea.Vocabulary exposing (..)
 
 type TestMsg
     = OnInputContent String
+
+biggerThanSmall : Int
+biggerThanSmall = 50
+
+biggerThanMedium : Int
+biggerThanMedium = 200
+
+biggerThanVeryLarge : Int
+biggerThanVeryLarge = 200000
 
 defaultAdapter : Adapter.Model TestMsg
 defaultAdapter =
@@ -435,24 +444,27 @@ selectorsDangerHelp = [ Selector.classes ["help", "is-danger"] ]
 withStateContent: Int -> SettingsEntity.Model
 withStateContent value = {
     attributes = [
-        attr ui_tag (createString value)
+        attr ui_content (createString value)
     ]
  }
 
 fuzzyContent : Fuzzer Int
-fuzzyContent=intRange 1 30
+fuzzyContent= constant 1000
 
 fuzzyNotContent : Fuzzer Int
-fuzzyNotContent= intRange 300 400
+fuzzyNotContent= intRange biggerThanVeryLarge (10*biggerThanVeryLarge)
 
 selectorsContent : List Selector
-selectorsContent = [ Selector.attribute (attribute "title" "tag") ]
+selectorsContent = [ Selector.tag "textarea" , Selector.attribute (Attributes.value (createString 1000))]
+
+selectorsNotContent : List Selector
+selectorsNotContent = [Selector.attribute (attribute "data-bubblegum-warn" "unsatisfied-constraint:within-string-chars-range:(0,60000)") ]
 
 -- Tag representing a successful facet of the content
 withStateSuccessTag: Int -> SettingsEntity.Model
 withStateSuccessTag value = {
     attributes = [
-        attr ui_tag (createString value)
+        attr ui_successTag (createString value)
     ]
  }
 
@@ -469,7 +481,7 @@ selectorsSuccessTag = [ Selector.attribute (attribute "title" "tag") ]
 withStateWarningTag: Int -> SettingsEntity.Model
 withStateWarningTag value = {
     attributes = [
-        attr ui_tag (createString value)
+        attr ui_warningTag (createString value)
     ]
  }
 
@@ -486,7 +498,7 @@ selectorsWarningTag = [ Selector.attribute (attribute "title" "tag") ]
 withStateDangerTag: Int -> SettingsEntity.Model
 withStateDangerTag value = {
     attributes = [
-        attr ui_tag (createString value)
+        attr ui_dangerTag (createString value)
     ]
  }
 
@@ -514,4 +526,7 @@ ipsum =
 
 createString: Int -> String
 createString size  =
-    String.left size ipsum
+    if size > 500 then
+        String.repeat size "A"
+    else
+        String.left size ipsum

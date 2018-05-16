@@ -10,7 +10,7 @@ placeholder,Short hint describing the expected content,String,medium! attribute,
 label,Label related to the field,String,medium!,Some label;ラベル;ضع الكلمة المناسبة
 help,Some help tip related to the field,String,medium!,Lorem ipsum dolor sit amet consectetur adipiscing elit.;助けて
 danger-help,Help message to highlight an issue with the content,String,medium! state,do not do this
-content,The content of the field,String,state very-large,some content 
+content,The content of the field,String,state very-large attribute,some content 
 user-language,Language used by the user,String,small! attribute,en-GB;ja;ar
 content-language,Language of the content,String,small! user attribute,en-GB;ja;ar
 user-right-to-left,Whether the user is using right to left,Bool,attribute,

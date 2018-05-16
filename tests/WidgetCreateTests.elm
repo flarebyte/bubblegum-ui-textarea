@@ -115,9 +115,9 @@ suite =
                 \value -> viewWidgetWithState (withStateContent value)
                     |> findComponent selectorsContent
 
-              , fuzz fuzzyNotContent "Wrong settings for The content of the field" <|
-                \value -> viewWidgetWithState (withStateContent value)
-                    |> findWarningDiv           
+             , fuzz fuzzyNotContent "Wrong settings for The content of the field" <|
+                \value -> viewWidgetWithState (withStateContent value) 
+                    |> findComponent selectorsNotContent
 
                 , fuzz fuzzyUserLanguage "Correct settings for Language used by the user" <|
                 \value -> viewWidgetWithUserSettings (withUserSettingsUserLanguage value)

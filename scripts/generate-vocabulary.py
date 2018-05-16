@@ -456,7 +456,6 @@ def createWidgetCreateTests():
                     file.write(formatTemplate(templateWidgetCreateTestsStateWrongAttr, row))
                 else:
                     file.write(formatTemplate(templateWidgetCreateTestsStateWrong, row))
-                print(formatTemplate(templateTemp, row))
                 withComa = True
     file.write(footerWidgetCreateTests)            
     file.close()    
