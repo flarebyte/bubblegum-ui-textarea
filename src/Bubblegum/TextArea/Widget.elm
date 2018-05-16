@@ -77,7 +77,7 @@ displayTextInfo adapter userSettings settings state =
             appendHtmlIfSuccess progressBar charRatioAndStatus
 
         addCharInfo =
-            tags <| ([] |> addCharContentLength |> addCharTargetLength)
+            tagsAddons <| ([] |> addCharContentLength |> addCharTargetLength)
 
         -- Word counter
         addWordContentLength =
@@ -93,16 +93,19 @@ displayTextInfo adapter userSettings settings state =
             flip (++) [ tag { text = labelForWord, style = "is-light", ariaLabel = "unit" } ]
 
         addWordInfo =
-            tags <| ([] |> addWordContentLength |> addWordTargetLength |> addLabelForWord)
+            tagsAddons <| ([] |> addWordContentLength |> addWordTargetLength |> addLabelForWord)
 
         addTagsInfo =
             appendHtmlIfSuccess tagsInfo (getTag settings)
+
+        addSuccessTags =
+            appendHtmlIfSuccess tagsSuccess (getSuccessTag state)
     in
     groupFields
         [ div [ class "bubblegum-textarea__wordinfo control" ] (addWordInfo |> List.singleton |> addWordProgressBar)
         , div [ class "bubblegum-textarea__charinfo control" ] (addCharInfo |> List.singleton |> addCharProgressBar)
         , div [ class "control" ] [ text "    " ]
-        , div [ class "bubblegum-textarea__tagsinfo control" ] ([] |> addTagsInfo)
+        , div [ class "bubblegum-textarea__tagsinfo control" ] [ tags ([] |> addTagsInfo |> addSuccessTags) ]
         ]
 
 

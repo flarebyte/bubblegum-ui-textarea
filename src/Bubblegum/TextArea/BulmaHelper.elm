@@ -98,9 +98,14 @@ tag tagInfo =
         [ text tagInfo.text ]
 
 
+tagsAddons : List (Html msg) -> Html msg
+tagsAddons list =
+    div [ class "tags has-addons" ] list
+
+
 tags : List (Html msg) -> Html msg
 tags list =
-    div [ class "tags has-addons" ] list
+    div [ class "tags" ] list
 
 
 infoText : String -> StyledText
@@ -111,9 +116,22 @@ infoText text =
     }
 
 
+successTagText : String -> StyledText
+successTagText text =
+    { text = text
+    , style = "is-success"
+    , ariaLabel = "tag"
+    }
+
+
 tagsInfo : List String -> Html msg
 tagsInfo list =
-    list |> List.map infoText |> List.map tag |> div [ class "tags" ]
+    list |> List.map infoText |> List.map tag |> div []
+
+
+tagsSuccess : List String -> Html msg
+tagsSuccess list =
+    list |> List.map successTagText |> List.map tag |> div []
 
 
 groupFields : List (Html msg) -> Html msg

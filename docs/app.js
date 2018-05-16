@@ -9006,10 +9006,23 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$groupFields 
 		},
 		list);
 };
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$successTagText = function (text) {
+	return {text: text, style: 'is-success', ariaLabel: 'tag'};
+};
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$infoText = function (text) {
 	return {text: text, style: 'is-dark', ariaLabel: 'tag'};
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tags = function (list) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('tags'),
+			_1: {ctor: '[]'}
+		},
+		list);
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tagsAddons = function (list) {
 	return A2(
 		_elm_lang$html$Html$div,
 		{
@@ -9082,15 +9095,20 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tag = functi
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tagsInfo = function (list) {
 	return A2(
 		_elm_lang$html$Html$div,
-		{
-			ctor: '::',
-			_0: _elm_lang$html$Html_Attributes$class('tags'),
-			_1: {ctor: '[]'}
-		},
+		{ctor: '[]'},
 		A2(
 			_elm_lang$core$List$map,
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tag,
 			A2(_elm_lang$core$List$map, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$infoText, list)));
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tagsSuccess = function (list) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		A2(
+			_elm_lang$core$List$map,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tag,
+			A2(_elm_lang$core$List$map, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$successTagText, list)));
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$infoHelp = function (helpText) {
 	return A2(
@@ -10056,6 +10074,10 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$tra
 
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayTextInfo = F4(
 	function (adapter, userSettings, settings, state) {
+		var addSuccessTags = A2(
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendHtmlIfSuccess,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tagsSuccess,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getSuccessTag(state));
 		var addTagsInfo = A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendHtmlIfSuccess,
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tagsInfo,
@@ -10118,7 +10140,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayTextInfo =
 					});
 			},
 			optSuccessCharRange);
-		var addCharInfo = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tags(
+		var addCharInfo = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tagsAddons(
 			addCharTargetLength(
 				addCharContentLength(
 					{ctor: '[]'})));
@@ -10151,7 +10173,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayTextInfo =
 					});
 			},
 			optSuccessWordRange);
-		var addWordInfo = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tags(
+		var addWordInfo = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tagsAddons(
 			addLabelForWord(
 				addWordTargetLength(
 					addWordContentLength(
@@ -10202,8 +10224,14 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayTextInfo =
 									_0: _elm_lang$html$Html_Attributes$class('bubblegum-textarea__tagsinfo control'),
 									_1: {ctor: '[]'}
 								},
-								addTagsInfo(
-									{ctor: '[]'})),
+								{
+									ctor: '::',
+									_0: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tags(
+										addSuccessTags(
+											addTagsInfo(
+												{ctor: '[]'}))),
+									_1: {ctor: '[]'}
+								}),
 							_1: {ctor: '[]'}
 						}
 					}
