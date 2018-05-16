@@ -11297,7 +11297,7 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocView$viewSettings = function (mode
 						},
 						A2(
 							_elm_lang$core$List$map,
-							A2(_flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioSettingsWithLabel, model, true),
+							_flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioSettingsWithLabelForState(model),
 							_flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc.stateAttributes)),
 					_1: {
 						ctor: '::',

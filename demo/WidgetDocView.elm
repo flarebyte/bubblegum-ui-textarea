@@ -171,7 +171,7 @@ viewSettings model =
     div [ class "box scrollable" ]
         [ h3 [ class "title is-3" ] [ text "State" ]
         , h4 [ class "subtitle is-4" ] [ text "Attributes that can be changed at runtime" ]
-        , div [ class "box" ] (textAreaWidgetDoc.stateAttributes |> List.map (viewRadioSettingsWithLabel model True))
+        , div [ class "box" ] (textAreaWidgetDoc.stateAttributes |> List.map (viewRadioSettingsWithLabelForState model))
         , h3 [ class "title is-3" ] [ text "User Settings" ]
         , h4 [ class "subtitle is-4" ] [ text "Attributes attached to the current profile" ]
         , div [ class "box" ] (textAreaWidgetDoc.userSettings |> List.map (viewRadioSettingsWithLabel model True))
