@@ -9006,11 +9006,17 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$groupFields 
 		},
 		list);
 };
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$dangerTagText = function (text) {
+	return {text: text, style: 'is-danger', title: 'tag'};
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$warningTagText = function (text) {
+	return {text: text, style: 'is-warning', title: 'tag'};
+};
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$successTagText = function (text) {
-	return {text: text, style: 'is-success', ariaLabel: 'tag'};
+	return {text: text, style: 'is-success', title: 'tag'};
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$infoText = function (text) {
-	return {text: text, style: 'is-dark', ariaLabel: 'tag'};
+	return {text: text, style: 'is-dark', title: 'tag'};
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tags = function (list) {
 	return A2(
@@ -9082,7 +9088,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tag = functi
 			_0: A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$asClass2, 'tag', tagInfo.style),
 			_1: {
 				ctor: '::',
-				_0: A2(_elm_lang$html$Html_Attributes$attribute, 'aria-label', tagInfo.ariaLabel),
+				_0: _elm_lang$html$Html_Attributes$title(tagInfo.title),
 				_1: {ctor: '[]'}
 			}
 		},
@@ -9109,6 +9115,24 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tagsSuccess 
 			_elm_lang$core$List$map,
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tag,
 			A2(_elm_lang$core$List$map, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$successTagText, list)));
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tagsWarning = function (list) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		A2(
+			_elm_lang$core$List$map,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tag,
+			A2(_elm_lang$core$List$map, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$warningTagText, list)));
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tagsDanger = function (list) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		A2(
+			_elm_lang$core$List$map,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tag,
+			A2(_elm_lang$core$List$map, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$dangerTagText, list)));
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$infoHelp = function (helpText) {
 	return A2(
@@ -9191,7 +9215,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$styleTextWor
 		return {
 			text: _elm_lang$core$Basics$toString(number),
 			style: status,
-			ariaLabel: 'number of words'
+			title: 'number of words'
 		};
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$styleTextChar = F2(
@@ -9199,7 +9223,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$styleTextCha
 		return {
 			text: _elm_lang$core$Basics$toString(number),
 			style: status,
-			ariaLabel: 'number of characters'
+			title: 'number of characters'
 		};
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendAttributeIfSuccess = F3(
@@ -9297,7 +9321,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendHtmlIf
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$StyledText = F3(
 	function (a, b, c) {
-		return {text: a, style: b, ariaLabel: c};
+		return {text: a, style: b, title: c};
 	});
 
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$isBool = function (value) {
@@ -10074,6 +10098,14 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$tra
 
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayTextInfo = F4(
 	function (adapter, userSettings, settings, state) {
+		var addDangerTags = A2(
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendHtmlIfSuccess,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tagsDanger,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getDangerTag(state));
+		var addWarningTags = A2(
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendHtmlIfSuccess,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tagsWarning,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getWarningTag(state));
 		var addSuccessTags = A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendHtmlIfSuccess,
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tagsSuccess,
@@ -10108,7 +10140,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayTextInfo =
 			{
 				ctor: '::',
 				_0: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tag(
-					{text: labelForWord, style: 'is-light', ariaLabel: 'unit'}),
+					{text: labelForWord, style: 'is-light', title: 'unit'}),
 				_1: {ctor: '[]'}
 			});
 		var optSuccessCharRange = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getSuccessCharRange(settings);
@@ -10136,7 +10168,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayTextInfo =
 						text: _elm_lang$core$Basics$toString(
 							_elm_lang$core$Tuple$first(tuple)),
 						style: 'is-dark',
-						ariaLabel: 'minimum number of characters expected'
+						title: 'minimum number of characters expected'
 					});
 			},
 			optSuccessCharRange);
@@ -10169,7 +10201,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayTextInfo =
 						text: _elm_lang$core$Basics$toString(
 							_elm_lang$core$Tuple$first(tuple)),
 						style: 'is-dark',
-						ariaLabel: 'minimum number of words expected'
+						title: 'minimum number of words expected'
 					});
 			},
 			optSuccessWordRange);
@@ -10228,8 +10260,10 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayTextInfo =
 									ctor: '::',
 									_0: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tags(
 										addSuccessTags(
-											addTagsInfo(
-												{ctor: '[]'}))),
+											addWarningTags(
+												addDangerTags(
+													addTagsInfo(
+														{ctor: '[]'}))))),
 									_1: {ctor: '[]'}
 								}),
 							_1: {ctor: '[]'}

@@ -71,7 +71,7 @@ displayTextInfo adapter userSettings settings state =
             appendHtmlIfSuccess tag charLengthAndStatus
 
         addCharTargetLength =
-            appendHtmlIfSuccess (\tuple -> tag { text = first tuple |> toString, style = "is-dark", ariaLabel = "minimum number of characters expected" }) optSuccessCharRange
+            appendHtmlIfSuccess (\tuple -> tag { text = first tuple |> toString, style = "is-dark", title = "minimum number of characters expected" }) optSuccessCharRange
 
         addCharProgressBar =
             appendHtmlIfSuccess progressBar charRatioAndStatus
@@ -84,13 +84,13 @@ displayTextInfo adapter userSettings settings state =
             appendHtmlIfSuccess tag wordLengthAndStatus
 
         addWordTargetLength =
-            appendHtmlIfSuccess (\tuple -> tag { text = first tuple |> toString, style = "is-dark", ariaLabel = "minimum number of words expected" }) optSuccessWordRange
+            appendHtmlIfSuccess (\tuple -> tag { text = first tuple |> toString, style = "is-dark", title = "minimum number of words expected" }) optSuccessWordRange
 
         addWordProgressBar =
             appendHtmlIfSuccess progressBar wordRatioAndStatus
 
         addLabelForWord =
-            flip (++) [ tag { text = labelForWord, style = "is-light", ariaLabel = "unit" } ]
+            flip (++) [ tag { text = labelForWord, style = "is-light", title = "unit" } ]
 
         addWordInfo =
             tagsAddons <| ([] |> addWordContentLength |> addWordTargetLength |> addLabelForWord)
@@ -100,12 +100,18 @@ displayTextInfo adapter userSettings settings state =
 
         addSuccessTags =
             appendHtmlIfSuccess tagsSuccess (getSuccessTag state)
+
+        addWarningTags =
+            appendHtmlIfSuccess tagsWarning (getWarningTag state)
+
+        addDangerTags =
+            appendHtmlIfSuccess tagsDanger (getDangerTag state)
     in
     groupFields
         [ div [ class "bubblegum-textarea__wordinfo control" ] (addWordInfo |> List.singleton |> addWordProgressBar)
         , div [ class "bubblegum-textarea__charinfo control" ] (addCharInfo |> List.singleton |> addCharProgressBar)
         , div [ class "control" ] [ text "    " ]
-        , div [ class "bubblegum-textarea__tagsinfo control" ] [ tags ([] |> addTagsInfo |> addSuccessTags) ]
+        , div [ class "bubblegum-textarea__tagsinfo control" ] [ tags ([] |> addTagsInfo |> addDangerTags |> addWarningTags |> addSuccessTags) ]
         ]
 
 

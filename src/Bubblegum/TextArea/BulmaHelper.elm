@@ -17,7 +17,7 @@ import Tuple exposing (first, second)
 type alias StyledText =
     { text : String
     , style : String
-    , ariaLabel : String
+    , title : String
     }
 
 
@@ -51,7 +51,7 @@ styleTextChar : Int -> String -> StyledText
 styleTextChar number status =
     { text = toString number
     , style = status
-    , ariaLabel = "number of characters"
+    , title = "number of characters"
     }
 
 
@@ -59,7 +59,7 @@ styleTextWord : Int -> String -> StyledText
 styleTextWord number status =
     { text = toString number
     , style = status
-    , ariaLabel = "number of words"
+    , title = "number of words"
     }
 
 
@@ -94,7 +94,7 @@ styledIcon iconName iconTextStyle =
 
 tag : StyledText -> Html msg
 tag tagInfo =
-    span [ asClass2 "tag" tagInfo.style, attribute "aria-label" tagInfo.ariaLabel ]
+    span [ asClass2 "tag" tagInfo.style, Attributes.title tagInfo.title ]
         [ text tagInfo.text ]
 
 
@@ -112,7 +112,7 @@ infoText : String -> StyledText
 infoText text =
     { text = text
     , style = "is-dark"
-    , ariaLabel = "tag"
+    , title = "tag"
     }
 
 
@@ -120,7 +120,23 @@ successTagText : String -> StyledText
 successTagText text =
     { text = text
     , style = "is-success"
-    , ariaLabel = "tag"
+    , title = "tag"
+    }
+
+
+warningTagText : String -> StyledText
+warningTagText text =
+    { text = text
+    , style = "is-warning"
+    , title = "tag"
+    }
+
+
+dangerTagText : String -> StyledText
+dangerTagText text =
+    { text = text
+    , style = "is-danger"
+    , title = "tag"
     }
 
 
@@ -132,6 +148,16 @@ tagsInfo list =
 tagsSuccess : List String -> Html msg
 tagsSuccess list =
     list |> List.map successTagText |> List.map tag |> div []
+
+
+tagsWarning : List String -> Html msg
+tagsWarning list =
+    list |> List.map warningTagText |> List.map tag |> div []
+
+
+tagsDanger : List String -> Html msg
+tagsDanger list =
+    list |> List.map dangerTagText |> List.map tag |> div []
 
 
 groupFields : List (Html msg) -> Html msg

@@ -142,7 +142,8 @@ fuzzyNotDangerMinimumChars= Fuzz.oneOf [
     ]
 
 selectorsDangerMinimumChars : List Selector
-selectorsDangerMinimumChars = [ Selector.classes ["tag", "is-danger"], Selector.attribute (attribute "aria-label" "number of characters") ]
+selectorsDangerMinimumChars = [ Selector.classes ["tag", "is-danger"], 
+    Selector.attribute (Attributes.title "number of characters") ]
 
 -- Warning when over the maximum number of characters
 withSettingsDangerMaximumChars: Int -> SettingsEntity.Model
@@ -163,7 +164,8 @@ fuzzyNotDangerMaximumChars= Fuzz.oneOf [
     ]
 
 selectorsDangerMaximumChars : List Selector
-selectorsDangerMaximumChars = [ Selector.classes ["tag", "is-danger"], Selector.attribute (attribute "aria-label" "number of characters") ]
+selectorsDangerMaximumChars = [ Selector.classes ["tag", "is-danger"],
+ Selector.attribute (Attributes.title "number of characters") ]
 
 -- The minimum number of words needed for successful content
 withSettingsSuccessMinimumWords: Int -> SettingsEntity.Model
@@ -226,7 +228,8 @@ fuzzyNotDangerMinimumWords= Fuzz.oneOf [
     ]
 
 selectorsDangerMinimumWords : List Selector
-selectorsDangerMinimumWords = [ Selector.classes ["tag", "is-danger"], Selector.attribute (attribute "aria-label" "number of words") ]
+selectorsDangerMinimumWords = [ Selector.classes ["tag", "is-danger"],
+    Selector.attribute (Attributes.title "number of words") ]
 
 -- Warning when over the maximum number of words
 withSettingsDangerMaximumWords: Int -> SettingsEntity.Model
@@ -247,7 +250,8 @@ fuzzyNotDangerMaximumWords= Fuzz.oneOf [
     ]
 
 selectorsDangerMaximumWords : List Selector
-selectorsDangerMaximumWords = [ Selector.classes ["tag", "is-danger"], Selector.attribute (attribute "aria-label" "number of words") ]
+selectorsDangerMaximumWords = [ Selector.classes ["tag", "is-danger"],
+ Selector.attribute (Attributes.title "number of words") ]
 
 -- Short hint describing the expected content
 withSettingsPlaceholder: Int -> SettingsEntity.Model
@@ -319,7 +323,7 @@ fuzzyNotTag : Fuzzer Int
 fuzzyNotTag= intRange 300 400
 
 selectorsTag : List Selector
-selectorsTag = [ Selector.attribute (attribute "aria-label" "tag") ]
+selectorsTag = [ Selector.attribute (Attributes.title "tag") ]
 
 -- Language used by the user
 
@@ -475,7 +479,8 @@ fuzzyNotSuccessTag : Fuzzer Int
 fuzzyNotSuccessTag= intRange 300 400
 
 selectorsSuccessTag : List Selector
-selectorsSuccessTag = [ Selector.attribute (attribute "title" "tag") ]
+selectorsSuccessTag = [ Selector.classes ["tag", "is-success"],
+    Selector.attribute (Attributes.title "tag") ]
 
 -- Tag representing a warning aspect of the content
 withStateWarningTag: Int -> SettingsEntity.Model
@@ -492,7 +497,8 @@ fuzzyNotWarningTag : Fuzzer Int
 fuzzyNotWarningTag= intRange 300 400
 
 selectorsWarningTag : List Selector
-selectorsWarningTag = [ Selector.attribute (attribute "title" "tag") ]
+selectorsWarningTag = [ Selector.classes ["tag", "is-warning"],
+    Selector.attribute (Attributes.title "tag") ]
 
 -- Tag representing a dangerous aspect of the content
 withStateDangerTag: Int -> SettingsEntity.Model
@@ -509,7 +515,8 @@ fuzzyNotDangerTag : Fuzzer Int
 fuzzyNotDangerTag= intRange 300 400
 
 selectorsDangerTag : List Selector
-selectorsDangerTag = [ Selector.attribute (attribute "title" "tag") ]
+selectorsDangerTag = [ Selector.classes ["tag", "is-danger"],
+    Selector.attribute (Attributes.title "tag") ]
 
 -- private
 
