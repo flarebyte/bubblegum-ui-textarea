@@ -9,7 +9,7 @@ from translation_template import *
 
 languages_csv = "languages.csv"
 translations_csv = "translations.csv"
-names = ["Word", "InfoTag"]
+names = ["Word", "InfoTag", "SuccessTag", "WarningTag", "DangerTag", "Unit", "NumberOfChars", "NumberOfWords"]
 
 def formatTemplateLanguage(template, row):
         nameField, isoCodeField = row

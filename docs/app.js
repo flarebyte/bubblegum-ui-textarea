@@ -10217,61 +10217,61 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$tra
 	switch (_p0.ctor) {
 		case 'English':
 			return 'information tag';
+		case 'Russian':
+			return 'информационный тег';
 		case 'German':
-			return 'information tag';
+			return 'Informationstag';
 		case 'Spanish':
-			return 'information tag';
+			return 'etiqueta de información';
 		case 'Japanese':
-			return 'information tag';
+			return '情報タグ';
 		case 'French':
-			return 'Etiquette informative';
+			return 'étiquette d\'information';
 		case 'Italian':
-			return 'information tag';
+			return 'tag di informazione';
 		case 'Chinese':
-			return 'information tag';
+			return '信息標籤';
 		case 'Arabic':
-			return 'information tag';
+			return 'علامة المعلومات';
 		case 'Swedish':
-			return 'information tag';
-		case 'Vietnamese':
-			return 'information tag';
-		case 'Romanian':
-			return 'information tag';
-		case 'Dutch':
-			return 'information tag';
-		case 'Korean':
 			return 'information tag';
 		case 'Danish':
 			return 'information tag';
 		case 'Indonesian':
 			return 'information tag';
-		case 'Hungarian':
+		case 'Portuguese':
 			return 'information tag';
-		case 'Ukrainian':
-			return 'information tag';
-		case 'Turkish':
-			return 'information tag';
-		case 'Norwegian':
-			return 'information tag';
-		case 'Russian':
-			return 'information tag';
-		case 'Thai':
+		case 'Vietnamese':
 			return 'information tag';
 		case 'Finnish':
 			return 'information tag';
-		case 'Bulgarian':
+		case 'Hungarian':
+			return 'information tag';
+		case 'Turkish':
+			return 'information tag';
+		case 'Hebrew':
+			return 'information tag';
+		case 'Romanian':
 			return 'information tag';
 		case 'Greek':
 			return 'information tag';
-		case 'Portuguese':
+		case 'Ukrainian':
 			return 'information tag';
-		case 'Czech':
+		case 'Bulgarian':
+			return 'information tag';
+		case 'Norwegian':
 			return 'information tag';
 		case 'Persian':
 			return 'information tag';
 		case 'Slovak':
 			return 'information tag';
-		case 'Hebrew':
+		case 'Dutch':
+			return 'information tag';
+		case 'Polish':
+			return 'information tag';
+		case 'Korean':
+			return 'information tag';
+		case 'Thai':
 			return 'information tag';
 		default:
 			return 'information tag';
@@ -10290,6 +10290,11 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$tra
 					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
 					howMany,
 					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Russian':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'слово', _1: 'слова'});
 			case 'German':
 				return A2(
 					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
@@ -10330,26 +10335,6 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$tra
 					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
 					howMany,
 					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Vietnamese':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Romanian':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Dutch':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Korean':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
 			case 'Danish':
 				return A2(
 					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
@@ -10360,32 +10345,12 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$tra
 					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
 					howMany,
 					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Hungarian':
+			case 'Portuguese':
 				return A2(
 					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
 					howMany,
 					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Ukrainian':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Turkish':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Norwegian':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Russian':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Thai':
+			case 'Vietnamese':
 				return A2(
 					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
 					howMany,
@@ -10395,7 +10360,22 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$tra
 					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
 					howMany,
 					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Bulgarian':
+			case 'Hungarian':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Turkish':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Hebrew':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Romanian':
 				return A2(
 					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
 					howMany,
@@ -10405,12 +10385,17 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$tra
 					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
 					howMany,
 					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Portuguese':
+			case 'Ukrainian':
 				return A2(
 					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
 					howMany,
 					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Czech':
+			case 'Bulgarian':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Norwegian':
 				return A2(
 					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
 					howMany,
@@ -10425,7 +10410,22 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$tra
 					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
 					howMany,
 					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Hebrew':
+			case 'Dutch':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Polish':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Korean':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Thai':
 				return A2(
 					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
 					howMany,

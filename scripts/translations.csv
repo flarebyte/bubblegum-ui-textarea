@@ -1,8 +1,9 @@
-English,word;words,information tag
-German,wort;wörter,information tag
-Spanish,palabra;palabras,information tag
-Japanese,ワード;言葉,information tag
-French,mot;mots,Etiquette informative
-Italian,parola;parole,information tag
-Chinese,字;话,information tag
-Arabic,كلمة;كلمات,information tag
+English,word;words,information tag, tag indicating success, tag indicating warning, tag indicating danger, unit, number of characters, number of words
+Russian,слово;слова, информационный тег, тег указывающий успех, тег указывающий предупреждение, тег указывающий опасность, единица, количество символов, количество слов
+German,wort;wörter,Informationstag, Tag der den Erfolg anzeigt, Tag der die Warnung anzeigt, Tag der die Gefahr anzeigt, Einheit, Anzahl der Zeichen, Anzahl der Wörter
+Spanish,palabra;palabras,etiqueta de información, etiqueta que indica el éxito, etiqueta que indica advertencia, etiqueta que indica peligro, unidad, número de caracteres, número de palabras
+Japanese,ワード;言葉,情報タグ,成功を示すタグ,警告を示すタグ,危険を示すタグ,単位,文字数,単語数
+French,mot;mots,étiquette d'information, étiquette indiquant le succès, étiquette indiquant l'avertissement, étiquette indiquant le danger, unité, nombre de caractères, nombre de mots
+Italian,parola;parole,tag di informazione, tag che indica il successo, tag che indica avvertimento, tag che indica pericolo, unità, numero di caratteri, numero di parole
+Chinese,字;话,信息標籤,成功標籤,警告標籤,危險標籤,單位,字符數,字數
+Arabic,كلمة;كلمات,علامة المعلومات , العلامة التي تشير إلى النجاح , العلامة التي تشير إلى التحذير , العلامة التي تشير إلى الخطر , الوحدة , عدد الأحرف , عدد الكلمات
