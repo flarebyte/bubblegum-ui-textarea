@@ -40,7 +40,7 @@ meta:
 	cd scripts && python convert-package.py
 
 generate:
-	cd scripts && python generate-vocabulary.py
+	cd scripts && python generate_vocabulary.py
 
 diff:
 	elm-package diff
