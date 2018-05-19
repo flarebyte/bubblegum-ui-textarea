@@ -7,6 +7,7 @@ module Bubblegum.TextArea.BulmaHelper exposing (..)
 -}
 
 import Bubblegum.Entity.Outcome as Outcome exposing (..)
+import Bubblegum.TextArea.IsoLanguage exposing (IsoLanguage(..), toIsoLanguage)
 import Html exposing (..)
 import Html.Attributes as Attributes exposing (..)
 import List
@@ -140,23 +141,23 @@ dangerTagText text =
     }
 
 
-tagsInfo : List String -> Html msg
-tagsInfo list =
+tagsInfo : IsoLanguage -> List String -> Html msg
+tagsInfo userIsoLanguage list =
     list |> List.map infoText |> List.map tag |> div []
 
 
-tagsSuccess : List String -> Html msg
-tagsSuccess list =
+tagsSuccess : IsoLanguage -> List String -> Html msg
+tagsSuccess userIsoLanguage list =
     list |> List.map successTagText |> List.map tag |> div []
 
 
-tagsWarning : List String -> Html msg
-tagsWarning list =
+tagsWarning : IsoLanguage -> List String -> Html msg
+tagsWarning userIsoLanguage list =
     list |> List.map warningTagText |> List.map tag |> div []
 
 
-tagsDanger : List String -> Html msg
-tagsDanger list =
+tagsDanger : IsoLanguage -> List String -> Html msg
+tagsDanger userIsoLanguage list =
     list |> List.map dangerTagText |> List.map tag |> div []
 
 
@@ -199,3 +200,18 @@ dangerHelp : String -> Html msg
 dangerHelp helpText =
     p [ asClass2 "help" "is-danger" ]
         [ text helpText ]
+
+
+minimumCharsTag : IsoLanguage -> ( Int, Int ) -> Html msg
+minimumCharsTag userIsoLanguage tuple =
+    tag { text = first tuple |> toString, style = "is-dark", title = "minimum number of characters expected" }
+
+
+minimumWordsTag : IsoLanguage -> ( Int, Int ) -> Html msg
+minimumWordsTag userIsoLanguage tuple =
+    tag { text = first tuple |> toString, style = "is-dark", title = "minimum number of words expected" }
+
+
+unitTag : IsoLanguage -> String -> Html msg
+unitTag userIsoLanguage value =
+    tag { text = value, style = "is-light", title = "unit" }

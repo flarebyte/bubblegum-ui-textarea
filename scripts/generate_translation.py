@@ -9,6 +9,7 @@ from translation_template import *
 
 languages_csv = "languages.csv"
 translations_csv = "translations.csv"
+names = ["Word", "InfoTag"]
 
 def formatTemplateLanguage(template, row):
         nameField, isoCodeField = row
@@ -73,7 +74,6 @@ def createI18n():
     content = readCsv(translations_csv)
     file = open("../src/Bubblegum/TextArea/Internationalization.elm", "w")
     file.write(headerI18n)
-    names = ["Word", "InfoTag"]
     templatesMethod = [templateI18nWithPluralMethod, templateI18nMethod]
     templateslanguage = [templateI18nWithPluralLanguage, templateI18nLanguage]
     maxIndice = len(names)

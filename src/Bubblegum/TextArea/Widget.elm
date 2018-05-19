@@ -30,6 +30,9 @@ import Tuple exposing (first, second)
 displayTextInfo : TextAreaAdapter.Model msg -> SettingsEntity.Model -> SettingsEntity.Model -> StateEntity.Model -> Html msg
 displayTextInfo adapter userSettings settings state =
     let
+        userIsoLanguage =
+            getUserIsoLanguage userSettings
+
         optSuccessWordRange =
             getSuccessWordRange settings
 
@@ -43,7 +46,7 @@ displayTextInfo adapter userSettings settings state =
             getContent state |> Outcome.map String.length
 
         labelForWord =
-            contentWordLength |> Outcome.map (getUserIsoLanguage userSettings |> translateWord) |> Outcome.toMaybe |> Maybe.withDefault ""
+            contentWordLength |> Outcome.map (translateWord userIsoLanguage) |> Outcome.toMaybe |> Maybe.withDefault ""
 
         themeWordBasedOnRange =
             themeProgress (Outcome.map2 successRange contentWordLength optSuccessWordRange)
@@ -71,7 +74,7 @@ displayTextInfo adapter userSettings settings state =
             appendHtmlIfSuccess tag charLengthAndStatus
 
         addCharTargetLength =
-            appendHtmlIfSuccess (\tuple -> tag { text = first tuple |> toString, style = "is-dark", title = "minimum number of characters expected" }) optSuccessCharRange
+            appendHtmlIfSuccess (minimumCharsTag userIsoLanguage) optSuccessCharRange
 
         addCharProgressBar =
             appendHtmlIfSuccess progressBar charRatioAndStatus
@@ -84,28 +87,28 @@ displayTextInfo adapter userSettings settings state =
             appendHtmlIfSuccess tag wordLengthAndStatus
 
         addWordTargetLength =
-            appendHtmlIfSuccess (\tuple -> tag { text = first tuple |> toString, style = "is-dark", title = "minimum number of words expected" }) optSuccessWordRange
+            appendHtmlIfSuccess (minimumWordsTag userIsoLanguage) optSuccessWordRange
 
         addWordProgressBar =
             appendHtmlIfSuccess progressBar wordRatioAndStatus
 
         addLabelForWord =
-            flip (++) [ tag { text = labelForWord, style = "is-light", title = "unit" } ]
+            flip (++) [ unitTag userIsoLanguage labelForWord ]
 
         addWordInfo =
             tagsAddons <| ([] |> addWordContentLength |> addWordTargetLength |> addLabelForWord)
 
         addTagsInfo =
-            appendHtmlIfSuccess tagsInfo (getTag settings)
+            appendHtmlIfSuccess (tagsInfo userIsoLanguage) (getTag settings)
 
         addSuccessTags =
-            appendHtmlIfSuccess tagsSuccess (getSuccessTag state)
+            appendHtmlIfSuccess (tagsSuccess userIsoLanguage) (getSuccessTag state)
 
         addWarningTags =
-            appendHtmlIfSuccess tagsWarning (getWarningTag state)
+            appendHtmlIfSuccess (tagsWarning userIsoLanguage) (getWarningTag state)
 
         addDangerTags =
-            appendHtmlIfSuccess tagsDanger (getDangerTag state)
+            appendHtmlIfSuccess (tagsDanger userIsoLanguage) (getDangerTag state)
     in
     groupFields
         [ div [ class "bubblegum-textarea__wordinfo control" ] (addWordInfo |> List.singleton |> addWordProgressBar)

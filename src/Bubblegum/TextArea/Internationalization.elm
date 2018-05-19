@@ -7,7 +7,6 @@ module Bubblegum.TextArea.Internationalization exposing (..)
 -}
 
 import Bubblegum.TextArea.IsoLanguage exposing (IsoLanguage(..))
-import String exposing (left)
 import Tuple exposing (first, second)
 
 
