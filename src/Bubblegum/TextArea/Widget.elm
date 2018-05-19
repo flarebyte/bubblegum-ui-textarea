@@ -43,7 +43,7 @@ displayTextInfo adapter userSettings settings state =
             getContent state |> Outcome.map String.length
 
         labelForWord =
-            contentWordLength |> Outcome.map (getUserLanguageOrEnglish userSettings |> translateWord) |> Outcome.toMaybe |> Maybe.withDefault ""
+            contentWordLength |> Outcome.map (getUserIsoLanguage userSettings |> translateWord) |> Outcome.toMaybe |> Maybe.withDefault ""
 
         themeWordBasedOnRange =
             themeProgress (Outcome.map2 successRange contentWordLength optSuccessWordRange)

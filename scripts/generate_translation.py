@@ -2,6 +2,7 @@
 
 import sys
 import csv
+import copy
 from string import Template
 from generator_helper import camelCase, camelCaseUpper, quoteArray, readCsv
 from translation_template import * 
@@ -74,22 +75,26 @@ def createI18n():
     file.write(headerI18n)
     names = ["Word", "InfoTag"]
     templatesMethod = [templateI18nWithPluralMethod, templateI18nMethod]
-    templatesMethodDefault = [templateI18nWithPluralMethodDefault, templateI18nMethodDefault]
     templateslanguage = [templateI18nWithPluralLanguage, templateI18nLanguage]
     maxIndice = len(names)
     codeParts = [formatTemplateI18nMethod(templatesMethod[i], names[i]) for i in range(0, maxIndice)]
     translatedLanguages = []
+    englishRow = ""
     for row in content:
         if len(row) > 1 :
+            if row[0] == "English":
+                englishRow = row
             for indice in range(0, maxIndice):
                 translatedLanguages.append(getLanguageName(row))
                 temp = formatTemplateI18n(templateslanguage[indice], row, indice+1, names[indice])
                 codeParts[indice] += temp
     untranslatedLanguages = list(set(getAllLanguageNames()) - set(translatedLanguages))
     for otherlanguage in untranslatedLanguages:
-        for i in range(0, maxIndice):
-            temp = formatTemplateI18nMethod(templatesMethodDefault[i], names[i], otherlanguage)
-            codeParts[i] += temp
+        for indice in range(0, maxIndice):
+                row = copy.copy(englishRow)
+                row[0] = otherlanguage 
+                temp = formatTemplateI18n(templateslanguage[indice], row, indice+1, names[indice])
+                codeParts[indice] += temp
     
     file.write("\n\n".join(codeParts))        
     file.close()

@@ -1,114 +1,207 @@
-
 module Bubblegum.TextArea.Internationalization exposing (..)
 
 {-| Utility to translate some of the text used by the widget
- 
+
     **Generated** by generate-translation.py
 
 -}
 
+import Bubblegum.TextArea.IsoLanguage exposing (IsoLanguage(..))
 import String exposing (left)
 import Tuple exposing (first, second)
-import Bubblegum.TextArea.IsoLanguage exposing (IsoLanguage(..))
 
-pickSingularOrPlural: Int -> (String, String) -> String
+
+pickSingularOrPlural : Int -> ( String, String ) -> String
 pickSingularOrPlural howMany singularOrPlural =
     if howMany < 2 then
         first singularOrPlural
     else
         second singularOrPlural
 
+
 translateWord : IsoLanguage -> Int -> String
 translateWord language howMany =
-     case language of
-
-       English ->
+    case language of
+        English ->
             pickSingularOrPlural howMany ( "word", "words" )
 
-       German ->
+        German ->
             pickSingularOrPlural howMany ( "wort", "wörter" )
 
-       Spanish ->
+        Spanish ->
             pickSingularOrPlural howMany ( "palabra", "palabras" )
 
-       Japanese ->
+        Japanese ->
             pickSingularOrPlural howMany ( "ワード", "言葉" )
 
-       French ->
+        French ->
             pickSingularOrPlural howMany ( "mot", "mots" )
 
-       Italian ->
+        Italian ->
             pickSingularOrPlural howMany ( "parola", "parole" )
 
-       Chinese ->
+        Chinese ->
             pickSingularOrPlural howMany ( "字", "话" )
 
-       Arabic ->
+        Arabic ->
             pickSingularOrPlural howMany ( "كلمة", "كلمات" )
 
         Swedish ->
-            translateWord English howMany --TODO
+            pickSingularOrPlural howMany ( "word", "words" )
 
         Vietnamese ->
-            translateWord English howMany --TODO
+            pickSingularOrPlural howMany ( "word", "words" )
 
         Romanian ->
-            translateWord English howMany --TODO
+            pickSingularOrPlural howMany ( "word", "words" )
 
         Dutch ->
-            translateWord English howMany --TODO
+            pickSingularOrPlural howMany ( "word", "words" )
 
         Korean ->
-            translateWord English howMany --TODO
+            pickSingularOrPlural howMany ( "word", "words" )
 
         Danish ->
-            translateWord English howMany --TODO
+            pickSingularOrPlural howMany ( "word", "words" )
 
         Indonesian ->
-            translateWord English howMany --TODO
+            pickSingularOrPlural howMany ( "word", "words" )
 
         Hungarian ->
-            translateWord English howMany --TODO
+            pickSingularOrPlural howMany ( "word", "words" )
 
         Ukrainian ->
-            translateWord English howMany --TODO
+            pickSingularOrPlural howMany ( "word", "words" )
 
         Turkish ->
-            translateWord English howMany --TODO
+            pickSingularOrPlural howMany ( "word", "words" )
 
         Norwegian ->
-            translateWord English howMany --TODO
+            pickSingularOrPlural howMany ( "word", "words" )
 
         Russian ->
-            translateWord English howMany --TODO
+            pickSingularOrPlural howMany ( "word", "words" )
 
         Thai ->
-            translateWord English howMany --TODO
+            pickSingularOrPlural howMany ( "word", "words" )
 
         Finnish ->
-            translateWord English howMany --TODO
+            pickSingularOrPlural howMany ( "word", "words" )
 
         Bulgarian ->
-            translateWord English howMany --TODO
+            pickSingularOrPlural howMany ( "word", "words" )
 
         Greek ->
-            translateWord English howMany --TODO
+            pickSingularOrPlural howMany ( "word", "words" )
 
         Portuguese ->
-            translateWord English howMany --TODO
+            pickSingularOrPlural howMany ( "word", "words" )
 
         Czech ->
-            translateWord English howMany --TODO
+            pickSingularOrPlural howMany ( "word", "words" )
 
         Persian ->
-            translateWord English howMany --TODO
+            pickSingularOrPlural howMany ( "word", "words" )
 
         Slovak ->
-            translateWord English howMany --TODO
+            pickSingularOrPlural howMany ( "word", "words" )
 
         Hebrew ->
-            translateWord English howMany --TODO
+            pickSingularOrPlural howMany ( "word", "words" )
 
         Polish ->
-            translateWord English howMany --TODO
+            pickSingularOrPlural howMany ( "word", "words" )
 
+
+translateInfoTag : IsoLanguage -> String
+translateInfoTag language =
+    case language of
+        English ->
+            "information tag"
+
+        German ->
+            "information tag"
+
+        Spanish ->
+            "information tag"
+
+        Japanese ->
+            "information tag"
+
+        French ->
+            "Etiquette informative"
+
+        Italian ->
+            "information tag"
+
+        Chinese ->
+            "information tag"
+
+        Arabic ->
+            "information tag"
+
+        Swedish ->
+            "information tag"
+
+        Vietnamese ->
+            "information tag"
+
+        Romanian ->
+            "information tag"
+
+        Dutch ->
+            "information tag"
+
+        Korean ->
+            "information tag"
+
+        Danish ->
+            "information tag"
+
+        Indonesian ->
+            "information tag"
+
+        Hungarian ->
+            "information tag"
+
+        Ukrainian ->
+            "information tag"
+
+        Turkish ->
+            "information tag"
+
+        Norwegian ->
+            "information tag"
+
+        Russian ->
+            "information tag"
+
+        Thai ->
+            "information tag"
+
+        Finnish ->
+            "information tag"
+
+        Bulgarian ->
+            "information tag"
+
+        Greek ->
+            "information tag"
+
+        Portuguese ->
+            "information tag"
+
+        Czech ->
+            "information tag"
+
+        Persian ->
+            "information tag"
+
+        Slovak ->
+            "information tag"
+
+        Hebrew ->
+            "information tag"
+
+        Polish ->
+            "information tag"

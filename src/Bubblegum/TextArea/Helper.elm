@@ -10,6 +10,7 @@ import Bubblegum.Entity.Outcome as Outcome exposing (..)
 import Bubblegum.Entity.SettingsEntity as SettingsEntity
 import Bubblegum.Entity.Validation as Validation
 import Bubblegum.TextArea.EntityHelper exposing (..)
+import Bubblegum.TextArea.IsoLanguage exposing (IsoLanguage(..), toIsoLanguage)
 import Bubblegum.TextArea.VocabularyHelper exposing (getContentLanguage, getUserLanguage)
 import List
 import Maybe exposing (..)
@@ -111,3 +112,13 @@ getContentLanguageOrEnglish settings =
     getContentLanguage settings
         |> Outcome.toMaybe
         |> Maybe.withDefault "en-GB"
+
+
+getUserIsoLanguage : SettingsEntity.Model -> IsoLanguage
+getUserIsoLanguage settings =
+    getUserLanguageOrEnglish settings |> toIsoLanguage
+
+
+getContentIsoLanguage : SettingsEntity.Model -> IsoLanguage
+getContentIsoLanguage settings =
+    getContentLanguageOrEnglish settings |> toIsoLanguage
