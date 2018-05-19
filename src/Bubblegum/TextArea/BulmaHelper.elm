@@ -109,32 +109,32 @@ tags list =
     div [ class "tags" ] list
 
 
-infoText : String -> StyledText
-infoText text =
+infoText : IsoLanguage -> String -> StyledText
+infoText userIsoLanguage text =
     { text = text
     , style = "is-dark"
     , title = "tag"
     }
 
 
-successTagText : String -> StyledText
-successTagText text =
+successTagText : IsoLanguage -> String -> StyledText
+successTagText userIsoLanguage text =
     { text = text
     , style = "is-success"
     , title = "tag"
     }
 
 
-warningTagText : String -> StyledText
-warningTagText text =
+warningTagText : IsoLanguage -> String -> StyledText
+warningTagText userIsoLanguage text =
     { text = text
     , style = "is-warning"
     , title = "tag"
     }
 
 
-dangerTagText : String -> StyledText
-dangerTagText text =
+dangerTagText : IsoLanguage -> String -> StyledText
+dangerTagText userIsoLanguage text =
     { text = text
     , style = "is-danger"
     , title = "tag"
@@ -143,22 +143,22 @@ dangerTagText text =
 
 tagsInfo : IsoLanguage -> List String -> Html msg
 tagsInfo userIsoLanguage list =
-    list |> List.map infoText |> List.map tag |> div []
+    list |> List.map (infoText userIsoLanguage) |> List.map tag |> div []
 
 
 tagsSuccess : IsoLanguage -> List String -> Html msg
 tagsSuccess userIsoLanguage list =
-    list |> List.map successTagText |> List.map tag |> div []
+    list |> List.map (successTagText userIsoLanguage) |> List.map tag |> div []
 
 
 tagsWarning : IsoLanguage -> List String -> Html msg
 tagsWarning userIsoLanguage list =
-    list |> List.map warningTagText |> List.map tag |> div []
+    list |> List.map (warningTagText userIsoLanguage) |> List.map tag |> div []
 
 
 tagsDanger : IsoLanguage -> List String -> Html msg
 tagsDanger userIsoLanguage list =
-    list |> List.map dangerTagText |> List.map tag |> div []
+    list |> List.map (dangerTagText userIsoLanguage) |> List.map tag |> div []
 
 
 groupFields : List (Html msg) -> Html msg

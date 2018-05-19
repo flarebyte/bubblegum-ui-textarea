@@ -9107,18 +9107,22 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$groupFields 
 		},
 		list);
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$dangerTagText = function (text) {
-	return {text: text, style: 'is-danger', title: 'tag'};
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$warningTagText = function (text) {
-	return {text: text, style: 'is-warning', title: 'tag'};
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$successTagText = function (text) {
-	return {text: text, style: 'is-success', title: 'tag'};
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$infoText = function (text) {
-	return {text: text, style: 'is-dark', title: 'tag'};
-};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$dangerTagText = F2(
+	function (userIsoLanguage, text) {
+		return {text: text, style: 'is-danger', title: 'tag'};
+	});
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$warningTagText = F2(
+	function (userIsoLanguage, text) {
+		return {text: text, style: 'is-warning', title: 'tag'};
+	});
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$successTagText = F2(
+	function (userIsoLanguage, text) {
+		return {text: text, style: 'is-success', title: 'tag'};
+	});
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$infoText = F2(
+	function (userIsoLanguage, text) {
+		return {text: text, style: 'is-dark', title: 'tag'};
+	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tags = function (list) {
 	return A2(
 		_elm_lang$html$Html$div,
@@ -9207,7 +9211,10 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tagsInfo = F
 			A2(
 				_elm_lang$core$List$map,
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tag,
-				A2(_elm_lang$core$List$map, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$infoText, list)));
+				A2(
+					_elm_lang$core$List$map,
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$infoText(userIsoLanguage),
+					list)));
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tagsSuccess = F2(
 	function (userIsoLanguage, list) {
@@ -9217,7 +9224,10 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tagsSuccess 
 			A2(
 				_elm_lang$core$List$map,
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tag,
-				A2(_elm_lang$core$List$map, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$successTagText, list)));
+				A2(
+					_elm_lang$core$List$map,
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$successTagText(userIsoLanguage),
+					list)));
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tagsWarning = F2(
 	function (userIsoLanguage, list) {
@@ -9227,7 +9237,10 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tagsWarning 
 			A2(
 				_elm_lang$core$List$map,
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tag,
-				A2(_elm_lang$core$List$map, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$warningTagText, list)));
+				A2(
+					_elm_lang$core$List$map,
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$warningTagText(userIsoLanguage),
+					list)));
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tagsDanger = F2(
 	function (userIsoLanguage, list) {
@@ -9237,7 +9250,10 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tagsDanger =
 			A2(
 				_elm_lang$core$List$map,
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tag,
-				A2(_elm_lang$core$List$map, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$dangerTagText, list)));
+				A2(
+					_elm_lang$core$List$map,
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$dangerTagText(userIsoLanguage),
+					list)));
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$minimumCharsTag = F2(
 	function (userIsoLanguage, tuple) {
