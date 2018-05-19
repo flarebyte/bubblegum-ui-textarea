@@ -10212,9 +10212,399 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$dangerRange = F2(
 		return !A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$successRange, size, range);
 	});
 
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateInfoTag = function (language) {
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateNumberOfWords = function (language) {
 	var _p0 = language;
 	switch (_p0.ctor) {
+		case 'English':
+			return 'number of words';
+		case 'Russian':
+			return 'количество слов';
+		case 'German':
+			return 'Anzahl der Wörter';
+		case 'Spanish':
+			return 'número de palabras';
+		case 'Japanese':
+			return '単語数';
+		case 'French':
+			return 'nombre de mots';
+		case 'Italian':
+			return 'numero di parole';
+		case 'Chinese':
+			return '字數';
+		case 'Arabic':
+			return 'عدد الكلمات';
+		case 'Swedish':
+			return 'number of words';
+		case 'Danish':
+			return 'number of words';
+		case 'Indonesian':
+			return 'number of words';
+		case 'Portuguese':
+			return 'number of words';
+		case 'Vietnamese':
+			return 'number of words';
+		case 'Finnish':
+			return 'number of words';
+		case 'Hungarian':
+			return 'number of words';
+		case 'Turkish':
+			return 'number of words';
+		case 'Hebrew':
+			return 'number of words';
+		case 'Romanian':
+			return 'number of words';
+		case 'Greek':
+			return 'number of words';
+		case 'Ukrainian':
+			return 'number of words';
+		case 'Bulgarian':
+			return 'number of words';
+		case 'Norwegian':
+			return 'number of words';
+		case 'Persian':
+			return 'number of words';
+		case 'Slovak':
+			return 'number of words';
+		case 'Dutch':
+			return 'number of words';
+		case 'Polish':
+			return 'number of words';
+		case 'Korean':
+			return 'number of words';
+		case 'Thai':
+			return 'number of words';
+		default:
+			return 'number of words';
+	}
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateNumberOfChars = function (language) {
+	var _p1 = language;
+	switch (_p1.ctor) {
+		case 'English':
+			return 'number of characters';
+		case 'Russian':
+			return 'количество символов';
+		case 'German':
+			return 'Anzahl der Zeichen';
+		case 'Spanish':
+			return 'número de caracteres';
+		case 'Japanese':
+			return '文字数';
+		case 'French':
+			return 'nombre de caractères';
+		case 'Italian':
+			return 'numero di caratteri';
+		case 'Chinese':
+			return '字符數';
+		case 'Arabic':
+			return 'عدد الأحرف';
+		case 'Swedish':
+			return 'number of characters';
+		case 'Danish':
+			return 'number of characters';
+		case 'Indonesian':
+			return 'number of characters';
+		case 'Portuguese':
+			return 'number of characters';
+		case 'Vietnamese':
+			return 'number of characters';
+		case 'Finnish':
+			return 'number of characters';
+		case 'Hungarian':
+			return 'number of characters';
+		case 'Turkish':
+			return 'number of characters';
+		case 'Hebrew':
+			return 'number of characters';
+		case 'Romanian':
+			return 'number of characters';
+		case 'Greek':
+			return 'number of characters';
+		case 'Ukrainian':
+			return 'number of characters';
+		case 'Bulgarian':
+			return 'number of characters';
+		case 'Norwegian':
+			return 'number of characters';
+		case 'Persian':
+			return 'number of characters';
+		case 'Slovak':
+			return 'number of characters';
+		case 'Dutch':
+			return 'number of characters';
+		case 'Polish':
+			return 'number of characters';
+		case 'Korean':
+			return 'number of characters';
+		case 'Thai':
+			return 'number of characters';
+		default:
+			return 'number of characters';
+	}
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateUnit = function (language) {
+	var _p2 = language;
+	switch (_p2.ctor) {
+		case 'English':
+			return 'unit';
+		case 'Russian':
+			return 'единица';
+		case 'German':
+			return 'Einheit';
+		case 'Spanish':
+			return 'unidad';
+		case 'Japanese':
+			return '単位';
+		case 'French':
+			return 'unité';
+		case 'Italian':
+			return 'unità';
+		case 'Chinese':
+			return '單位';
+		case 'Arabic':
+			return 'الوحدة';
+		case 'Swedish':
+			return 'unit';
+		case 'Danish':
+			return 'unit';
+		case 'Indonesian':
+			return 'unit';
+		case 'Portuguese':
+			return 'unit';
+		case 'Vietnamese':
+			return 'unit';
+		case 'Finnish':
+			return 'unit';
+		case 'Hungarian':
+			return 'unit';
+		case 'Turkish':
+			return 'unit';
+		case 'Hebrew':
+			return 'unit';
+		case 'Romanian':
+			return 'unit';
+		case 'Greek':
+			return 'unit';
+		case 'Ukrainian':
+			return 'unit';
+		case 'Bulgarian':
+			return 'unit';
+		case 'Norwegian':
+			return 'unit';
+		case 'Persian':
+			return 'unit';
+		case 'Slovak':
+			return 'unit';
+		case 'Dutch':
+			return 'unit';
+		case 'Polish':
+			return 'unit';
+		case 'Korean':
+			return 'unit';
+		case 'Thai':
+			return 'unit';
+		default:
+			return 'unit';
+	}
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateDangerTag = function (language) {
+	var _p3 = language;
+	switch (_p3.ctor) {
+		case 'English':
+			return 'tag indicating danger';
+		case 'Russian':
+			return 'тег указывающий опасность';
+		case 'German':
+			return 'Tag der die Gefahr anzeigt';
+		case 'Spanish':
+			return 'etiqueta que indica peligro';
+		case 'Japanese':
+			return '危険を示すタグ';
+		case 'French':
+			return 'étiquette indiquant le danger';
+		case 'Italian':
+			return 'tag che indica pericolo';
+		case 'Chinese':
+			return '危險標籤';
+		case 'Arabic':
+			return 'العلامة التي تشير إلى الخطر';
+		case 'Swedish':
+			return 'tag indicating danger';
+		case 'Danish':
+			return 'tag indicating danger';
+		case 'Indonesian':
+			return 'tag indicating danger';
+		case 'Portuguese':
+			return 'tag indicating danger';
+		case 'Vietnamese':
+			return 'tag indicating danger';
+		case 'Finnish':
+			return 'tag indicating danger';
+		case 'Hungarian':
+			return 'tag indicating danger';
+		case 'Turkish':
+			return 'tag indicating danger';
+		case 'Hebrew':
+			return 'tag indicating danger';
+		case 'Romanian':
+			return 'tag indicating danger';
+		case 'Greek':
+			return 'tag indicating danger';
+		case 'Ukrainian':
+			return 'tag indicating danger';
+		case 'Bulgarian':
+			return 'tag indicating danger';
+		case 'Norwegian':
+			return 'tag indicating danger';
+		case 'Persian':
+			return 'tag indicating danger';
+		case 'Slovak':
+			return 'tag indicating danger';
+		case 'Dutch':
+			return 'tag indicating danger';
+		case 'Polish':
+			return 'tag indicating danger';
+		case 'Korean':
+			return 'tag indicating danger';
+		case 'Thai':
+			return 'tag indicating danger';
+		default:
+			return 'tag indicating danger';
+	}
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateWarningTag = function (language) {
+	var _p4 = language;
+	switch (_p4.ctor) {
+		case 'English':
+			return 'tag indicating warning';
+		case 'Russian':
+			return 'тег указывающий предупреждение';
+		case 'German':
+			return 'Tag der die Warnung anzeigt';
+		case 'Spanish':
+			return 'etiqueta que indica advertencia';
+		case 'Japanese':
+			return '警告を示すタグ';
+		case 'French':
+			return 'étiquette indiquant l\'avertissement';
+		case 'Italian':
+			return 'tag che indica avvertimento';
+		case 'Chinese':
+			return '警告標籤';
+		case 'Arabic':
+			return 'العلامة التي تشير إلى التحذير';
+		case 'Swedish':
+			return 'tag indicating warning';
+		case 'Danish':
+			return 'tag indicating warning';
+		case 'Indonesian':
+			return 'tag indicating warning';
+		case 'Portuguese':
+			return 'tag indicating warning';
+		case 'Vietnamese':
+			return 'tag indicating warning';
+		case 'Finnish':
+			return 'tag indicating warning';
+		case 'Hungarian':
+			return 'tag indicating warning';
+		case 'Turkish':
+			return 'tag indicating warning';
+		case 'Hebrew':
+			return 'tag indicating warning';
+		case 'Romanian':
+			return 'tag indicating warning';
+		case 'Greek':
+			return 'tag indicating warning';
+		case 'Ukrainian':
+			return 'tag indicating warning';
+		case 'Bulgarian':
+			return 'tag indicating warning';
+		case 'Norwegian':
+			return 'tag indicating warning';
+		case 'Persian':
+			return 'tag indicating warning';
+		case 'Slovak':
+			return 'tag indicating warning';
+		case 'Dutch':
+			return 'tag indicating warning';
+		case 'Polish':
+			return 'tag indicating warning';
+		case 'Korean':
+			return 'tag indicating warning';
+		case 'Thai':
+			return 'tag indicating warning';
+		default:
+			return 'tag indicating warning';
+	}
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateSuccessTag = function (language) {
+	var _p5 = language;
+	switch (_p5.ctor) {
+		case 'English':
+			return 'tag indicating success';
+		case 'Russian':
+			return 'тег указывающий успех';
+		case 'German':
+			return 'Tag der den Erfolg anzeigt';
+		case 'Spanish':
+			return 'etiqueta que indica el éxito';
+		case 'Japanese':
+			return '成功を示すタグ';
+		case 'French':
+			return 'étiquette indiquant le succès';
+		case 'Italian':
+			return 'tag che indica il successo';
+		case 'Chinese':
+			return '成功標籤';
+		case 'Arabic':
+			return 'العلامة التي تشير إلى النجاح';
+		case 'Swedish':
+			return 'tag indicating success';
+		case 'Danish':
+			return 'tag indicating success';
+		case 'Indonesian':
+			return 'tag indicating success';
+		case 'Portuguese':
+			return 'tag indicating success';
+		case 'Vietnamese':
+			return 'tag indicating success';
+		case 'Finnish':
+			return 'tag indicating success';
+		case 'Hungarian':
+			return 'tag indicating success';
+		case 'Turkish':
+			return 'tag indicating success';
+		case 'Hebrew':
+			return 'tag indicating success';
+		case 'Romanian':
+			return 'tag indicating success';
+		case 'Greek':
+			return 'tag indicating success';
+		case 'Ukrainian':
+			return 'tag indicating success';
+		case 'Bulgarian':
+			return 'tag indicating success';
+		case 'Norwegian':
+			return 'tag indicating success';
+		case 'Persian':
+			return 'tag indicating success';
+		case 'Slovak':
+			return 'tag indicating success';
+		case 'Dutch':
+			return 'tag indicating success';
+		case 'Polish':
+			return 'tag indicating success';
+		case 'Korean':
+			return 'tag indicating success';
+		case 'Thai':
+			return 'tag indicating success';
+		default:
+			return 'tag indicating success';
+	}
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateInfoTag = function (language) {
+	var _p6 = language;
+	switch (_p6.ctor) {
 		case 'English':
 			return 'information tag';
 		case 'Russian':
@@ -10283,8 +10673,8 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pic
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateWord = F2(
 	function (language, howMany) {
-		var _p1 = language;
-		switch (_p1.ctor) {
+		var _p7 = language;
+		switch (_p7.ctor) {
 			case 'English':
 				return A2(
 					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,

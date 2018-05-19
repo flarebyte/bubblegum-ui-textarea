@@ -74,10 +74,18 @@ def createI18n():
     content = readCsv(translations_csv)
     file = open("../src/Bubblegum/TextArea/Internationalization.elm", "w")
     file.write(headerI18n)
-    templatesMethod = [templateI18nWithPluralMethod, templateI18nMethod]
-    templateslanguage = [templateI18nWithPluralLanguage, templateI18nLanguage]
+    def templatesMethod(ii):
+        if ii == 0:
+            return templateI18nWithPluralMethod
+        else:
+            return templateI18nMethod
+    def templateslanguage(ii):
+        if ii == 0:
+            return templateI18nWithPluralLanguage
+        else:
+            return templateI18nLanguage
     maxIndice = len(names)
-    codeParts = [formatTemplateI18nMethod(templatesMethod[i], names[i]) for i in range(0, maxIndice)]
+    codeParts = [formatTemplateI18nMethod(templatesMethod(i), names[i]) for i in range(0, maxIndice)]
     translatedLanguages = []
     englishRow = ""
     for row in content:
@@ -86,14 +94,14 @@ def createI18n():
                 englishRow = row
             for indice in range(0, maxIndice):
                 translatedLanguages.append(getLanguageName(row))
-                temp = formatTemplateI18n(templateslanguage[indice], row, indice+1, names[indice])
+                temp = formatTemplateI18n(templateslanguage(indice), row, indice+1, names[indice])
                 codeParts[indice] += temp
     untranslatedLanguages = list(set(getAllLanguageNames()) - set(translatedLanguages))
     for otherlanguage in untranslatedLanguages:
         for indice in range(0, maxIndice):
                 row = copy.copy(englishRow)
                 row[0] = otherlanguage 
-                temp = formatTemplateI18n(templateslanguage[indice], row, indice+1, names[indice])
+                temp = formatTemplateI18n(templateslanguage(indice), row, indice+1, names[indice])
                 codeParts[indice] += temp
     
     file.write("\n\n".join(codeParts))        
