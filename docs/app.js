@@ -9080,6 +9080,752 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_IsoLanguage$toIsoLanguag
 	}
 };
 
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateMinimumWords = function (language) {
+	var _p0 = language;
+	switch (_p0.ctor) {
+		case 'Arabic':
+			return 'الحد الأدنى لعدد الكلمات المتوقع';
+		case 'Chinese':
+			return '预计最少字数';
+		case 'English':
+			return 'minimum number of words expected';
+		case 'French':
+			return 'nombre minimum de mots attendus';
+		case 'German':
+			return 'Mindestanzahl der erwarteten Wörter';
+		case 'Italian':
+			return 'numero minimo di parole previsto';
+		case 'Japanese':
+			return '予想される単語の最小数';
+		case 'Russian':
+			return 'минимальное количество ожидаемых слов';
+		case 'Spanish':
+			return 'número mínimo de palabras esperado';
+		case 'Swedish':
+			return 'minimum number of words expected';
+		case 'Danish':
+			return 'minimum number of words expected';
+		case 'Bulgarian':
+			return 'minimum number of words expected';
+		case 'Portuguese':
+			return 'minimum number of words expected';
+		case 'Vietnamese':
+			return 'minimum number of words expected';
+		case 'Finnish':
+			return 'minimum number of words expected';
+		case 'Hungarian':
+			return 'minimum number of words expected';
+		case 'Turkish':
+			return 'minimum number of words expected';
+		case 'Czech':
+			return 'minimum number of words expected';
+		case 'Romanian':
+			return 'minimum number of words expected';
+		case 'Greek':
+			return 'minimum number of words expected';
+		case 'Ukrainian':
+			return 'minimum number of words expected';
+		case 'Indonesian':
+			return 'minimum number of words expected';
+		case 'Norwegian':
+			return 'minimum number of words expected';
+		case 'Persian':
+			return 'minimum number of words expected';
+		case 'Slovak':
+			return 'minimum number of words expected';
+		case 'Dutch':
+			return 'minimum number of words expected';
+		case 'Polish':
+			return 'minimum number of words expected';
+		case 'Korean':
+			return 'minimum number of words expected';
+		case 'Thai':
+			return 'minimum number of words expected';
+		default:
+			return 'minimum number of words expected';
+	}
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateMinimumChars = function (language) {
+	var _p1 = language;
+	switch (_p1.ctor) {
+		case 'Arabic':
+			return 'الحد الأدنى لعدد الأحرف المتوقع';
+		case 'Chinese':
+			return '最少预期字符数';
+		case 'English':
+			return 'minimum number of characters expected';
+		case 'French':
+			return 'nombre minimum de caractères attendus';
+		case 'German':
+			return 'Mindestanzahl der erwarteten Zeichen';
+		case 'Italian':
+			return 'numero minimo di caratteri previsto';
+		case 'Japanese':
+			return '期待される最小文字数';
+		case 'Russian':
+			return 'минимальное количество ожидаемых символов';
+		case 'Spanish':
+			return 'número mínimo de caracteres esperado';
+		case 'Swedish':
+			return 'minimum number of characters expected';
+		case 'Danish':
+			return 'minimum number of characters expected';
+		case 'Bulgarian':
+			return 'minimum number of characters expected';
+		case 'Portuguese':
+			return 'minimum number of characters expected';
+		case 'Vietnamese':
+			return 'minimum number of characters expected';
+		case 'Finnish':
+			return 'minimum number of characters expected';
+		case 'Hungarian':
+			return 'minimum number of characters expected';
+		case 'Turkish':
+			return 'minimum number of characters expected';
+		case 'Czech':
+			return 'minimum number of characters expected';
+		case 'Romanian':
+			return 'minimum number of characters expected';
+		case 'Greek':
+			return 'minimum number of characters expected';
+		case 'Ukrainian':
+			return 'minimum number of characters expected';
+		case 'Indonesian':
+			return 'minimum number of characters expected';
+		case 'Norwegian':
+			return 'minimum number of characters expected';
+		case 'Persian':
+			return 'minimum number of characters expected';
+		case 'Slovak':
+			return 'minimum number of characters expected';
+		case 'Dutch':
+			return 'minimum number of characters expected';
+		case 'Polish':
+			return 'minimum number of characters expected';
+		case 'Korean':
+			return 'minimum number of characters expected';
+		case 'Thai':
+			return 'minimum number of characters expected';
+		default:
+			return 'minimum number of characters expected';
+	}
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateNumberOfWords = function (language) {
+	var _p2 = language;
+	switch (_p2.ctor) {
+		case 'Arabic':
+			return 'عدد الكلمات';
+		case 'Chinese':
+			return '字數';
+		case 'English':
+			return 'number of words';
+		case 'French':
+			return 'nombre de mots';
+		case 'German':
+			return 'Anzahl der Wörter';
+		case 'Italian':
+			return 'numero di parole';
+		case 'Japanese':
+			return '単語数';
+		case 'Russian':
+			return 'количество слов';
+		case 'Spanish':
+			return 'número de palabras';
+		case 'Swedish':
+			return 'number of words';
+		case 'Danish':
+			return 'number of words';
+		case 'Bulgarian':
+			return 'number of words';
+		case 'Portuguese':
+			return 'number of words';
+		case 'Vietnamese':
+			return 'number of words';
+		case 'Finnish':
+			return 'number of words';
+		case 'Hungarian':
+			return 'number of words';
+		case 'Turkish':
+			return 'number of words';
+		case 'Czech':
+			return 'number of words';
+		case 'Romanian':
+			return 'number of words';
+		case 'Greek':
+			return 'number of words';
+		case 'Ukrainian':
+			return 'number of words';
+		case 'Indonesian':
+			return 'number of words';
+		case 'Norwegian':
+			return 'number of words';
+		case 'Persian':
+			return 'number of words';
+		case 'Slovak':
+			return 'number of words';
+		case 'Dutch':
+			return 'number of words';
+		case 'Polish':
+			return 'number of words';
+		case 'Korean':
+			return 'number of words';
+		case 'Thai':
+			return 'number of words';
+		default:
+			return 'number of words';
+	}
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateNumberOfChars = function (language) {
+	var _p3 = language;
+	switch (_p3.ctor) {
+		case 'Arabic':
+			return 'عدد الأحرف';
+		case 'Chinese':
+			return '字符數';
+		case 'English':
+			return 'number of characters';
+		case 'French':
+			return 'nombre de caractères';
+		case 'German':
+			return 'Anzahl der Zeichen';
+		case 'Italian':
+			return 'numero di caratteri';
+		case 'Japanese':
+			return '文字数';
+		case 'Russian':
+			return 'количество символов';
+		case 'Spanish':
+			return 'número de caracteres';
+		case 'Swedish':
+			return 'number of characters';
+		case 'Danish':
+			return 'number of characters';
+		case 'Bulgarian':
+			return 'number of characters';
+		case 'Portuguese':
+			return 'number of characters';
+		case 'Vietnamese':
+			return 'number of characters';
+		case 'Finnish':
+			return 'number of characters';
+		case 'Hungarian':
+			return 'number of characters';
+		case 'Turkish':
+			return 'number of characters';
+		case 'Czech':
+			return 'number of characters';
+		case 'Romanian':
+			return 'number of characters';
+		case 'Greek':
+			return 'number of characters';
+		case 'Ukrainian':
+			return 'number of characters';
+		case 'Indonesian':
+			return 'number of characters';
+		case 'Norwegian':
+			return 'number of characters';
+		case 'Persian':
+			return 'number of characters';
+		case 'Slovak':
+			return 'number of characters';
+		case 'Dutch':
+			return 'number of characters';
+		case 'Polish':
+			return 'number of characters';
+		case 'Korean':
+			return 'number of characters';
+		case 'Thai':
+			return 'number of characters';
+		default:
+			return 'number of characters';
+	}
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateUnit = function (language) {
+	var _p4 = language;
+	switch (_p4.ctor) {
+		case 'Arabic':
+			return 'الوحدة';
+		case 'Chinese':
+			return '單位';
+		case 'English':
+			return 'unit';
+		case 'French':
+			return 'unité';
+		case 'German':
+			return 'Einheit';
+		case 'Italian':
+			return 'unità';
+		case 'Japanese':
+			return '単位';
+		case 'Russian':
+			return 'единица';
+		case 'Spanish':
+			return 'unidad';
+		case 'Swedish':
+			return 'unit';
+		case 'Danish':
+			return 'unit';
+		case 'Bulgarian':
+			return 'unit';
+		case 'Portuguese':
+			return 'unit';
+		case 'Vietnamese':
+			return 'unit';
+		case 'Finnish':
+			return 'unit';
+		case 'Hungarian':
+			return 'unit';
+		case 'Turkish':
+			return 'unit';
+		case 'Czech':
+			return 'unit';
+		case 'Romanian':
+			return 'unit';
+		case 'Greek':
+			return 'unit';
+		case 'Ukrainian':
+			return 'unit';
+		case 'Indonesian':
+			return 'unit';
+		case 'Norwegian':
+			return 'unit';
+		case 'Persian':
+			return 'unit';
+		case 'Slovak':
+			return 'unit';
+		case 'Dutch':
+			return 'unit';
+		case 'Polish':
+			return 'unit';
+		case 'Korean':
+			return 'unit';
+		case 'Thai':
+			return 'unit';
+		default:
+			return 'unit';
+	}
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateDangerTag = function (language) {
+	var _p5 = language;
+	switch (_p5.ctor) {
+		case 'Arabic':
+			return 'العلامة التي تشير إلى الخطر';
+		case 'Chinese':
+			return '危險標籤';
+		case 'English':
+			return 'tag indicating danger';
+		case 'French':
+			return 'étiquette indiquant le danger';
+		case 'German':
+			return 'Tag der die Gefahr anzeigt';
+		case 'Italian':
+			return 'tag che indica pericolo';
+		case 'Japanese':
+			return '危険を示すタグ';
+		case 'Russian':
+			return 'тег указывающий опасность';
+		case 'Spanish':
+			return 'etiqueta que indica peligro';
+		case 'Swedish':
+			return 'tag indicating danger';
+		case 'Danish':
+			return 'tag indicating danger';
+		case 'Bulgarian':
+			return 'tag indicating danger';
+		case 'Portuguese':
+			return 'tag indicating danger';
+		case 'Vietnamese':
+			return 'tag indicating danger';
+		case 'Finnish':
+			return 'tag indicating danger';
+		case 'Hungarian':
+			return 'tag indicating danger';
+		case 'Turkish':
+			return 'tag indicating danger';
+		case 'Czech':
+			return 'tag indicating danger';
+		case 'Romanian':
+			return 'tag indicating danger';
+		case 'Greek':
+			return 'tag indicating danger';
+		case 'Ukrainian':
+			return 'tag indicating danger';
+		case 'Indonesian':
+			return 'tag indicating danger';
+		case 'Norwegian':
+			return 'tag indicating danger';
+		case 'Persian':
+			return 'tag indicating danger';
+		case 'Slovak':
+			return 'tag indicating danger';
+		case 'Dutch':
+			return 'tag indicating danger';
+		case 'Polish':
+			return 'tag indicating danger';
+		case 'Korean':
+			return 'tag indicating danger';
+		case 'Thai':
+			return 'tag indicating danger';
+		default:
+			return 'tag indicating danger';
+	}
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateWarningTag = function (language) {
+	var _p6 = language;
+	switch (_p6.ctor) {
+		case 'Arabic':
+			return 'العلامة التي تشير إلى التحذير';
+		case 'Chinese':
+			return '警告標籤';
+		case 'English':
+			return 'tag indicating warning';
+		case 'French':
+			return 'étiquette indiquant l\'avertissement';
+		case 'German':
+			return 'Tag der die Warnung anzeigt';
+		case 'Italian':
+			return 'tag che indica avvertimento';
+		case 'Japanese':
+			return '警告を示すタグ';
+		case 'Russian':
+			return 'тег указывающий предупреждение';
+		case 'Spanish':
+			return 'etiqueta que indica advertencia';
+		case 'Swedish':
+			return 'tag indicating warning';
+		case 'Danish':
+			return 'tag indicating warning';
+		case 'Bulgarian':
+			return 'tag indicating warning';
+		case 'Portuguese':
+			return 'tag indicating warning';
+		case 'Vietnamese':
+			return 'tag indicating warning';
+		case 'Finnish':
+			return 'tag indicating warning';
+		case 'Hungarian':
+			return 'tag indicating warning';
+		case 'Turkish':
+			return 'tag indicating warning';
+		case 'Czech':
+			return 'tag indicating warning';
+		case 'Romanian':
+			return 'tag indicating warning';
+		case 'Greek':
+			return 'tag indicating warning';
+		case 'Ukrainian':
+			return 'tag indicating warning';
+		case 'Indonesian':
+			return 'tag indicating warning';
+		case 'Norwegian':
+			return 'tag indicating warning';
+		case 'Persian':
+			return 'tag indicating warning';
+		case 'Slovak':
+			return 'tag indicating warning';
+		case 'Dutch':
+			return 'tag indicating warning';
+		case 'Polish':
+			return 'tag indicating warning';
+		case 'Korean':
+			return 'tag indicating warning';
+		case 'Thai':
+			return 'tag indicating warning';
+		default:
+			return 'tag indicating warning';
+	}
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateSuccessTag = function (language) {
+	var _p7 = language;
+	switch (_p7.ctor) {
+		case 'Arabic':
+			return 'العلامة التي تشير إلى النجاح';
+		case 'Chinese':
+			return '成功標籤';
+		case 'English':
+			return 'tag indicating success';
+		case 'French':
+			return 'étiquette indiquant le succès';
+		case 'German':
+			return 'Tag der den Erfolg anzeigt';
+		case 'Italian':
+			return 'tag che indica il successo';
+		case 'Japanese':
+			return '成功を示すタグ';
+		case 'Russian':
+			return 'тег указывающий успех';
+		case 'Spanish':
+			return 'etiqueta que indica el éxito';
+		case 'Swedish':
+			return 'tag indicating success';
+		case 'Danish':
+			return 'tag indicating success';
+		case 'Bulgarian':
+			return 'tag indicating success';
+		case 'Portuguese':
+			return 'tag indicating success';
+		case 'Vietnamese':
+			return 'tag indicating success';
+		case 'Finnish':
+			return 'tag indicating success';
+		case 'Hungarian':
+			return 'tag indicating success';
+		case 'Turkish':
+			return 'tag indicating success';
+		case 'Czech':
+			return 'tag indicating success';
+		case 'Romanian':
+			return 'tag indicating success';
+		case 'Greek':
+			return 'tag indicating success';
+		case 'Ukrainian':
+			return 'tag indicating success';
+		case 'Indonesian':
+			return 'tag indicating success';
+		case 'Norwegian':
+			return 'tag indicating success';
+		case 'Persian':
+			return 'tag indicating success';
+		case 'Slovak':
+			return 'tag indicating success';
+		case 'Dutch':
+			return 'tag indicating success';
+		case 'Polish':
+			return 'tag indicating success';
+		case 'Korean':
+			return 'tag indicating success';
+		case 'Thai':
+			return 'tag indicating success';
+		default:
+			return 'tag indicating success';
+	}
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateInfoTag = function (language) {
+	var _p8 = language;
+	switch (_p8.ctor) {
+		case 'Arabic':
+			return 'علامة المعلومات';
+		case 'Chinese':
+			return '信息標籤';
+		case 'English':
+			return 'information tag';
+		case 'French':
+			return 'étiquette d\'information';
+		case 'German':
+			return 'Informationstag';
+		case 'Italian':
+			return 'tag di informazione';
+		case 'Japanese':
+			return '情報タグ';
+		case 'Russian':
+			return 'информационный тег';
+		case 'Spanish':
+			return 'etiqueta de información';
+		case 'Swedish':
+			return 'information tag';
+		case 'Danish':
+			return 'information tag';
+		case 'Bulgarian':
+			return 'information tag';
+		case 'Portuguese':
+			return 'information tag';
+		case 'Vietnamese':
+			return 'information tag';
+		case 'Finnish':
+			return 'information tag';
+		case 'Hungarian':
+			return 'information tag';
+		case 'Turkish':
+			return 'information tag';
+		case 'Czech':
+			return 'information tag';
+		case 'Romanian':
+			return 'information tag';
+		case 'Greek':
+			return 'information tag';
+		case 'Ukrainian':
+			return 'information tag';
+		case 'Indonesian':
+			return 'information tag';
+		case 'Norwegian':
+			return 'information tag';
+		case 'Persian':
+			return 'information tag';
+		case 'Slovak':
+			return 'information tag';
+		case 'Dutch':
+			return 'information tag';
+		case 'Polish':
+			return 'information tag';
+		case 'Korean':
+			return 'information tag';
+		case 'Thai':
+			return 'information tag';
+		default:
+			return 'information tag';
+	}
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural = F2(
+	function (howMany, singularOrPlural) {
+		return (_elm_lang$core$Native_Utils.cmp(howMany, 2) < 0) ? _elm_lang$core$Tuple$first(singularOrPlural) : _elm_lang$core$Tuple$second(singularOrPlural);
+	});
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateWord = F2(
+	function (language, howMany) {
+		var _p9 = language;
+		switch (_p9.ctor) {
+			case 'Arabic':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'كلمة', _1: 'كلمات'});
+			case 'Chinese':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: '字', _1: '话'});
+			case 'English':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'French':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'mot', _1: 'mots'});
+			case 'German':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'wort', _1: 'wörter'});
+			case 'Italian':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'parola', _1: 'parole'});
+			case 'Japanese':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'ワード', _1: '言葉'});
+			case 'Russian':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'слово', _1: 'слова'});
+			case 'Spanish':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'palabra', _1: 'palabras'});
+			case 'Swedish':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Danish':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Bulgarian':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Portuguese':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Vietnamese':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Finnish':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Hungarian':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Turkish':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Czech':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Romanian':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Greek':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Ukrainian':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Indonesian':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Norwegian':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Persian':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Slovak':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Dutch':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Polish':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Korean':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			case 'Thai':
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+			default:
+				return A2(
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
+					howMany,
+					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
+		}
+	});
+
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$widgetLabel = function (widgetText) {
 	return A2(
 		_elm_lang$html$Html$label,
@@ -9109,19 +9855,35 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$groupFields 
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$dangerTagText = F2(
 	function (userIsoLanguage, text) {
-		return {text: text, style: 'is-danger', title: 'tag'};
+		return {
+			text: text,
+			style: 'is-danger',
+			title: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateDangerTag(userIsoLanguage)
+		};
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$warningTagText = F2(
 	function (userIsoLanguage, text) {
-		return {text: text, style: 'is-warning', title: 'tag'};
+		return {
+			text: text,
+			style: 'is-warning',
+			title: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateWarningTag(userIsoLanguage)
+		};
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$successTagText = F2(
 	function (userIsoLanguage, text) {
-		return {text: text, style: 'is-success', title: 'tag'};
+		return {
+			text: text,
+			style: 'is-success',
+			title: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateSuccessTag(userIsoLanguage)
+		};
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$infoText = F2(
 	function (userIsoLanguage, text) {
-		return {text: text, style: 'is-dark', title: 'tag'};
+		return {
+			text: text,
+			style: 'is-dark',
+			title: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateInfoTag(userIsoLanguage)
+		};
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tags = function (list) {
 	return A2(
@@ -9262,7 +10024,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$minimumChars
 				text: _elm_lang$core$Basics$toString(
 					_elm_lang$core$Tuple$first(tuple)),
 				style: 'is-dark',
-				title: 'minimum number of characters expected'
+				title: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateMinimumChars(userIsoLanguage)
 			});
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$minimumWordsTag = F2(
@@ -9272,13 +10034,17 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$minimumWords
 				text: _elm_lang$core$Basics$toString(
 					_elm_lang$core$Tuple$first(tuple)),
 				style: 'is-dark',
-				title: 'minimum number of words expected'
+				title: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateMinimumWords(userIsoLanguage)
 			});
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$unitTag = F2(
 	function (userIsoLanguage, value) {
 		return _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tag(
-			{text: value, style: 'is-light', title: 'unit'});
+			{
+				text: value,
+				style: 'is-light',
+				title: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateUnit(userIsoLanguage)
+			});
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$infoHelp = function (helpText) {
 	return A2(
@@ -9356,20 +10122,20 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$progressBar 
 			_1: {ctor: '[]'}
 		});
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$styleTextWord = F2(
-	function (number, status) {
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$styleTextWord = F3(
+	function (userIsoLanguage, number, status) {
 		return {
 			text: _elm_lang$core$Basics$toString(number),
 			style: status,
-			title: 'number of words'
+			title: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateNumberOfWords(userIsoLanguage)
 		};
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$styleTextChar = F2(
-	function (number, status) {
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$styleTextChar = F3(
+	function (userIsoLanguage, number, status) {
 		return {
 			text: _elm_lang$core$Basics$toString(number),
 			style: status,
-			title: 'number of characters'
+			title: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateNumberOfChars(userIsoLanguage)
 		};
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendAttributeIfSuccess = F3(
@@ -10212,622 +10978,6 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$dangerRange = F2(
 		return !A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$successRange, size, range);
 	});
 
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateNumberOfWords = function (language) {
-	var _p0 = language;
-	switch (_p0.ctor) {
-		case 'Arabic':
-			return 'عدد الكلمات';
-		case 'Chinese':
-			return '字數';
-		case 'English':
-			return 'number of words';
-		case 'French':
-			return 'nombre de mots';
-		case 'German':
-			return 'Anzahl der Wörter';
-		case 'Italian':
-			return 'numero di parole';
-		case 'Japanese':
-			return '単語数';
-		case 'Russian':
-			return 'количество слов';
-		case 'Spanish':
-			return 'número de palabras';
-		case 'Swedish':
-			return 'number of words';
-		case 'Danish':
-			return 'number of words';
-		case 'Bulgarian':
-			return 'number of words';
-		case 'Portuguese':
-			return 'number of words';
-		case 'Vietnamese':
-			return 'number of words';
-		case 'Finnish':
-			return 'number of words';
-		case 'Hungarian':
-			return 'number of words';
-		case 'Turkish':
-			return 'number of words';
-		case 'Czech':
-			return 'number of words';
-		case 'Romanian':
-			return 'number of words';
-		case 'Greek':
-			return 'number of words';
-		case 'Ukrainian':
-			return 'number of words';
-		case 'Indonesian':
-			return 'number of words';
-		case 'Norwegian':
-			return 'number of words';
-		case 'Persian':
-			return 'number of words';
-		case 'Slovak':
-			return 'number of words';
-		case 'Dutch':
-			return 'number of words';
-		case 'Polish':
-			return 'number of words';
-		case 'Korean':
-			return 'number of words';
-		case 'Thai':
-			return 'number of words';
-		default:
-			return 'number of words';
-	}
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateNumberOfChars = function (language) {
-	var _p1 = language;
-	switch (_p1.ctor) {
-		case 'Arabic':
-			return 'عدد الأحرف';
-		case 'Chinese':
-			return '字符數';
-		case 'English':
-			return 'number of characters';
-		case 'French':
-			return 'nombre de caractères';
-		case 'German':
-			return 'Anzahl der Zeichen';
-		case 'Italian':
-			return 'numero di caratteri';
-		case 'Japanese':
-			return '文字数';
-		case 'Russian':
-			return 'количество символов';
-		case 'Spanish':
-			return 'número de caracteres';
-		case 'Swedish':
-			return 'number of characters';
-		case 'Danish':
-			return 'number of characters';
-		case 'Bulgarian':
-			return 'number of characters';
-		case 'Portuguese':
-			return 'number of characters';
-		case 'Vietnamese':
-			return 'number of characters';
-		case 'Finnish':
-			return 'number of characters';
-		case 'Hungarian':
-			return 'number of characters';
-		case 'Turkish':
-			return 'number of characters';
-		case 'Czech':
-			return 'number of characters';
-		case 'Romanian':
-			return 'number of characters';
-		case 'Greek':
-			return 'number of characters';
-		case 'Ukrainian':
-			return 'number of characters';
-		case 'Indonesian':
-			return 'number of characters';
-		case 'Norwegian':
-			return 'number of characters';
-		case 'Persian':
-			return 'number of characters';
-		case 'Slovak':
-			return 'number of characters';
-		case 'Dutch':
-			return 'number of characters';
-		case 'Polish':
-			return 'number of characters';
-		case 'Korean':
-			return 'number of characters';
-		case 'Thai':
-			return 'number of characters';
-		default:
-			return 'number of characters';
-	}
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateUnit = function (language) {
-	var _p2 = language;
-	switch (_p2.ctor) {
-		case 'Arabic':
-			return 'الوحدة';
-		case 'Chinese':
-			return '單位';
-		case 'English':
-			return 'unit';
-		case 'French':
-			return 'unité';
-		case 'German':
-			return 'Einheit';
-		case 'Italian':
-			return 'unità';
-		case 'Japanese':
-			return '単位';
-		case 'Russian':
-			return 'единица';
-		case 'Spanish':
-			return 'unidad';
-		case 'Swedish':
-			return 'unit';
-		case 'Danish':
-			return 'unit';
-		case 'Bulgarian':
-			return 'unit';
-		case 'Portuguese':
-			return 'unit';
-		case 'Vietnamese':
-			return 'unit';
-		case 'Finnish':
-			return 'unit';
-		case 'Hungarian':
-			return 'unit';
-		case 'Turkish':
-			return 'unit';
-		case 'Czech':
-			return 'unit';
-		case 'Romanian':
-			return 'unit';
-		case 'Greek':
-			return 'unit';
-		case 'Ukrainian':
-			return 'unit';
-		case 'Indonesian':
-			return 'unit';
-		case 'Norwegian':
-			return 'unit';
-		case 'Persian':
-			return 'unit';
-		case 'Slovak':
-			return 'unit';
-		case 'Dutch':
-			return 'unit';
-		case 'Polish':
-			return 'unit';
-		case 'Korean':
-			return 'unit';
-		case 'Thai':
-			return 'unit';
-		default:
-			return 'unit';
-	}
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateDangerTag = function (language) {
-	var _p3 = language;
-	switch (_p3.ctor) {
-		case 'Arabic':
-			return 'العلامة التي تشير إلى الخطر';
-		case 'Chinese':
-			return '危險標籤';
-		case 'English':
-			return 'tag indicating danger';
-		case 'French':
-			return 'étiquette indiquant le danger';
-		case 'German':
-			return 'Tag der die Gefahr anzeigt';
-		case 'Italian':
-			return 'tag che indica pericolo';
-		case 'Japanese':
-			return '危険を示すタグ';
-		case 'Russian':
-			return 'тег указывающий опасность';
-		case 'Spanish':
-			return 'etiqueta que indica peligro';
-		case 'Swedish':
-			return 'tag indicating danger';
-		case 'Danish':
-			return 'tag indicating danger';
-		case 'Bulgarian':
-			return 'tag indicating danger';
-		case 'Portuguese':
-			return 'tag indicating danger';
-		case 'Vietnamese':
-			return 'tag indicating danger';
-		case 'Finnish':
-			return 'tag indicating danger';
-		case 'Hungarian':
-			return 'tag indicating danger';
-		case 'Turkish':
-			return 'tag indicating danger';
-		case 'Czech':
-			return 'tag indicating danger';
-		case 'Romanian':
-			return 'tag indicating danger';
-		case 'Greek':
-			return 'tag indicating danger';
-		case 'Ukrainian':
-			return 'tag indicating danger';
-		case 'Indonesian':
-			return 'tag indicating danger';
-		case 'Norwegian':
-			return 'tag indicating danger';
-		case 'Persian':
-			return 'tag indicating danger';
-		case 'Slovak':
-			return 'tag indicating danger';
-		case 'Dutch':
-			return 'tag indicating danger';
-		case 'Polish':
-			return 'tag indicating danger';
-		case 'Korean':
-			return 'tag indicating danger';
-		case 'Thai':
-			return 'tag indicating danger';
-		default:
-			return 'tag indicating danger';
-	}
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateWarningTag = function (language) {
-	var _p4 = language;
-	switch (_p4.ctor) {
-		case 'Arabic':
-			return 'العلامة التي تشير إلى التحذير';
-		case 'Chinese':
-			return '警告標籤';
-		case 'English':
-			return 'tag indicating warning';
-		case 'French':
-			return 'étiquette indiquant l\'avertissement';
-		case 'German':
-			return 'Tag der die Warnung anzeigt';
-		case 'Italian':
-			return 'tag che indica avvertimento';
-		case 'Japanese':
-			return '警告を示すタグ';
-		case 'Russian':
-			return 'тег указывающий предупреждение';
-		case 'Spanish':
-			return 'etiqueta que indica advertencia';
-		case 'Swedish':
-			return 'tag indicating warning';
-		case 'Danish':
-			return 'tag indicating warning';
-		case 'Bulgarian':
-			return 'tag indicating warning';
-		case 'Portuguese':
-			return 'tag indicating warning';
-		case 'Vietnamese':
-			return 'tag indicating warning';
-		case 'Finnish':
-			return 'tag indicating warning';
-		case 'Hungarian':
-			return 'tag indicating warning';
-		case 'Turkish':
-			return 'tag indicating warning';
-		case 'Czech':
-			return 'tag indicating warning';
-		case 'Romanian':
-			return 'tag indicating warning';
-		case 'Greek':
-			return 'tag indicating warning';
-		case 'Ukrainian':
-			return 'tag indicating warning';
-		case 'Indonesian':
-			return 'tag indicating warning';
-		case 'Norwegian':
-			return 'tag indicating warning';
-		case 'Persian':
-			return 'tag indicating warning';
-		case 'Slovak':
-			return 'tag indicating warning';
-		case 'Dutch':
-			return 'tag indicating warning';
-		case 'Polish':
-			return 'tag indicating warning';
-		case 'Korean':
-			return 'tag indicating warning';
-		case 'Thai':
-			return 'tag indicating warning';
-		default:
-			return 'tag indicating warning';
-	}
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateSuccessTag = function (language) {
-	var _p5 = language;
-	switch (_p5.ctor) {
-		case 'Arabic':
-			return 'العلامة التي تشير إلى النجاح';
-		case 'Chinese':
-			return '成功標籤';
-		case 'English':
-			return 'tag indicating success';
-		case 'French':
-			return 'étiquette indiquant le succès';
-		case 'German':
-			return 'Tag der den Erfolg anzeigt';
-		case 'Italian':
-			return 'tag che indica il successo';
-		case 'Japanese':
-			return '成功を示すタグ';
-		case 'Russian':
-			return 'тег указывающий успех';
-		case 'Spanish':
-			return 'etiqueta que indica el éxito';
-		case 'Swedish':
-			return 'tag indicating success';
-		case 'Danish':
-			return 'tag indicating success';
-		case 'Bulgarian':
-			return 'tag indicating success';
-		case 'Portuguese':
-			return 'tag indicating success';
-		case 'Vietnamese':
-			return 'tag indicating success';
-		case 'Finnish':
-			return 'tag indicating success';
-		case 'Hungarian':
-			return 'tag indicating success';
-		case 'Turkish':
-			return 'tag indicating success';
-		case 'Czech':
-			return 'tag indicating success';
-		case 'Romanian':
-			return 'tag indicating success';
-		case 'Greek':
-			return 'tag indicating success';
-		case 'Ukrainian':
-			return 'tag indicating success';
-		case 'Indonesian':
-			return 'tag indicating success';
-		case 'Norwegian':
-			return 'tag indicating success';
-		case 'Persian':
-			return 'tag indicating success';
-		case 'Slovak':
-			return 'tag indicating success';
-		case 'Dutch':
-			return 'tag indicating success';
-		case 'Polish':
-			return 'tag indicating success';
-		case 'Korean':
-			return 'tag indicating success';
-		case 'Thai':
-			return 'tag indicating success';
-		default:
-			return 'tag indicating success';
-	}
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateInfoTag = function (language) {
-	var _p6 = language;
-	switch (_p6.ctor) {
-		case 'Arabic':
-			return 'علامة المعلومات';
-		case 'Chinese':
-			return '信息標籤';
-		case 'English':
-			return 'information tag';
-		case 'French':
-			return 'étiquette d\'information';
-		case 'German':
-			return 'Informationstag';
-		case 'Italian':
-			return 'tag di informazione';
-		case 'Japanese':
-			return '情報タグ';
-		case 'Russian':
-			return 'информационный тег';
-		case 'Spanish':
-			return 'etiqueta de información';
-		case 'Swedish':
-			return 'information tag';
-		case 'Danish':
-			return 'information tag';
-		case 'Bulgarian':
-			return 'information tag';
-		case 'Portuguese':
-			return 'information tag';
-		case 'Vietnamese':
-			return 'information tag';
-		case 'Finnish':
-			return 'information tag';
-		case 'Hungarian':
-			return 'information tag';
-		case 'Turkish':
-			return 'information tag';
-		case 'Czech':
-			return 'information tag';
-		case 'Romanian':
-			return 'information tag';
-		case 'Greek':
-			return 'information tag';
-		case 'Ukrainian':
-			return 'information tag';
-		case 'Indonesian':
-			return 'information tag';
-		case 'Norwegian':
-			return 'information tag';
-		case 'Persian':
-			return 'information tag';
-		case 'Slovak':
-			return 'information tag';
-		case 'Dutch':
-			return 'information tag';
-		case 'Polish':
-			return 'information tag';
-		case 'Korean':
-			return 'information tag';
-		case 'Thai':
-			return 'information tag';
-		default:
-			return 'information tag';
-	}
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural = F2(
-	function (howMany, singularOrPlural) {
-		return (_elm_lang$core$Native_Utils.cmp(howMany, 2) < 0) ? _elm_lang$core$Tuple$first(singularOrPlural) : _elm_lang$core$Tuple$second(singularOrPlural);
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateWord = F2(
-	function (language, howMany) {
-		var _p7 = language;
-		switch (_p7.ctor) {
-			case 'Arabic':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'كلمة', _1: 'كلمات'});
-			case 'Chinese':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: '字', _1: '话'});
-			case 'English':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'French':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'mot', _1: 'mots'});
-			case 'German':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'wort', _1: 'wörter'});
-			case 'Italian':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'parola', _1: 'parole'});
-			case 'Japanese':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'ワード', _1: '言葉'});
-			case 'Russian':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'слово', _1: 'слова'});
-			case 'Spanish':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'palabra', _1: 'palabras'});
-			case 'Swedish':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Danish':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Bulgarian':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Portuguese':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Vietnamese':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Finnish':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Hungarian':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Turkish':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Czech':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Romanian':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Greek':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Ukrainian':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Indonesian':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Norwegian':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Persian':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Slovak':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Dutch':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Polish':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Korean':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			case 'Thai':
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-			default:
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$pickSingularOrPlural,
-					howMany,
-					{ctor: '_Tuple2', _0: 'word', _1: 'words'});
-		}
-	});
-
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayTextInfo = F4(
 	function (adapter, userSettings, settings, state) {
 		var contentCharLength = A2(
@@ -10847,8 +10997,6 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayTextInfo =
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$dangerRange,
 				contentCharLength,
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getDangerCharRange(settings)));
-		var charLengthAndStatus = A3(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$styleTextChar, contentCharLength, themeCharBasedOnRange);
-		var addCharContentLength = A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendHtmlIfSuccess, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tag, charLengthAndStatus);
 		var charRatioAndStatus = A3(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2,
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$tupleify,
@@ -10864,8 +11012,6 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayTextInfo =
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$dangerRange,
 				contentWordLength,
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getDangerWordRange(settings)));
-		var wordLengthAndStatus = A3(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$styleTextWord, contentWordLength, themeWordBasedOnRange);
-		var addWordContentLength = A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendHtmlIfSuccess, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tag, wordLengthAndStatus);
 		var wordRatioAndStatus = A3(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2,
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$tupleify,
@@ -10881,6 +11027,18 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayTextInfo =
 					_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map,
 					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateWord(userIsoLanguage),
 					contentWordLength)));
+		var wordLengthAndStatus = A3(
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$styleTextWord(userIsoLanguage),
+			contentWordLength,
+			themeWordBasedOnRange);
+		var addWordContentLength = A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendHtmlIfSuccess, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tag, wordLengthAndStatus);
+		var charLengthAndStatus = A3(
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$styleTextChar(userIsoLanguage),
+			contentCharLength,
+			themeCharBasedOnRange);
+		var addCharContentLength = A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendHtmlIfSuccess, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tag, charLengthAndStatus);
 		var addCharTargetLength = A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendHtmlIfSuccess,
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$minimumCharsTag(userIsoLanguage),

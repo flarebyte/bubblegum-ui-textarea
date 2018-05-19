@@ -63,10 +63,10 @@ displayTextInfo adapter userSettings settings state =
             Outcome.map2 tupleify (Outcome.map2 successRatio contentCharLength optSuccessCharRange) themeCharBasedOnRange
 
         wordLengthAndStatus =
-            Outcome.map2 styleTextWord contentWordLength themeWordBasedOnRange
+            Outcome.map2 (styleTextWord userIsoLanguage) contentWordLength themeWordBasedOnRange
 
         charLengthAndStatus =
-            Outcome.map2 styleTextChar contentCharLength themeCharBasedOnRange
+            Outcome.map2 (styleTextChar userIsoLanguage) contentCharLength themeCharBasedOnRange
 
         -- optional html to display
         -- Char counter

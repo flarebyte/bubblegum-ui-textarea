@@ -768,3 +768,191 @@ translateNumberOfWords language =
 
         Hebrew ->
             "number of words"
+
+
+translateMinimumChars : IsoLanguage -> String
+translateMinimumChars language =
+    case language of
+        Arabic ->
+            "الحد الأدنى لعدد الأحرف المتوقع"
+
+        Chinese ->
+            "最少预期字符数"
+
+        English ->
+            "minimum number of characters expected"
+
+        French ->
+            "nombre minimum de caractères attendus"
+
+        German ->
+            "Mindestanzahl der erwarteten Zeichen"
+
+        Italian ->
+            "numero minimo di caratteri previsto"
+
+        Japanese ->
+            "期待される最小文字数"
+
+        Russian ->
+            "минимальное количество ожидаемых символов"
+
+        Spanish ->
+            "número mínimo de caracteres esperado"
+
+        Swedish ->
+            "minimum number of characters expected"
+
+        Danish ->
+            "minimum number of characters expected"
+
+        Bulgarian ->
+            "minimum number of characters expected"
+
+        Portuguese ->
+            "minimum number of characters expected"
+
+        Vietnamese ->
+            "minimum number of characters expected"
+
+        Finnish ->
+            "minimum number of characters expected"
+
+        Hungarian ->
+            "minimum number of characters expected"
+
+        Turkish ->
+            "minimum number of characters expected"
+
+        Czech ->
+            "minimum number of characters expected"
+
+        Romanian ->
+            "minimum number of characters expected"
+
+        Greek ->
+            "minimum number of characters expected"
+
+        Ukrainian ->
+            "minimum number of characters expected"
+
+        Indonesian ->
+            "minimum number of characters expected"
+
+        Norwegian ->
+            "minimum number of characters expected"
+
+        Persian ->
+            "minimum number of characters expected"
+
+        Slovak ->
+            "minimum number of characters expected"
+
+        Dutch ->
+            "minimum number of characters expected"
+
+        Polish ->
+            "minimum number of characters expected"
+
+        Korean ->
+            "minimum number of characters expected"
+
+        Thai ->
+            "minimum number of characters expected"
+
+        Hebrew ->
+            "minimum number of characters expected"
+
+
+translateMinimumWords : IsoLanguage -> String
+translateMinimumWords language =
+    case language of
+        Arabic ->
+            "الحد الأدنى لعدد الكلمات المتوقع"
+
+        Chinese ->
+            "预计最少字数"
+
+        English ->
+            "minimum number of words expected"
+
+        French ->
+            "nombre minimum de mots attendus"
+
+        German ->
+            "Mindestanzahl der erwarteten Wörter"
+
+        Italian ->
+            "numero minimo di parole previsto"
+
+        Japanese ->
+            "予想される単語の最小数"
+
+        Russian ->
+            "минимальное количество ожидаемых слов"
+
+        Spanish ->
+            "número mínimo de palabras esperado"
+
+        Swedish ->
+            "minimum number of words expected"
+
+        Danish ->
+            "minimum number of words expected"
+
+        Bulgarian ->
+            "minimum number of words expected"
+
+        Portuguese ->
+            "minimum number of words expected"
+
+        Vietnamese ->
+            "minimum number of words expected"
+
+        Finnish ->
+            "minimum number of words expected"
+
+        Hungarian ->
+            "minimum number of words expected"
+
+        Turkish ->
+            "minimum number of words expected"
+
+        Czech ->
+            "minimum number of words expected"
+
+        Romanian ->
+            "minimum number of words expected"
+
+        Greek ->
+            "minimum number of words expected"
+
+        Ukrainian ->
+            "minimum number of words expected"
+
+        Indonesian ->
+            "minimum number of words expected"
+
+        Norwegian ->
+            "minimum number of words expected"
+
+        Persian ->
+            "minimum number of words expected"
+
+        Slovak ->
+            "minimum number of words expected"
+
+        Dutch ->
+            "minimum number of words expected"
+
+        Polish ->
+            "minimum number of words expected"
+
+        Korean ->
+            "minimum number of words expected"
+
+        Thai ->
+            "minimum number of words expected"
+
+        Hebrew ->
+            "minimum number of words expected"

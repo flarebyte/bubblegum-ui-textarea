@@ -7,6 +7,7 @@ module Bubblegum.TextArea.BulmaHelper exposing (..)
 -}
 
 import Bubblegum.Entity.Outcome as Outcome exposing (..)
+import Bubblegum.TextArea.Internationalization exposing (..)
 import Bubblegum.TextArea.IsoLanguage exposing (IsoLanguage(..), toIsoLanguage)
 import Html exposing (..)
 import Html.Attributes as Attributes exposing (..)
@@ -48,19 +49,19 @@ appendAttributeIfSuccess ifSuccess outcome attributes =
             attributes ++ [ ifSuccess success ]
 
 
-styleTextChar : Int -> String -> StyledText
-styleTextChar number status =
+styleTextChar : IsoLanguage -> Int -> String -> StyledText
+styleTextChar userIsoLanguage number status =
     { text = toString number
     , style = status
-    , title = "number of characters"
+    , title = translateNumberOfChars userIsoLanguage
     }
 
 
-styleTextWord : Int -> String -> StyledText
-styleTextWord number status =
+styleTextWord : IsoLanguage -> Int -> String -> StyledText
+styleTextWord userIsoLanguage number status =
     { text = toString number
     , style = status
-    , title = "number of words"
+    , title = translateNumberOfWords userIsoLanguage
     }
 
 
@@ -113,7 +114,7 @@ infoText : IsoLanguage -> String -> StyledText
 infoText userIsoLanguage text =
     { text = text
     , style = "is-dark"
-    , title = "tag"
+    , title = translateInfoTag userIsoLanguage
     }
 
 
@@ -121,7 +122,7 @@ successTagText : IsoLanguage -> String -> StyledText
 successTagText userIsoLanguage text =
     { text = text
     , style = "is-success"
-    , title = "tag"
+    , title = translateSuccessTag userIsoLanguage
     }
 
 
@@ -129,7 +130,7 @@ warningTagText : IsoLanguage -> String -> StyledText
 warningTagText userIsoLanguage text =
     { text = text
     , style = "is-warning"
-    , title = "tag"
+    , title = translateWarningTag userIsoLanguage
     }
 
 
@@ -137,7 +138,7 @@ dangerTagText : IsoLanguage -> String -> StyledText
 dangerTagText userIsoLanguage text =
     { text = text
     , style = "is-danger"
-    , title = "tag"
+    , title = translateDangerTag userIsoLanguage
     }
 
 
@@ -204,14 +205,14 @@ dangerHelp helpText =
 
 minimumCharsTag : IsoLanguage -> ( Int, Int ) -> Html msg
 minimumCharsTag userIsoLanguage tuple =
-    tag { text = first tuple |> toString, style = "is-dark", title = "minimum number of characters expected" }
+    tag { text = first tuple |> toString, style = "is-dark", title = translateMinimumChars userIsoLanguage }
 
 
 minimumWordsTag : IsoLanguage -> ( Int, Int ) -> Html msg
 minimumWordsTag userIsoLanguage tuple =
-    tag { text = first tuple |> toString, style = "is-dark", title = "minimum number of words expected" }
+    tag { text = first tuple |> toString, style = "is-dark", title = translateMinimumWords userIsoLanguage }
 
 
 unitTag : IsoLanguage -> String -> Html msg
 unitTag userIsoLanguage value =
-    tag { text = value, style = "is-light", title = "unit" }
+    tag { text = value, style = "is-light", title = translateUnit userIsoLanguage }
