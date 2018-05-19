@@ -46,10 +46,8 @@ translateWord language howMany =
        Arabic ->
             pickSingularOrPlural howMany ( "كلمة", "كلمات" )
 
-        other ->
-            translateWord English howMany
-
-
+       other ->
+        ""
 
 translateInfoTag : IsoLanguage -> String
 translateInfoTag language =
@@ -79,5 +77,5 @@ translateInfoTag language =
        Arabic ->
              "information tag"
 
-        other ->
-            translateInfoTag English
+        _ ->
+            "aaa aa"
