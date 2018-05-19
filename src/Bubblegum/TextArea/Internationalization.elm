@@ -1,51 +1,83 @@
-module Bubblegum.TextArea.Internationalization exposing (translateWord)
 
-{-| Setting key
+module Bubblegum.TextArea.Internationalization exposing (..)
 
-@docs Model
+{-| Utility to translate some of the text used by the widget
+ 
+    **Generated** by generate-translation.py
 
 -}
 
 import String exposing (left)
 import Tuple exposing (first, second)
+import Bubblegum.TextArea.IsoLanguage exposing (IsoLanguage(..))
 
+pickSingularOrPlural: Int -> (String, String) -> String
+pickSingularOrPlural howMany singularOrPlural =
+    if howMany < 2 then
+        first singularOrPlural
+    else
+        second singularOrPlural
 
-translateWord : String -> Int -> String
+translateWord : IsoLanguage -> Int -> String
 translateWord language howMany =
-    let
-        languageCode =
-            left 2 language
+     case language of
 
-        pickTranslation singularOrPlural =
-            if howMany < 2 then
-                first singularOrPlural
-            else
-                second singularOrPlural
-    in
-    case languageCode of
-        "en" ->
-            pickTranslation ( "word", "words" )
+       English ->
+            pickSingularOrPlural howMany ( "word", "words" )
 
-        "ja" ->
-            pickTranslation ( "ワード", "言葉" )
+       German ->
+            pickSingularOrPlural howMany ( "wort", "wörter" )
 
-        "ar" ->
-            pickTranslation ( "كلمة", "كلمات" )
+       Spanish ->
+            pickSingularOrPlural howMany ( "palabra", "palabras" )
 
-        "fr" ->
-            pickTranslation ( "mot", "mots" )
+       Japanese ->
+            pickSingularOrPlural howMany ( "ワード", "言葉" )
 
-        "es" ->
-            pickTranslation ( "palabra", "palabras" )
+       French ->
+            pickSingularOrPlural howMany ( "mot", "mots" )
 
-        "it" ->
-            pickTranslation ( "parola", "parole" )
+       Italian ->
+            pickSingularOrPlural howMany ( "parola", "parole" )
 
-        "de" ->
-            pickTranslation ( "wort", "wörter" )
+       Chinese ->
+            pickSingularOrPlural howMany ( "字", "话" )
 
-        "zh" ->
-            pickTranslation ( "字", "话" )
+       Arabic ->
+            pickSingularOrPlural howMany ( "كلمة", "كلمات" )
 
-        _ ->
-            pickTranslation ( "word", "words" )
+        other ->
+            translateWord English howMany
+
+
+
+translateInfoTag : IsoLanguage -> String
+translateInfoTag language =
+     case language of
+
+       English ->
+             "information tag"
+
+       German ->
+             "information tag"
+
+       Spanish ->
+             "information tag"
+
+       Japanese ->
+             "information tag"
+
+       French ->
+             "Etiquette informative"
+
+       Italian ->
+             "information tag"
+
+       Chinese ->
+             "information tag"
+
+       Arabic ->
+             "information tag"
+
+        other ->
+            translateInfoTag English

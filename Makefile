@@ -41,6 +41,7 @@ meta:
 
 generate:
 	cd scripts && python generate_vocabulary.py
+	cd scripts && python generate_translation.py
 
 diff:
 	elm-package diff

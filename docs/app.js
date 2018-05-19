@@ -10058,13 +10058,15 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$dangerRange = F2(
 		return !A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$successRange, size, range);
 	});
 
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$getLanguageCode = function (language) {
+	return A2(_elm_lang$core$String$left, 2, language);
+};
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateWord = F2(
 	function (language, howMany) {
 		var pickTranslation = function (singularOrPlural) {
 			return (_elm_lang$core$Native_Utils.cmp(howMany, 2) < 0) ? _elm_lang$core$Tuple$first(singularOrPlural) : _elm_lang$core$Tuple$second(singularOrPlural);
 		};
-		var languageCode = A2(_elm_lang$core$String$left, 2, language);
-		var _p0 = languageCode;
+		var _p0 = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$getLanguageCode(language);
 		switch (_p0) {
 			case 'en':
 				return pickTranslation(
