@@ -46,36 +46,69 @@ translateWord language howMany =
        Arabic ->
             pickSingularOrPlural howMany ( "كلمة", "كلمات" )
 
-       other ->
-        ""
+        Swedish ->
+            translateWord English howMany --TODO
 
-translateInfoTag : IsoLanguage -> String
-translateInfoTag language =
-     case language of
+        Vietnamese ->
+            translateWord English howMany --TODO
 
-       English ->
-             "information tag"
+        Romanian ->
+            translateWord English howMany --TODO
 
-       German ->
-             "information tag"
+        Dutch ->
+            translateWord English howMany --TODO
 
-       Spanish ->
-             "information tag"
+        Korean ->
+            translateWord English howMany --TODO
 
-       Japanese ->
-             "information tag"
+        Danish ->
+            translateWord English howMany --TODO
 
-       French ->
-             "Etiquette informative"
+        Indonesian ->
+            translateWord English howMany --TODO
 
-       Italian ->
-             "information tag"
+        Hungarian ->
+            translateWord English howMany --TODO
 
-       Chinese ->
-             "information tag"
+        Ukrainian ->
+            translateWord English howMany --TODO
 
-       Arabic ->
-             "information tag"
+        Turkish ->
+            translateWord English howMany --TODO
 
-        _ ->
-            "aaa aa"
+        Norwegian ->
+            translateWord English howMany --TODO
+
+        Russian ->
+            translateWord English howMany --TODO
+
+        Thai ->
+            translateWord English howMany --TODO
+
+        Finnish ->
+            translateWord English howMany --TODO
+
+        Bulgarian ->
+            translateWord English howMany --TODO
+
+        Greek ->
+            translateWord English howMany --TODO
+
+        Portuguese ->
+            translateWord English howMany --TODO
+
+        Czech ->
+            translateWord English howMany --TODO
+
+        Persian ->
+            translateWord English howMany --TODO
+
+        Slovak ->
+            translateWord English howMany --TODO
+
+        Hebrew ->
+            translateWord English howMany --TODO
+
+        Polish ->
+            translateWord English howMany --TODO
+

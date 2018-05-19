@@ -33,9 +33,11 @@ def formatTemplateI18n(template, row, indice, name):
             nameCamelUpper = name
             )
 
-def formatTemplateI18nMethod(template, name):
+def formatTemplateI18nMethod(template, name, language = ""):
         return Template(template).substitute(
-            nameCamelUpper = name
+            nameCamelUpper = name,
+            language = language
+
         )
 
 
@@ -58,25 +60,37 @@ def createIsoLanguage():
     file.write(createIsolanguageType(languageNames))
     file.close()
 
+def getAllLanguageNames():
+    content = readCsv(languages_csv)
+    languageNames = []
+    for row in content:
+        if len(row) > 1 :
+            languageNames.append(getLanguageName(row))
+    return languageNames
+
 def createI18n():
     content = readCsv(translations_csv)
     file = open("../src/Bubblegum/TextArea/Internationalization.elm", "w")
     file.write(headerI18n)
     names = ["Word", "InfoTag"]
     templatesMethod = [templateI18nWithPluralMethod, templateI18nMethod]
-    templatesMethodEnd = [templateI18nWithPluralMethodEnd, templateI18nMethodEnd]
+    templatesMethodDefault = [templateI18nWithPluralMethodDefault, templateI18nMethodDefault]
     templateslanguage = [templateI18nWithPluralLanguage, templateI18nLanguage]
     maxIndice = len(names)
     codeParts = [formatTemplateI18nMethod(templatesMethod[i], names[i]) for i in range(0, maxIndice)]
+    translatedLanguages = []
     for row in content:
         if len(row) > 1 :
             for indice in range(0, maxIndice):
+                translatedLanguages.append(getLanguageName(row))
                 temp = formatTemplateI18n(templateslanguage[indice], row, indice+1, names[indice])
                 codeParts[indice] += temp
+    untranslatedLanguages = list(set(getAllLanguageNames()) - set(translatedLanguages))
+    for otherlanguage in untranslatedLanguages:
+        for i in range(0, maxIndice):
+            temp = formatTemplateI18nMethod(templatesMethodDefault[i], names[i], otherlanguage)
+            codeParts[i] += temp
     
-    codePartsEnd = [formatTemplateI18nMethod(templatesMethodEnd[i], names[i]) for i in range(0, maxIndice)]
-    for i in range(0, maxIndice):
-       codeParts[i] += codePartsEnd[i]
     file.write("\n\n".join(codeParts))        
     file.close()
         

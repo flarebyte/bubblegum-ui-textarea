@@ -66,9 +66,9 @@ templateI18nWithPluralLanguage= """
        $language ->
             pickSingularOrPlural howMany ( "$translation", "$translation2" )
 """
-templateI18nWithPluralMethodEnd= """
-        other ->
-            translate$nameCamelUpper English howMany
+templateI18nWithPluralMethodDefault= """
+        $language ->
+            translate$nameCamelUpper English howMany --TODO
 """
 
 templateI18nMethod = """
@@ -80,7 +80,7 @@ templateI18nLanguage= """
        $language ->
              "$translation"
 """
-templateI18nMethodEnd= """
-        other ->
-            translate$nameCamelUpper English
+templateI18nMethodDefault= """
+       $language ->
+             translate$nameCamelUpper English --TODO
 """
