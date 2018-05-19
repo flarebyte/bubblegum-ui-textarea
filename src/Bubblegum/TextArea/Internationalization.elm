@@ -21,32 +21,32 @@ pickSingularOrPlural howMany singularOrPlural =
 translateWord : IsoLanguage -> Int -> String
 translateWord language howMany =
     case language of
-        English ->
-            pickSingularOrPlural howMany ( "word", "words" )
-
-        Russian ->
-            pickSingularOrPlural howMany ( "слово", "слова" )
-
-        German ->
-            pickSingularOrPlural howMany ( "wort", "wörter" )
-
-        Spanish ->
-            pickSingularOrPlural howMany ( "palabra", "palabras" )
-
-        Japanese ->
-            pickSingularOrPlural howMany ( "ワード", "言葉" )
-
-        French ->
-            pickSingularOrPlural howMany ( "mot", "mots" )
-
-        Italian ->
-            pickSingularOrPlural howMany ( "parola", "parole" )
+        Arabic ->
+            pickSingularOrPlural howMany ( "كلمة", "كلمات" )
 
         Chinese ->
             pickSingularOrPlural howMany ( "字", "话" )
 
-        Arabic ->
-            pickSingularOrPlural howMany ( "كلمة", "كلمات" )
+        English ->
+            pickSingularOrPlural howMany ( "word", "words" )
+
+        French ->
+            pickSingularOrPlural howMany ( "mot", "mots" )
+
+        German ->
+            pickSingularOrPlural howMany ( "wort", "wörter" )
+
+        Italian ->
+            pickSingularOrPlural howMany ( "parola", "parole" )
+
+        Japanese ->
+            pickSingularOrPlural howMany ( "ワード", "言葉" )
+
+        Russian ->
+            pickSingularOrPlural howMany ( "слово", "слова" )
+
+        Spanish ->
+            pickSingularOrPlural howMany ( "palabra", "palabras" )
 
         Swedish ->
             pickSingularOrPlural howMany ( "word", "words" )
@@ -54,7 +54,7 @@ translateWord language howMany =
         Danish ->
             pickSingularOrPlural howMany ( "word", "words" )
 
-        Indonesian ->
+        Bulgarian ->
             pickSingularOrPlural howMany ( "word", "words" )
 
         Portuguese ->
@@ -72,7 +72,7 @@ translateWord language howMany =
         Turkish ->
             pickSingularOrPlural howMany ( "word", "words" )
 
-        Hebrew ->
+        Czech ->
             pickSingularOrPlural howMany ( "word", "words" )
 
         Romanian ->
@@ -84,7 +84,7 @@ translateWord language howMany =
         Ukrainian ->
             pickSingularOrPlural howMany ( "word", "words" )
 
-        Bulgarian ->
+        Indonesian ->
             pickSingularOrPlural howMany ( "word", "words" )
 
         Norwegian ->
@@ -108,39 +108,39 @@ translateWord language howMany =
         Thai ->
             pickSingularOrPlural howMany ( "word", "words" )
 
-        Czech ->
+        Hebrew ->
             pickSingularOrPlural howMany ( "word", "words" )
 
 
 translateInfoTag : IsoLanguage -> String
 translateInfoTag language =
     case language of
-        English ->
-            "information tag"
-
-        Russian ->
-            "информационный тег"
-
-        German ->
-            "Informationstag"
-
-        Spanish ->
-            "etiqueta de información"
-
-        Japanese ->
-            "情報タグ"
-
-        French ->
-            "étiquette d'information"
-
-        Italian ->
-            "tag di informazione"
+        Arabic ->
+            "علامة المعلومات"
 
         Chinese ->
             "信息標籤"
 
-        Arabic ->
-            "علامة المعلومات"
+        English ->
+            "information tag"
+
+        French ->
+            "étiquette d'information"
+
+        German ->
+            "Informationstag"
+
+        Italian ->
+            "tag di informazione"
+
+        Japanese ->
+            "情報タグ"
+
+        Russian ->
+            "информационный тег"
+
+        Spanish ->
+            "etiqueta de información"
 
         Swedish ->
             "information tag"
@@ -148,7 +148,7 @@ translateInfoTag language =
         Danish ->
             "information tag"
 
-        Indonesian ->
+        Bulgarian ->
             "information tag"
 
         Portuguese ->
@@ -166,7 +166,7 @@ translateInfoTag language =
         Turkish ->
             "information tag"
 
-        Hebrew ->
+        Czech ->
             "information tag"
 
         Romanian ->
@@ -178,7 +178,7 @@ translateInfoTag language =
         Ukrainian ->
             "information tag"
 
-        Bulgarian ->
+        Indonesian ->
             "information tag"
 
         Norwegian ->
@@ -202,39 +202,39 @@ translateInfoTag language =
         Thai ->
             "information tag"
 
-        Czech ->
+        Hebrew ->
             "information tag"
 
 
 translateSuccessTag : IsoLanguage -> String
 translateSuccessTag language =
     case language of
-        English ->
-            "tag indicating success"
-
-        Russian ->
-            "тег указывающий успех"
-
-        German ->
-            "Tag der den Erfolg anzeigt"
-
-        Spanish ->
-            "etiqueta que indica el éxito"
-
-        Japanese ->
-            "成功を示すタグ"
-
-        French ->
-            "étiquette indiquant le succès"
-
-        Italian ->
-            "tag che indica il successo"
+        Arabic ->
+            "العلامة التي تشير إلى النجاح"
 
         Chinese ->
             "成功標籤"
 
-        Arabic ->
-            "العلامة التي تشير إلى النجاح"
+        English ->
+            "tag indicating success"
+
+        French ->
+            "étiquette indiquant le succès"
+
+        German ->
+            "Tag der den Erfolg anzeigt"
+
+        Italian ->
+            "tag che indica il successo"
+
+        Japanese ->
+            "成功を示すタグ"
+
+        Russian ->
+            "тег указывающий успех"
+
+        Spanish ->
+            "etiqueta que indica el éxito"
 
         Swedish ->
             "tag indicating success"
@@ -242,7 +242,7 @@ translateSuccessTag language =
         Danish ->
             "tag indicating success"
 
-        Indonesian ->
+        Bulgarian ->
             "tag indicating success"
 
         Portuguese ->
@@ -260,7 +260,7 @@ translateSuccessTag language =
         Turkish ->
             "tag indicating success"
 
-        Hebrew ->
+        Czech ->
             "tag indicating success"
 
         Romanian ->
@@ -272,7 +272,7 @@ translateSuccessTag language =
         Ukrainian ->
             "tag indicating success"
 
-        Bulgarian ->
+        Indonesian ->
             "tag indicating success"
 
         Norwegian ->
@@ -296,39 +296,39 @@ translateSuccessTag language =
         Thai ->
             "tag indicating success"
 
-        Czech ->
+        Hebrew ->
             "tag indicating success"
 
 
 translateWarningTag : IsoLanguage -> String
 translateWarningTag language =
     case language of
-        English ->
-            "tag indicating warning"
-
-        Russian ->
-            "тег указывающий предупреждение"
-
-        German ->
-            "Tag der die Warnung anzeigt"
-
-        Spanish ->
-            "etiqueta que indica advertencia"
-
-        Japanese ->
-            "警告を示すタグ"
-
-        French ->
-            "étiquette indiquant l'avertissement"
-
-        Italian ->
-            "tag che indica avvertimento"
+        Arabic ->
+            "العلامة التي تشير إلى التحذير"
 
         Chinese ->
             "警告標籤"
 
-        Arabic ->
-            "العلامة التي تشير إلى التحذير"
+        English ->
+            "tag indicating warning"
+
+        French ->
+            "étiquette indiquant l'avertissement"
+
+        German ->
+            "Tag der die Warnung anzeigt"
+
+        Italian ->
+            "tag che indica avvertimento"
+
+        Japanese ->
+            "警告を示すタグ"
+
+        Russian ->
+            "тег указывающий предупреждение"
+
+        Spanish ->
+            "etiqueta que indica advertencia"
 
         Swedish ->
             "tag indicating warning"
@@ -336,7 +336,7 @@ translateWarningTag language =
         Danish ->
             "tag indicating warning"
 
-        Indonesian ->
+        Bulgarian ->
             "tag indicating warning"
 
         Portuguese ->
@@ -354,7 +354,7 @@ translateWarningTag language =
         Turkish ->
             "tag indicating warning"
 
-        Hebrew ->
+        Czech ->
             "tag indicating warning"
 
         Romanian ->
@@ -366,7 +366,7 @@ translateWarningTag language =
         Ukrainian ->
             "tag indicating warning"
 
-        Bulgarian ->
+        Indonesian ->
             "tag indicating warning"
 
         Norwegian ->
@@ -390,39 +390,39 @@ translateWarningTag language =
         Thai ->
             "tag indicating warning"
 
-        Czech ->
+        Hebrew ->
             "tag indicating warning"
 
 
 translateDangerTag : IsoLanguage -> String
 translateDangerTag language =
     case language of
-        English ->
-            "tag indicating danger"
-
-        Russian ->
-            "тег указывающий опасность"
-
-        German ->
-            "Tag der die Gefahr anzeigt"
-
-        Spanish ->
-            "etiqueta que indica peligro"
-
-        Japanese ->
-            "危険を示すタグ"
-
-        French ->
-            "étiquette indiquant le danger"
-
-        Italian ->
-            "tag che indica pericolo"
+        Arabic ->
+            "العلامة التي تشير إلى الخطر"
 
         Chinese ->
             "危險標籤"
 
-        Arabic ->
-            "العلامة التي تشير إلى الخطر"
+        English ->
+            "tag indicating danger"
+
+        French ->
+            "étiquette indiquant le danger"
+
+        German ->
+            "Tag der die Gefahr anzeigt"
+
+        Italian ->
+            "tag che indica pericolo"
+
+        Japanese ->
+            "危険を示すタグ"
+
+        Russian ->
+            "тег указывающий опасность"
+
+        Spanish ->
+            "etiqueta que indica peligro"
 
         Swedish ->
             "tag indicating danger"
@@ -430,7 +430,7 @@ translateDangerTag language =
         Danish ->
             "tag indicating danger"
 
-        Indonesian ->
+        Bulgarian ->
             "tag indicating danger"
 
         Portuguese ->
@@ -448,7 +448,7 @@ translateDangerTag language =
         Turkish ->
             "tag indicating danger"
 
-        Hebrew ->
+        Czech ->
             "tag indicating danger"
 
         Romanian ->
@@ -460,7 +460,7 @@ translateDangerTag language =
         Ukrainian ->
             "tag indicating danger"
 
-        Bulgarian ->
+        Indonesian ->
             "tag indicating danger"
 
         Norwegian ->
@@ -484,39 +484,39 @@ translateDangerTag language =
         Thai ->
             "tag indicating danger"
 
-        Czech ->
+        Hebrew ->
             "tag indicating danger"
 
 
 translateUnit : IsoLanguage -> String
 translateUnit language =
     case language of
-        English ->
-            "unit"
-
-        Russian ->
-            "единица"
-
-        German ->
-            "Einheit"
-
-        Spanish ->
-            "unidad"
-
-        Japanese ->
-            "単位"
-
-        French ->
-            "unité"
-
-        Italian ->
-            "unità"
+        Arabic ->
+            "الوحدة"
 
         Chinese ->
             "單位"
 
-        Arabic ->
-            "الوحدة"
+        English ->
+            "unit"
+
+        French ->
+            "unité"
+
+        German ->
+            "Einheit"
+
+        Italian ->
+            "unità"
+
+        Japanese ->
+            "単位"
+
+        Russian ->
+            "единица"
+
+        Spanish ->
+            "unidad"
 
         Swedish ->
             "unit"
@@ -524,7 +524,7 @@ translateUnit language =
         Danish ->
             "unit"
 
-        Indonesian ->
+        Bulgarian ->
             "unit"
 
         Portuguese ->
@@ -542,7 +542,7 @@ translateUnit language =
         Turkish ->
             "unit"
 
-        Hebrew ->
+        Czech ->
             "unit"
 
         Romanian ->
@@ -554,7 +554,7 @@ translateUnit language =
         Ukrainian ->
             "unit"
 
-        Bulgarian ->
+        Indonesian ->
             "unit"
 
         Norwegian ->
@@ -578,39 +578,39 @@ translateUnit language =
         Thai ->
             "unit"
 
-        Czech ->
+        Hebrew ->
             "unit"
 
 
 translateNumberOfChars : IsoLanguage -> String
 translateNumberOfChars language =
     case language of
-        English ->
-            "number of characters"
-
-        Russian ->
-            "количество символов"
-
-        German ->
-            "Anzahl der Zeichen"
-
-        Spanish ->
-            "número de caracteres"
-
-        Japanese ->
-            "文字数"
-
-        French ->
-            "nombre de caractères"
-
-        Italian ->
-            "numero di caratteri"
+        Arabic ->
+            "عدد الأحرف"
 
         Chinese ->
             "字符數"
 
-        Arabic ->
-            "عدد الأحرف"
+        English ->
+            "number of characters"
+
+        French ->
+            "nombre de caractères"
+
+        German ->
+            "Anzahl der Zeichen"
+
+        Italian ->
+            "numero di caratteri"
+
+        Japanese ->
+            "文字数"
+
+        Russian ->
+            "количество символов"
+
+        Spanish ->
+            "número de caracteres"
 
         Swedish ->
             "number of characters"
@@ -618,7 +618,7 @@ translateNumberOfChars language =
         Danish ->
             "number of characters"
 
-        Indonesian ->
+        Bulgarian ->
             "number of characters"
 
         Portuguese ->
@@ -636,7 +636,7 @@ translateNumberOfChars language =
         Turkish ->
             "number of characters"
 
-        Hebrew ->
+        Czech ->
             "number of characters"
 
         Romanian ->
@@ -648,7 +648,7 @@ translateNumberOfChars language =
         Ukrainian ->
             "number of characters"
 
-        Bulgarian ->
+        Indonesian ->
             "number of characters"
 
         Norwegian ->
@@ -672,39 +672,39 @@ translateNumberOfChars language =
         Thai ->
             "number of characters"
 
-        Czech ->
+        Hebrew ->
             "number of characters"
 
 
 translateNumberOfWords : IsoLanguage -> String
 translateNumberOfWords language =
     case language of
-        English ->
-            "number of words"
-
-        Russian ->
-            "количество слов"
-
-        German ->
-            "Anzahl der Wörter"
-
-        Spanish ->
-            "número de palabras"
-
-        Japanese ->
-            "単語数"
-
-        French ->
-            "nombre de mots"
-
-        Italian ->
-            "numero di parole"
+        Arabic ->
+            "عدد الكلمات"
 
         Chinese ->
             "字數"
 
-        Arabic ->
-            "عدد الكلمات"
+        English ->
+            "number of words"
+
+        French ->
+            "nombre de mots"
+
+        German ->
+            "Anzahl der Wörter"
+
+        Italian ->
+            "numero di parole"
+
+        Japanese ->
+            "単語数"
+
+        Russian ->
+            "количество слов"
+
+        Spanish ->
+            "número de palabras"
 
         Swedish ->
             "number of words"
@@ -712,7 +712,7 @@ translateNumberOfWords language =
         Danish ->
             "number of words"
 
-        Indonesian ->
+        Bulgarian ->
             "number of words"
 
         Portuguese ->
@@ -730,7 +730,7 @@ translateNumberOfWords language =
         Turkish ->
             "number of words"
 
-        Hebrew ->
+        Czech ->
             "number of words"
 
         Romanian ->
@@ -742,7 +742,7 @@ translateNumberOfWords language =
         Ukrainian ->
             "number of words"
 
-        Bulgarian ->
+        Indonesian ->
             "number of words"
 
         Norwegian ->
@@ -766,5 +766,5 @@ translateNumberOfWords language =
         Thai ->
             "number of words"
 
-        Czech ->
+        Hebrew ->
             "number of words"

@@ -20,32 +20,59 @@ getLanguageCode language =
 toIsoLanguage : String -> IsoLanguage
 toIsoLanguage language =
     case getLanguageCode language of
+        "ar" ->
+            Arabic
+
+        "bg" ->
+            Bulgarian
+
+        "zh" ->
+            Chinese
+
+        "cs" ->
+            Czech
+
+        "da" ->
+            Danish
+
+        "nl" ->
+            Dutch
+
         "en" ->
             English
 
-        "ru" ->
-            Russian
-
-        "de" ->
-            German
-
-        "es" ->
-            Spanish
-
-        "ja" ->
-            Japanese
+        "fi" ->
+            Finnish
 
         "fr" ->
             French
 
-        "pt" ->
-            Portuguese
+        "de" ->
+            German
+
+        "el" ->
+            Greek
+
+        "iw" ->
+            Hebrew
+
+        "hu" ->
+            Hungarian
+
+        "in" ->
+            Indonesian
 
         "it" ->
             Italian
 
-        "zh" ->
-            Chinese
+        "ja" ->
+            Japanese
+
+        "ko" ->
+            Korean
+
+        "no" ->
+            Norwegian
 
         "fa" ->
             Persian
@@ -53,95 +80,68 @@ toIsoLanguage language =
         "pl" ->
             Polish
 
-        "nl" ->
-            Dutch
-
-        "tr" ->
-            Turkish
-
-        "cs" ->
-            Czech
-
-        "ko" ->
-            Korean
-
-        "ar" ->
-            Arabic
-
-        "vi" ->
-            Vietnamese
-
-        "sv" ->
-            Swedish
-
-        "el" ->
-            Greek
-
-        "hu" ->
-            Hungarian
+        "pt" ->
+            Portuguese
 
         "ro" ->
             Romanian
 
-        "in" ->
-            Indonesian
+        "ru" ->
+            Russian
 
         "sk" ->
             Slovak
 
-        "da" ->
-            Danish
+        "es" ->
+            Spanish
 
-        "fi" ->
-            Finnish
+        "sv" ->
+            Swedish
 
         "th" ->
             Thai
 
-        "bg" ->
-            Bulgarian
+        "tr" ->
+            Turkish
 
         "uk" ->
             Ukrainian
 
-        "iw" ->
-            Hebrew
-
-        "no" ->
-            Norwegian
+        "vi" ->
+            Vietnamese
 
         _ ->
             English
 
 
 type IsoLanguage
-    = English
-    | Russian
-    | German
-    | Spanish
-    | Japanese
-    | French
-    | Portuguese
-    | Italian
+    = Arabic
+    | Bulgarian
     | Chinese
+    | Czech
+    | Danish
+    | Dutch
+    | English
+    | Finnish
+    | French
+    | German
+    | Greek
+    | Hebrew
+    | Hungarian
+    | Indonesian
+    | Italian
+    | Japanese
+    | Korean
+    | Norwegian
     | Persian
     | Polish
-    | Dutch
-    | Turkish
-    | Czech
-    | Korean
-    | Arabic
-    | Vietnamese
-    | Swedish
-    | Greek
-    | Hungarian
+    | Portuguese
     | Romanian
-    | Indonesian
+    | Russian
     | Slovak
-    | Danish
-    | Finnish
+    | Spanish
+    | Swedish
     | Thai
-    | Bulgarian
+    | Turkish
     | Ukrainian
-    | Hebrew
-    | Norwegian
+    | Vietnamese
