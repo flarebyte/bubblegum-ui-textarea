@@ -4,8 +4,11 @@ module Bubblegum.TextArea.Widget exposing (view)
 
   - Supports multiple languages as well as right to left writing.
   - The widget and the content do not have to use the same language.
-  - You can define targets in term of characters or words and display the progress against them.
+  - You can define targets in term of number of characters or words, and display the progress against them.
   - You can add various tags to describe the content or the status of the content (ex: warning tag)
+
+Please have a look at the main [documentation](https://github.com/flarebyte/bubblegum-ui-textarea) for more details about the possible settings.
+
 
 @docs view
 
@@ -125,10 +128,12 @@ displayTextInfo adapter userSettings settings state =
 {-| View for the widget
 
     attr key value = { id = Nothing , key = key, facets = [], values = [value]}
+    
     adapter = { onInput = OnInputContent }
     userSettings = { attributes = [attr ui_userLanguage "en-US"] }
     settings = { attributes = [attr ui_label "My Story"] }
     state = { attributes = [attr ui_content "Once upon a time ..."] }
+    
     view adapter userSettings settings state
 
 -}
