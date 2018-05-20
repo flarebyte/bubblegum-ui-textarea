@@ -5,7 +5,7 @@ module Bubblegum.TextArea.Adapter exposing (..)
 
 
 {-| Hook into the onInput event
-  See https://www.w3schools.com/jsref/event_oninput.asp
+See <https://www.w3schools.com/jsref/event_oninput.asp>
 
     { onInput = OnInputContent }
 

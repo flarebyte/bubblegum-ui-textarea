@@ -519,6 +519,27 @@ selectorsDangerTag : List Selector
 selectorsDangerTag = [ Selector.classes ["tag", "is-danger"],
     Selector.attribute (Attributes.title "etiqueta que indica peligro") ]
 
+-- The unique id of the content
+withStateContentId: Int -> SettingsEntity.Model
+withStateContentId value = {
+    attributes = [
+        attr ui_contentId (createString value)
+    ]
+ }
+
+fuzzyContentId : Fuzzer Int
+fuzzyContentId=constant 100
+
+fuzzyNotContentId : Fuzzer Int
+fuzzyNotContentId= intRange biggerThanMedium (4*biggerThanMedium)
+
+selectorsContentId : List Selector
+selectorsContentId = [ Selector.tag "textarea" , Selector.attribute (Attributes.id (createString 100))]
+
+selectorsNotContentId : List Selector
+selectorsNotContentId = [ Selector.tag "textarea" ,
+    Selector.attribute (attribute "data-bubblegum-warn" "unsatisfied-constraint:within-string-chars-range:(1,128)") ]
+
 -- private
 
 attr: String -> String -> Attribute.Model

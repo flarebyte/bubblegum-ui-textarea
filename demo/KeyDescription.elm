@@ -7,74 +7,9 @@ module KeyDescription exposing (..)
 -}
 
 
-descSuccessMinimumChars : String
-descSuccessMinimumChars =
-    "The minimum number of characters needed for successful content"
-
-
-descSuccessMaximumChars : String
-descSuccessMaximumChars =
-    "The maximum number of characters needed for successful content"
-
-
-descDangerMinimumChars : String
-descDangerMinimumChars =
-    "Warning when under the minimum number of characters"
-
-
-descDangerMaximumChars : String
-descDangerMaximumChars =
-    "Warning when over the maximum number of characters"
-
-
-descSuccessMinimumWords : String
-descSuccessMinimumWords =
-    "The minimum number of words needed for successful content"
-
-
-descSuccessMaximumWords : String
-descSuccessMaximumWords =
-    "The maximum number of words needed for successful content"
-
-
-descDangerMinimumWords : String
-descDangerMinimumWords =
-    "Warning when under the minimum number of words"
-
-
-descDangerMaximumWords : String
-descDangerMaximumWords =
-    "Warning when over the maximum number of words"
-
-
-descPlaceholder : String
-descPlaceholder =
-    "Short hint describing the expected content"
-
-
-descLabel : String
-descLabel =
-    "Label related to the field"
-
-
-descHelp : String
-descHelp =
-    "Some help tip related to the field"
-
-
-descDangerHelp : String
-descDangerHelp =
-    "Help message to highlight an issue with the content"
-
-
-descContent : String
-descContent =
-    "The content of the field"
-
-
-descUserLanguage : String
-descUserLanguage =
-    "Language used by the user"
+descContentId : String
+descContentId =
+    "The unique id of the content"
 
 
 descContentLanguage : String
@@ -82,19 +17,79 @@ descContentLanguage =
     "Language of the content"
 
 
-descUserRightToLeft : String
-descUserRightToLeft =
-    "Whether the user is using right to left"
-
-
 descContentRightToLeft : String
 descContentRightToLeft =
     "Whether the content requires right to left"
 
 
-descTag : String
-descTag =
-    "Tag used to describe the field"
+descContent : String
+descContent =
+    "The content of the field"
+
+
+descDangerHelp : String
+descDangerHelp =
+    "Help message to highlight an issue with the content"
+
+
+descDangerMaximumChars : String
+descDangerMaximumChars =
+    "Warning when over the maximum number of characters"
+
+
+descDangerMaximumWords : String
+descDangerMaximumWords =
+    "Warning when over the maximum number of words"
+
+
+descDangerMinimumChars : String
+descDangerMinimumChars =
+    "Warning when under the minimum number of characters"
+
+
+descDangerMinimumWords : String
+descDangerMinimumWords =
+    "Warning when under the minimum number of words"
+
+
+descDangerTag : String
+descDangerTag =
+    "Tag representing a dangerous aspect of the content"
+
+
+descHelp : String
+descHelp =
+    "Some help tip related to the field"
+
+
+descLabel : String
+descLabel =
+    "Label related to the field"
+
+
+descPlaceholder : String
+descPlaceholder =
+    "Short hint describing the expected content"
+
+
+descSuccessMaximumChars : String
+descSuccessMaximumChars =
+    "The maximum number of characters needed for successful content"
+
+
+descSuccessMaximumWords : String
+descSuccessMaximumWords =
+    "The maximum number of words needed for successful content"
+
+
+descSuccessMinimumChars : String
+descSuccessMinimumChars =
+    "The minimum number of characters needed for successful content"
+
+
+descSuccessMinimumWords : String
+descSuccessMinimumWords =
+    "The minimum number of words needed for successful content"
 
 
 descSuccessTag : String
@@ -102,11 +97,21 @@ descSuccessTag =
     "Tag representing a successful facet of the content"
 
 
+descTag : String
+descTag =
+    "Tag used to describe the field"
+
+
+descUserLanguage : String
+descUserLanguage =
+    "Language used by the user"
+
+
+descUserRightToLeft : String
+descUserRightToLeft =
+    "Whether the user is using right to left"
+
+
 descWarningTag : String
 descWarningTag =
     "Tag representing a warning aspect of the content"
-
-
-descDangerTag : String
-descDangerTag =
-    "Tag representing a dangerous aspect of the content"

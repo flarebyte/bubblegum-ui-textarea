@@ -62,6 +62,7 @@ calculateRows content =
             40
         )
 
+
 limit100 : Int -> Int
 limit100 value =
     if value > 100 then

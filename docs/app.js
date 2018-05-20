@@ -8848,27 +8848,28 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_StateEntity$Model = functi
 	return {attributes: a};
 };
 
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerTag = 'ui:danger-tag';
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_warningTag = 'ui:warning-tag';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successTag = 'ui:success-tag';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_tag = 'ui:tag';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentRightToLeft = 'ui:content-right-to-left';
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_userRightToLeft = 'ui:user-right-to-left';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentLanguage = 'ui:content-language';
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_userLanguage = 'ui:user-language';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_content = 'ui:content';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerHelp = 'ui:danger-help';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_help = 'ui:help';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_label = 'ui:label';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_placeholder = 'ui:placeholder';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMaximumWords = 'ui:danger-maximum-words';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMinimumWords = 'ui:danger-minimum-words';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMaximumWords = 'ui:success-maximum-words';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_tag = 'ui:tag';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successTag = 'ui:success-tag';
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMinimumWords = 'ui:success-minimum-words';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMaximumChars = 'ui:danger-maximum-chars';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMinimumChars = 'ui:danger-minimum-chars';
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMaximumChars = 'ui:success-maximum-chars';
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMinimumChars = 'ui:success-minimum-chars';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMaximumWords = 'ui:success-maximum-words';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMaximumChars = 'ui:success-maximum-chars';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_placeholder = 'ui:placeholder';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_label = 'ui:label';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_help = 'ui:help';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerTag = 'ui:danger-tag';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMinimumWords = 'ui:danger-minimum-words';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMinimumChars = 'ui:danger-minimum-chars';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMaximumWords = 'ui:danger-maximum-words';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMaximumChars = 'ui:danger-maximum-chars';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerHelp = 'ui:danger-help';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_content = 'ui:content';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentRightToLeft = 'ui:content-right-to-left';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentLanguage = 'ui:content-language';
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentId = 'ui:content-id';
 
 var _flarebyte$bubblegum_ui_textarea$Ipsum$ipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mauris dolor, suscipit at nulla a, molestie scelerisque lectus. Nullam quis leo a felis auctor mollis ac vel turpis. Praesent eleifend ut sem et hendrerit. Vivamus sagittis tortor ipsum, eu suscipit lectus accumsan a. Vivamus elit ante, ornare vitae sem at, ornare eleifend nibh. Mauris venenatis nunc sit amet leo aliquam, in ornare quam vehicula. Morbi consequat ante sed felis semper egestas. Donec efficitur suscipit ipsum vitae ultrices. Quisque eget vehicula odio. Aliquam vitae posuere mauris. Nulla ac pulvinar felis. Integer odio libero, vulputate in erat in, tristique cursus erat.';
 
@@ -10831,29 +10832,11 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getSucc
 			{ctor: '_Tuple2', _0: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMinimumChars, _1: _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMaximumChars},
 			settings.attributes));
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getDangerTag = function (settings) {
-	return A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findListString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerTag, settings.attributes);
-};
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getWarningTag = function (settings) {
 	return A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findListString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_warningTag, settings.attributes);
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getSuccessTag = function (settings) {
-	return A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findListString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successTag, settings.attributes);
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getTag = function (settings) {
-	return A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findListString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_tag, settings.attributes);
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$isContentRightToLeft = function (settings) {
-	return A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findBool, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentRightToLeft, settings.attributes);
-};
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$isUserRightToLeft = function (settings) {
 	return A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findBool, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_userRightToLeft, settings.attributes);
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getContentLanguage = function (settings) {
-	return A2(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange,
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitSmallRangeNotEmpty,
-		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentLanguage, settings.attributes));
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getUserLanguage = function (settings) {
 	return A2(
@@ -10861,23 +10844,17 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getUser
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitSmallRangeNotEmpty,
 		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_userLanguage, settings.attributes));
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getContent = function (settings) {
-	return A2(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange,
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitVeryLargeRange,
-		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_content, settings.attributes));
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getTag = function (settings) {
+	return A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findListString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_tag, settings.attributes);
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getDangerHelp = function (settings) {
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getSuccessTag = function (settings) {
+	return A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findListString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successTag, settings.attributes);
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getPlaceholder = function (settings) {
 	return A2(
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange,
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitMediumRangeNotEmpty,
-		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerHelp, settings.attributes));
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getHelp = function (settings) {
-	return A2(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange,
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitMediumRangeNotEmpty,
-		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_help, settings.attributes));
+		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_placeholder, settings.attributes));
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getLabel = function (settings) {
 	return A2(
@@ -10885,11 +10862,41 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getLabe
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitMediumRangeNotEmpty,
 		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_label, settings.attributes));
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getPlaceholder = function (settings) {
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getHelp = function (settings) {
 	return A2(
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange,
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitMediumRangeNotEmpty,
-		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_placeholder, settings.attributes));
+		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_help, settings.attributes));
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getDangerTag = function (settings) {
+	return A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findListString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerTag, settings.attributes);
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getDangerHelp = function (settings) {
+	return A2(
+		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange,
+		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitMediumRangeNotEmpty,
+		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerHelp, settings.attributes));
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getContent = function (settings) {
+	return A2(
+		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange,
+		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitVeryLargeRange,
+		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_content, settings.attributes));
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$isContentRightToLeft = function (settings) {
+	return A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findBool, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentRightToLeft, settings.attributes);
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getContentLanguage = function (settings) {
+	return A2(
+		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange,
+		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitSmallRangeNotEmpty,
+		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentLanguage, settings.attributes));
+};
+var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getContentId = function (settings) {
+	return A2(
+		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange,
+		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitMediumRangeNotEmpty,
+		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentId, settings.attributes));
 };
 
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getContentLanguageOrEnglish = function (settings) {
@@ -11181,6 +11188,10 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$view = F4(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendAttributeIfSuccess,
 			_elm_lang$html$Html_Attributes$lang,
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getContentLanguage(userSettings));
+		var addContentId = A2(
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendAttributeIfSuccess,
+			_elm_lang$html$Html_Attributes$id,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getContentId(state));
 		var addPlaceholder = A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendAttributeIfSuccess,
 			_elm_lang$html$Html_Attributes$placeholder,
@@ -11213,15 +11224,16 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$view = F4(
 												addContentRtl(
 													addContentLanguage(
 														addPlaceholder(
-															{
-																ctor: '::',
-																_0: _elm_lang$html$Html_Attributes$class('bubblegum-textarea__input textarea is-marginless is-paddingless is-shadowless'),
-																_1: {
+															addContentId(
+																{
 																	ctor: '::',
-																	_0: _elm_lang$html$Html_Events$onInput(adapter.onInput),
-																	_1: {ctor: '[]'}
-																}
-															}))))),
+																	_0: _elm_lang$html$Html_Attributes$class('bubblegum-textarea__input textarea is-marginless is-paddingless is-shadowless'),
+																	_1: {
+																		ctor: '::',
+																		_0: _elm_lang$html$Html_Events$onInput(adapter.onInput),
+																		_1: {ctor: '[]'}
+																	}
+																})))))),
 										{ctor: '[]'}),
 									_1: {
 										ctor: '::',
@@ -11257,27 +11269,28 @@ var _flarebyte$bubblegum_ui_textarea$AttributeDoc$OneOrMany = {ctor: 'OneOrMany'
 var _flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne = {ctor: 'ZeroOrOne'};
 var _flarebyte$bubblegum_ui_textarea$AttributeDoc$OnlyOne = {ctor: 'OnlyOne'};
 
-var _flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerTag = 'Tag representing a dangerous aspect of the content';
 var _flarebyte$bubblegum_ui_textarea$KeyDescription$descWarningTag = 'Tag representing a warning aspect of the content';
-var _flarebyte$bubblegum_ui_textarea$KeyDescription$descSuccessTag = 'Tag representing a successful facet of the content';
-var _flarebyte$bubblegum_ui_textarea$KeyDescription$descTag = 'Tag used to describe the field';
-var _flarebyte$bubblegum_ui_textarea$KeyDescription$descContentRightToLeft = 'Whether the content requires right to left';
 var _flarebyte$bubblegum_ui_textarea$KeyDescription$descUserRightToLeft = 'Whether the user is using right to left';
-var _flarebyte$bubblegum_ui_textarea$KeyDescription$descContentLanguage = 'Language of the content';
 var _flarebyte$bubblegum_ui_textarea$KeyDescription$descUserLanguage = 'Language used by the user';
-var _flarebyte$bubblegum_ui_textarea$KeyDescription$descContent = 'The content of the field';
-var _flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerHelp = 'Help message to highlight an issue with the content';
-var _flarebyte$bubblegum_ui_textarea$KeyDescription$descHelp = 'Some help tip related to the field';
-var _flarebyte$bubblegum_ui_textarea$KeyDescription$descLabel = 'Label related to the field';
-var _flarebyte$bubblegum_ui_textarea$KeyDescription$descPlaceholder = 'Short hint describing the expected content';
-var _flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerMaximumWords = 'Warning when over the maximum number of words';
-var _flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerMinimumWords = 'Warning when under the minimum number of words';
-var _flarebyte$bubblegum_ui_textarea$KeyDescription$descSuccessMaximumWords = 'The maximum number of words needed for successful content';
+var _flarebyte$bubblegum_ui_textarea$KeyDescription$descTag = 'Tag used to describe the field';
+var _flarebyte$bubblegum_ui_textarea$KeyDescription$descSuccessTag = 'Tag representing a successful facet of the content';
 var _flarebyte$bubblegum_ui_textarea$KeyDescription$descSuccessMinimumWords = 'The minimum number of words needed for successful content';
-var _flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerMaximumChars = 'Warning when over the maximum number of characters';
-var _flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerMinimumChars = 'Warning when under the minimum number of characters';
-var _flarebyte$bubblegum_ui_textarea$KeyDescription$descSuccessMaximumChars = 'The maximum number of characters needed for successful content';
 var _flarebyte$bubblegum_ui_textarea$KeyDescription$descSuccessMinimumChars = 'The minimum number of characters needed for successful content';
+var _flarebyte$bubblegum_ui_textarea$KeyDescription$descSuccessMaximumWords = 'The maximum number of words needed for successful content';
+var _flarebyte$bubblegum_ui_textarea$KeyDescription$descSuccessMaximumChars = 'The maximum number of characters needed for successful content';
+var _flarebyte$bubblegum_ui_textarea$KeyDescription$descPlaceholder = 'Short hint describing the expected content';
+var _flarebyte$bubblegum_ui_textarea$KeyDescription$descLabel = 'Label related to the field';
+var _flarebyte$bubblegum_ui_textarea$KeyDescription$descHelp = 'Some help tip related to the field';
+var _flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerTag = 'Tag representing a dangerous aspect of the content';
+var _flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerMinimumWords = 'Warning when under the minimum number of words';
+var _flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerMinimumChars = 'Warning when under the minimum number of characters';
+var _flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerMaximumWords = 'Warning when over the maximum number of words';
+var _flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerMaximumChars = 'Warning when over the maximum number of characters';
+var _flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerHelp = 'Help message to highlight an issue with the content';
+var _flarebyte$bubblegum_ui_textarea$KeyDescription$descContent = 'The content of the field';
+var _flarebyte$bubblegum_ui_textarea$KeyDescription$descContentRightToLeft = 'Whether the content requires right to left';
+var _flarebyte$bubblegum_ui_textarea$KeyDescription$descContentLanguage = 'Language of the content';
+var _flarebyte$bubblegum_ui_textarea$KeyDescription$descContentId = 'The unique id of the content';
 
 var _flarebyte$bubblegum_ui_textarea$PackageJson$Model = F5(
 	function (a, b, c, d, e) {
@@ -11307,7 +11320,7 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 		ctor: '::',
 		_0: A4(
 			_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_userLanguage,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentLanguage,
 			_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 			{
 				ctor: '::',
@@ -11346,41 +11359,62 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 					}
 				}
 			},
-			_flarebyte$bubblegum_ui_textarea$KeyDescription$descUserLanguage),
+			_flarebyte$bubblegum_ui_textarea$KeyDescription$descContentLanguage),
 		_1: {
 			ctor: '::',
 			_0: A4(
 				_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentLanguage,
+				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentRightToLeft,
 				_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 				{
 					ctor: '::',
-					_0: 'en-GB',
+					_0: 'true',
 					_1: {
 						ctor: '::',
-						_0: 'ja',
+						_0: 'false',
 						_1: {
 							ctor: '::',
-							_0: 'ar',
+							_0: 'other',
+							_1: {ctor: '[]'}
+						}
+					}
+				},
+				_flarebyte$bubblegum_ui_textarea$KeyDescription$descContentRightToLeft),
+			_1: {
+				ctor: '::',
+				_0: A4(
+					_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_userLanguage,
+					_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
+					{
+						ctor: '::',
+						_0: 'en-GB',
+						_1: {
+							ctor: '::',
+							_0: 'ja',
 							_1: {
 								ctor: '::',
-								_0: 'zh-CN-SC',
+								_0: 'ar',
 								_1: {
 									ctor: '::',
-									_0: 'ru-RUS',
+									_0: 'zh-CN-SC',
 									_1: {
 										ctor: '::',
-										_0: 'es',
+										_0: 'ru-RUS',
 										_1: {
 											ctor: '::',
-											_0: 'it',
+											_0: 'es',
 											_1: {
 												ctor: '::',
-												_0: 'fr',
+												_0: 'it',
 												_1: {
 													ctor: '::',
-													_0: 'other',
-													_1: {ctor: '[]'}
+													_0: 'fr',
+													_1: {
+														ctor: '::',
+														_0: 'other',
+														_1: {ctor: '[]'}
+													}
 												}
 											}
 										}
@@ -11388,34 +11422,13 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 								}
 							}
 						}
-					}
-				},
-				_flarebyte$bubblegum_ui_textarea$KeyDescription$descContentLanguage),
-			_1: {
-				ctor: '::',
-				_0: A4(
-					_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_userRightToLeft,
-					_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
-					{
-						ctor: '::',
-						_0: 'true',
-						_1: {
-							ctor: '::',
-							_0: 'false',
-							_1: {
-								ctor: '::',
-								_0: 'other',
-								_1: {ctor: '[]'}
-							}
-						}
 					},
-					_flarebyte$bubblegum_ui_textarea$KeyDescription$descUserRightToLeft),
+					_flarebyte$bubblegum_ui_textarea$KeyDescription$descUserLanguage),
 				_1: {
 					ctor: '::',
 					_0: A4(
 						_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-						_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentRightToLeft,
+						_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_userRightToLeft,
 						_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 						{
 							ctor: '::',
@@ -11430,7 +11443,7 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 								}
 							}
 						},
-						_flarebyte$bubblegum_ui_textarea$KeyDescription$descContentRightToLeft),
+						_flarebyte$bubblegum_ui_textarea$KeyDescription$descUserRightToLeft),
 					_1: {ctor: '[]'}
 				}
 			}
@@ -11440,7 +11453,7 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 		ctor: '::',
 		_0: A4(
 			_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMinimumChars,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMaximumChars,
 			_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 			{
 				ctor: '::',
@@ -11471,12 +11484,12 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 					}
 				}
 			},
-			_flarebyte$bubblegum_ui_textarea$KeyDescription$descSuccessMinimumChars),
+			_flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerMaximumChars),
 		_1: {
 			ctor: '::',
 			_0: A4(
 				_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMaximumChars,
+				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMaximumWords,
 				_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 				{
 					ctor: '::',
@@ -11507,7 +11520,7 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 						}
 					}
 				},
-				_flarebyte$bubblegum_ui_textarea$KeyDescription$descSuccessMaximumChars),
+				_flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerMaximumWords),
 			_1: {
 				ctor: '::',
 				_0: A4(
@@ -11548,7 +11561,7 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 					ctor: '::',
 					_0: A4(
 						_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-						_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMaximumChars,
+						_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMinimumWords,
 						_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 						{
 							ctor: '::',
@@ -11579,120 +11592,76 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 								}
 							}
 						},
-						_flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerMaximumChars),
+						_flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerMinimumWords),
 					_1: {
 						ctor: '::',
 						_0: A4(
 							_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-							_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMinimumWords,
+							_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_help,
 							_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 							{
 								ctor: '::',
-								_0: '0',
+								_0: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
 								_1: {
 									ctor: '::',
-									_0: '20',
+									_0: '助けて',
 									_1: {
 										ctor: '::',
-										_0: '40',
-										_1: {
-											ctor: '::',
-											_0: '80',
-											_1: {
-												ctor: '::',
-												_0: '160',
-												_1: {
-													ctor: '::',
-													_0: '320',
-													_1: {
-														ctor: '::',
-														_0: '-5',
-														_1: {ctor: '[]'}
-													}
-												}
-											}
-										}
+										_0: 'other',
+										_1: {ctor: '[]'}
 									}
 								}
 							},
-							_flarebyte$bubblegum_ui_textarea$KeyDescription$descSuccessMinimumWords),
+							_flarebyte$bubblegum_ui_textarea$KeyDescription$descHelp),
 						_1: {
 							ctor: '::',
 							_0: A4(
 								_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-								_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMaximumWords,
+								_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_label,
 								_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 								{
 									ctor: '::',
-									_0: '0',
+									_0: 'Some label',
 									_1: {
 										ctor: '::',
-										_0: '20',
+										_0: 'ラベル',
 										_1: {
 											ctor: '::',
-											_0: '40',
+											_0: 'ضع الكلمة المناسبة',
 											_1: {
 												ctor: '::',
-												_0: '80',
-												_1: {
-													ctor: '::',
-													_0: '160',
-													_1: {
-														ctor: '::',
-														_0: '320',
-														_1: {
-															ctor: '::',
-															_0: '-5',
-															_1: {ctor: '[]'}
-														}
-													}
-												}
+												_0: 'other',
+												_1: {ctor: '[]'}
 											}
 										}
 									}
 								},
-								_flarebyte$bubblegum_ui_textarea$KeyDescription$descSuccessMaximumWords),
+								_flarebyte$bubblegum_ui_textarea$KeyDescription$descLabel),
 							_1: {
 								ctor: '::',
 								_0: A4(
 									_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-									_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMinimumWords,
+									_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_placeholder,
 									_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 									{
 										ctor: '::',
-										_0: '0',
+										_0: 'Some placeholder',
 										_1: {
 											ctor: '::',
-											_0: '20',
+											_0: 'プレースホルダ',
 											_1: {
 												ctor: '::',
-												_0: '40',
-												_1: {
-													ctor: '::',
-													_0: '80',
-													_1: {
-														ctor: '::',
-														_0: '160',
-														_1: {
-															ctor: '::',
-															_0: '320',
-															_1: {
-																ctor: '::',
-																_0: '-5',
-																_1: {ctor: '[]'}
-															}
-														}
-													}
-												}
+												_0: 'other',
+												_1: {ctor: '[]'}
 											}
 										}
 									},
-									_flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerMinimumWords),
+									_flarebyte$bubblegum_ui_textarea$KeyDescription$descPlaceholder),
 								_1: {
 									ctor: '::',
 									_0: A4(
 										_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-										_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerMaximumWords,
+										_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMaximumChars,
 										_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 										{
 											ctor: '::',
@@ -11723,71 +11692,115 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 												}
 											}
 										},
-										_flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerMaximumWords),
+										_flarebyte$bubblegum_ui_textarea$KeyDescription$descSuccessMaximumChars),
 									_1: {
 										ctor: '::',
 										_0: A4(
 											_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-											_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_placeholder,
+											_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMaximumWords,
 											_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 											{
 												ctor: '::',
-												_0: 'Some placeholder',
+												_0: '0',
 												_1: {
 													ctor: '::',
-													_0: 'プレースホルダ',
+													_0: '20',
 													_1: {
 														ctor: '::',
-														_0: 'other',
-														_1: {ctor: '[]'}
+														_0: '40',
+														_1: {
+															ctor: '::',
+															_0: '80',
+															_1: {
+																ctor: '::',
+																_0: '160',
+																_1: {
+																	ctor: '::',
+																	_0: '320',
+																	_1: {
+																		ctor: '::',
+																		_0: '-5',
+																		_1: {ctor: '[]'}
+																	}
+																}
+															}
+														}
 													}
 												}
 											},
-											_flarebyte$bubblegum_ui_textarea$KeyDescription$descPlaceholder),
+											_flarebyte$bubblegum_ui_textarea$KeyDescription$descSuccessMaximumWords),
 										_1: {
 											ctor: '::',
 											_0: A4(
 												_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-												_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_label,
+												_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMinimumChars,
 												_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 												{
 													ctor: '::',
-													_0: 'Some label',
+													_0: '0',
 													_1: {
 														ctor: '::',
-														_0: 'ラベル',
+														_0: '20',
 														_1: {
 															ctor: '::',
-															_0: 'ضع الكلمة المناسبة',
+															_0: '40',
 															_1: {
 																ctor: '::',
-																_0: 'other',
-																_1: {ctor: '[]'}
+																_0: '80',
+																_1: {
+																	ctor: '::',
+																	_0: '160',
+																	_1: {
+																		ctor: '::',
+																		_0: '320',
+																		_1: {
+																			ctor: '::',
+																			_0: '-5',
+																			_1: {ctor: '[]'}
+																		}
+																	}
+																}
 															}
 														}
 													}
 												},
-												_flarebyte$bubblegum_ui_textarea$KeyDescription$descLabel),
+												_flarebyte$bubblegum_ui_textarea$KeyDescription$descSuccessMinimumChars),
 											_1: {
 												ctor: '::',
 												_0: A4(
 													_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-													_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_help,
+													_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successMinimumWords,
 													_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 													{
 														ctor: '::',
-														_0: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+														_0: '0',
 														_1: {
 															ctor: '::',
-															_0: '助けて',
+															_0: '20',
 															_1: {
 																ctor: '::',
-																_0: 'other',
-																_1: {ctor: '[]'}
+																_0: '40',
+																_1: {
+																	ctor: '::',
+																	_0: '80',
+																	_1: {
+																		ctor: '::',
+																		_0: '160',
+																		_1: {
+																			ctor: '::',
+																			_0: '320',
+																			_1: {
+																				ctor: '::',
+																				_0: '-5',
+																				_1: {ctor: '[]'}
+																			}
+																		}
+																	}
+																}
 															}
 														}
 													},
-													_flarebyte$bubblegum_ui_textarea$KeyDescription$descHelp),
+													_flarebyte$bubblegum_ui_textarea$KeyDescription$descSuccessMinimumWords),
 												_1: {
 													ctor: '::',
 													_0: A4(
@@ -11829,18 +11842,18 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 		ctor: '::',
 		_0: A4(
 			_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerHelp,
+			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentId,
 			_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 			{
 				ctor: '::',
-				_0: 'do not do this',
+				_0: 'id:aa61e603-9947-4fd8-86bb-d63a682259d0',
 				_1: {
 					ctor: '::',
 					_0: 'other',
 					_1: {ctor: '[]'}
 				}
 			},
-			_flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerHelp),
+			_flarebyte$bubblegum_ui_textarea$KeyDescription$descContentId),
 		_1: {
 			ctor: '::',
 			_0: A4(
@@ -11861,38 +11874,30 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 				ctor: '::',
 				_0: A4(
 					_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successTag,
+					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerHelp,
 					_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 					{
 						ctor: '::',
-						_0: 'spelling',
+						_0: 'do not do this',
 						_1: {
 							ctor: '::',
-							_0: 'concise',
-							_1: {
-								ctor: '::',
-								_0: 'italian',
-								_1: {
-									ctor: '::',
-									_0: 'other',
-									_1: {ctor: '[]'}
-								}
-							}
+							_0: 'other',
+							_1: {ctor: '[]'}
 						}
 					},
-					_flarebyte$bubblegum_ui_textarea$KeyDescription$descSuccessTag),
+					_flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerHelp),
 				_1: {
 					ctor: '::',
 					_0: A4(
 						_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-						_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_warningTag,
+						_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerTag,
 						_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 						{
 							ctor: '::',
-							_0: 'grammar',
+							_0: 'sensitive',
 							_1: {
 								ctor: '::',
-								_0: 'synonyms',
+								_0: 'save',
 								_1: {
 									ctor: '::',
 									_0: 'other',
@@ -11900,28 +11905,53 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 								}
 							}
 						},
-						_flarebyte$bubblegum_ui_textarea$KeyDescription$descWarningTag),
+						_flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerTag),
 					_1: {
 						ctor: '::',
 						_0: A4(
 							_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
-							_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerTag,
+							_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_successTag,
 							_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
 							{
 								ctor: '::',
-								_0: 'sensitive',
+								_0: 'spelling',
 								_1: {
 									ctor: '::',
-									_0: 'save',
+									_0: 'concise',
 									_1: {
 										ctor: '::',
-										_0: 'other',
-										_1: {ctor: '[]'}
+										_0: 'italian',
+										_1: {
+											ctor: '::',
+											_0: 'other',
+											_1: {ctor: '[]'}
+										}
 									}
 								}
 							},
-							_flarebyte$bubblegum_ui_textarea$KeyDescription$descDangerTag),
-						_1: {ctor: '[]'}
+							_flarebyte$bubblegum_ui_textarea$KeyDescription$descSuccessTag),
+						_1: {
+							ctor: '::',
+							_0: A4(
+								_flarebyte$bubblegum_ui_textarea$AttributeDoc$createKey,
+								_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_warningTag,
+								_flarebyte$bubblegum_ui_textarea$AttributeDoc$ZeroOrOne,
+								{
+									ctor: '::',
+									_0: 'grammar',
+									_1: {
+										ctor: '::',
+										_0: 'synonyms',
+										_1: {
+											ctor: '::',
+											_0: 'other',
+											_1: {ctor: '[]'}
+										}
+									}
+								},
+								_flarebyte$bubblegum_ui_textarea$KeyDescription$descWarningTag),
+							_1: {ctor: '[]'}
+						}
 					}
 				}
 			}

@@ -1,7 +1,6 @@
 module Bubblegum.TextArea.EntityHelper exposing (..)
 
 {-| Basic functions for the VocabularyHelper to facilitate the retrieval of data from the configuration
-  
 -}
 
 import Bubblegum.Entity.Attribute as Attribute

@@ -14,11 +14,57 @@ import Bubblegum.TextArea.HelperLimits exposing (..)
 import Bubblegum.TextArea.Vocabulary exposing (..)
 
 
-{-| Short hint describing the expected content
+{-| The unique id of the content
 -}
-getPlaceholder : SettingsEntity.Model -> Outcome String
-getPlaceholder settings =
-    findString ui_placeholder settings.attributes
+getContentId : SettingsEntity.Model -> Outcome String
+getContentId settings =
+    findString ui_contentId settings.attributes
+        |> Validation.withinStringCharsRange limitMediumRangeNotEmpty
+
+
+{-| Language of the content
+-}
+getContentLanguage : SettingsEntity.Model -> Outcome String
+getContentLanguage settings =
+    findString ui_contentLanguage settings.attributes
+        |> Validation.withinStringCharsRange limitSmallRangeNotEmpty
+
+
+{-| Whether the content requires right to left
+-}
+isContentRightToLeft : SettingsEntity.Model -> Outcome Bool
+isContentRightToLeft settings =
+    findBool ui_contentRightToLeft settings.attributes
+
+
+{-| The content of the field
+-}
+getContent : SettingsEntity.Model -> Outcome String
+getContent settings =
+    findString ui_content settings.attributes
+        |> Validation.withinStringCharsRange limitVeryLargeRange
+
+
+{-| Help message to highlight an issue with the content
+-}
+getDangerHelp : SettingsEntity.Model -> Outcome String
+getDangerHelp settings =
+    findString ui_dangerHelp settings.attributes
+        |> Validation.withinStringCharsRange limitMediumRangeNotEmpty
+
+
+{-| Tag representing a dangerous aspect of the content
+-}
+getDangerTag : SettingsEntity.Model -> Outcome (List String)
+getDangerTag settings =
+    findListString ui_dangerTag settings.attributes
+
+
+{-| Some help tip related to the field
+-}
+getHelp : SettingsEntity.Model -> Outcome String
+getHelp settings =
+    findString ui_help settings.attributes
         |> Validation.withinStringCharsRange limitMediumRangeNotEmpty
 
 
@@ -30,28 +76,26 @@ getLabel settings =
         |> Validation.withinStringCharsRange limitMediumRangeNotEmpty
 
 
-{-| Some help tip related to the field
+{-| Short hint describing the expected content
 -}
-getHelp : SettingsEntity.Model -> Outcome String
-getHelp settings =
-    findString ui_help settings.attributes
+getPlaceholder : SettingsEntity.Model -> Outcome String
+getPlaceholder settings =
+    findString ui_placeholder settings.attributes
         |> Validation.withinStringCharsRange limitMediumRangeNotEmpty
 
 
-{-| Help message to highlight an issue with the content
+{-| Tag representing a successful facet of the content
 -}
-getDangerHelp : SettingsEntity.Model -> Outcome String
-getDangerHelp settings =
-    findString ui_dangerHelp settings.attributes
-        |> Validation.withinStringCharsRange limitMediumRangeNotEmpty
+getSuccessTag : SettingsEntity.Model -> Outcome (List String)
+getSuccessTag settings =
+    findListString ui_successTag settings.attributes
 
 
-{-| The content of the field
+{-| Tag used to describe the field
 -}
-getContent : SettingsEntity.Model -> Outcome String
-getContent settings =
-    findString ui_content settings.attributes
-        |> Validation.withinStringCharsRange limitVeryLargeRange
+getTag : SettingsEntity.Model -> Outcome (List String)
+getTag settings =
+    findListString ui_tag settings.attributes
 
 
 {-| Language used by the user
@@ -62,14 +106,6 @@ getUserLanguage settings =
         |> Validation.withinStringCharsRange limitSmallRangeNotEmpty
 
 
-{-| Language of the content
--}
-getContentLanguage : SettingsEntity.Model -> Outcome String
-getContentLanguage settings =
-    findString ui_contentLanguage settings.attributes
-        |> Validation.withinStringCharsRange limitSmallRangeNotEmpty
-
-
 {-| Whether the user is using right to left
 -}
 isUserRightToLeft : SettingsEntity.Model -> Outcome Bool
@@ -77,39 +113,11 @@ isUserRightToLeft settings =
     findBool ui_userRightToLeft settings.attributes
 
 
-{-| Whether the content requires right to left
--}
-isContentRightToLeft : SettingsEntity.Model -> Outcome Bool
-isContentRightToLeft settings =
-    findBool ui_contentRightToLeft settings.attributes
-
-
-{-| Tag used to describe the field
--}
-getTag : SettingsEntity.Model -> Outcome (List String)
-getTag settings =
-    findListString ui_tag settings.attributes
-
-
-{-| Tag representing a successful facet of the content
--}
-getSuccessTag : SettingsEntity.Model -> Outcome (List String)
-getSuccessTag settings =
-    findListString ui_successTag settings.attributes
-
-
 {-| Tag representing a warning aspect of the content
 -}
 getWarningTag : SettingsEntity.Model -> Outcome (List String)
 getWarningTag settings =
     findListString ui_warningTag settings.attributes
-
-
-{-| Tag representing a dangerous aspect of the content
--}
-getDangerTag : SettingsEntity.Model -> Outcome (List String)
-getDangerTag settings =
-    findListString ui_dangerTag settings.attributes
 
 
 {-| The range of characters accepted for successful content

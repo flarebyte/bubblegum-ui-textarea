@@ -2,9 +2,9 @@ module Bubblegum.TextArea.BulmaHelper exposing (..)
 
 {-| The Bulma css framework is used for styling the widget.
 
-  See https://bulma.io/documentation/ 
+See <https://bulma.io/documentation/>
 
-  This helper facilitates the creation of Bulma styled html elements.
+This helper facilitates the creation of Bulma styled html elements.
 
 -}
 
@@ -47,12 +47,17 @@ appendAttributeIfSuccess ifSuccess outcome attributes =
         Valid success ->
             attributes ++ [ ifSuccess success ]
 
+
+
 -- Various helpers
+
+
 type alias StyledText =
     { text : String
     , style : String
     , title : String
     }
+
 
 styleTextChar : IsoLanguage -> Int -> String -> StyledText
 styleTextChar userIsoLanguage number status =
