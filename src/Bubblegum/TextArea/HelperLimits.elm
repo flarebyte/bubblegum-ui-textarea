@@ -1,9 +1,6 @@
 module Bubblegum.TextArea.HelperLimits exposing (..)
 
-{-| Setting key
-
-@docs Model
-
+{-| Various limits used accross the widget
 -}
 
 

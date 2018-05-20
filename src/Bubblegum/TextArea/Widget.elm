@@ -1,6 +1,10 @@
 module Bubblegum.TextArea.Widget exposing (view)
 
-{-| Setting key
+{-| A flexible textarea widget with the following features:
+ * Supports multiple languages as well as right to left writing.
+ * The widget and the content do not have to use the same language.
+ * You can define targets in term of characters or words and display the progress against them.
+ * You can add various tags to describe the content or the status of the content (ex: warning tag)
 
 @docs view
 
@@ -19,14 +23,11 @@ import Html.Attributes exposing (..)
 import Html.Events exposing (onClick, onInput, onMouseEnter, onMouseOut)
 import Maybe
 import String exposing (lines, words)
-import Tuple exposing (first, second)
 
 
 {-
-   The pogress bar is available only if a number of words has been defined for measuring progress
+   Various progress and information html displayed below the main textarea
 -}
-
-
 displayTextInfo : TextAreaAdapter.Model msg -> SettingsEntity.Model -> SettingsEntity.Model -> StateEntity.Model -> Html msg
 displayTextInfo adapter userSettings settings state =
     let
@@ -118,7 +119,14 @@ displayTextInfo adapter userSettings settings state =
         ]
 
 
-{-| The core representation of a field.
+{-| View for the widget
+    
+    attr key value = { id = Nothing , key = key, facets = [], values = [value]}
+    adapter = { onInput = OnInputContent }
+    userSettings = { attributes = [attr ui_userLanguage "en-US"] }
+    settings = { attributes = [attr ui_label "My Story"] }
+    state = { attributes = [attr ui_content "Once upon a time ..."] }
+    view adapter userSettings settings state
 -}
 view : TextAreaAdapter.Model msg -> SettingsEntity.Model -> SettingsEntity.Model -> StateEntity.Model -> Html msg
 view adapter userSettings settings state =

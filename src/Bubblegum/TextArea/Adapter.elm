@@ -1,13 +1,14 @@
 module Bubblegum.TextArea.Adapter exposing (..)
 
-{-| Setting key
-
-@docs Model
-
+{-| Adapter which converts event handlers for the texterea widget
 -}
 
 
-{-| The core representation of a field.
+{-| Hook into the onInput event
+  See https://www.w3schools.com/jsref/event_oninput.asp
+
+    { onInput = OnInputContent }
+
 -}
 type alias Model msg =
     { onInput : String -> msg

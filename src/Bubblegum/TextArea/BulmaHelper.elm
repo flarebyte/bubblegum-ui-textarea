@@ -1,8 +1,10 @@
 module Bubblegum.TextArea.BulmaHelper exposing (..)
 
-{-| Setting key
+{-| The Bulma css framework is used for styling the widget.
 
-@docs Model
+  See https://bulma.io/documentation/ 
+
+  This helper facilitates the creation of Bulma styled html elements.
 
 -}
 
@@ -16,13 +18,8 @@ import String exposing (join, lines, words)
 import Tuple exposing (first, second)
 
 
-type alias StyledText =
-    { text : String
-    , style : String
-    , title : String
-    }
-
-
+{-| Append some html code when the outcome is successful otherwise hide a warning in the html
+-}
 appendHtmlIfSuccess : (a -> Html.Html msg) -> Outcome a -> List (Html.Html msg) -> List (Html.Html msg)
 appendHtmlIfSuccess ifSuccess outcome htmlList =
     case outcome of
@@ -36,6 +33,8 @@ appendHtmlIfSuccess ifSuccess outcome htmlList =
             htmlList ++ [ ifSuccess success ]
 
 
+{-| Append a html attribute when the outcome is successful otherwise hide a warning in the html
+-}
 appendAttributeIfSuccess : (a -> Attribute msg) -> Outcome a -> List (Attribute msg) -> List (Attribute msg)
 appendAttributeIfSuccess ifSuccess outcome attributes =
     case outcome of
@@ -48,6 +47,12 @@ appendAttributeIfSuccess ifSuccess outcome attributes =
         Valid success ->
             attributes ++ [ ifSuccess success ]
 
+-- Various helpers
+type alias StyledText =
+    { text : String
+    , style : String
+    , title : String
+    }
 
 styleTextChar : IsoLanguage -> Int -> String -> StyledText
 styleTextChar userIsoLanguage number status =

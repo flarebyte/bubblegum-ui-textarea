@@ -1,15 +1,10 @@
 module Bubblegum.TextArea.Helper exposing (..)
 
-{-| Setting key
-
-@docs Model
-
+{-| Helper to keep the noise away from Widget
 -}
 
 import Bubblegum.Entity.Outcome as Outcome exposing (..)
 import Bubblegum.Entity.SettingsEntity as SettingsEntity
-import Bubblegum.Entity.Validation as Validation
-import Bubblegum.TextArea.EntityHelper exposing (..)
 import Bubblegum.TextArea.IsoLanguage exposing (IsoLanguage(..), toIsoLanguage)
 import Bubblegum.TextArea.VocabularyHelper exposing (getContentLanguage, getUserLanguage)
 import List
@@ -66,11 +61,6 @@ calculateRows content =
          else
             40
         )
-
-
-
--- The new title length is 70 characters before Google will truncate the title with ellipses
-
 
 limit100 : Int -> Int
 limit100 value =

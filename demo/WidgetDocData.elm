@@ -16,8 +16,8 @@ textAreaWidgetDoc : WidgetDoc
 textAreaWidgetDoc =
     { meta = WidgetPackageJson.meta
     , userSettings =
-        [ createKey ui_userLanguage ZeroOrOne [ "en-GB", "ja", "ar", "other" ] descUserLanguage
-        , createKey ui_contentLanguage ZeroOrOne [ "en-GB", "ja", "ar", "other" ] descContentLanguage
+        [ createKey ui_userLanguage ZeroOrOne [ "en-GB", "ja", "ar", "zh-CN-SC", "ru-RUS", "es", "it", "fr", "other" ] descUserLanguage
+        , createKey ui_contentLanguage ZeroOrOne [ "en-GB", "ja", "ar", "zh-CN-SC", "ru-RUS", "es", "it", "fr", "other" ] descContentLanguage
         , createKey ui_userRightToLeft ZeroOrOne [ "true", "false", "other" ] descUserRightToLeft
         , createKey ui_contentRightToLeft ZeroOrOne [ "true", "false", "other" ] descContentRightToLeft
         ]

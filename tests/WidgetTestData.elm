@@ -1,6 +1,6 @@
 module WidgetTestData exposing (..)
 
-{-| Setting key
+{-| Tests data to be used by the unit tests which are themselves generated automatically.
 
 -}
 

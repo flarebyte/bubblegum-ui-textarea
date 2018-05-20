@@ -11320,8 +11320,28 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 						_0: 'ar',
 						_1: {
 							ctor: '::',
-							_0: 'other',
-							_1: {ctor: '[]'}
+							_0: 'zh-CN-SC',
+							_1: {
+								ctor: '::',
+								_0: 'ru-RUS',
+								_1: {
+									ctor: '::',
+									_0: 'es',
+									_1: {
+										ctor: '::',
+										_0: 'it',
+										_1: {
+											ctor: '::',
+											_0: 'fr',
+											_1: {
+												ctor: '::',
+												_0: 'other',
+												_1: {ctor: '[]'}
+											}
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -11344,8 +11364,28 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocData$textAreaWidgetDoc = {
 							_0: 'ar',
 							_1: {
 								ctor: '::',
-								_0: 'other',
-								_1: {ctor: '[]'}
+								_0: 'zh-CN-SC',
+								_1: {
+									ctor: '::',
+									_0: 'ru-RUS',
+									_1: {
+										ctor: '::',
+										_0: 'es',
+										_1: {
+											ctor: '::',
+											_0: 'it',
+											_1: {
+												ctor: '::',
+												_0: 'fr',
+												_1: {
+													ctor: '::',
+													_0: 'other',
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									}
+								}
 							}
 						}
 					}
