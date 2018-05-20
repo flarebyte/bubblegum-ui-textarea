@@ -40,6 +40,7 @@ defaultAdapter =
 defaultUserSettings: SettingsEntity.Model
 defaultUserSettings = {
     attributes = [
+        attr ui_userLanguage "es-ES"
     ]
  }
 
@@ -143,7 +144,7 @@ fuzzyNotDangerMinimumChars= Fuzz.oneOf [
 
 selectorsDangerMinimumChars : List Selector
 selectorsDangerMinimumChars = [ Selector.classes ["tag", "is-danger"], 
-    Selector.attribute (Attributes.title "number of characters") ]
+    Selector.attribute (Attributes.title "número de caracteres") ]
 
 -- Warning when over the maximum number of characters
 withSettingsDangerMaximumChars: Int -> SettingsEntity.Model
@@ -165,7 +166,7 @@ fuzzyNotDangerMaximumChars= Fuzz.oneOf [
 
 selectorsDangerMaximumChars : List Selector
 selectorsDangerMaximumChars = [ Selector.classes ["tag", "is-danger"],
- Selector.attribute (Attributes.title "number of characters") ]
+ Selector.attribute (Attributes.title "número de caracteres") ]
 
 -- The minimum number of words needed for successful content
 withSettingsSuccessMinimumWords: Int -> SettingsEntity.Model
@@ -229,7 +230,7 @@ fuzzyNotDangerMinimumWords= Fuzz.oneOf [
 
 selectorsDangerMinimumWords : List Selector
 selectorsDangerMinimumWords = [ Selector.classes ["tag", "is-danger"],
-    Selector.attribute (Attributes.title "number of words") ]
+    Selector.attribute (Attributes.title "número de palabras") ]
 
 -- Warning when over the maximum number of words
 withSettingsDangerMaximumWords: Int -> SettingsEntity.Model
@@ -251,7 +252,7 @@ fuzzyNotDangerMaximumWords= Fuzz.oneOf [
 
 selectorsDangerMaximumWords : List Selector
 selectorsDangerMaximumWords = [ Selector.classes ["tag", "is-danger"],
- Selector.attribute (Attributes.title "number of words") ]
+ Selector.attribute (Attributes.title "número de palabras") ]
 
 -- Short hint describing the expected content
 withSettingsPlaceholder: Int -> SettingsEntity.Model
@@ -323,7 +324,7 @@ fuzzyNotTag : Fuzzer Int
 fuzzyNotTag= intRange 300 400
 
 selectorsTag : List Selector
-selectorsTag = [ Selector.attribute (Attributes.title "tag") ]
+selectorsTag = [ Selector.attribute (Attributes.title "etiqueta de información") ]
 
 -- Language used by the user
 
@@ -480,7 +481,7 @@ fuzzyNotSuccessTag= intRange 300 400
 
 selectorsSuccessTag : List Selector
 selectorsSuccessTag = [ Selector.classes ["tag", "is-success"],
-    Selector.attribute (Attributes.title "tag") ]
+    Selector.attribute (Attributes.title "etiqueta que indica el éxito") ]
 
 -- Tag representing a warning aspect of the content
 withStateWarningTag: Int -> SettingsEntity.Model
@@ -498,7 +499,7 @@ fuzzyNotWarningTag= intRange 300 400
 
 selectorsWarningTag : List Selector
 selectorsWarningTag = [ Selector.classes ["tag", "is-warning"],
-    Selector.attribute (Attributes.title "tag") ]
+    Selector.attribute (Attributes.title "etiqueta que indica advertencia") ]
 
 -- Tag representing a dangerous aspect of the content
 withStateDangerTag: Int -> SettingsEntity.Model
@@ -516,7 +517,7 @@ fuzzyNotDangerTag= intRange 300 400
 
 selectorsDangerTag : List Selector
 selectorsDangerTag = [ Selector.classes ["tag", "is-danger"],
-    Selector.attribute (Attributes.title "tag") ]
+    Selector.attribute (Attributes.title "etiqueta que indica peligro") ]
 
 -- private
 
