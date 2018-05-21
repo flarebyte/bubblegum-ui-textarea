@@ -191,25 +191,10 @@ templateWidgetCreateTestsStateWrongAttr = """
 """
 
 templateTemp = """
--- $description
-withState$nameCamel: Int -> SettingsEntity.Model
-withState$nameCamel value = {
-    attributes = [
-        attr ui_tag (createString value)
-    ]
- }
-
-fuzzy$nameCamel : Fuzzer Int
-fuzzy$nameCamel=intRange 1 30
-
-fuzzyNot$nameCamel : Fuzzer Int
-fuzzyNot$nameCamel= intRange 300 400
-
-selectors$nameCamel : List Selector
-selectors$nameCamel = [ Selector.attribute (attribute "title" "tag") ]
 
 """
 
+templateReadme = """ * **ui:$name** : $description ($signature)"""
 
 footerWidgetCreateTests = """
             ]

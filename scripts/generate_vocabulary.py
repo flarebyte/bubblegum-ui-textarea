@@ -60,7 +60,6 @@ def createKeyDescription():
     file.close()    
 
 
-
 def createVocabularyHelper():
     content = readCsv(ui_keys_csv)
     rangeContent = readCsv(ui_range_keys_csv)
