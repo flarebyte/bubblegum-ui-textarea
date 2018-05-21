@@ -9,7 +9,6 @@ module Bubblegum.TextArea.Widget exposing (view)
 
 Please have a look at the main [documentation](https://github.com/flarebyte/bubblegum-ui-textarea) for more details about the possible settings.
 
-
 @docs view
 
 -}
@@ -128,12 +127,12 @@ displayTextInfo adapter userSettings settings state =
 {-| View for the widget
 
     attr key value = { id = Nothing , key = key, facets = [], values = [value]}
-    
+
     adapter = { onInput = OnInputContent }
     userSettings = { attributes = [attr ui_userLanguage "en-US"] }
     settings = { attributes = [attr ui_label "My Story"] }
     state = { attributes = [attr ui_content "Once upon a time ..."] }
-    
+
     view adapter userSettings settings state
 
 -}

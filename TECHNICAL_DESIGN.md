@@ -112,22 +112,41 @@ The unit test code is under the tests folder:
 * WidgetCreateTests.elm: the unit tests for testing all the main settings (generated from scripts/ui-keys.csv and scripts/ui-range-keys.csv)
 * WidgetTestData.elm: Some data to support the unit tests
 
+You can run the unit-test:
+```
+elm-test
+```
+
 #### Demo
 
 All the code to demo the widget is available under demo.
 
-#### Scripts
+You can build the demo:
+```
+make build
+```
 
-The code for the python code generators is under the folder scripts.
+And then run the demo:
+```
+make start
+```
 
-### Code generation
+#### Code generation
 
-Code generation is usually not very developer friendly as it increases the level of abstraction. However, it is acually a good fit with strongly typed language like Elm. It helps with naming conventions and reduce the amount of boring repetitive tasks.
+Code generation is usually not very developer friendly as it increases the level of abstraction. However, it is acually a good fit with strongly typed language like Elm. It helps with naming conventions and reduces the amount of boring repetitive tasks.
 However, when this libary is more mature, we could decide to get rid of them, a bit like you would get rid of the scaffolding once the house is built. Still, they can be a helpful boost when building a different widget.
 
 The code generators are written for Python 2.7 and do not require any dependencies. They work out of the box on Mac Os and probably on Linux. 
 
 It is probably easier to understand how the generators work by looking at the files they are trying to produce.
+
+The code for the python code generators is under the folder scripts.
+
+You can run the generators:
+
+```
+make generate
+``` 
 
 ### Internationalisation & Accessibility
 
