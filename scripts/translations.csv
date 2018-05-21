@@ -1,0 +1,9 @@
+Arabic,كلمة;كلمات,علامة المعلومات , العلامة التي تشير إلى النجاح , العلامة التي تشير إلى التحذير , العلامة التي تشير إلى الخطر , الوحدة , عدد الأحرف , عدد الكلمات,الحد الأدنى لعدد الأحرف المتوقع , الحد الأدنى لعدد الكلمات المتوقع
+Chinese,字;话,信息標籤,成功標籤,警告標籤,危險標籤,單位,字符數,字數,最少预期字符数,预计最少字数
+English,word;words,information tag, tag indicating success, tag indicating warning, tag indicating danger, unit, number of characters, number of words, minimum number of characters expected, minimum number of words expected
+French,mot;mots,étiquette d'information, étiquette indiquant le succès, étiquette indiquant l'avertissement, étiquette indiquant le danger, unité, nombre de caractères, nombre de mots, nombre minimum de caractères attendus, nombre minimum de mots attendus
+German,wort;wörter,Informationstag, Tag der den Erfolg anzeigt, Tag der die Warnung anzeigt, Tag der die Gefahr anzeigt, Einheit, Anzahl der Zeichen, Anzahl der Wörter, Mindestanzahl der erwarteten Zeichen, Mindestanzahl der erwarteten Wörter
+Italian,parola;parole,tag di informazione, tag che indica il successo, tag che indica avvertimento, tag che indica pericolo, unità, numero di caratteri, numero di parole, numero minimo di caratteri previsto, numero minimo di parole previsto
+Japanese,ワード;言葉,情報タグ,成功を示すタグ,警告を示すタグ,危険を示すタグ,単位,文字数,単語数,期待される最小文字数,予想される単語の最小数
+Russian,слово;слова, информационный тег, тег указывающий успех, тег указывающий предупреждение, тег указывающий опасность, единица, количество символов, количество слов,минимальное количество ожидаемых символов, минимальное количество ожидаемых слов
+Spanish,palabra;palabras,etiqueta de información, etiqueta que indica el éxito, etiqueta que indica advertencia, etiqueta que indica peligro, unidad, número de caracteres, número de palabras, número mínimo de caracteres esperado, número mínimo de palabras esperado
