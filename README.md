@@ -2,6 +2,8 @@
 
 > TextArea widget for the Bubblegum UI toolkit
 
+You can see a [demo](https://flarebyte.github.io/bubblegum-ui-textarea/)
+
 ### Installing Elm packages
 
 There is no dependency.
