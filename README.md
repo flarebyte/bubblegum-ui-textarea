@@ -92,6 +92,10 @@ state = {
  * **ui:success-tag** : Tag representing a successful facet of the content (List String)
  * **ui:warning-tag** : Tag representing a warning aspect of the content (List String)
 
+## Technical design
+
+See [Technical design](TECHNICAL_DESIGN.md)
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
