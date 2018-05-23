@@ -4,7 +4,9 @@
 
 [![Build Status](https://semaphoreci.com/api/v1/olih/bubblegum-ui-textarea/branches/master/badge.svg)](https://semaphoreci.com/olih/bubblegum-ui-textarea)
 
-You can see a [demo](https://flarebyte.github.io/bubblegum-ui-textarea/)
+Please check the [demo](https://flarebyte.github.io/bubblegum-ui-textarea/)
+
+![Text Area Widget](text-area-widget.jpg)
 
 ### Installing Elm packages
 

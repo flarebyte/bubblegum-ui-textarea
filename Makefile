@@ -3,7 +3,6 @@
 SRC = src
 DOCS = docs
 DEMO = demo
-hash := ""
 
 reset:
 	rm -rf elm-stuff
@@ -11,6 +10,9 @@ reset:
 	rm -rf docs
 
 build: test beautify build-directory js html mint doc
+
+build-ci:
+	sh scripts/build-ci.sh
 
 install:
 	elm-package install -y
