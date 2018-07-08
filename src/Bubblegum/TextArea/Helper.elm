@@ -3,13 +3,13 @@ module Bubblegum.TextArea.Helper exposing (..)
 {-| Helper to keep the noise away from Widget
 -}
 
-import Bubblegum.Entity.Outcome as Outcome exposing (..)
+import Bubblegum.Entity.Outcome as Outcome exposing (Outcome(..))
 import Bubblegum.Entity.SettingsEntity as SettingsEntity
 import Bubblegum.TextArea.IsoLanguage exposing (IsoLanguage(..), toIsoLanguage)
 import Bubblegum.TextArea.VocabularyHelper exposing (getContentLanguage, getUserLanguage)
 import List
-import Maybe exposing (..)
-import String exposing (lines, words)
+import Maybe as Maybe
+import String exposing (lines)
 import Tuple exposing (first, second)
 
 

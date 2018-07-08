@@ -1,10 +1,16 @@
-module Bubblegum.TextArea.EntityHelper exposing (..)
+module Bubblegum.TextArea.EntityHelper
+    exposing
+        ( findBool
+        , findIntRange
+        , findListString
+        , findString
+        )
 
 {-| Basic functions for the VocabularyHelper to facilitate the retrieval of data from the configuration
 -}
 
 import Bubblegum.Entity.Attribute as Attribute
-import Bubblegum.Entity.Outcome as Outcome exposing (..)
+import Bubblegum.Entity.Outcome exposing (Outcome(..))
 import Bubblegum.Entity.Validation as Validation
 import Bubblegum.TextArea.HelperLimits exposing (limitList, limitSmallRangeNotEmpty)
 

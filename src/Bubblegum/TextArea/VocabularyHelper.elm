@@ -6,7 +6,7 @@ module Bubblegum.TextArea.VocabularyHelper exposing (..)
 
 -}
 
-import Bubblegum.Entity.Outcome as Outcome exposing (..)
+import Bubblegum.Entity.Outcome exposing (..)
 import Bubblegum.Entity.SettingsEntity as SettingsEntity
 import Bubblegum.Entity.Validation as Validation
 import Bubblegum.TextArea.EntityHelper exposing (..)
