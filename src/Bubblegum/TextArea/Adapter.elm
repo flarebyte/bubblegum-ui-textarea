@@ -1,4 +1,4 @@
-module Bubblegum.TextArea.Adapter exposing (..)
+module Bubblegum.TextArea.Adapter exposing (Model)
 
 {-| Adapter which converts event handlers for the texterea widget
 -}

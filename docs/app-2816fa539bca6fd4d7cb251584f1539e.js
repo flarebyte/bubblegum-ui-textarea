@@ -8528,7 +8528,7 @@ var _elm_lang$html$Html_Events$Options = F2(
 		return {stopPropagation: a, preventDefault: b};
 	});
 
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$isWarning = function (outcome) {
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$isWarning = function (outcome) {
 	var _p0 = outcome;
 	if (_p0.ctor === 'Warning') {
 		return true;
@@ -8536,7 +8536,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$isWarning = functi
 		return false;
 	}
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$isNone = function (outcome) {
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$isNone = function (outcome) {
 	var _p1 = outcome;
 	if (_p1.ctor === 'None') {
 		return true;
@@ -8544,7 +8544,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$isNone = function 
 		return false;
 	}
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$isValid = function (outcome) {
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$isValid = function (outcome) {
 	var _p2 = outcome;
 	if (_p2.ctor === 'Valid') {
 		return true;
@@ -8552,7 +8552,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$isValid = function
 		return false;
 	}
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$toMaybe = function (outcome) {
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$toMaybe = function (outcome) {
 	var _p3 = outcome;
 	switch (_p3.ctor) {
 		case 'None':
@@ -8563,10 +8563,10 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$toMaybe = function
 			return _elm_lang$core$Maybe$Just(_p3._0);
 	}
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning = function (a) {
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$Warning = function (a) {
 	return {ctor: 'Warning', _0: a};
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$or = F2(
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$or = F2(
 	function (ma, mb) {
 		var _p4 = ma;
 		switch (_p4.ctor) {
@@ -8575,39 +8575,39 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$or = F2(
 			case 'Valid':
 				return ma;
 			default:
-				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(_p4._0);
+				return _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$Warning(_p4._0);
 		}
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$None = {ctor: 'None'};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Valid = function (a) {
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$None = {ctor: 'None'};
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$Valid = function (a) {
 	return {ctor: 'Valid', _0: a};
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$withDefault = F2(
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$withDefault = F2(
 	function (def, outcome) {
 		var _p5 = outcome;
 		switch (_p5.ctor) {
 			case 'Valid':
-				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Valid(_p5._0);
+				return _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$Valid(_p5._0);
 			case 'None':
-				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Valid(def);
+				return _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$Valid(def);
 			default:
-				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(_p5._0);
+				return _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$Warning(_p5._0);
 		}
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map = F2(
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map = F2(
 	function (func, ra) {
 		var _p6 = ra;
 		switch (_p6.ctor) {
 			case 'Valid':
-				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Valid(
+				return _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$Valid(
 					func(_p6._0));
 			case 'None':
-				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$None;
+				return _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$None;
 			default:
-				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(_p6._0);
+				return _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$Warning(_p6._0);
 		}
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2 = F3(
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map2 = F3(
 	function (func, ra, rb) {
 		var _p7 = {ctor: '_Tuple2', _0: ra, _1: rb};
 		_v7_6:
@@ -8616,81 +8616,85 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2 = F3(
 				case 'Valid':
 					switch (_p7._1.ctor) {
 						case 'Valid':
-							return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Valid(
+							return _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$Valid(
 								A2(func, _p7._0._0, _p7._1._0));
 						case 'None':
-							return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$None;
+							return _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$None;
 						default:
 							break _v7_6;
 					}
 				case 'None':
 					switch (_p7._1.ctor) {
 						case 'None':
-							return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$None;
+							return _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$None;
 						case 'Valid':
-							return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$None;
+							return _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$None;
 						default:
 							break _v7_6;
 					}
 				default:
 					if (_p7._1.ctor === 'Warning') {
-						return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(
+						return _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$Warning(
 							A2(_elm_lang$core$Basics_ops['++'], _p7._0._0, _p7._1._0));
 					} else {
-						return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(_p7._0._0);
+						return _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$Warning(_p7._0._0);
 					}
 			}
 		} while(false);
-		return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(_p7._1._0);
+		return _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$Warning(_p7._1._0);
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check = F3(
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check = F3(
 	function (checker, warnMsg, ra) {
 		var _p8 = ra;
 		switch (_p8.ctor) {
 			case 'None':
-				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$None;
+				return _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$None;
 			case 'Warning':
-				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(_p8._0);
+				return _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$Warning(_p8._0);
 			default:
 				var _p9 = _p8._0;
-				return checker(_p9) ? _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Valid(_p9) : _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(warnMsg);
+				return checker(_p9) ? _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$Valid(_p9) : _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$Warning(warnMsg);
 		}
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$checkOrNone = F2(
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$checkOrNone = F2(
 	function (checker, ra) {
 		var _p10 = ra;
 		switch (_p10.ctor) {
 			case 'None':
-				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$None;
+				return _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$None;
 			case 'Warning':
-				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(_p10._0);
+				return _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$Warning(_p10._0);
 			default:
 				var _p11 = _p10._0;
-				return checker(_p11) ? _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Valid(_p11) : _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$None;
+				return checker(_p11) ? _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$Valid(_p11) : _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$None;
 		}
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$trueMapToConstant = F2(
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$trueMapToConstant = F2(
 	function ($const, outcome) {
 		var _p12 = outcome;
 		switch (_p12.ctor) {
 			case 'None':
-				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$None;
+				return _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$None;
 			case 'Warning':
-				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Warning(_p12._0);
+				return _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$Warning(_p12._0);
 			default:
-				return _p12._0 ? _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Valid($const) : _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$None;
+				return _p12._0 ? _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$Valid($const) : _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$None;
 		}
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$fromMaybe = function (maybe) {
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$fromMaybe = function (maybe) {
 	var _p13 = maybe;
 	if (_p13.ctor === 'Just') {
-		return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$Valid(_p13._0);
+		return _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$Valid(_p13._0);
 	} else {
-		return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$None;
+		return _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$None;
 	}
 };
 
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$deleteAttributeByKey = F2(
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$createTuple = F2(
+	function (a, b) {
+		return {ctor: '_Tuple2', _0: a, _1: b};
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$deleteAttributeByKey = F2(
 	function (key, attributes) {
 		return A2(
 			_elm_lang$core$List$filter,
@@ -8699,11 +8703,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$deleteAttributeB
 			},
 			attributes);
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$createTuple = F2(
-	function (a, b) {
-		return {ctor: '_Tuple2', _0: a, _1: b};
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findAttributeByKey = F2(
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$findAttributeByKey = F2(
 	function (key, attributes) {
 		findAttributeByKey:
 		while (true) {
@@ -8724,7 +8724,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findAttributeByK
 			}
 		}
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findAttributeFirstValueByKey = F2(
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$findAttributeFirstValueByKey = F2(
 	function (key, attributes) {
 		return A2(
 			_elm_lang$core$Maybe$andThen,
@@ -8734,19 +8734,19 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findAttributeFir
 				function (_) {
 					return _.values;
 				},
-				A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findAttributeByKey, key, attributes)));
+				A2(_flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$findAttributeByKey, key, attributes)));
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findOutcomeByKey = F2(
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$findOutcomeByKey = F2(
 	function (key, attributes) {
-		return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$fromMaybe(
+		return _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$fromMaybe(
 			A2(
 				_elm_lang$core$Maybe$map,
 				function (_) {
 					return _.values;
 				},
-				A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findAttributeByKey, key, attributes)));
+				A2(_flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$findAttributeByKey, key, attributes)));
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findOutcomeByKeyTuple = F2(
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$findOutcomeByKeyTuple = F2(
 	function (tuple, attributes) {
 		var b = A2(
 			_elm_lang$core$Maybe$map,
@@ -8754,7 +8754,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findOutcomeByKey
 				return _.values;
 			},
 			A2(
-				_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findAttributeByKey,
+				_flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$findAttributeByKey,
 				_elm_lang$core$Tuple$second(tuple),
 				attributes));
 		var a = A2(
@@ -8763,26 +8763,26 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findOutcomeByKey
 				return _.values;
 			},
 			A2(
-				_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findAttributeByKey,
+				_flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$findAttributeByKey,
 				_elm_lang$core$Tuple$first(tuple),
 				attributes));
-		var ab = A3(_elm_lang$core$Maybe$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$createTuple, a, b);
-		return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$fromMaybe(ab);
+		var ab = A3(_elm_lang$core$Maybe$map2, _flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$createTuple, a, b);
+		return _flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$fromMaybe(ab);
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$blankAttribute = {
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$blankAttribute = {
 	id: _elm_lang$core$Maybe$Nothing,
 	key: '',
 	facets: {ctor: '[]'},
 	values: {ctor: '[]'}
 };
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$replaceAttributeByKey = F3(
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$replaceAttributeByKey = F3(
 	function (key, values, attributes) {
 		var existingOrNew = A2(
 			_elm_lang$core$Maybe$withDefault,
 			_elm_lang$core$Native_Utils.update(
-				_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$blankAttribute,
+				_flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$blankAttribute,
 				{key: key}),
-			A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findAttributeByKey, key, attributes));
+			A2(_flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$findAttributeByKey, key, attributes));
 		return A2(
 			F2(
 				function (x, y) {
@@ -8795,57 +8795,580 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$replaceAttribute
 					{values: values}),
 				_1: {ctor: '[]'}
 			},
-			A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$deleteAttributeByKey, key, attributes));
+			A2(_flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$deleteAttributeByKey, key, attributes));
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$setValues = F2(
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$setValues = F2(
 	function (values, model) {
 		return _elm_lang$core$Native_Utils.update(
 			model,
 			{values: values});
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$setFacets = F2(
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$setFacets = F2(
 	function (facets, model) {
 		return _elm_lang$core$Native_Utils.update(
 			model,
 			{facets: facets});
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$setKey = F2(
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$setKey = F2(
 	function (key, model) {
 		return _elm_lang$core$Native_Utils.update(
 			model,
 			{key: key});
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$setId = F2(
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$setId = F2(
 	function (id, model) {
 		return _elm_lang$core$Native_Utils.update(
 			model,
 			{id: id});
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$Model = F4(
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$Model = F4(
 	function (a, b, c, d) {
-		return {id: a, key: b, facets: c, values: d};
+		return {id: a, key: b, values: c, facets: d};
 	});
 
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_SettingsEntity$setAttributes = F2(
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_SettingsEntity$setAttributes = F2(
 	function (attributes, model) {
 		return _elm_lang$core$Native_Utils.update(
 			model,
 			{attributes: attributes});
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_SettingsEntity$asAttributesIn = _elm_lang$core$Basics$flip(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_SettingsEntity$setAttributes);
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_SettingsEntity$Model = function (a) {
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_SettingsEntity$asAttributesIn = _elm_lang$core$Basics$flip(_flarebyte$bubblegum_entity$Bubblegum_Entity_SettingsEntity$setAttributes);
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_SettingsEntity$Model = function (a) {
 	return {attributes: a};
 };
 
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_StateEntity$setAttributes = F2(
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_StateEntity$setAttributes = F2(
 	function (attributes, model) {
 		return _elm_lang$core$Native_Utils.update(
 			model,
 			{attributes: attributes});
 	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_StateEntity$asAttributesIn = _elm_lang$core$Basics$flip(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_StateEntity$setAttributes);
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_StateEntity$Model = function (a) {
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_StateEntity$asAttributesIn = _elm_lang$core$Basics$flip(_flarebyte$bubblegum_entity$Bubblegum_Entity_StateEntity$setAttributes);
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_StateEntity$Model = function (a) {
 	return {attributes: a};
+};
+
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$isBool = function (value) {
+	return A2(
+		_elm_lang$core$List$member,
+		_elm_lang$core$String$toLower(value),
+		{
+			ctor: '::',
+			_0: 'true',
+			_1: {
+				ctor: '::',
+				_0: 'false',
+				_1: {ctor: '[]'}
+			}
+		});
+};
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$stringToBool = function (value) {
+	return _elm_lang$core$Native_Utils.eq(value, 'true');
+};
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$floatOrZero = function (value) {
+	return A2(
+		_elm_lang$core$Result$withDefault,
+		0,
+		_elm_lang$core$String$toFloat(value));
+};
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$intOrZero = function (value) {
+	return A2(
+		_elm_lang$core$Result$withDefault,
+		0,
+		_elm_lang$core$String$toInt(value));
+};
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$isFloat = function (value) {
+	var _p0 = _elm_lang$core$String$toFloat(value);
+	if (_p0.ctor === 'Ok') {
+		return true;
+	} else {
+		return false;
+	}
+};
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$isInt = function (value) {
+	var _p1 = _elm_lang$core$String$toInt(value);
+	if (_p1.ctor === 'Ok') {
+		return true;
+	} else {
+		return false;
+	}
+};
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$onlyTuple = function (listTuple) {
+	var _p2 = listTuple;
+	if (((((_p2.ctor === '_Tuple2') && (_p2._0.ctor === '::')) && (_p2._0._1.ctor === '[]')) && (_p2._1.ctor === '::')) && (_p2._1._1.ctor === '[]')) {
+		return {ctor: '_Tuple2', _0: _p2._0._0, _1: _p2._1._0};
+	} else {
+		return {ctor: '_Tuple2', _0: 'should-never-happen', _1: 'should-never-happen'};
+	}
+};
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$onlyOne = function (list) {
+	return A2(
+		_elm_lang$core$Maybe$withDefault,
+		'should-never-happen',
+		_elm_lang$core$List$head(list));
+};
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$helperStrictlyLessThan = F2(
+	function (expected, list) {
+		return _elm_lang$core$Native_Utils.cmp(
+			_elm_lang$core$List$length(list),
+			expected) < 0;
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$helperLessThan = F2(
+	function (expected, list) {
+		return _elm_lang$core$Native_Utils.cmp(
+			_elm_lang$core$List$length(list),
+			expected) < 1;
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$helperStrictlyMoreThan = F2(
+	function (expected, list) {
+		return _elm_lang$core$Native_Utils.cmp(
+			_elm_lang$core$List$length(list),
+			expected) > 0;
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$helperMoreThan = F2(
+	function (expected, list) {
+		return _elm_lang$core$Native_Utils.cmp(
+			_elm_lang$core$List$length(list),
+			expected) > -1;
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$matchListSize = F2(
+	function (expected, list) {
+		return _elm_lang$core$Native_Utils.eq(
+			_elm_lang$core$List$length(list),
+			expected);
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$helperCharsRange = F2(
+	function (range, str) {
+		return (_elm_lang$core$Native_Utils.cmp(
+			_elm_lang$core$String$length(str),
+			_elm_lang$core$Tuple$first(range)) > -1) && (_elm_lang$core$Native_Utils.cmp(
+			_elm_lang$core$String$length(str),
+			_elm_lang$core$Tuple$second(range)) < 0);
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$withinListStringCharsRange = F2(
+	function (range, outcome) {
+		return A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			function (list) {
+				return A2(
+					_elm_lang$core$List$all,
+					_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$helperCharsRange(range),
+					list);
+			},
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				'unsatisfied-constraint:within-list-string-chars-range:',
+				_elm_lang$core$Basics$toString(range)),
+			outcome);
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$withinStringCharsRange = F2(
+	function (range, outcome) {
+		return A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$helperCharsRange(range),
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				'unsatisfied-constraint:within-string-chars-range:',
+				_elm_lang$core$Basics$toString(range)),
+			outcome);
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$withinFloatRange = F2(
+	function (range, outcome) {
+		return A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			function (t) {
+				return (_elm_lang$core$Native_Utils.cmp(
+					_elm_lang$core$Tuple$first(t),
+					_elm_lang$core$Tuple$first(range)) > -1) && (_elm_lang$core$Native_Utils.cmp(
+					_elm_lang$core$Tuple$second(t),
+					_elm_lang$core$Tuple$second(range)) < 0);
+			},
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				'unsatisfied-constraint:within-float-range:',
+				_elm_lang$core$Basics$toString(range)),
+			outcome);
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$withinIntRange = F2(
+	function (range, outcome) {
+		return A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			function (t) {
+				return (_elm_lang$core$Native_Utils.cmp(
+					_elm_lang$core$Tuple$first(t),
+					_elm_lang$core$Tuple$first(range)) > -1) && (_elm_lang$core$Native_Utils.cmp(
+					_elm_lang$core$Tuple$second(t),
+					_elm_lang$core$Tuple$second(range)) < 0);
+			},
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				'unsatisfied-constraint:within-int-range:',
+				_elm_lang$core$Basics$toString(range)),
+			outcome);
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$asFloatRange = function (outcome) {
+	return A3(
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+		function (t) {
+			return _elm_lang$core$Native_Utils.cmp(
+				_elm_lang$core$Tuple$first(t),
+				_elm_lang$core$Tuple$second(t)) < 0;
+		},
+		'unsatisfied-constraint:float-range',
+		outcome);
+};
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$asIntRange = function (outcome) {
+	return A3(
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+		function (t) {
+			return _elm_lang$core$Native_Utils.cmp(
+				_elm_lang$core$Tuple$first(t),
+				_elm_lang$core$Tuple$second(t)) < 0;
+		},
+		'unsatisfied-constraint:int-range',
+		outcome);
+};
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$asFloatTuple = function (outcome) {
+	return A2(
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map,
+		function (t) {
+			return {
+				ctor: '_Tuple2',
+				_0: _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$floatOrZero(
+					_elm_lang$core$Tuple$first(t)),
+				_1: _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$floatOrZero(
+					_elm_lang$core$Tuple$second(t))
+			};
+		},
+		A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			function (t) {
+				return _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$isFloat(
+					_elm_lang$core$Tuple$first(t)) && _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$isFloat(
+					_elm_lang$core$Tuple$second(t));
+			},
+			'unsatisfied-constraint:float-tuple',
+			outcome));
+};
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$asIntTuple = function (outcome) {
+	return A2(
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map,
+		function (t) {
+			return {
+				ctor: '_Tuple2',
+				_0: _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$intOrZero(
+					_elm_lang$core$Tuple$first(t)),
+				_1: _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$intOrZero(
+					_elm_lang$core$Tuple$second(t))
+			};
+		},
+		A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			function (t) {
+				return _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$isInt(
+					_elm_lang$core$Tuple$first(t)) && _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$isInt(
+					_elm_lang$core$Tuple$second(t));
+			},
+			'unsatisfied-constraint:int-tuple',
+			outcome));
+};
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$matchNormalizedString = function (outcome) {
+	return A3(
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+		function (v) {
+			return !A2(_elm_lang$core$String$contains, '\n', v);
+		},
+		'unsatisfied-constraint:normalized-string',
+		outcome);
+};
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$matchRegex = F2(
+	function (regExp, outcome) {
+		var re = _elm_lang$core$Regex$regex(
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				'^',
+				A2(_elm_lang$core$Basics_ops['++'], regExp, '$')));
+		return A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			function (v) {
+				return A2(_elm_lang$core$Regex$contains, re, v);
+			},
+			'unsatisfied-constraint:regex',
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$matchNormalizedString(outcome));
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$matchAbsoluteUrl = function (outcome) {
+	var re = _elm_lang$core$Regex$regex('^https?://[^\\s/$.?#].[^\\s]*$');
+	return A3(
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+		function (v) {
+			return A2(_elm_lang$core$Regex$contains, re, v);
+		},
+		'unsatisfied-constraint:absolute-url',
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$matchNormalizedString(outcome));
+};
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$matchCompactUri = function (outcome) {
+	var re = _elm_lang$core$Regex$regex('^[a-z][a-z0-9_.-]{1,15}:\\w[^\\s]*$');
+	return A3(
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+		function (v) {
+			return A2(_elm_lang$core$Regex$contains, re, v);
+		},
+		'unsatisfied-constraint:compact-uri',
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$matchNormalizedString(outcome));
+};
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$stringContains = F2(
+	function (str, outcome) {
+		return A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			function (v) {
+				return A2(_elm_lang$core$String$contains, str, v);
+			},
+			A2(_elm_lang$core$Basics_ops['++'], 'unsatisfied-constraint:contains:', str),
+			outcome);
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$stringEndsWith = F2(
+	function (suffix, outcome) {
+		return A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			function (v) {
+				return A2(_elm_lang$core$String$endsWith, suffix, v);
+			},
+			A2(_elm_lang$core$Basics_ops['++'], 'unsatisfied-constraint:ends-with:', suffix),
+			outcome);
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$stringStartsWith = F2(
+	function (prefix, outcome) {
+		return A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			function (v) {
+				return A2(_elm_lang$core$String$startsWith, prefix, v);
+			},
+			A2(_elm_lang$core$Basics_ops['++'], 'unsatisfied-constraint:starts-with:', prefix),
+			outcome);
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$matchEnum = F2(
+	function ($enum, outcome) {
+		return A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			function (v) {
+				return A2(_elm_lang$core$List$member, v, $enum);
+			},
+			'unsatisfied-constraint:enum-match',
+			outcome);
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$floatStrictlyLessThan = F2(
+	function (limit, outcome) {
+		return A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			function (v) {
+				return _elm_lang$core$Native_Utils.cmp(v, limit) < 0;
+			},
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				'unsatisfied-constraint:float-strictly-less-than-',
+				_elm_lang$core$Basics$toString(limit)),
+			outcome);
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$floatLessThan = F2(
+	function (limit, outcome) {
+		return A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			function (v) {
+				return _elm_lang$core$Native_Utils.cmp(v, limit) < 1;
+			},
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				'unsatisfied-constraint:float-less-than-',
+				_elm_lang$core$Basics$toString(limit)),
+			outcome);
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$floatStrictlyMoreThan = F2(
+	function (limit, outcome) {
+		return A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			function (v) {
+				return _elm_lang$core$Native_Utils.cmp(v, limit) > 0;
+			},
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				'unsatisfied-constraint:float-strictly-more-than-',
+				_elm_lang$core$Basics$toString(limit)),
+			outcome);
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$floatMoreThan = F2(
+	function (limit, outcome) {
+		return A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			function (v) {
+				return _elm_lang$core$Native_Utils.cmp(v, limit) > -1;
+			},
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				'unsatisfied-constraint:float-more-than-',
+				_elm_lang$core$Basics$toString(limit)),
+			outcome);
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$intStrictlyLessThan = F2(
+	function (limit, outcome) {
+		return A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			function (v) {
+				return _elm_lang$core$Native_Utils.cmp(v, limit) < 0;
+			},
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				'unsatisfied-constraint:int-strictly-less-than-',
+				_elm_lang$core$Basics$toString(limit)),
+			outcome);
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$intLessThan = F2(
+	function (limit, outcome) {
+		return A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			function (v) {
+				return _elm_lang$core$Native_Utils.cmp(v, limit) < 1;
+			},
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				'unsatisfied-constraint:int-less-than-',
+				_elm_lang$core$Basics$toString(limit)),
+			outcome);
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$intStrictlyMoreThan = F2(
+	function (limit, outcome) {
+		return A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			function (v) {
+				return _elm_lang$core$Native_Utils.cmp(v, limit) > 0;
+			},
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				'unsatisfied-constraint:int-strictly-more-than-',
+				_elm_lang$core$Basics$toString(limit)),
+			outcome);
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$intMoreThan = F2(
+	function (limit, outcome) {
+		return A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			function (v) {
+				return _elm_lang$core$Native_Utils.cmp(v, limit) > -1;
+			},
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				'unsatisfied-constraint:int-more-than-',
+				_elm_lang$core$Basics$toString(limit)),
+			outcome);
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$asBool = function (outcome) {
+	return A2(
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map,
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$stringToBool,
+		A3(_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check, _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$isBool, 'unsatisfied-constraint:bool', outcome));
+};
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$asFloat = function (outcome) {
+	return A2(
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map,
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$floatOrZero,
+		A3(_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check, _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$isFloat, 'unsatisfied-constraint:float', outcome));
+};
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$asInt = function (outcome) {
+	return A2(
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map,
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$intOrZero,
+		A3(_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check, _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$isInt, 'unsatisfied-constraint:int', outcome));
+};
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$asUnique = function (outcome) {
+	return A2(
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map,
+		function (list) {
+			return _elm_lang$core$Set$toList(
+				_elm_lang$core$Set$fromList(list));
+		},
+		outcome);
+};
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$listStrictlyLessThan = F2(
+	function (size, outcome) {
+		return A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$helperStrictlyLessThan(size),
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				'unsatisfied-constraint:list-strictly-less-than-',
+				_elm_lang$core$Basics$toString(size)),
+			outcome);
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$listLessThan = F2(
+	function (size, outcome) {
+		return A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$helperLessThan(size),
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				'unsatisfied-constraint:list-less-than-',
+				_elm_lang$core$Basics$toString(size)),
+			outcome);
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$listStrictlyMoreThan = F2(
+	function (size, outcome) {
+		return A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$helperStrictlyMoreThan(size),
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				'unsatisfied-constraint:list-strictly-more-than-',
+				_elm_lang$core$Basics$toString(size)),
+			outcome);
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$listMoreThan = F2(
+	function (size, outcome) {
+		return A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$helperMoreThan(size),
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				'unsatisfied-constraint:list-more-than-',
+				_elm_lang$core$Basics$toString(size)),
+			outcome);
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$listEqual = F2(
+	function (size, outcome) {
+		return A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$matchListSize(size),
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				'unsatisfied-constraint:list-equal-',
+				_elm_lang$core$Basics$toString(size)),
+			outcome);
+	});
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$asTuple = function (outcome) {
+	return A2(
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map,
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$onlyTuple,
+		A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			function (o) {
+				return A2(
+					_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$matchListSize,
+					1,
+					_elm_lang$core$Tuple$first(o)) && A2(
+					_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$matchListSize,
+					1,
+					_elm_lang$core$Tuple$second(o));
+			},
+			'unsatisfied-constraint:tuple',
+			outcome));
+};
+var _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$asSingle = function (outcome) {
+	return A2(
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map,
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$onlyOne,
+		A3(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$check,
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$matchListSize(1),
+			'unsatisfied-constraint:single',
+			outcome));
 };
 
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_warningTag = 'ui:warning-tag';
@@ -8882,7 +9405,7 @@ var _flarebyte$bubblegum_ui_textarea$AppModel$reset = {
 	},
 	state: {
 		attributes: A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$replaceAttributeByKey,
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$replaceAttributeByKey,
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_content,
 			{
 				ctor: '::',
@@ -10172,7 +10695,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$mainBox = F3
 			A3(
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendAttributeIfSuccess,
 				_elm_lang$html$Html_Attributes$dir,
-				A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$rtlOrLtr, rtl),
+				A2(_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$rtlOrLtr, rtl),
 				A3(
 					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendAttributeIfSuccess,
 					_elm_lang$html$Html_Attributes$lang,
@@ -10237,529 +10760,6 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$StyledText =
 		return {text: a, style: b, title: c};
 	});
 
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$isBool = function (value) {
-	return A2(
-		_elm_lang$core$List$member,
-		_elm_lang$core$String$toLower(value),
-		{
-			ctor: '::',
-			_0: 'true',
-			_1: {
-				ctor: '::',
-				_0: 'false',
-				_1: {ctor: '[]'}
-			}
-		});
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$stringToBool = function (value) {
-	return _elm_lang$core$Native_Utils.eq(value, 'true');
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$floatOrZero = function (value) {
-	return A2(
-		_elm_lang$core$Result$withDefault,
-		0,
-		_elm_lang$core$String$toFloat(value));
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$intOrZero = function (value) {
-	return A2(
-		_elm_lang$core$Result$withDefault,
-		0,
-		_elm_lang$core$String$toInt(value));
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$isFloat = function (value) {
-	var _p0 = _elm_lang$core$String$toFloat(value);
-	if (_p0.ctor === 'Ok') {
-		return true;
-	} else {
-		return false;
-	}
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$isInt = function (value) {
-	var _p1 = _elm_lang$core$String$toInt(value);
-	if (_p1.ctor === 'Ok') {
-		return true;
-	} else {
-		return false;
-	}
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$onlyTuple = function (listTuple) {
-	var _p2 = listTuple;
-	if (((((_p2.ctor === '_Tuple2') && (_p2._0.ctor === '::')) && (_p2._0._1.ctor === '[]')) && (_p2._1.ctor === '::')) && (_p2._1._1.ctor === '[]')) {
-		return {ctor: '_Tuple2', _0: _p2._0._0, _1: _p2._1._0};
-	} else {
-		return {ctor: '_Tuple2', _0: 'should-never-happen', _1: 'should-never-happen'};
-	}
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$onlyOne = function (list) {
-	return A2(
-		_elm_lang$core$Maybe$withDefault,
-		'should-never-happen',
-		_elm_lang$core$List$head(list));
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$helperStrictlyLessThan = F2(
-	function (expected, list) {
-		return _elm_lang$core$Native_Utils.cmp(
-			_elm_lang$core$List$length(list),
-			expected) < 0;
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$helperLessThan = F2(
-	function (expected, list) {
-		return _elm_lang$core$Native_Utils.cmp(
-			_elm_lang$core$List$length(list),
-			expected) < 1;
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$helperStrictlyMoreThan = F2(
-	function (expected, list) {
-		return _elm_lang$core$Native_Utils.cmp(
-			_elm_lang$core$List$length(list),
-			expected) > 0;
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$helperMoreThan = F2(
-	function (expected, list) {
-		return _elm_lang$core$Native_Utils.cmp(
-			_elm_lang$core$List$length(list),
-			expected) > -1;
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$matchListSize = F2(
-	function (expected, list) {
-		return _elm_lang$core$Native_Utils.eq(
-			_elm_lang$core$List$length(list),
-			expected);
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$helperCharsRange = F2(
-	function (range, str) {
-		return (_elm_lang$core$Native_Utils.cmp(
-			_elm_lang$core$String$length(str),
-			_elm_lang$core$Tuple$first(range)) > -1) && (_elm_lang$core$Native_Utils.cmp(
-			_elm_lang$core$String$length(str),
-			_elm_lang$core$Tuple$second(range)) < 0);
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinListStringCharsRange = F2(
-	function (range, outcome) {
-		return A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			function (list) {
-				return A2(
-					_elm_lang$core$List$all,
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$helperCharsRange(range),
-					list);
-			},
-			A2(
-				_elm_lang$core$Basics_ops['++'],
-				'unsatisfied-constraint:within-list-string-chars-range:',
-				_elm_lang$core$Basics$toString(range)),
-			outcome);
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange = F2(
-	function (range, outcome) {
-		return A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$helperCharsRange(range),
-			A2(
-				_elm_lang$core$Basics_ops['++'],
-				'unsatisfied-constraint:within-string-chars-range:',
-				_elm_lang$core$Basics$toString(range)),
-			outcome);
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinFloatRange = F2(
-	function (range, outcome) {
-		return A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			function (t) {
-				return (_elm_lang$core$Native_Utils.cmp(
-					_elm_lang$core$Tuple$first(t),
-					_elm_lang$core$Tuple$first(range)) > -1) && (_elm_lang$core$Native_Utils.cmp(
-					_elm_lang$core$Tuple$second(t),
-					_elm_lang$core$Tuple$second(range)) < 0);
-			},
-			A2(
-				_elm_lang$core$Basics_ops['++'],
-				'unsatisfied-constraint:within-float-range:',
-				_elm_lang$core$Basics$toString(range)),
-			outcome);
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinIntRange = F2(
-	function (range, outcome) {
-		return A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			function (t) {
-				return (_elm_lang$core$Native_Utils.cmp(
-					_elm_lang$core$Tuple$first(t),
-					_elm_lang$core$Tuple$first(range)) > -1) && (_elm_lang$core$Native_Utils.cmp(
-					_elm_lang$core$Tuple$second(t),
-					_elm_lang$core$Tuple$second(range)) < 0);
-			},
-			A2(
-				_elm_lang$core$Basics_ops['++'],
-				'unsatisfied-constraint:within-int-range:',
-				_elm_lang$core$Basics$toString(range)),
-			outcome);
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asFloatRange = function (outcome) {
-	return A3(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-		function (t) {
-			return _elm_lang$core$Native_Utils.cmp(
-				_elm_lang$core$Tuple$first(t),
-				_elm_lang$core$Tuple$second(t)) < 0;
-		},
-		'unsatisfied-constraint:float-range',
-		outcome);
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asIntRange = function (outcome) {
-	return A3(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-		function (t) {
-			return _elm_lang$core$Native_Utils.cmp(
-				_elm_lang$core$Tuple$first(t),
-				_elm_lang$core$Tuple$second(t)) < 0;
-		},
-		'unsatisfied-constraint:int-range',
-		outcome);
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asFloatTuple = function (outcome) {
-	return A2(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map,
-		function (t) {
-			return {
-				ctor: '_Tuple2',
-				_0: _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$floatOrZero(
-					_elm_lang$core$Tuple$first(t)),
-				_1: _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$floatOrZero(
-					_elm_lang$core$Tuple$second(t))
-			};
-		},
-		A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			function (t) {
-				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$isFloat(
-					_elm_lang$core$Tuple$first(t)) && _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$isFloat(
-					_elm_lang$core$Tuple$second(t));
-			},
-			'unsatisfied-constraint:float-tuple',
-			outcome));
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asIntTuple = function (outcome) {
-	return A2(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map,
-		function (t) {
-			return {
-				ctor: '_Tuple2',
-				_0: _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$intOrZero(
-					_elm_lang$core$Tuple$first(t)),
-				_1: _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$intOrZero(
-					_elm_lang$core$Tuple$second(t))
-			};
-		},
-		A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			function (t) {
-				return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$isInt(
-					_elm_lang$core$Tuple$first(t)) && _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$isInt(
-					_elm_lang$core$Tuple$second(t));
-			},
-			'unsatisfied-constraint:int-tuple',
-			outcome));
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$matchNormalizedString = function (outcome) {
-	return A3(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-		function (v) {
-			return A2(_elm_lang$core$String$contains, '\n', v);
-		},
-		'unsatisfied-constraint:normalized-string',
-		outcome);
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$matchRegex = F2(
-	function (regExp, outcome) {
-		var re = _elm_lang$core$Regex$regex(
-			A2(
-				_elm_lang$core$Basics_ops['++'],
-				'^',
-				A2(_elm_lang$core$Basics_ops['++'], regExp, '$')));
-		return A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			function (v) {
-				return A2(_elm_lang$core$Regex$contains, re, v);
-			},
-			'unsatisfied-constraint:regex',
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$matchNormalizedString(outcome));
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$matchAbsoluteUrl = function (outcome) {
-	var re = _elm_lang$core$Regex$regex('^https?://[^\\s/$.?#].[^\\s]*$');
-	return A3(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-		function (v) {
-			return A2(_elm_lang$core$Regex$contains, re, v);
-		},
-		'unsatisfied-constraint:absolute-url',
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$matchNormalizedString(outcome));
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$matchCompactUri = function (outcome) {
-	var re = _elm_lang$core$Regex$regex('^[a-z][a-z0-9_.-]{1,15}:\\w[^\\s]*$');
-	return A3(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-		function (v) {
-			return A2(_elm_lang$core$Regex$contains, re, v);
-		},
-		'unsatisfied-constraint:compact-uri',
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$matchNormalizedString(outcome));
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$stringContains = F2(
-	function (str, outcome) {
-		return A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			function (v) {
-				return A2(_elm_lang$core$String$contains, str, v);
-			},
-			A2(_elm_lang$core$Basics_ops['++'], 'unsatisfied-constraint:contains:', str),
-			outcome);
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$stringEndsWith = F2(
-	function (suffix, outcome) {
-		return A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			function (v) {
-				return A2(_elm_lang$core$String$endsWith, suffix, v);
-			},
-			A2(_elm_lang$core$Basics_ops['++'], 'unsatisfied-constraint:ends-with:', suffix),
-			outcome);
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$stringStartsWith = F2(
-	function (prefix, outcome) {
-		return A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			function (v) {
-				return A2(_elm_lang$core$String$startsWith, prefix, v);
-			},
-			A2(_elm_lang$core$Basics_ops['++'], 'unsatisfied-constraint:starts-with:', prefix),
-			outcome);
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$matchEnum = F2(
-	function ($enum, outcome) {
-		return A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			function (v) {
-				return A2(_elm_lang$core$List$member, v, $enum);
-			},
-			'unsatisfied-constraint:enum-match',
-			outcome);
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$floatStrictlyLessThan = F2(
-	function (limit, outcome) {
-		return A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			function (v) {
-				return _elm_lang$core$Native_Utils.cmp(v, limit) < 0;
-			},
-			A2(
-				_elm_lang$core$Basics_ops['++'],
-				'unsatisfied-constraint:float-strictly-less-than-',
-				_elm_lang$core$Basics$toString(limit)),
-			outcome);
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$floatLessThan = F2(
-	function (limit, outcome) {
-		return A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			function (v) {
-				return _elm_lang$core$Native_Utils.cmp(v, limit) < 1;
-			},
-			A2(
-				_elm_lang$core$Basics_ops['++'],
-				'unsatisfied-constraint:float-less-than-',
-				_elm_lang$core$Basics$toString(limit)),
-			outcome);
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$floatStrictlyMoreThan = F2(
-	function (limit, outcome) {
-		return A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			function (v) {
-				return _elm_lang$core$Native_Utils.cmp(v, limit) > 0;
-			},
-			A2(
-				_elm_lang$core$Basics_ops['++'],
-				'unsatisfied-constraint:float-strictly-more-than-',
-				_elm_lang$core$Basics$toString(limit)),
-			outcome);
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$floatMoreThan = F2(
-	function (limit, outcome) {
-		return A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			function (v) {
-				return _elm_lang$core$Native_Utils.cmp(v, limit) > -1;
-			},
-			A2(
-				_elm_lang$core$Basics_ops['++'],
-				'unsatisfied-constraint:float-more-than-',
-				_elm_lang$core$Basics$toString(limit)),
-			outcome);
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$intStrictlyLessThan = F2(
-	function (limit, outcome) {
-		return A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			function (v) {
-				return _elm_lang$core$Native_Utils.cmp(v, limit) < 0;
-			},
-			A2(
-				_elm_lang$core$Basics_ops['++'],
-				'unsatisfied-constraint:int-strictly-less-than-',
-				_elm_lang$core$Basics$toString(limit)),
-			outcome);
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$intLessThan = F2(
-	function (limit, outcome) {
-		return A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			function (v) {
-				return _elm_lang$core$Native_Utils.cmp(v, limit) < 1;
-			},
-			A2(
-				_elm_lang$core$Basics_ops['++'],
-				'unsatisfied-constraint:int-less-than-',
-				_elm_lang$core$Basics$toString(limit)),
-			outcome);
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$intStrictlyMoreThan = F2(
-	function (limit, outcome) {
-		return A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			function (v) {
-				return _elm_lang$core$Native_Utils.cmp(v, limit) > 0;
-			},
-			A2(
-				_elm_lang$core$Basics_ops['++'],
-				'unsatisfied-constraint:int-strictly-more-than-',
-				_elm_lang$core$Basics$toString(limit)),
-			outcome);
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$intMoreThan = F2(
-	function (limit, outcome) {
-		return A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			function (v) {
-				return _elm_lang$core$Native_Utils.cmp(v, limit) > -1;
-			},
-			A2(
-				_elm_lang$core$Basics_ops['++'],
-				'unsatisfied-constraint:int-more-than-',
-				_elm_lang$core$Basics$toString(limit)),
-			outcome);
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asBool = function (outcome) {
-	return A2(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map,
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$stringToBool,
-		A3(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check, _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$isBool, 'unsatisfied-constraint:bool', outcome));
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asFloat = function (outcome) {
-	return A2(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map,
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$floatOrZero,
-		A3(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check, _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$isFloat, 'unsatisfied-constraint:float', outcome));
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asInt = function (outcome) {
-	return A2(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map,
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$intOrZero,
-		A3(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check, _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$isInt, 'unsatisfied-constraint:int', outcome));
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asUnique = function (outcome) {
-	return A2(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map,
-		function (list) {
-			return _elm_lang$core$Set$toList(
-				_elm_lang$core$Set$fromList(list));
-		},
-		outcome);
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$listStrictlyLessThan = F2(
-	function (size, outcome) {
-		return A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$helperStrictlyLessThan(size),
-			A2(
-				_elm_lang$core$Basics_ops['++'],
-				'unsatisfied-constraint:list-strictly-less-than-',
-				_elm_lang$core$Basics$toString(size)),
-			outcome);
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$listLessThan = F2(
-	function (size, outcome) {
-		return A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$helperLessThan(size),
-			A2(
-				_elm_lang$core$Basics_ops['++'],
-				'unsatisfied-constraint:list-less-than-',
-				_elm_lang$core$Basics$toString(size)),
-			outcome);
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$listStrictlyMoreThan = F2(
-	function (size, outcome) {
-		return A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$helperStrictlyMoreThan(size),
-			A2(
-				_elm_lang$core$Basics_ops['++'],
-				'unsatisfied-constraint:list-strictly-more-than-',
-				_elm_lang$core$Basics$toString(size)),
-			outcome);
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$listMoreThan = F2(
-	function (size, outcome) {
-		return A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$helperMoreThan(size),
-			A2(
-				_elm_lang$core$Basics_ops['++'],
-				'unsatisfied-constraint:list-more-than-',
-				_elm_lang$core$Basics$toString(size)),
-			outcome);
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$listEqual = F2(
-	function (size, outcome) {
-		return A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$matchListSize(size),
-			A2(
-				_elm_lang$core$Basics_ops['++'],
-				'unsatisfied-constraint:list-equal-',
-				_elm_lang$core$Basics$toString(size)),
-			outcome);
-	});
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asTuple = function (outcome) {
-	return A2(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map,
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$onlyTuple,
-		A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			function (o) {
-				return A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$matchListSize,
-					1,
-					_elm_lang$core$Tuple$first(o)) && A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$matchListSize,
-					1,
-					_elm_lang$core$Tuple$second(o));
-			},
-			'unsatisfied-constraint:tuple',
-			outcome));
-};
-var _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asSingle = function (outcome) {
-	return A2(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map,
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$onlyOne,
-		A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$check,
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$matchListSize(1),
-			'unsatisfied-constraint:single',
-			outcome));
-};
-
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitList = 8;
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitVeryLargeRangeNotEmpty = {ctor: '_Tuple2', _0: 1, _1: 60000};
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitMediumRangeNotEmpty = {ctor: '_Tuple2', _0: 1, _1: 128};
@@ -10771,34 +10771,34 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitSmallR
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findListString = F2(
 	function (key, attributes) {
 		return A2(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinListStringCharsRange,
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$withinListStringCharsRange,
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitSmallRangeNotEmpty,
 			A2(
-				_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$listLessThan,
+				_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$listLessThan,
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitList,
-				A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findOutcomeByKey, key, attributes)));
+				A2(_flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$findOutcomeByKey, key, attributes)));
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findString = F2(
 	function (key, attributes) {
-		return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asSingle(
-			A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findOutcomeByKey, key, attributes));
+		return _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$asSingle(
+			A2(_flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$findOutcomeByKey, key, attributes));
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findBool = F2(
 	function (key, attributes) {
-		return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asBool(
+		return _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$asBool(
 			A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findString, key, attributes));
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findIntRange = F2(
 	function (keyTuple, attributes) {
-		return _flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asIntRange(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asIntTuple(
-				_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$asTuple(
-					A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findOutcomeByKeyTuple, keyTuple, attributes))));
+		return _flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$asIntRange(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$asIntTuple(
+				_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$asTuple(
+					A2(_flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$findOutcomeByKeyTuple, keyTuple, attributes))));
 	});
 
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getDangerWordRange = function (settings) {
 	return A2(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinIntRange,
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$withinIntRange,
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitVeryLargeRangeNotEmpty,
 		A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findIntRange,
@@ -10807,7 +10807,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getDang
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getSuccessWordRange = function (settings) {
 	return A2(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinIntRange,
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$withinIntRange,
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitVeryLargeRangeNotEmpty,
 		A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findIntRange,
@@ -10816,7 +10816,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getSucc
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getDangerCharRange = function (settings) {
 	return A2(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinIntRange,
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$withinIntRange,
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitVeryLargeRangeNotEmpty,
 		A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findIntRange,
@@ -10825,7 +10825,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getDang
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getSuccessCharRange = function (settings) {
 	return A2(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinIntRange,
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$withinIntRange,
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitVeryLargeRangeNotEmpty,
 		A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findIntRange,
@@ -10840,7 +10840,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$isUserR
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getUserLanguage = function (settings) {
 	return A2(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange,
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$withinStringCharsRange,
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitSmallRangeNotEmpty,
 		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_userLanguage, settings.attributes));
 };
@@ -10852,19 +10852,19 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getSucc
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getPlaceholder = function (settings) {
 	return A2(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange,
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$withinStringCharsRange,
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitMediumRangeNotEmpty,
 		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_placeholder, settings.attributes));
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getLabel = function (settings) {
 	return A2(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange,
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$withinStringCharsRange,
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitMediumRangeNotEmpty,
 		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_label, settings.attributes));
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getHelp = function (settings) {
 	return A2(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange,
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$withinStringCharsRange,
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitMediumRangeNotEmpty,
 		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_help, settings.attributes));
 };
@@ -10873,13 +10873,13 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getDang
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getDangerHelp = function (settings) {
 	return A2(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange,
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$withinStringCharsRange,
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitMediumRangeNotEmpty,
 		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_dangerHelp, settings.attributes));
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getContent = function (settings) {
 	return A2(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange,
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$withinStringCharsRange,
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitVeryLargeRange,
 		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_content, settings.attributes));
 };
@@ -10888,13 +10888,13 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$isConte
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getContentLanguage = function (settings) {
 	return A2(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange,
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$withinStringCharsRange,
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitSmallRangeNotEmpty,
 		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentLanguage, settings.attributes));
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getContentId = function (settings) {
 	return A2(
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Validation$withinStringCharsRange,
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Validation$withinStringCharsRange,
 		_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_HelperLimits$limitMediumRangeNotEmpty,
 		A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_EntityHelper$findString, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_contentId, settings.attributes));
 };
@@ -10903,7 +10903,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getContentLanguag
 	return A2(
 		_elm_lang$core$Maybe$withDefault,
 		'en-GB',
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$toMaybe(
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$toMaybe(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getContentLanguage(settings)));
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getContentIsoLanguage = function (settings) {
@@ -10914,7 +10914,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getUserLanguageOr
 	return A2(
 		_elm_lang$core$Maybe$withDefault,
 		'en-GB',
-		_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$toMaybe(
+		_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$toMaybe(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getUserLanguage(settings)));
 };
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getUserIsoLanguage = function (settings) {
@@ -10924,18 +10924,18 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getUserIsoLanguag
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$themeProgress = F2(
 	function (a, b) {
 		return A2(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$withDefault,
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$withDefault,
 			'is-info',
 			A2(
-				_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$or,
+				_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$or,
 				A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$trueMapToConstant,
+					_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$trueMapToConstant,
 					'is-success',
-					A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$checkOrNone, _elm_lang$core$Basics$identity, a)),
+					A2(_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$checkOrNone, _elm_lang$core$Basics$identity, a)),
 				A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$trueMapToConstant,
+					_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$trueMapToConstant,
 					'is-danger',
-					A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$checkOrNone, _elm_lang$core$Basics$identity, b))));
+					A2(_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$checkOrNone, _elm_lang$core$Basics$identity, b))));
 	});
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$numberOfWords = function (someText) {
 	return _elm_lang$core$List$length(
@@ -10988,60 +10988,60 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$dangerRange = F2(
 var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$displayTextInfo = F4(
 	function (adapter, userSettings, settings, state) {
 		var contentCharLength = A2(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map,
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map,
 			_elm_lang$core$String$length,
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getContent(state));
 		var contentWordLength = A2(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map,
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map,
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$numberOfWords,
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getContent(state));
 		var optSuccessCharRange = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getSuccessCharRange(settings);
 		var themeCharBasedOnRange = A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$themeProgress,
-			A3(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$successRange, contentCharLength, optSuccessCharRange),
+			A3(_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$successRange, contentCharLength, optSuccessCharRange),
 			A3(
-				_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2,
+				_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map2,
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$dangerRange,
 				contentCharLength,
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getDangerCharRange(settings)));
 		var charRatioAndStatus = A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2,
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map2,
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$tupleify,
-			A3(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$successRatio, contentCharLength, optSuccessCharRange),
+			A3(_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$successRatio, contentCharLength, optSuccessCharRange),
 			themeCharBasedOnRange);
 		var addCharProgressBar = A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendHtmlIfSuccess, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$progressBar, charRatioAndStatus);
 		var optSuccessWordRange = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getSuccessWordRange(settings);
 		var themeWordBasedOnRange = A2(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$themeProgress,
-			A3(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$successRange, contentWordLength, optSuccessWordRange),
+			A3(_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$successRange, contentWordLength, optSuccessWordRange),
 			A3(
-				_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2,
+				_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map2,
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$dangerRange,
 				contentWordLength,
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getDangerWordRange(settings)));
 		var wordRatioAndStatus = A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2,
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map2,
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$tupleify,
-			A3(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$successRatio, contentWordLength, optSuccessWordRange),
+			A3(_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map2, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$successRatio, contentWordLength, optSuccessWordRange),
 			themeWordBasedOnRange);
 		var addWordProgressBar = A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendHtmlIfSuccess, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$progressBar, wordRatioAndStatus);
 		var userIsoLanguage = _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$getUserIsoLanguage(userSettings);
 		var labelForWord = A2(
 			_elm_lang$core$Maybe$withDefault,
 			'',
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$toMaybe(
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$toMaybe(
 				A2(
-					_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map,
+					_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map,
 					_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Internationalization$translateWord(userIsoLanguage),
 					contentWordLength)));
 		var wordLengthAndStatus = A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2,
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map2,
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$styleTextWord(userIsoLanguage),
 			contentWordLength,
 			themeWordBasedOnRange);
 		var addWordContentLength = A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendHtmlIfSuccess, _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$tag, wordLengthAndStatus);
 		var charLengthAndStatus = A3(
-			_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map2,
+			_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map2,
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$styleTextChar(userIsoLanguage),
 			contentCharLength,
 			themeCharBasedOnRange);
@@ -11170,7 +11170,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$view = F4(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendAttributeIfSuccess,
 			_elm_lang$html$Html_Attributes$attribute('rows'),
 			A2(
-				_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map,
+				_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map,
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Helper$calculateRows,
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$getContent(state)));
 		var addValue = A2(
@@ -11181,7 +11181,7 @@ var _flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Widget$view = F4(
 			_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$appendAttributeIfSuccess,
 			_elm_lang$html$Html_Attributes$dir,
 			A2(
-				_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Outcome$map,
+				_flarebyte$bubblegum_entity$Bubblegum_Entity_Outcome$map,
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_BulmaHelper$rtlOrLtr,
 				_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_VocabularyHelper$isContentRightToLeft(userSettings)));
 		var addContentLanguage = A2(
@@ -12092,7 +12092,7 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioItemForState = F3(
 var _flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioSettingsForState = F2(
 	function (model, attrDoc) {
 		var actualState = _flarebyte$bubblegum_ui_textarea$AppModel$getState(model);
-		var actualValue = A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findAttributeFirstValueByKey, attrDoc.key, actualState.attributes);
+		var actualValue = A2(_flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$findAttributeFirstValueByKey, attrDoc.key, actualState.attributes);
 		return A2(
 			_elm_lang$html$Html$div,
 			{
@@ -12212,7 +12212,7 @@ var _flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioItem = F4(
 var _flarebyte$bubblegum_ui_textarea$WidgetDocView$viewRadioSettings = F3(
 	function (model, isUserSettings, attrDoc) {
 		var actualSettings = A2(_flarebyte$bubblegum_ui_textarea$AppModel$getSettings, isUserSettings, model);
-		var actualValue = A2(_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$findAttributeFirstValueByKey, attrDoc.key, actualSettings.attributes);
+		var actualValue = A2(_flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$findAttributeFirstValueByKey, attrDoc.key, actualSettings.attributes);
 		return A2(
 			_elm_lang$html$Html$div,
 			{
@@ -12740,10 +12740,10 @@ var _flarebyte$bubblegum_ui_textarea$App$update = F2(
 					_flarebyte$bubblegum_ui_textarea$AppModel$asStateIn,
 					model,
 					A2(
-						_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_StateEntity$asAttributesIn,
+						_flarebyte$bubblegum_entity$Bubblegum_Entity_StateEntity$asAttributesIn,
 						model.state,
 						A3(
-							_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$replaceAttributeByKey,
+							_flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$replaceAttributeByKey,
 							_flarebyte$bubblegum_ui_textarea$Bubblegum_TextArea_Vocabulary$ui_content,
 							{
 								ctor: '::',
@@ -12758,10 +12758,10 @@ var _flarebyte$bubblegum_ui_textarea$App$update = F2(
 					_p1,
 					model,
 					A2(
-						_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_SettingsEntity$asAttributesIn,
+						_flarebyte$bubblegum_entity$Bubblegum_Entity_SettingsEntity$asAttributesIn,
 						A2(_flarebyte$bubblegum_ui_textarea$AppModel$getSettings, _p1, model),
 						A3(
-							_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$replaceAttributeByKey,
+							_flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$replaceAttributeByKey,
 							_p0._1,
 							{
 								ctor: '::',
@@ -12774,10 +12774,10 @@ var _flarebyte$bubblegum_ui_textarea$App$update = F2(
 					_flarebyte$bubblegum_ui_textarea$AppModel$asStateIn,
 					model,
 					A2(
-						_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_StateEntity$asAttributesIn,
+						_flarebyte$bubblegum_entity$Bubblegum_Entity_StateEntity$asAttributesIn,
 						_flarebyte$bubblegum_ui_textarea$AppModel$getState(model),
 						A3(
-							_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$replaceAttributeByKey,
+							_flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$replaceAttributeByKey,
 							_p0._0,
 							{
 								ctor: '::',
@@ -12792,10 +12792,10 @@ var _flarebyte$bubblegum_ui_textarea$App$update = F2(
 					_p2,
 					model,
 					A2(
-						_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_SettingsEntity$asAttributesIn,
+						_flarebyte$bubblegum_entity$Bubblegum_Entity_SettingsEntity$asAttributesIn,
 						A2(_flarebyte$bubblegum_ui_textarea$AppModel$getSettings, _p2, model),
 						A2(
-							_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$deleteAttributeByKey,
+							_flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$deleteAttributeByKey,
 							_p0._1,
 							A2(_flarebyte$bubblegum_ui_textarea$AppModel$getSettingsAttributes, _p2, model))));
 			default:
@@ -12803,10 +12803,10 @@ var _flarebyte$bubblegum_ui_textarea$App$update = F2(
 					_flarebyte$bubblegum_ui_textarea$AppModel$asStateIn,
 					model,
 					A2(
-						_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_StateEntity$asAttributesIn,
+						_flarebyte$bubblegum_entity$Bubblegum_Entity_StateEntity$asAttributesIn,
 						_flarebyte$bubblegum_ui_textarea$AppModel$getState(model),
 						A2(
-							_flarebyte$bubblegum_ui_textarea$Bubblegum_Entity_Attribute$deleteAttributeByKey,
+							_flarebyte$bubblegum_entity$Bubblegum_Entity_Attribute$deleteAttributeByKey,
 							_p0._0,
 							_flarebyte$bubblegum_ui_textarea$AppModel$getStateAttributes(model))));
 		}

@@ -8,13 +8,42 @@ This helper facilitates the creation of Bulma styled html elements.
 
 -}
 
-import Bubblegum.Entity.Outcome as Outcome exposing (..)
-import Bubblegum.TextArea.Internationalization exposing (..)
-import Bubblegum.TextArea.IsoLanguage exposing (IsoLanguage(..), toIsoLanguage)
-import Html exposing (..)
-import Html.Attributes as Attributes exposing (..)
+import Bubblegum.Entity.Outcome as Outcome exposing (Outcome(..))
+import Bubblegum.TextArea.Internationalization
+    exposing
+        ( translateDangerTag
+        , translateInfoTag
+        , translateMinimumChars
+        , translateMinimumWords
+        , translateNumberOfChars
+        , translateNumberOfWords
+        , translateSuccessTag
+        , translateUnit
+        , translateWarningTag
+        )
+import Bubblegum.TextArea.IsoLanguage exposing (IsoLanguage(..))
+import Html
+    exposing
+        ( Attribute
+        , Html
+        , div
+        , i
+        , label
+        , p
+        , progress
+        , span
+        , text
+        )
+import Html.Attributes as Attributes
+    exposing
+        ( attribute
+        , class
+        , dir
+        , lang
+        , value
+        )
 import List
-import String exposing (join, lines, words)
+import String exposing (join)
 import Tuple exposing (first, second)
 
 

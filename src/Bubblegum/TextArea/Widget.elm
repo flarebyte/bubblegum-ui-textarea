@@ -13,19 +13,72 @@ Please have a look at the main [documentation](https://github.com/flarebyte/bubb
 
 -}
 
-import Bubblegum.Entity.Outcome as Outcome exposing (..)
+import Bubblegum.Entity.Outcome as Outcome exposing (Outcome(..))
 import Bubblegum.Entity.SettingsEntity as SettingsEntity
 import Bubblegum.Entity.StateEntity as StateEntity
 import Bubblegum.TextArea.Adapter as TextAreaAdapter
-import Bubblegum.TextArea.BulmaHelper exposing (..)
-import Bubblegum.TextArea.Helper exposing (..)
+import Bubblegum.TextArea.BulmaHelper
+    exposing
+        ( appendAttributeIfSuccess
+        , appendHtmlIfSuccess
+        , dangerHelp
+        , groupFields
+        , infoHelp
+        , mainBox
+        , minimumCharsTag
+        , minimumWordsTag
+        , progressBar
+        , rtlOrLtr
+        , styleTextChar
+        , styleTextWord
+        , tag
+        , tags
+        , tagsAddons
+        , tagsDanger
+        , tagsInfo
+        , tagsSuccess
+        , tagsWarning
+        , unitTag
+        , widgetLabel
+        )
+import Bubblegum.TextArea.Helper
+    exposing
+        ( calculateRows
+        , dangerRange
+        , getUserIsoLanguage
+        , numberOfWords
+        , successRange
+        , successRatio
+        , themeProgress
+        , tupleify
+        )
 import Bubblegum.TextArea.Internationalization exposing (translateWord)
-import Bubblegum.TextArea.VocabularyHelper exposing (..)
-import Html exposing (..)
-import Html.Attributes exposing (..)
-import Html.Events exposing (onClick, onInput, onMouseEnter, onMouseOut)
+import Bubblegum.TextArea.VocabularyHelper
+    exposing
+        ( getContent
+        , getContentId
+        , getContentLanguage
+        , getDangerCharRange
+        , getDangerHelp
+        , getDangerTag
+        , getDangerWordRange
+        , getHelp
+        , getLabel
+        , getPlaceholder
+        , getSuccessCharRange
+        , getSuccessTag
+        , getSuccessWordRange
+        , getTag
+        , getUserLanguage
+        , getWarningTag
+        , isContentRightToLeft
+        , isUserRightToLeft
+        )
+import Html exposing (Html, div, text, textarea)
+import Html.Attributes exposing (attribute, class, dir, id, lang, placeholder, value)
+import Html.Events exposing (onInput)
 import Maybe
-import String exposing (lines, words)
+import String
 
 
 {-
