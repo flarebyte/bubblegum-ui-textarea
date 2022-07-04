@@ -25,7 +25,7 @@ dangerRange size range =
 
 successRatio : Int -> ( Int, Int ) -> String
 successRatio size range =
-    calculateRatio (first range) size |> toString
+    calculateRatio (first range) size |> String.fromInt
 
 
 tupleify : a -> b -> ( a, b )
@@ -55,7 +55,7 @@ calculateRows content =
         numberOfLines =
             carriageReturns + numberOfAvgLines + 1
     in
-    toString
+    String.fromInt
         (if numberOfLines < 40 then
             numberOfLines
 

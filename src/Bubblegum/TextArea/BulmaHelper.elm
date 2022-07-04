@@ -90,7 +90,7 @@ type alias StyledText =
 
 styleTextChar : IsoLanguage -> Int -> String -> StyledText
 styleTextChar userIsoLanguage number status =
-    { text = toString number
+    { text = String.fromInt number
     , style = status
     , title = translateNumberOfChars userIsoLanguage
     }
@@ -98,7 +98,7 @@ styleTextChar userIsoLanguage number status =
 
 styleTextWord : IsoLanguage -> Int -> String -> StyledText
 styleTextWord userIsoLanguage number status =
-    { text = toString number
+    { text = String.fromInt number
     , style = status
     , title = translateNumberOfWords userIsoLanguage
     }
@@ -245,12 +245,12 @@ dangerHelp helpText =
 
 minimumCharsTag : IsoLanguage -> ( Int, Int ) -> Html msg
 minimumCharsTag userIsoLanguage tuple =
-    tag { text = first tuple |> toString, style = "is-dark", title = translateMinimumChars userIsoLanguage }
+    tag { text = first tuple |> String.fromInt, style = "is-dark", title = translateMinimumChars userIsoLanguage }
 
 
 minimumWordsTag : IsoLanguage -> ( Int, Int ) -> Html msg
 minimumWordsTag userIsoLanguage tuple =
-    tag { text = first tuple |> toString, style = "is-dark", title = translateMinimumWords userIsoLanguage }
+    tag { text = first tuple |> String.fromInt, style = "is-dark", title = translateMinimumWords userIsoLanguage }
 
 
 unitTag : IsoLanguage -> String -> Html msg

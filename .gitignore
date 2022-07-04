@@ -1,9 +1,8 @@
 elm-stuff
 repl-temp-*
-
-*.DS_Store
-.AppleDouble
-.LSOverride
-Icon
-
 *.pyc
+*.log
+.vscode/*.log
+.DS_Store
+report/
+.message
