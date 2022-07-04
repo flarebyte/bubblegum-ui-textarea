@@ -14,6 +14,7 @@ pickSingularOrPlural : Int -> ( String, String ) -> String
 pickSingularOrPlural howMany singularOrPlural =
     if howMany < 2 then
         first singularOrPlural
+
     else
         second singularOrPlural
 

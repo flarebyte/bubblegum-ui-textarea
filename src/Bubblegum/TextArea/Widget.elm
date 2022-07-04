@@ -81,6 +81,7 @@ import Maybe
 import String
 
 
+
 {-
    Various progress and information html displayed below the main textarea
 -}
@@ -152,7 +153,7 @@ displayTextInfo adapter userSettings settings state =
             appendHtmlIfSuccess progressBar wordRatioAndStatus
 
         addLabelForWord =
-            flip (++) [ unitTag userIsoLanguage labelForWord ]
+            \a -> (++) a [ unitTag userIsoLanguage labelForWord ]
 
         addWordInfo =
             tagsAddons <| ([] |> addWordContentLength |> addWordTargetLength |> addLabelForWord)
@@ -172,7 +173,7 @@ displayTextInfo adapter userSettings settings state =
     groupFields
         [ div [ class "bubblegum-textarea__wordinfo control" ] (addWordInfo |> List.singleton |> addWordProgressBar)
         , div [ class "bubblegum-textarea__charinfo control" ] (addCharInfo |> List.singleton |> addCharProgressBar)
-        , div [ class "control" ] [ text "    " ]
+        , div [ class "control" ] [ text "\u{00A0}\u{00A0}\u{00A0}\u{00A0}" ]
         , div [ class "bubblegum-textarea__tagsinfo control" ] [ tags ([] |> addTagsInfo |> addDangerTags |> addWarningTags |> addSuccessTags) ]
         ]
 

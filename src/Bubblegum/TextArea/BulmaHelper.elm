@@ -210,6 +210,7 @@ rtlOrLtr : Bool -> String
 rtlOrLtr value =
     if value then
         "rtl"
+
     else
         "ltr"
 

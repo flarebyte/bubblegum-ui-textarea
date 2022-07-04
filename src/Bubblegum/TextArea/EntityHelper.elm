@@ -1,10 +1,9 @@
-module Bubblegum.TextArea.EntityHelper
-    exposing
-        ( findBool
-        , findIntRange
-        , findListString
-        , findString
-        )
+module Bubblegum.TextArea.EntityHelper exposing
+    ( findBool
+    , findIntRange
+    , findListString
+    , findString
+    )
 
 {-| Basic functions for the VocabularyHelper to facilitate the retrieval of data from the configuration
 -}

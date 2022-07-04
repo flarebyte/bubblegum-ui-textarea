@@ -58,6 +58,7 @@ calculateRows content =
     toString
         (if numberOfLines < 40 then
             numberOfLines
+
          else
             40
         )
@@ -67,6 +68,7 @@ limit100 : Int -> Int
 limit100 value =
     if value > 100 then
         100
+
     else
         value
 
