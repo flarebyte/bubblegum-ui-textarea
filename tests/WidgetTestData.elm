@@ -86,8 +86,8 @@ findWarningDiv html =
 withSettingsSuccessMinimumChars: Int -> SettingsEntity.Model
 withSettingsSuccessMinimumChars value = {
     attributes = [
-        attr ui_successMinimumChars (value |> toString)
-        , attr ui_successMaximumChars (value + 100 |> toString)
+        attr ui_successMinimumChars (value |> String.fromInt)
+        , attr ui_successMaximumChars (value + 100 |> String.fromInt)
     ]
  }
 
@@ -107,8 +107,8 @@ selectorsSuccessMinimumChars = [ Selector.tag "progress" ]
 withSettingsSuccessMaximumChars: Int -> SettingsEntity.Model
 withSettingsSuccessMaximumChars value = {
     attributes = [
-        attr ui_successMinimumChars (value |> toString)
-        , attr ui_successMaximumChars (value + 100 |> toString)
+        attr ui_successMinimumChars (value |> String.fromInt)
+        , attr ui_successMaximumChars (value + 100 |> String.fromInt)
     ]
  }
 
@@ -128,8 +128,8 @@ selectorsSuccessMaximumChars = [ Selector.tag "progress" ]
 withSettingsDangerMinimumChars: Int -> SettingsEntity.Model
 withSettingsDangerMinimumChars value = {
     attributes = [
-        attr ui_dangerMinimumChars (value |> toString)
-        , attr ui_dangerMaximumChars (value + 50 |> toString)
+        attr ui_dangerMinimumChars (value |> String.fromInt)
+        , attr ui_dangerMaximumChars (value + 50 |> String.fromInt)
     ]
  }
 
@@ -150,8 +150,8 @@ selectorsDangerMinimumChars = [ Selector.classes ["tag", "is-danger"],
 withSettingsDangerMaximumChars: Int -> SettingsEntity.Model
 withSettingsDangerMaximumChars value = {
     attributes = [
-        attr ui_dangerMinimumChars (value |> toString)
-        , attr ui_dangerMaximumChars (value + 100 |> toString)
+        attr ui_dangerMinimumChars (value |> String.fromInt)
+        , attr ui_dangerMaximumChars (value + 100 |> String.fromInt)
     ]
  }
 
@@ -172,8 +172,8 @@ selectorsDangerMaximumChars = [ Selector.classes ["tag", "is-danger"],
 withSettingsSuccessMinimumWords: Int -> SettingsEntity.Model
 withSettingsSuccessMinimumWords value = {
     attributes = [
-        attr ui_successMinimumWords (value |> toString)
-        , attr ui_successMaximumWords (value + 100 |> toString)
+        attr ui_successMinimumWords (value |> String.fromInt)
+        , attr ui_successMaximumWords (value + 100 |> String.fromInt)
     ]
  }
 
@@ -193,8 +193,8 @@ selectorsSuccessMinimumWords = [ Selector.tag "progress" ]
 withSettingsSuccessMaximumWords: Int -> SettingsEntity.Model
 withSettingsSuccessMaximumWords value = {
     attributes = [
-        attr ui_successMinimumWords (value |> toString)
-        , attr ui_successMaximumWords (value + 100 |> toString)
+        attr ui_successMinimumWords (value |> String.fromInt)
+        , attr ui_successMaximumWords (value + 100 |> String.fromInt)
     ]
  }
 
@@ -214,8 +214,8 @@ selectorsSuccessMaximumWords = [ Selector.tag "progress" ]
 withSettingsDangerMinimumWords: Int -> SettingsEntity.Model
 withSettingsDangerMinimumWords value = {
     attributes = [
-        attr ui_dangerMinimumWords (value |> toString)
-        , attr ui_dangerMaximumWords (value + 20 |> toString)
+        attr ui_dangerMinimumWords (value |> String.fromInt)
+        , attr ui_dangerMaximumWords (value + 20 |> String.fromInt)
     ]
  }
 
@@ -236,8 +236,8 @@ selectorsDangerMinimumWords = [ Selector.classes ["tag", "is-danger"],
 withSettingsDangerMaximumWords: Int -> SettingsEntity.Model
 withSettingsDangerMaximumWords value = {
     attributes = [
-        attr ui_dangerMinimumWords (value |> toString)
-        , attr ui_dangerMaximumWords (value + 20 |> toString)
+        attr ui_dangerMinimumWords (value |> String.fromInt)
+        , attr ui_dangerMaximumWords (value + 20 |> String.fromInt)
     ]
  }
 
