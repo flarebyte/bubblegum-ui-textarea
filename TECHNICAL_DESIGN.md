@@ -6,6 +6,9 @@
 The TextArea widget should eventually be part of a suite of widgets for the
 Bubblegum Document Suite.
 
+The purpose of this widget is to allow the user to edit text content and to
+give him feedback on his progress.
+
 The Bubblegum Document Suite should make it easy to create structured
 documents that satisfy a schema.
 
@@ -132,16 +135,7 @@ Internally, the model for state is similar to the model for settings. However
 they have different types to make it easier to evolve these models in the
 future if required.
 
-## TextArea Widget
-
-### Purpose
-
-The purpose of this widget is to allow the user to edit text content and to
-give him feedback on his progress.
-
-### Code structure
-
-#### Source
+### Source of TextArea Widget
 
 The source code is in the src/Bubblegum/TextArea folder.
 
@@ -162,7 +156,7 @@ The source code is in the src/Bubblegum/TextArea folder.
     scripts, scripts/generate-vocabulary.py).
 -   Widget.elm: The textarea widget and most important source file.
 
-#### Unit tests
+### Unit tests
 
 The unit test code is under the tests folder:
 
@@ -176,7 +170,7 @@ You can run the unit-test:
 elm-test
 ```
 
-#### Demo
+### Demo
 
 All the code to demo the widget is available under demo.
 
@@ -192,7 +186,7 @@ And then run the demo:
 make start
 ```
 
-#### Code generation
+### Code generation
 
 Code generation is usually not very developer friendly as it increases the
 level of abstraction. However, it is acually a good fit with strongly typed
