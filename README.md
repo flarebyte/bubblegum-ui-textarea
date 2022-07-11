@@ -5,7 +5,7 @@ dependencies](https://reiner-dolp.github.io/elm-badges/flarebyte/bubblegum-ui-te
 ![License of the
 package](https://reiner-dolp.github.io/elm-badges/flarebyte/bubblegum-ui-textarea/license.svg)
 ![Latest version of the
-package](https://reiner-dolp.github.io/elm-badges/flarebyte/bubblegum-ui-textarea/version.svg)
+package](https://img.shields.io/elm-package/v/flarebyte/bubblegum-ui-textarea)
 
 > TextArea widget for the Bubblegum UI toolkit
 
@@ -23,10 +23,8 @@ elm-app package install flarebyte/bubblegum-ui-textarea
 
 -   [Code Maintenance](MAINTENANCE.md)
 -   [Code Of Conduct](CODE_OF_CONDUCT.md)
--   [Api for bubblegum-ui-textarea](API.md)
 -   [Contributing](CONTRIBUTING.md)
 -   [Glossary](GLOSSARY.md)
--   [Diagram for the code base](INTERNAL.md)
 -   [Vocabulary used in the code base](CODE_VOCABULARY.md)
 -   [Architectural Decision Records](DECISIONS.md)
 -   [Contributors](https://github.com/flarebyte/bubblegum-ui-textarea/graphs/contributors)
