@@ -15,13 +15,13 @@ uiRangeKeys:
     unit: word
     description: The range of words triggering a warning
 uiKeys:
-  - name: content-id
+  - name: content id
     description: The unique id of the content
     signature: String
     constraints: state medium! attribute
     examples:
       - "id:aa61e603-9947-4fd8-86bb-d63a682259d0 "
-  - name: content-language
+  - name: content language
     description: Language of the content
     signature: String
     constraints: small! user attribute
@@ -34,7 +34,7 @@ uiKeys:
       - es
       - it
       - fr
-  - name: content-right-to-left
+  - name: content right to left
     description: Whether the content requires right to left
     signature: Bool
     constraints: user attribute
@@ -45,34 +45,34 @@ uiKeys:
     constraints: state very-large attribute
     examples:
       - "some content "
-  - name: danger-help
+  - name: danger help
     description: Help message to highlight an issue with the content
     signature: String
     constraints: medium! state
     examples:
       - do not do this
-  - name: danger-maximum-chars
+  - name: danger maximum chars
     description: Warning when over the maximum number of characters
     signature: Int
     constraints: ""
     examples: []
-  - name: danger-maximum-words
+  - name: danger maximum words
     description: Warning when over the maximum number of words
     signature: Int
     constraints: ""
     examples:
       - ""
-  - name: danger-minimum-chars
+  - name: danger minimum chars
     description: Warning when under the minimum number of characters
     signature: Int
     constraints: ""
     examples: []
-  - name: danger-minimum-words
+  - name: danger minimum words
     description: Warning when under the minimum number of words
     signature: Int
     constraints: ""
     examples: []
-  - name: danger-tag
+  - name: danger tag
     description: Tag representing a dangerous aspect of the content
     signature: List String
     constraints: small! state
@@ -101,27 +101,27 @@ uiKeys:
     examples:
       - Some placeholder
       - プレースホルダ
-  - name: success-maximum-chars
+  - name: success maximum chars
     description: The maximum number of characters needed for successful content
     signature: Int
     constraints: ""
     examples: []
-  - name: success-maximum-words
+  - name: success maximum words
     description: The maximum number of words needed for successful content
     signature: Int
     constraints: ""
     examples: []
-  - name: success-minimum-chars
+  - name: success minimum chars
     description: The minimum number of characters needed for successful content
     signature: Int
     constraints: ""
     examples: []
-  - name: success-minimum-words
+  - name: success minimum words
     description: The minimum number of words needed for successful content
     signature: Int
     constraints: ""
     examples: []
-  - name: success-tag
+  - name: success tag
     description: Tag representing a successful facet of the content
     signature: List String
     constraints: small! state
@@ -137,7 +137,7 @@ uiKeys:
       - it
       - learning
       - elm
-  - name: user-language
+  - name: user language
     description: Language used by the user
     signature: String
     constraints: small! attribute
@@ -150,12 +150,12 @@ uiKeys:
       - es
       - it
       - fr
-  - name: user-right-to-left
+  - name: user right to left
     description: Whether the user is using right to left
     signature: Bool
     constraints: attribute
     examples: []
-  - name: warning-tag
+  - name: warning tag
     description: Tag representing a warning aspect of the content
     signature: List String
     constraints: small! state
