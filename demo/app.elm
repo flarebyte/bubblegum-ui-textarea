@@ -5,13 +5,11 @@ module App exposing (..)
 
 # Basics
 
-
-
 -}
 
-import Browser
 import AppModel exposing (..)
 import AppMsg exposing (AppMsg(..))
+import Browser
 import Bubblegum.Entity.Attribute exposing (deleteAttributeByKey, replaceAttributeByKey)
 import Bubblegum.Entity.SettingsEntity as SettingsEntity
 import Bubblegum.Entity.StateEntity as StateEntity

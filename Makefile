@@ -12,6 +12,7 @@ assist: pre-generate
 beautify: 
 	elm-format src/ --yes
 	elm-format tests/ --yes
+	elm-format demo/ --yes
 
 # Build the library
 build: test beautify doc
