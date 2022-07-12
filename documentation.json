@@ -2,8 +2,8 @@
   {
     "name": "Bubblegum.TextArea.Widget",
     "comment": " A flexible textarea widget with the following features:\n\n  - Supports multiple languages as well as right to left writing.\n  - The widget and the content do not have to use the same language.\n  - You can define targets in term of number of characters or words, and display the progress against them.\n  - You can add various tags to describe the content or the status of the content (ex: warning tag)\n\nPlease have a look at the main [documentation](https://github.com/flarebyte/bubblegum-ui-textarea) for more details about the possible settings.\n\n@docs view\n\n",
+    "unions": [],
     "aliases": [],
-    "types": [],
     "values": [
       {
         "name": "view",
@@ -11,6 +11,6 @@
         "type": "Bubblegum.TextArea.Adapter.Model msg -> Bubblegum.Entity.SettingsEntity.Model -> Bubblegum.Entity.SettingsEntity.Model -> Bubblegum.Entity.StateEntity.Model -> Html.Html msg"
       }
     ],
-    "generated-with-elm-version": "0.18.0"
+    "binops": []
   }
 ]

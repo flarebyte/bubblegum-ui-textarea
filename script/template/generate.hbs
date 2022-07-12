@@ -1,0 +1,8 @@
+#!/bin/sh
+npx baldrick-whisker@latest render elm.json script/template/widget-package.hbs demo/WidgetPackageJson.elm
+{{#each modules}}
+echo "Generating {{moduleName}} ..."
+# npx baldrick-whisker@latest object generated/{{dasherize moduleName}}.json src/{{../packageNameSlash}}/{{moduleName}}.elm script/data/module/{{dasherize moduleName}}.json
+# npx ajv validate --errors text -s script/schema/merged.schema.json -d generated/{{dasherize moduleName}}.json
+# npx baldrick-whisker@latest render generated/{{dasherize moduleName}}.json script/template/tests.hbs tests/{{moduleName}}Tests.elm
+{{/each}}

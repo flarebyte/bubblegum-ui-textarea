@@ -1,8 +1,8 @@
 {
-  "packageNameSlash": "Package/Fixme",
+  "packageNameSlash": "Bubblegum/TextArea",
   "modules": [
     {
-      "moduleName": "Fixme"
+      "moduleName": "Vocabulary"
     }
   ]
 }

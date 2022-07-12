@@ -5,10 +5,11 @@ module App exposing (..)
 
 # Basics
 
-@docs
+
 
 -}
 
+import Browser
 import AppModel exposing (..)
 import AppMsg exposing (AppMsg(..))
 import Bubblegum.Entity.Attribute exposing (deleteAttributeByKey, replaceAttributeByKey)
@@ -22,10 +23,9 @@ import WidgetBuilder exposing (viewWidget)
 import WidgetDocView exposing (..)
 
 
-main : Program Never AppModel AppMsg
 main =
-    Html.beginnerProgram
-        { model = AppModel.reset
+    Browser.sandbox
+        { init = AppModel.reset
         , view = view
         , update = update
         }
