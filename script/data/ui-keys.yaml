@@ -1,3 +1,4 @@
+---
 uiRangeKeys:
   - kind: success
     unit: char
@@ -17,7 +18,7 @@ uiKeys:
     signature: String
     constraints: state medium! attribute
     examples:
-      - 'id:aa61e603-9947-4fd8-86bb-d63a682259d0 '
+      - "id:aa61e603-9947-4fd8-86bb-d63a682259d0 "
   - name: content-language
     description: Language of the content
     signature: String
@@ -41,7 +42,7 @@ uiKeys:
     signature: String
     constraints: state very-large attribute
     examples:
-      - 'some content '
+      - "some content "
   - name: danger-help
     description: Help message to highlight an issue with the content
     signature: String
@@ -51,23 +52,23 @@ uiKeys:
   - name: danger-maximum-chars
     description: Warning when over the maximum number of characters
     signature: Int
-    constraints: ''
+    constraints: ""
     examples: []
   - name: danger-maximum-words
     description: Warning when over the maximum number of words
     signature: Int
-    constraints: ''
+    constraints: ""
     examples:
-      - ''
+      - ""
   - name: danger-minimum-chars
     description: Warning when under the minimum number of characters
     signature: Int
-    constraints: ''
+    constraints: ""
     examples: []
   - name: danger-minimum-words
     description: Warning when under the minimum number of words
     signature: Int
-    constraints: ''
+    constraints: ""
     examples: []
   - name: danger-tag
     description: Tag representing a dangerous aspect of the content
@@ -101,22 +102,22 @@ uiKeys:
   - name: success-maximum-chars
     description: The maximum number of characters needed for successful content
     signature: Int
-    constraints: ''
+    constraints: ""
     examples: []
   - name: success-maximum-words
     description: The maximum number of words needed for successful content
     signature: Int
-    constraints: ''
+    constraints: ""
     examples: []
   - name: success-minimum-chars
     description: The minimum number of characters needed for successful content
     signature: Int
-    constraints: ''
+    constraints: ""
     examples: []
   - name: success-minimum-words
     description: The minimum number of words needed for successful content
     signature: Int
-    constraints: ''
+    constraints: ""
     examples: []
   - name: success-tag
     description: Tag representing a successful facet of the content
