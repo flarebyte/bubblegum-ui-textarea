@@ -1,0 +1,6 @@
+---
+packageNameSlash: Bubblegum/TextArea
+generations:
+  - data: vocabulary
+    schema: vocabulary
+    template: vocabulary

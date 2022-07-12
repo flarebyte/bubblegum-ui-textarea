@@ -1,4 +1,6 @@
 ---
+moduleName: Vocabulary
+packageNameDot: Bubblegum.TextArea
 uiRangeKeys:
   - kind: success
     unit: char

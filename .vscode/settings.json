@@ -1,13 +1,8 @@
 {
   "python.linting.pylintEnabled": false,
   "makefile.extensionOutputFolder": "./.vscode",
-  "json.schemas": [
-    {
-      "fileMatch": ["script/data/project.json"],
-      "url": "./script/schema/project.schema.json"
-    }
-  ],
   "yaml.schemas": {
-    "./script/schema/ui-keys.schema.json": "script/data/ui-keys.yaml"
+    "./script/schema/project.schema.json": "script/data/project.yaml",
+    "./script/schema/vocabulary.schema.json": "script/data/vocabulary.yaml"
   }
 }
