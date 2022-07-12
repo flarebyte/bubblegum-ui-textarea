@@ -39,10 +39,14 @@
         "schema": {
           "type": "string",
           "description": "the base name of the schema file"
+        },
+        "destination": {
+          "type": "string",
+          "description": "the relative path to the target file"
         }
       },
-      "required": ["data", "template", "schema"],
-      "title": "Module"
+      "required": ["data", "template", "schema", "destination"],
+      "title": "Generation parameters"
     }
   }
 }

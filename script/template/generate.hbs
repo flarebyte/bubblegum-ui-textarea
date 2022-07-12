@@ -3,5 +3,5 @@ npx baldrick-whisker@latest render elm.json script/template/widget-package.hbs d
 {{#each generations}}
 echo "Generating {{template}} with {{data}}..."
 npx ajv validate --errors text -s script/schema/{{schema}}.schema.json -d script/data/{{data}}.yaml
-# npx baldrick-whisker@latest render generated/{{dasherize moduleName}}.json script/template/tests.hbs tests/{{moduleName}}Tests.elm
+npx baldrick-whisker@latest render script/data/{{data}}.yaml script/template/{{template}}.hbs {{destination}}
 {{/each}}
