@@ -10,5 +10,6 @@ module {{packageNameDot}}.{{moduleName}} exposing (..)
 {-|  {{description}}. ({{signature}}) -}
 ui_{{lowerCamelCase name}}: String
 ui_{{lowerCamelCase name}} =
-    "ui:$name"
+    "ui:{{dasherize name}}"
+
 {{/each}}
