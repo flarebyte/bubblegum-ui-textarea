@@ -9,3 +9,7 @@ generations:
     schema: vocabulary
     template: vocabulary-helper
     destination: src/Bubblegum/TextArea/VocabularyHelper.elm
+  - data: vocabulary
+    schema: vocabulary
+    template: key-description
+    destination: demo/KeyDescription.elm
