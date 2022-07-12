@@ -5,3 +5,7 @@ generations:
     schema: vocabulary
     template: vocabulary
     destination: src/Bubblegum/TextArea/Vocabulary.elm
+  - data: vocabulary
+    schema: vocabulary
+    template: vocabulary-helper
+    destination: src/Bubblegum/TextArea/VocabularyHelper2.elm

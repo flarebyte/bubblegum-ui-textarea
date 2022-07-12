@@ -1,0 +1,44 @@
+module {{packageNameDot}}.{{moduleName}}Helper exposing (..)
+
+{-| Helpers for accessing settings
+
+    **generated** with make generate
+
+-}
+
+import Bubblegum.Entity.Outcome exposing (..)
+import Bubblegum.Entity.SettingsEntity as SettingsEntity
+import Bubblegum.Entity.Validation as Validation
+import {{packageNameDot}}.EntityHelper exposing (..)
+import {{packageNameDot}}.HelperLimits exposing (..)
+import {{packageNameDot}}.Vocabulary exposing (..)
+
+{{#each uiKeys}}
+{-|  {{description}} -}
+{{#ifSatisfy "equals" signature "String"}}
+get{{upperCamelCase name}} : SettingsEntity.Model -> Outcome String
+get{{upperCamelCase name}} settings =
+    findString ui_{{lowerCamelCase name}} settings.attributes
+        |> Validation.withinStringCharsRange $rangeRestriction
+{{/ifSatisfy}}
+{{#ifSatisfy "equals" signature "List String"}}
+get{{upperCamelCase name}} : SettingsEntity.Model -> Outcome (List String)
+get{{upperCamelCase name}} settings =
+    findListString ui_{{lowerCamelCase name}} settings.attributes
+{{/ifSatisfy}}
+{{#ifSatisfy "equals" signature "Bool"}}
+is{{upperCamelCase name}} : SettingsEntity.Model -> Outcome Bool
+is{{upperCamelCase name}} settings =
+    findBool ui_{{lowerCamelCase name}} settings.attributes
+{{/ifSatisfy}}
+{{/each}}
+
+{{#each uiRangeKeys}}
+{-|  {{description}} -}
+
+get{{upperCamelCase kind}}{{ upperCamelCase unit}}Range: SettingsEntity.Model -> Outcome ( Int, Int )
+get{{upperCamelCase kind}}{{ upperCamelCase unit}}Range settings =
+    findIntRange ( ui_successMinimum{{upperCamelCase unit}}s, ui_successMaximum{{upperCamelCase unit}}s ) settings.attributes
+        |> Validation.withinIntRange limitVeryLargeRangeNotEmpty
+
+{{/each}}

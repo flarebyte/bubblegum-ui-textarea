@@ -1,4 +1,5 @@
 #!/bin/sh
+# Generated with make generate. See template script/template/generate.hbs
 npx baldrick-whisker@latest render elm.json script/template/widget-package.hbs demo/WidgetPackageJson.elm
 {{#each generations}}
 echo "Generating {{template}} with {{data}}..."
