@@ -5,10 +5,9 @@
     {
       "fileMatch": ["script/data/project.json"],
       "url": "./script/schema/project.schema.json"
-    },
-    {
-      "fileMatch": ["script/data/ui-keys.yaml"],
-      "url": "./script/schema/ui-keys.schema.json"
     }
-  ]
+  ],
+  "yaml.schemas": {
+    "./script/schema/ui-keys.schema.json": "script/data/ui-keys.yaml"
+  }
 }
