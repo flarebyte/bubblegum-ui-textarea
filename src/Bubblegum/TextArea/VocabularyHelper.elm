@@ -2,7 +2,7 @@ module Bubblegum.TextArea.VocabularyHelper exposing (..)
 
 {-| Helpers for accessing settings
 
-    **Generated** by generate-vocabulary.py
+    **generated** with make generate
 
 -}
 

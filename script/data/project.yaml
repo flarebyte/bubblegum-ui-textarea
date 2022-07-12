@@ -8,4 +8,4 @@ generations:
   - data: vocabulary
     schema: vocabulary
     template: vocabulary-helper
-    destination: src/Bubblegum/TextArea/VocabularyHelper2.elm
+    destination: src/Bubblegum/TextArea/VocabularyHelper.elm

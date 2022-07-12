@@ -6,4 +6,4 @@ npx ajv validate --errors text -s script/schema/vocabulary.schema.json -d script
 npx baldrick-whisker@latest render script/data/vocabulary.yaml script/template/vocabulary.hbs src/Bubblegum/TextArea/Vocabulary.elm
 echo "Generating vocabulary-helper with vocabulary..."
 npx ajv validate --errors text -s script/schema/vocabulary.schema.json -d script/data/vocabulary.yaml
-npx baldrick-whisker@latest render script/data/vocabulary.yaml script/template/vocabulary-helper.hbs src/Bubblegum/TextArea/VocabularyHelper2.elm
+npx baldrick-whisker@latest render script/data/vocabulary.yaml script/template/vocabulary-helper.hbs src/Bubblegum/TextArea/VocabularyHelper.elm

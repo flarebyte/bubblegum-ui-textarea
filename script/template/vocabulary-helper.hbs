@@ -14,12 +14,14 @@ import {{packageNameDot}}.HelperLimits exposing (..)
 import {{packageNameDot}}.Vocabulary exposing (..)
 
 {{#each uiKeys}}
+{{#ifSatisfy "contains" signature "String OR Bool"}}
 {-|  {{description}} -}
+
 {{#ifSatisfy "equals" signature "String"}}
 get{{upperCamelCase name}} : SettingsEntity.Model -> Outcome String
 get{{upperCamelCase name}} settings =
     findString ui_{{lowerCamelCase name}} settings.attributes
-        |> Validation.withinStringCharsRange $rangeRestriction
+        |> Validation.withinStringCharsRange limit{{#ifSatisfy "contains" constraints "small"}}Small{{/ifSatisfy}}{{#ifSatisfy "contains" constraints "medium"}}Medium{{/ifSatisfy}}{{#ifSatisfy "contains" constraints "very-large"}}VeryLarge{{/ifSatisfy}}Range{{#ifSatisfy "contains" constraints "not-empty"}}NotEmpty{{/ifSatisfy}}      
 {{/ifSatisfy}}
 {{#ifSatisfy "equals" signature "List String"}}
 get{{upperCamelCase name}} : SettingsEntity.Model -> Outcome (List String)
@@ -31,6 +33,7 @@ is{{upperCamelCase name}} : SettingsEntity.Model -> Outcome Bool
 is{{upperCamelCase name}} settings =
     findBool ui_{{lowerCamelCase name}} settings.attributes
 {{/ifSatisfy}}
+{{/ifSatisfy}}
 {{/each}}
 
 {{#each uiRangeKeys}}
@@ -38,7 +41,7 @@ is{{upperCamelCase name}} settings =
 
 get{{upperCamelCase kind}}{{ upperCamelCase unit}}Range: SettingsEntity.Model -> Outcome ( Int, Int )
 get{{upperCamelCase kind}}{{ upperCamelCase unit}}Range settings =
-    findIntRange ( ui_successMinimum{{upperCamelCase unit}}s, ui_successMaximum{{upperCamelCase unit}}s ) settings.attributes
+    findIntRange ( ui_{{lowerCamelCase kind}}Minimum{{upperCamelCase unit}}s, ui_{{lowerCamelCase kind}}Maximum{{upperCamelCase unit}}s ) settings.attributes
         |> Validation.withinIntRange limitVeryLargeRangeNotEmpty
 
 {{/each}}

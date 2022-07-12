@@ -18,13 +18,13 @@ uiKeys:
   - name: content id
     description: The unique id of the content
     signature: String
-    constraints: state medium! attribute
+    constraints: state medium not-empty attribute
     examples:
       - "id:aa61e603-9947-4fd8-86bb-d63a682259d0 "
   - name: content language
     description: Language of the content
     signature: String
-    constraints: small! user attribute
+    constraints: small not-empty user attribute
     examples:
       - en-GB
       - ja
@@ -48,7 +48,7 @@ uiKeys:
   - name: danger help
     description: Help message to highlight an issue with the content
     signature: String
-    constraints: medium! state
+    constraints: medium not-empty state
     examples:
       - do not do this
   - name: danger maximum chars
@@ -75,21 +75,21 @@ uiKeys:
   - name: danger tag
     description: Tag representing a dangerous aspect of the content
     signature: List String
-    constraints: small! state
+    constraints: small not-empty state
     examples:
       - sensitive
       - save
   - name: help
     description: Some help tip related to the field
     signature: String
-    constraints: medium!
+    constraints: medium not-empty
     examples:
       - Lorem ipsum dolor sit amet consectetur adipiscing elit.
       - 助けて
   - name: label
     description: Label related to the field
     signature: String
-    constraints: medium!
+    constraints: medium not-empty
     examples:
       - Some label
       - ラベル
@@ -97,7 +97,7 @@ uiKeys:
   - name: placeholder
     description: Short hint describing the expected content
     signature: String
-    constraints: medium! attribute
+    constraints: medium not-empty attribute
     examples:
       - Some placeholder
       - プレースホルダ
@@ -124,7 +124,7 @@ uiKeys:
   - name: success tag
     description: Tag representing a successful facet of the content
     signature: List String
-    constraints: small! state
+    constraints: small not-empty state
     examples:
       - spelling
       - concise
@@ -132,7 +132,7 @@ uiKeys:
   - name: tag
     description: Tag used to describe the field
     signature: List String
-    constraints: small!
+    constraints: small not-empty
     examples:
       - it
       - learning
@@ -140,7 +140,7 @@ uiKeys:
   - name: user language
     description: Language used by the user
     signature: String
-    constraints: small! attribute
+    constraints: small not-empty attribute
     examples:
       - en-GB
       - ja
@@ -158,7 +158,7 @@ uiKeys:
   - name: warning tag
     description: Tag representing a warning aspect of the content
     signature: List String
-    constraints: small! state
+    constraints: small not-empty state
     examples:
       - grammar
       - synonyms
