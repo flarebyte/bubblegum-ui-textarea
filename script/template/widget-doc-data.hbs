@@ -1,0 +1,39 @@
+module WidgetDocData exposing (textAreaWidgetDoc)
+
+import AttributeDoc exposing (AttributeDoc, Cardinality(..), createKey)
+import Bubblegum.TextArea.Vocabulary exposing (..)
+import KeyDescription exposing (..)
+import WidgetDoc exposing (..)
+import WidgetPackageJson
+
+
+{-| Some examples of settings for the demo.
+
+    **Generated** by generate-vocabulary.py
+
+-}
+textAreaWidgetDoc : WidgetDoc
+textAreaWidgetDoc =
+    { meta = WidgetPackageJson.meta
+    , userSettings = [
+    {{#each uiKeys}}
+    {{#ifSatisfy "contains" constraints "user"}}
+    {{#ifSatisfy "not contains" constraints "no-comma"}} , {{/ifSatisfy}} createKey ui_{{lowerCamelCase name}} ZeroOrOne [ {{#listJoin "," examples}} "{{this}}" {{/listJoin}} ] desc{{upperCamelCase name}}
+    {{/ifSatisfy}}
+    {{/each}}
+    ]  
+    , settings = [ 
+    {{#each uiKeys}}
+    {{#ifSatisfy "not contains" constraints "user OR state"}}
+    {{#ifSatisfy "not contains" constraints "no-comma"}} , {{/ifSatisfy}} createKey ui_{{lowerCamelCase name}} ZeroOrOne [ {{#listJoin "," examples}} "{{this}}" {{/listJoin}} ] desc{{upperCamelCase name}}
+    {{/ifSatisfy}}
+    {{/each}}
+    ]
+    , stateAttributes = [
+    {{#each uiKeys}}
+    {{#ifSatisfy "contains" constraints "state"}}
+    {{#ifSatisfy "not contains" constraints "no-comma"}} , {{/ifSatisfy}} createKey ui_{{lowerCamelCase name}} ZeroOrOne [ {{#listJoin "," examples}} "{{this}}" {{/listJoin}} ] desc{{upperCamelCase name}}
+    {{/ifSatisfy}}
+    {{/each}}
+    ]
+    }

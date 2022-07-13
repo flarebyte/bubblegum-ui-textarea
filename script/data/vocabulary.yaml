@@ -18,13 +18,13 @@ uiKeys:
   - name: content id
     description: The unique id of the content
     signature: String
-    constraints: state medium not-empty attribute
+    constraints: state medium not-empty attribute no-comma
     examples:
       - "id:aa61e603-9947-4fd8-86bb-d63a682259d0 "
   - name: content language
     description: Language of the content
     signature: String
-    constraints: small not-empty user attribute
+    constraints: small not-empty user attribute no-comma
     examples:
       - en-GB
       - ja
@@ -38,7 +38,9 @@ uiKeys:
     description: Whether the content requires right to left
     signature: Bool
     constraints: user attribute
-    examples: []
+    examples:
+      - "true"
+      - "false"
   - name: content
     description: The content of the field
     signature: String
@@ -54,24 +56,35 @@ uiKeys:
   - name: danger maximum chars
     description: Warning when over the maximum number of characters
     signature: Int
-    constraints: ""
-    examples: []
+    constraints: "no-comma"
+    examples:
+      - '80'
+      - '160'
+      - '320'
   - name: danger maximum words
     description: Warning when over the maximum number of words
     signature: Int
     constraints: ""
     examples:
-      - ""
+      - '40'
+      - '80'
+      - '160'
   - name: danger minimum chars
     description: Warning when under the minimum number of characters
     signature: Int
     constraints: ""
-    examples: []
+    examples:
+      - '0'
+      - '20'
+      - '40'      
   - name: danger minimum words
     description: Warning when under the minimum number of words
     signature: Int
     constraints: ""
-    examples: []
+    examples:
+      - '0'
+      - '10'
+      - '20'
   - name: danger tag
     description: Tag representing a dangerous aspect of the content
     signature: List String
@@ -105,22 +118,34 @@ uiKeys:
     description: The maximum number of characters needed for successful content
     signature: Int
     constraints: ""
-    examples: []
+    examples:
+      - '70'
+      - '150'
+      - '310'
   - name: success maximum words
     description: The maximum number of words needed for successful content
     signature: Int
     constraints: ""
-    examples: []
+    examples:
+      - '30'
+      - '70'
+      - '150'
   - name: success minimum chars
     description: The minimum number of characters needed for successful content
     signature: Int
     constraints: ""
-    examples: []
+    examples:
+      - '1'
+      - '10'
+      - '20'
   - name: success minimum words
     description: The minimum number of words needed for successful content
     signature: Int
     constraints: ""
-    examples: []
+    examples:
+      - '1'
+      - '10'
+      - '20'
   - name: success tag
     description: Tag representing a successful facet of the content
     signature: List String
@@ -140,7 +165,7 @@ uiKeys:
   - name: user language
     description: Language used by the user
     signature: String
-    constraints: small not-empty attribute
+    constraints: small not-empty user attribute
     examples:
       - en-GB
       - ja
@@ -153,8 +178,10 @@ uiKeys:
   - name: user right to left
     description: Whether the user is using right to left
     signature: Bool
-    constraints: attribute
-    examples: []
+    constraints: user attribute
+    examples:
+      - "true"
+      - "false"
   - name: warning tag
     description: Tag representing a warning aspect of the content
     signature: List String

@@ -13,3 +13,7 @@ generations:
     schema: vocabulary
     template: key-description
     destination: demo/KeyDescription.elm
+  - data: vocabulary
+    schema: vocabulary
+    template: widget-doc-data
+    destination: demo/WidgetDocData.elm
