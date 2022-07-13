@@ -1,0 +1,49 @@
+module WidgetCreateTests exposing (..)
+
+{-| Unit tests for testing the view of the Widget
+
+    **generated** with make generate
+
+-}
+
+import Test exposing (..)
+import WidgetTestData exposing (..)
+
+
+suite : Test
+suite =
+    describe "The Widget module"
+        [ describe "Widget.view"
+            [
+    {{#each uiKeys}}
+    {{#ifSatisfy "not contains" constraints "user OR state"}}
+             ,  fuzz fuzzy{{upperCamelCase name}} "Correct settings for {{description}}" <|
+                \value -> viewWidgetWithSettings (withSettings{{upperCamelCase name}} value)
+                    |> findComponent selectors{{upperCamelCase name}}
+              , fuzz fuzzyNot{{upperCamelCase name}} "Wrong settings for {{description}}" <|
+                \value -> viewWidgetWithSettings (withSettings{{upperCamelCase name}} value)
+                    {{#ifSatisfy "contains" constraints "attribute"}}|> findComponent selectorsNot{{upperCamelCase name}}{{/ifSatisfy}}
+                    {{#ifSatisfy "not contains" constraints "attribute"}}|> findWarningDiv{{/ifSatisfy}}       
+
+    {{/ifSatisfy}}
+    {{#ifSatisfy "contains" constraints "user"}}
+             ,  fuzz fuzzy{{upperCamelCase name}} "Correct settings for {{description}}" <|
+                \value -> viewWidgetWithUserSettings (withUserSettings{{upperCamelCase name}} value)
+                    |> findComponent selectors{{upperCamelCase name}}
+              , fuzz fuzzyNot{{upperCamelCase name}} "Wrong settings for {{description}}" <|
+                \value -> viewWidgetWithUserSettings (withUserSettings{{upperCamelCase name}} value)
+                    {{#ifSatisfy "contains" constraints "attribute"}}|> findComponent selectorsNot{{upperCamelCase name}}{{/ifSatisfy}}
+                    {{#ifSatisfy "not contains" constraints "attribute"}}|> findWarningDiv{{/ifSatisfy}}       
+    {{/ifSatisfy}}
+    {{#ifSatisfy "contains" constraints "state"}}
+             ,  fuzz fuzzy{{upperCamelCase name}} "Correct settings for {{description}}" <|
+                \value -> viewWidgetWithState (withState{{upperCamelCase name}} value)
+                    |> findComponent selectors{{upperCamelCase name}}
+              , fuzz fuzzyNot{{upperCamelCase name}} "Wrong settings for {{description}}" <|
+                \value -> viewWidgetWithState (withState{{upperCamelCase name}} value)
+                    {{#ifSatisfy "contains" constraints "attribute"}}|> findComponent selectorsNot{{upperCamelCase name}}{{/ifSatisfy}}
+                    {{#ifSatisfy "not contains" constraints "attribute"}}|> findWarningDiv{{/ifSatisfy}}       
+    {{/ifSatisfy}}
+    {{/each}}
+            ]
+        ]

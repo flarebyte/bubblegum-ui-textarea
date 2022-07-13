@@ -17,3 +17,7 @@ generations:
     schema: vocabulary
     template: widget-doc-data
     destination: demo/WidgetDocData.elm
+  - data: vocabulary
+    schema: vocabulary
+    template: widget-create-tests
+    destination: tests/WidgetCreateTests2.elm
