@@ -19,3 +19,6 @@ npx baldrick-whisker@latest render script/data/vocabulary.yaml script/template/w
 echo "Generating iso-language with language..."
 npx ajv validate --errors text -s script/schema/language.schema.json -d script/data/language.yaml
 npx baldrick-whisker@latest render script/data/language.yaml script/template/iso-language.hbs src/Bubblegum/TextArea/IsoLanguage.elm
+echo "Generating internationalization with translation..."
+npx ajv validate --errors text -s script/schema/translation.schema.json -d script/data/translation.yaml
+npx baldrick-whisker@latest render script/data/translation.yaml script/template/internationalization.hbs src/Bubblegum/TextArea/Internationalization2.elm

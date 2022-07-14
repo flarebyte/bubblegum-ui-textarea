@@ -25,3 +25,7 @@ generations:
     schema: language
     template: iso-language
     destination: src/Bubblegum/TextArea/IsoLanguage.elm
+  - data: translation
+    schema: translation
+    template: internationalization
+    destination: src/Bubblegum/TextArea/Internationalization2.elm

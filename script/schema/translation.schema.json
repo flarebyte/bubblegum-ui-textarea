@@ -1,0 +1,108 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Translations",
+    "definitions": {
+        "Translations": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "ar": {
+                    "$ref": "#/definitions/Translation"
+                },
+                "zh": {
+                    "$ref": "#/definitions/Translation"
+                },
+                "en": {
+                    "$ref": "#/definitions/Translation"
+                },
+                "fr": {
+                    "$ref": "#/definitions/Translation"
+                },
+                "de": {
+                    "$ref": "#/definitions/Translation"
+                },
+                "it": {
+                    "$ref": "#/definitions/Translation"
+                },
+                "ja": {
+                    "$ref": "#/definitions/Translation"
+                },
+                "ru": {
+                    "$ref": "#/definitions/Translation"
+                },
+                "es": {
+                    "$ref": "#/definitions/Translation"
+                }
+            },
+            "required": [
+                "ar",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "it",
+                "ja",
+                "ru",
+                "zh"
+            ],
+            "title": "Translations"
+        },
+        "Translation": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Language": {
+                    "type": "string"
+                },
+                "Word": {
+                    "type": "string"
+                },
+                "Words": {
+                    "type": "string"
+                },
+                "InfoTag": {
+                    "type": "string"
+                },
+                "SuccessTag": {
+                    "type": "string"
+                },
+                "WarningTag": {
+                    "type": "string"
+                },
+                "DangerTag": {
+                    "type": "string"
+                },
+                "Unit": {
+                    "type": "string"
+                },
+                "NumberOfChars": {
+                    "type": "string"
+                },
+                "NumberOfWords": {
+                    "type": "string"
+                },
+                "MinimumChars": {
+                    "type": "string"
+                },
+                "MinimumWords": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "DangerTag",
+                "InfoTag",
+                "Language",
+                "MinimumChars",
+                "MinimumWords",
+                "NumberOfChars",
+                "NumberOfWords",
+                "SuccessTag",
+                "Unit",
+                "WarningTag",
+                "Word",
+                "Words"
+            ],
+            "title": "Translation for a given language"
+        }
+    }
+}

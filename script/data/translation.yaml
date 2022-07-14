@@ -1,0 +1,118 @@
+---
+ar:
+  Language: Arabic
+  Word: كلم
+  Words: ";كلمات"
+  InfoTag: 'علامة المعلومات '
+  SuccessTag: " العلامة التي تشير إلى النجاح "
+  WarningTag: " العلامة التي تشير إلى التحذير "
+  DangerTag: " العلامة التي تشير إلى الخطر "
+  Unit: " الوحدة "
+  NumberOfChars: " عدد الأحرف "
+  NumberOfWords: " عدد الكلمات"
+  MinimumChars: 'الحد الأدنى لعدد الأحرف المتوقع '
+  MinimumWords: " الحد الأدنى لعدد الكلمات المتوقع"
+zh:
+  Language: Chinese
+  Word: 字
+  Words: 话
+  InfoTag: 信息標籤
+  SuccessTag: 成功標籤
+  WarningTag: 警告標籤
+  DangerTag: 危險標籤
+  Unit: 單位
+  NumberOfChars: 字符數
+  NumberOfWords: 字數
+  MinimumChars: 最少预期字符数
+  MinimumWords: 预计最少字数
+en:
+  Language: English
+  Word: word
+  Words: words
+  InfoTag: information tag
+  SuccessTag: " tag indicating success"
+  WarningTag: " tag indicating warning"
+  DangerTag: " tag indicating danger"
+  Unit: " unit"
+  NumberOfChars: " number of characters"
+  NumberOfWords: " number of words"
+  MinimumChars: " minimum number of characters expected"
+  MinimumWords: " minimum number of words expected"
+fr:
+  Language: French
+  Word: mot
+  Words: mots
+  InfoTag: étiquette d'information
+  SuccessTag: " étiquette indiquant le succès"
+  WarningTag: " étiquette indiquant l'avertissement"
+  DangerTag: " étiquette indiquant le danger"
+  Unit: " unité"
+  NumberOfChars: " nombre de caractères"
+  NumberOfWords: " nombre de mots"
+  MinimumChars: " nombre minimum de caractères attendus"
+  MinimumWords: " nombre minimum de mots attendus"
+de:
+  Language: German
+  Word: wort
+  Words: wörter
+  InfoTag: Informationstag
+  SuccessTag: " Tag der den Erfolg anzeigt"
+  WarningTag: " Tag der die Warnung anzeigt"
+  DangerTag: " Tag der die Gefahr anzeigt"
+  Unit: " Einheit"
+  NumberOfChars: " Anzahl der Zeichen"
+  NumberOfWords: " Anzahl der Wörter"
+  MinimumChars: " Mindestanzahl der erwarteten Zeichen"
+  MinimumWords: " Mindestanzahl der erwarteten Wörter"
+it:
+  Language: Italian
+  Word: parola
+  Words: parole
+  InfoTag: tag di informazione
+  SuccessTag: " tag che indica il successo"
+  WarningTag: " tag che indica avvertimento"
+  DangerTag: " tag che indica pericolo"
+  Unit: " unità"
+  NumberOfChars: " numero di caratteri"
+  NumberOfWords: " numero di parole"
+  MinimumChars: " numero minimo di caratteri previsto"
+  MinimumWords: " numero minimo di parole previsto"
+ja:
+  Language: Japanese
+  Word: ワード
+  Words: 言葉
+  InfoTag: 情報タグ
+  SuccessTag: 成功を示すタグ
+  WarningTag: 警告を示すタグ
+  DangerTag: 危険を示すタグ
+  Unit: 単位
+  NumberOfChars: 文字数
+  NumberOfWords: 単語数
+  MinimumChars: 期待される最小文字数
+  MinimumWords: 予想される単語の最小数
+ru:
+  Language: Russian
+  Word: слово
+  Words: слова
+  InfoTag: " информационный тег"
+  SuccessTag: " тег указывающий успех"
+  WarningTag: " тег указывающий предупреждение"
+  DangerTag: " тег указывающий опасность"
+  Unit: " единица"
+  NumberOfChars: " количество символов"
+  NumberOfWords: " количество слов"
+  MinimumChars: минимальное количество ожидаемых символов
+  MinimumWords: " минимальное количество ожидаемых слов"
+es:
+  Language: Spanish
+  Word: palabra
+  Words: palabras
+  InfoTag: etiqueta de información
+  SuccessTag: " etiqueta que indica el éxito"
+  WarningTag: " etiqueta que indica advertencia"
+  DangerTag: " etiqueta que indica peligro"
+  Unit: " unidad"
+  NumberOfChars: " número de caracteres"
+  NumberOfWords: " número de palabras"
+  MinimumChars: " número mínimo de caracteres esperado"
+  MinimumWords: " número mínimo de palabras esperado"
