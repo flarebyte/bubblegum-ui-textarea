@@ -21,3 +21,7 @@ generations:
     schema: vocabulary
     template: widget-create-tests
     destination: tests/WidgetCreateTests.elm
+  - data: language
+    schema: language
+    template: iso-language
+    destination: src/Bubblegum/TextArea/IsoLanguage.elm

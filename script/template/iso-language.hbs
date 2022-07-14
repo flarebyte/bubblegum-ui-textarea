@@ -1,0 +1,39 @@
+module Bubblegum.TextArea.IsoLanguage exposing (IsoLanguage(..), toIsoLanguage)
+
+{-| Utility to identify ISO languages
+
+    See https://en.wikipedia.org/wiki/Languages_used_on_the_Internet
+    And https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+
+    **generated** with make generate
+
+-}
+
+import String exposing (left)
+
+
+getLanguageCode : String -> String
+getLanguageCode language =
+    left 2 language
+
+
+toIsoLanguage : String -> IsoLanguage
+toIsoLanguage language =
+    case getLanguageCode language of
+    {{#each @root}}
+        {{#if name}}{{! to skip other keys injected by whisker in root}}    
+        "{{@key}}" ->
+            {{name}}
+        {{/if}}
+    {{/each}}
+
+        _ ->
+            English
+
+type IsoLanguage
+    = 
+    {{#each @root}}
+    {{#if name}}
+    {{#unless @first}}| {{/unless}} {{name}}
+    {{/if}}
+    {{/each}}

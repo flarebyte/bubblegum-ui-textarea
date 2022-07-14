@@ -1,6 +1,0 @@
-kind,unit, description
-success,char,The range of characters accepted for successful content
-danger,char,The range of characters triggering a warning
-success,word,The range of words accepted for successful content
-danger,word,The range of words triggering a warning
-

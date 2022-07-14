@@ -3,6 +3,7 @@
   "makefile.extensionOutputFolder": "./.vscode",
   "yaml.schemas": {
     "./script/schema/project.schema.json": "script/data/project.yaml",
-    "./script/schema/vocabulary.schema.json": "script/data/vocabulary.yaml"
+    "./script/schema/vocabulary.schema.json": "script/data/vocabulary.yaml",
+    "./script/schema/language.schema.json": "script/data/language.yaml"
   }
 }

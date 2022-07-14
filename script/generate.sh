@@ -16,3 +16,6 @@ npx baldrick-whisker@latest render script/data/vocabulary.yaml script/template/w
 echo "Generating widget-create-tests with vocabulary..."
 npx ajv validate --errors text -s script/schema/vocabulary.schema.json -d script/data/vocabulary.yaml
 npx baldrick-whisker@latest render script/data/vocabulary.yaml script/template/widget-create-tests.hbs tests/WidgetCreateTests.elm
+echo "Generating iso-language with language..."
+npx ajv validate --errors text -s script/schema/language.schema.json -d script/data/language.yaml
+npx baldrick-whisker@latest render script/data/language.yaml script/template/iso-language.hbs src/Bubblegum/TextArea/IsoLanguage.elm
