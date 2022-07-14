@@ -16,3 +16,26 @@ pickSingularOrPlural howMany singularOrPlural =
 
     else
         second singularOrPlural
+
+translateWord : IsoLanguage -> Int -> String
+translateWord language howMany =
+    case language of
+    {{#each @root}}
+        {{#if Language}}{{! to skip other keys injected by whisker in root}}    
+        {{Language}} ->
+            pickSingularOrPlural howMany ( "{{Word}}", "{{Word}}" )
+        {{/if}}
+    {{/each}}
+
+{{#each en}}
+translate{{upperCamelCase @key}} : IsoLanguage -> String
+translate{{upperCamelCase @key}} language =
+    case language of
+    {{#each @root}}
+        {{#if Language}}{{! to skip other keys injected by whisker in root}}    
+        {{Language}} ->
+            "{{this}}"
+        {{/if}}
+    {{/each}}
+
+{{/each}}
