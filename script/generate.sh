@@ -15,4 +15,4 @@ npx ajv validate --errors text -s script/schema/vocabulary.schema.json -d script
 npx baldrick-whisker@latest render script/data/vocabulary.yaml script/template/widget-doc-data.hbs demo/WidgetDocData.elm
 echo "Generating widget-create-tests with vocabulary..."
 npx ajv validate --errors text -s script/schema/vocabulary.schema.json -d script/data/vocabulary.yaml
-npx baldrick-whisker@latest render script/data/vocabulary.yaml script/template/widget-create-tests.hbs tests/WidgetCreateTests2.elm
+npx baldrick-whisker@latest render script/data/vocabulary.yaml script/template/widget-create-tests.hbs tests/WidgetCreateTests.elm

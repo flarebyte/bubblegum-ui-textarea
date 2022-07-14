@@ -20,4 +20,4 @@ generations:
   - data: vocabulary
     schema: vocabulary
     template: widget-create-tests
-    destination: tests/WidgetCreateTests2.elm
+    destination: tests/WidgetCreateTests.elm

@@ -2,7 +2,7 @@ module WidgetCreateTests exposing (..)
 
 {-| Unit tests for testing the view of the Widget
 
-    **Generated** by generate-vocabulary.py
+    **generated** with make generate
 
 -}
 
