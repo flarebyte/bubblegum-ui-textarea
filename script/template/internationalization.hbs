@@ -28,14 +28,18 @@ translateWord language howMany =
     {{/each}}
 
 {{#each en}}
-translate{{upperCamelCase @key}} : IsoLanguage -> String
-translate{{upperCamelCase @key}} language =
+{{#with @key as | translationKey |}}
+{{#ifSatisfy "not equals" translationKey "Word OR Words"}}
+translate{{upperCamelCase translationKey}} : IsoLanguage -> String
+translate{{upperCamelCase translationKey}} language =
     case language of
-    {{#each @root}}
-        {{#if Language}}{{! to skip other keys injected by whisker in root}}    
-        {{Language}} ->
-            "{{this}}"
+    {{#each @root as | translation |}}
+        {{#if Language}}{{! to skip other keys injected by whisker in root}} 
+        {{Language}} ->  
+            "{{#with (lookup translation [translationKey])~}}{{this}}{{/with}}"
         {{/if}}
     {{/each}}
+{{/ifSatisfy}}
+{{/with}}
 
 {{/each}}

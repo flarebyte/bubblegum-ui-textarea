@@ -28,4 +28,4 @@ generations:
   - data: translation
     schema: translation
     template: internationalization
-    destination: src/Bubblegum/TextArea/Internationalization2.elm
+    destination: src/Bubblegum/TextArea/Internationalization.elm

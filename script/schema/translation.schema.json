@@ -1,91 +1,65 @@
 {
-    "$schema": "http://json-schema.org/draft-06/schema#",
-    "$ref": "#/definitions/Translations",
-    "definitions": {
-        "Translations": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "ar": {
-                    "$ref": "#/definitions/Translation"
-                },
-                "zh": {
-                    "$ref": "#/definitions/Translation"
-                },
-                "en": {
-                    "$ref": "#/definitions/Translation"
-                },
-                "fr": {
-                    "$ref": "#/definitions/Translation"
-                },
-                "de": {
-                    "$ref": "#/definitions/Translation"
-                },
-                "it": {
-                    "$ref": "#/definitions/Translation"
-                },
-                "ja": {
-                    "$ref": "#/definitions/Translation"
-                },
-                "ru": {
-                    "$ref": "#/definitions/Translation"
-                },
-                "es": {
-                    "$ref": "#/definitions/Translation"
-                }
-            },
-            "required": [
-                "ar",
-                "de",
-                "en",
-                "es",
-                "fr",
-                "it",
-                "ja",
-                "ru",
-                "zh"
-            ],
-            "title": "Translations"
-        },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "title": "Translations",
+    "patternProperties": {
+        "^..$": {
+            "$ref": "#/$defs/Translation"
+        }
+    },
+    "additionalProperties": false,
+    "$defs": {
         "Translation": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
                 "Language": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Name of the language"
                 },
                 "Word": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Translation for one word"
                 },
                 "Words": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Translation for multiple words"
                 },
                 "InfoTag": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Translation for an information tag"
                 },
                 "SuccessTag": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Translation for a success tag"
                 },
                 "WarningTag": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Translation for a warning tag"
                 },
                 "DangerTag": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Translation for a danger tag"
                 },
                 "Unit": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Translation for an unit"
                 },
                 "NumberOfChars": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Translation for a number of characters"
                 },
                 "NumberOfWords": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Translation for a number of words"
                 },
                 "MinimumChars": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Translation for a minimum of characters"
                 },
                 "MinimumWords": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Translation for a minimum of words"
                 }
             },
             "required": [
