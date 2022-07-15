@@ -10,7 +10,9 @@
         "packageNameSlash": {
           "type": "string",
           "description": "The Elm package name separated by slashes",
-          "examples": ["Bubblegum/Entity"]
+          "examples": [
+            "Bubblegum/Entity"
+          ]
         },
         "generations": {
           "type": "array",
@@ -20,7 +22,10 @@
           }
         }
       },
-      "required": ["generations", "packageNameSlash"],
+      "required": [
+        "generations",
+        "packageNameSlash"
+      ],
       "title": "Project",
       "description": "Description of the Elm project"
     },
@@ -45,7 +50,12 @@
           "description": "the relative path to the target file"
         }
       },
-      "required": ["data", "template", "schema", "destination"],
+      "required": [
+        "data",
+        "template",
+        "schema",
+        "destination"
+      ],
       "title": "Generation parameters"
     }
   }
