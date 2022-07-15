@@ -95,5 +95,10 @@ test:
 	elm-test
 
 # Normalize the project with baldrick-whisker
-whisker-norm: 
+whisker-norm:
+	mkdir -p script
+	test -f "elm.json" || npx baldrick-whisker@latest object elm.json github:flarebyte:baldrick-reserve:data/elm/src-elm.json
+	npx baldrick-whisker@latest render elm.json github:flarebyte:baldrick-reserve:template/elm/normalize.hbs script/normalize.sh --config '{"githubAccount":"flarebyte","copyrightHolder":"Flarebyte.com"}'
 	sh script/normalize.sh
+	npx baldrick-whisker@latest render elm.json github:flarebyte:baldrick-reserve:template/code-of-conduct.hbs CODE_OF_CONDUCT.md --config '{"githubAccount":"flarebyte","copyrightHolder":"Flarebyte.com"}'
+
