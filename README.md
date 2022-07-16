@@ -27,6 +27,9 @@ elm-app package install flarebyte/bubblegum-ui-textarea
 -   [Glossary](GLOSSARY.md)
 -   [Vocabulary used in the code base](CODE_VOCABULARY.md)
 -   [Architectural Decision Records](DECISIONS.md)
+-   [Internationalization](INTERNATIONALIZATION.md)
+-   [Accessibility](ACCESSIBILITY.md)
+-   [Code generation](CODE_GENERATION.md)
 -   [Contributors](https://github.com/flarebyte/bubblegum-ui-textarea/graphs/contributors)
 -   [Dependencies](https://github.com/flarebyte/bubblegum-ui-textarea/network/dependencies)
 
