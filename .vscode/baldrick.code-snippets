@@ -10,13 +10,13 @@
     "description": "Create a type alias"
   },
   "add decision": {
-    "scope": "md,md",
+    "scope": "markdown,md",
     "prefix": "add decision",
     "body": [
       "## Title Fixme",
       "",
       "* MUST-HAVE.",
-      "* Created: month year",
+      "* Created: ${CURRENT_MONTH_NAME} ${CURRENT_YEAR}",
       "",
       "### Context and Problem Statement",
       "",
@@ -52,7 +52,7 @@
       "    * Fixme",
       "* Cons:",
       "    * Fixme"
-    ]
-  },
-  "description": "Adds architecture decision record"
+    ],
+    "description": "Adds architecture decision record"
+  }
 }
