@@ -12,8 +12,6 @@ npx ajv validate --errors text -s script/schema/{{schema}}.schema.json -d script
 npx baldrick-whisker@latest render script/data/{{data}}.yaml script/template/{{template}}.hbs {{destination}}
 {{/each}}
 
-make build
-
 echo "Generating the app.js from Elm source code ..."
 rm docs/*.js docs/*.css docs/*.html
 pushd demo && elm make App.elm --output ../docs/app.js && popd

@@ -31,8 +31,6 @@ echo "Generating code-base with code-base..."
 npx ajv validate --errors text -s script/schema/code-base.schema.json -d script/data/code-base.yaml
 npx baldrick-whisker@latest render script/data/code-base.yaml script/template/code-base.hbs CODE_BASE.md
 
-make build
-
 echo "Generating the app.js from Elm source code ..."
 rm docs/*.js docs/*.css docs/*.html
 pushd demo && elm make App.elm --output ../docs/app.js && popd
