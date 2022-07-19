@@ -18,7 +18,7 @@
     <div id="main"></div>
     <script src="app.js"></script>
     <script>
-        var node = document.getElementById('main');
-        var app = Elm.App.embed(node);
-    </script>
+      const node = document.getElementById('main');
+      const app = Elm.App.init({node});
+  </script>
   </body>
