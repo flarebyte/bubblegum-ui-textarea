@@ -135,7 +135,6 @@ Internally, the model for state is similar to the model for settings. However
 they have different types to make it easier to evolve these models in the
 future if required.
 
-
 ### Demo
 
 All the code to demo the widget is available under demo.

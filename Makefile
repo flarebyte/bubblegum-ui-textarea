@@ -31,6 +31,7 @@ generate: reset-generated pre-generate
 	sh script/generate.sh
 	make beautify
 	make test
+	make md-fix
 
 # Update github repository
 github: 
