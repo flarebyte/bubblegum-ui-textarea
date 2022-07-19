@@ -14,6 +14,10 @@ npx baldrick-whisker@latest render script/data/{{data}}.yaml script/template/{{t
 
 make build
 
+echo "Generating the app.js from Elm source code ..."
+rm docs/*.js docs/*.css docs/*.html
+pushd demo && elm make App.elm --output ../docs/app.js && popd
+
 echo "Copy demo files to docs ..."
 cp demo/index.html docs/index.html
 cp demo/styles.css docs/styles.css

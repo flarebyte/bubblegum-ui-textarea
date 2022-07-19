@@ -5478,10 +5478,10 @@ var $author$project$KeyDescription$descWarningTag = 'Tag representing a warning 
 var $author$project$WidgetPackageJson$meta = {
 	exposedModules: _List_fromArray(
 		['Bubblegum.TextArea.Widget']),
-	license: 'BSD3',
+	license: 'BSD-3-Clause',
 	repository: 'https://github.com/flarebyte/bubblegum-ui-textarea.git',
 	summary: 'TextArea widget for the Bubblegum UI toolkit.',
-	version: '1.0.0'
+	version: '1.0.1'
 };
 var $author$project$Bubblegum$TextArea$Vocabulary$ui_contentId = 'ui:content-id';
 var $author$project$Bubblegum$TextArea$Vocabulary$ui_contentLanguage = 'ui:content-language';
@@ -5513,84 +5513,84 @@ var $author$project$WidgetDocData$textAreaWidgetDoc = {
 			$author$project$Bubblegum$TextArea$Vocabulary$ui_dangerMaximumChars,
 			$author$project$AttributeDoc$ZeroOrOne,
 			_List_fromArray(
-				['0', '20', '40', '80', '160', '320', '-5']),
+				['80', '160', '320']),
 			$author$project$KeyDescription$descDangerMaximumChars),
 			A4(
 			$author$project$AttributeDoc$createKey,
 			$author$project$Bubblegum$TextArea$Vocabulary$ui_dangerMaximumWords,
 			$author$project$AttributeDoc$ZeroOrOne,
 			_List_fromArray(
-				['0', '20', '40', '80', '160', '320', '-5']),
+				['40', '80', '160']),
 			$author$project$KeyDescription$descDangerMaximumWords),
 			A4(
 			$author$project$AttributeDoc$createKey,
 			$author$project$Bubblegum$TextArea$Vocabulary$ui_dangerMinimumChars,
 			$author$project$AttributeDoc$ZeroOrOne,
 			_List_fromArray(
-				['0', '20', '40', '80', '160', '320', '-5']),
+				['0', '20', '40']),
 			$author$project$KeyDescription$descDangerMinimumChars),
 			A4(
 			$author$project$AttributeDoc$createKey,
 			$author$project$Bubblegum$TextArea$Vocabulary$ui_dangerMinimumWords,
 			$author$project$AttributeDoc$ZeroOrOne,
 			_List_fromArray(
-				['0', '20', '40', '80', '160', '320', '-5']),
+				['0', '10', '20']),
 			$author$project$KeyDescription$descDangerMinimumWords),
 			A4(
 			$author$project$AttributeDoc$createKey,
 			$author$project$Bubblegum$TextArea$Vocabulary$ui_help,
 			$author$project$AttributeDoc$ZeroOrOne,
 			_List_fromArray(
-				['Lorem ipsum dolor sit amet consectetur adipiscing elit.', '助けて', 'other']),
+				['Lorem ipsum dolor sit amet consectetur adipiscing elit.', '助けて']),
 			$author$project$KeyDescription$descHelp),
 			A4(
 			$author$project$AttributeDoc$createKey,
 			$author$project$Bubblegum$TextArea$Vocabulary$ui_label,
 			$author$project$AttributeDoc$ZeroOrOne,
 			_List_fromArray(
-				['Some label', 'ラベル', 'ضع الكلمة المناسبة', 'other']),
+				['Some label', 'ラベル', 'ضع الكلمة المناسبة']),
 			$author$project$KeyDescription$descLabel),
 			A4(
 			$author$project$AttributeDoc$createKey,
 			$author$project$Bubblegum$TextArea$Vocabulary$ui_placeholder,
 			$author$project$AttributeDoc$ZeroOrOne,
 			_List_fromArray(
-				['Some placeholder', 'プレースホルダ', 'other']),
+				['Some placeholder', 'プレースホルダ']),
 			$author$project$KeyDescription$descPlaceholder),
 			A4(
 			$author$project$AttributeDoc$createKey,
 			$author$project$Bubblegum$TextArea$Vocabulary$ui_successMaximumChars,
 			$author$project$AttributeDoc$ZeroOrOne,
 			_List_fromArray(
-				['0', '20', '40', '80', '160', '320', '-5']),
+				['70', '150', '310']),
 			$author$project$KeyDescription$descSuccessMaximumChars),
 			A4(
 			$author$project$AttributeDoc$createKey,
 			$author$project$Bubblegum$TextArea$Vocabulary$ui_successMaximumWords,
 			$author$project$AttributeDoc$ZeroOrOne,
 			_List_fromArray(
-				['0', '20', '40', '80', '160', '320', '-5']),
+				['30', '70', '150']),
 			$author$project$KeyDescription$descSuccessMaximumWords),
 			A4(
 			$author$project$AttributeDoc$createKey,
 			$author$project$Bubblegum$TextArea$Vocabulary$ui_successMinimumChars,
 			$author$project$AttributeDoc$ZeroOrOne,
 			_List_fromArray(
-				['0', '20', '40', '80', '160', '320', '-5']),
+				['1', '10', '20']),
 			$author$project$KeyDescription$descSuccessMinimumChars),
 			A4(
 			$author$project$AttributeDoc$createKey,
 			$author$project$Bubblegum$TextArea$Vocabulary$ui_successMinimumWords,
 			$author$project$AttributeDoc$ZeroOrOne,
 			_List_fromArray(
-				['0', '20', '40', '80', '160', '320', '-5']),
+				['1', '10', '20']),
 			$author$project$KeyDescription$descSuccessMinimumWords),
 			A4(
 			$author$project$AttributeDoc$createKey,
 			$author$project$Bubblegum$TextArea$Vocabulary$ui_tag,
 			$author$project$AttributeDoc$ZeroOrOne,
 			_List_fromArray(
-				['it', 'learning', 'elm', 'other']),
+				['it', 'learning', 'elm']),
 			$author$project$KeyDescription$descTag)
 		]),
 	stateAttributes: _List_fromArray(
@@ -5600,42 +5600,42 @@ var $author$project$WidgetDocData$textAreaWidgetDoc = {
 			$author$project$Bubblegum$TextArea$Vocabulary$ui_contentId,
 			$author$project$AttributeDoc$ZeroOrOne,
 			_List_fromArray(
-				['id:aa61e603-9947-4fd8-86bb-d63a682259d0', 'other']),
+				['id:aa61e603-9947-4fd8-86bb-d63a682259d0 ']),
 			$author$project$KeyDescription$descContentId),
 			A4(
 			$author$project$AttributeDoc$createKey,
 			$author$project$Bubblegum$TextArea$Vocabulary$ui_content,
 			$author$project$AttributeDoc$ZeroOrOne,
 			_List_fromArray(
-				['some content', 'other']),
+				['some content ']),
 			$author$project$KeyDescription$descContent),
 			A4(
 			$author$project$AttributeDoc$createKey,
 			$author$project$Bubblegum$TextArea$Vocabulary$ui_dangerHelp,
 			$author$project$AttributeDoc$ZeroOrOne,
 			_List_fromArray(
-				['do not do this', 'other']),
+				['do not do this']),
 			$author$project$KeyDescription$descDangerHelp),
 			A4(
 			$author$project$AttributeDoc$createKey,
 			$author$project$Bubblegum$TextArea$Vocabulary$ui_dangerTag,
 			$author$project$AttributeDoc$ZeroOrOne,
 			_List_fromArray(
-				['sensitive', 'save', 'other']),
+				['sensitive', 'save']),
 			$author$project$KeyDescription$descDangerTag),
 			A4(
 			$author$project$AttributeDoc$createKey,
 			$author$project$Bubblegum$TextArea$Vocabulary$ui_successTag,
 			$author$project$AttributeDoc$ZeroOrOne,
 			_List_fromArray(
-				['spelling', 'concise', 'italian', 'other']),
+				['spelling', 'concise', 'italian']),
 			$author$project$KeyDescription$descSuccessTag),
 			A4(
 			$author$project$AttributeDoc$createKey,
 			$author$project$Bubblegum$TextArea$Vocabulary$ui_warningTag,
 			$author$project$AttributeDoc$ZeroOrOne,
 			_List_fromArray(
-				['grammar', 'synonyms', 'other']),
+				['grammar', 'synonyms']),
 			$author$project$KeyDescription$descWarningTag)
 		]),
 	userSettings: _List_fromArray(
@@ -5645,28 +5645,28 @@ var $author$project$WidgetDocData$textAreaWidgetDoc = {
 			$author$project$Bubblegum$TextArea$Vocabulary$ui_contentLanguage,
 			$author$project$AttributeDoc$ZeroOrOne,
 			_List_fromArray(
-				['en-GB', 'ja', 'ar', 'zh-CN-SC', 'ru-RUS', 'es', 'it', 'fr', 'other']),
+				['en-GB', 'ja', 'ar', 'zh-CN-SC', 'ru-RUS', 'es', 'it', 'fr']),
 			$author$project$KeyDescription$descContentLanguage),
 			A4(
 			$author$project$AttributeDoc$createKey,
 			$author$project$Bubblegum$TextArea$Vocabulary$ui_contentRightToLeft,
 			$author$project$AttributeDoc$ZeroOrOne,
 			_List_fromArray(
-				['true', 'false', 'other']),
+				['true', 'false']),
 			$author$project$KeyDescription$descContentRightToLeft),
 			A4(
 			$author$project$AttributeDoc$createKey,
 			$author$project$Bubblegum$TextArea$Vocabulary$ui_userLanguage,
 			$author$project$AttributeDoc$ZeroOrOne,
 			_List_fromArray(
-				['en-GB', 'ja', 'ar', 'zh-CN-SC', 'ru-RUS', 'es', 'it', 'fr', 'other']),
+				['en-GB', 'ja', 'ar', 'zh-CN-SC', 'ru-RUS', 'es', 'it', 'fr']),
 			$author$project$KeyDescription$descUserLanguage),
 			A4(
 			$author$project$AttributeDoc$createKey,
 			$author$project$Bubblegum$TextArea$Vocabulary$ui_userRightToLeft,
 			$author$project$AttributeDoc$ZeroOrOne,
 			_List_fromArray(
-				['true', 'false', 'other']),
+				['true', 'false']),
 			$author$project$KeyDescription$descUserRightToLeft)
 		])
 };
@@ -6895,7 +6895,7 @@ var $author$project$Bubblegum$TextArea$BulmaHelper$tag = function (tagInfo) {
 var $author$project$Bubblegum$TextArea$Internationalization$translateMinimumChars = function (language) {
 	switch (language.$) {
 		case 'Arabic':
-			return 'الحد الأدنى لعدد الأحرف المتوقع';
+			return 'الحد الأدنى لعدد الأحرف المتوقع ';
 		case 'Chinese':
 			return '最少预期字符数';
 		case 'English':
@@ -6912,45 +6912,45 @@ var $author$project$Bubblegum$TextArea$Internationalization$translateMinimumChar
 			return 'минимальное количество ожидаемых символов';
 		case 'Spanish':
 			return 'número mínimo de caracteres esperado';
-		case 'Swedish':
-			return 'minimum number of characters expected';
-		case 'Danish':
-			return 'minimum number of characters expected';
 		case 'Bulgarian':
-			return 'minimum number of characters expected';
-		case 'Portuguese':
-			return 'minimum number of characters expected';
-		case 'Vietnamese':
-			return 'minimum number of characters expected';
-		case 'Finnish':
-			return 'minimum number of characters expected';
-		case 'Hungarian':
-			return 'minimum number of characters expected';
-		case 'Turkish':
 			return 'minimum number of characters expected';
 		case 'Czech':
 			return 'minimum number of characters expected';
-		case 'Romanian':
+		case 'Danish':
+			return 'minimum number of characters expected';
+		case 'Dutch':
+			return 'minimum number of characters expected';
+		case 'Finnish':
 			return 'minimum number of characters expected';
 		case 'Greek':
 			return 'minimum number of characters expected';
-		case 'Ukrainian':
+		case 'Hebrew':
+			return 'minimum number of characters expected';
+		case 'Hungarian':
 			return 'minimum number of characters expected';
 		case 'Indonesian':
+			return 'minimum number of characters expected';
+		case 'Korean':
 			return 'minimum number of characters expected';
 		case 'Norwegian':
 			return 'minimum number of characters expected';
 		case 'Persian':
 			return 'minimum number of characters expected';
-		case 'Slovak':
-			return 'minimum number of characters expected';
-		case 'Dutch':
-			return 'minimum number of characters expected';
 		case 'Polish':
 			return 'minimum number of characters expected';
-		case 'Korean':
+		case 'Portuguese':
+			return 'minimum number of characters expected';
+		case 'Romanian':
+			return 'minimum number of characters expected';
+		case 'Slovak':
+			return 'minimum number of characters expected';
+		case 'Swedish':
 			return 'minimum number of characters expected';
 		case 'Thai':
+			return 'minimum number of characters expected';
+		case 'Turkish':
+			return 'minimum number of characters expected';
+		case 'Ukrainian':
 			return 'minimum number of characters expected';
 		default:
 			return 'minimum number of characters expected';
@@ -6985,45 +6985,45 @@ var $author$project$Bubblegum$TextArea$Internationalization$translateMinimumWord
 			return 'минимальное количество ожидаемых слов';
 		case 'Spanish':
 			return 'número mínimo de palabras esperado';
-		case 'Swedish':
-			return 'minimum number of words expected';
-		case 'Danish':
-			return 'minimum number of words expected';
 		case 'Bulgarian':
-			return 'minimum number of words expected';
-		case 'Portuguese':
-			return 'minimum number of words expected';
-		case 'Vietnamese':
-			return 'minimum number of words expected';
-		case 'Finnish':
-			return 'minimum number of words expected';
-		case 'Hungarian':
-			return 'minimum number of words expected';
-		case 'Turkish':
 			return 'minimum number of words expected';
 		case 'Czech':
 			return 'minimum number of words expected';
-		case 'Romanian':
+		case 'Danish':
+			return 'minimum number of words expected';
+		case 'Dutch':
+			return 'minimum number of words expected';
+		case 'Finnish':
 			return 'minimum number of words expected';
 		case 'Greek':
 			return 'minimum number of words expected';
-		case 'Ukrainian':
+		case 'Hebrew':
+			return 'minimum number of words expected';
+		case 'Hungarian':
 			return 'minimum number of words expected';
 		case 'Indonesian':
+			return 'minimum number of words expected';
+		case 'Korean':
 			return 'minimum number of words expected';
 		case 'Norwegian':
 			return 'minimum number of words expected';
 		case 'Persian':
 			return 'minimum number of words expected';
-		case 'Slovak':
-			return 'minimum number of words expected';
-		case 'Dutch':
-			return 'minimum number of words expected';
 		case 'Polish':
 			return 'minimum number of words expected';
-		case 'Korean':
+		case 'Portuguese':
+			return 'minimum number of words expected';
+		case 'Romanian':
+			return 'minimum number of words expected';
+		case 'Slovak':
+			return 'minimum number of words expected';
+		case 'Swedish':
 			return 'minimum number of words expected';
 		case 'Thai':
+			return 'minimum number of words expected';
+		case 'Turkish':
+			return 'minimum number of words expected';
+		case 'Ukrainian':
 			return 'minimum number of words expected';
 		default:
 			return 'minimum number of words expected';
@@ -7073,7 +7073,7 @@ var $elm$core$List$singleton = function (value) {
 var $author$project$Bubblegum$TextArea$Internationalization$translateNumberOfChars = function (language) {
 	switch (language.$) {
 		case 'Arabic':
-			return 'عدد الأحرف';
+			return 'عدد الأحرف ';
 		case 'Chinese':
 			return '字符數';
 		case 'English':
@@ -7090,45 +7090,45 @@ var $author$project$Bubblegum$TextArea$Internationalization$translateNumberOfCha
 			return 'количество символов';
 		case 'Spanish':
 			return 'número de caracteres';
-		case 'Swedish':
-			return 'number of characters';
-		case 'Danish':
-			return 'number of characters';
 		case 'Bulgarian':
-			return 'number of characters';
-		case 'Portuguese':
-			return 'number of characters';
-		case 'Vietnamese':
-			return 'number of characters';
-		case 'Finnish':
-			return 'number of characters';
-		case 'Hungarian':
-			return 'number of characters';
-		case 'Turkish':
 			return 'number of characters';
 		case 'Czech':
 			return 'number of characters';
-		case 'Romanian':
+		case 'Danish':
+			return 'number of characters';
+		case 'Dutch':
+			return 'number of characters';
+		case 'Finnish':
 			return 'number of characters';
 		case 'Greek':
 			return 'number of characters';
-		case 'Ukrainian':
+		case 'Hebrew':
+			return 'number of characters';
+		case 'Hungarian':
 			return 'number of characters';
 		case 'Indonesian':
+			return 'number of characters';
+		case 'Korean':
 			return 'number of characters';
 		case 'Norwegian':
 			return 'number of characters';
 		case 'Persian':
 			return 'number of characters';
-		case 'Slovak':
-			return 'number of characters';
-		case 'Dutch':
-			return 'number of characters';
 		case 'Polish':
 			return 'number of characters';
-		case 'Korean':
+		case 'Portuguese':
+			return 'number of characters';
+		case 'Romanian':
+			return 'number of characters';
+		case 'Slovak':
+			return 'number of characters';
+		case 'Swedish':
 			return 'number of characters';
 		case 'Thai':
+			return 'number of characters';
+		case 'Turkish':
+			return 'number of characters';
+		case 'Ukrainian':
 			return 'number of characters';
 		default:
 			return 'number of characters';
@@ -7162,45 +7162,45 @@ var $author$project$Bubblegum$TextArea$Internationalization$translateNumberOfWor
 			return 'количество слов';
 		case 'Spanish':
 			return 'número de palabras';
-		case 'Swedish':
-			return 'number of words';
-		case 'Danish':
-			return 'number of words';
 		case 'Bulgarian':
-			return 'number of words';
-		case 'Portuguese':
-			return 'number of words';
-		case 'Vietnamese':
-			return 'number of words';
-		case 'Finnish':
-			return 'number of words';
-		case 'Hungarian':
-			return 'number of words';
-		case 'Turkish':
 			return 'number of words';
 		case 'Czech':
 			return 'number of words';
-		case 'Romanian':
+		case 'Danish':
+			return 'number of words';
+		case 'Dutch':
+			return 'number of words';
+		case 'Finnish':
 			return 'number of words';
 		case 'Greek':
 			return 'number of words';
-		case 'Ukrainian':
+		case 'Hebrew':
+			return 'number of words';
+		case 'Hungarian':
 			return 'number of words';
 		case 'Indonesian':
+			return 'number of words';
+		case 'Korean':
 			return 'number of words';
 		case 'Norwegian':
 			return 'number of words';
 		case 'Persian':
 			return 'number of words';
-		case 'Slovak':
-			return 'number of words';
-		case 'Dutch':
-			return 'number of words';
 		case 'Polish':
 			return 'number of words';
-		case 'Korean':
+		case 'Portuguese':
+			return 'number of words';
+		case 'Romanian':
+			return 'number of words';
+		case 'Slovak':
+			return 'number of words';
+		case 'Swedish':
 			return 'number of words';
 		case 'Thai':
+			return 'number of words';
+		case 'Turkish':
+			return 'number of words';
+		case 'Ukrainian':
 			return 'number of words';
 		default:
 			return 'number of words';
@@ -7249,7 +7249,7 @@ var $author$project$Bubblegum$TextArea$BulmaHelper$tagsAddons = function (list) 
 var $author$project$Bubblegum$TextArea$Internationalization$translateDangerTag = function (language) {
 	switch (language.$) {
 		case 'Arabic':
-			return 'العلامة التي تشير إلى الخطر';
+			return 'العلامة التي تشير إلى الخطر ';
 		case 'Chinese':
 			return '危險標籤';
 		case 'English':
@@ -7266,45 +7266,45 @@ var $author$project$Bubblegum$TextArea$Internationalization$translateDangerTag =
 			return 'тег указывающий опасность';
 		case 'Spanish':
 			return 'etiqueta que indica peligro';
-		case 'Swedish':
-			return 'tag indicating danger';
-		case 'Danish':
-			return 'tag indicating danger';
 		case 'Bulgarian':
-			return 'tag indicating danger';
-		case 'Portuguese':
-			return 'tag indicating danger';
-		case 'Vietnamese':
-			return 'tag indicating danger';
-		case 'Finnish':
-			return 'tag indicating danger';
-		case 'Hungarian':
-			return 'tag indicating danger';
-		case 'Turkish':
 			return 'tag indicating danger';
 		case 'Czech':
 			return 'tag indicating danger';
-		case 'Romanian':
+		case 'Danish':
+			return 'tag indicating danger';
+		case 'Dutch':
+			return 'tag indicating danger';
+		case 'Finnish':
 			return 'tag indicating danger';
 		case 'Greek':
 			return 'tag indicating danger';
-		case 'Ukrainian':
+		case 'Hebrew':
+			return 'tag indicating danger';
+		case 'Hungarian':
 			return 'tag indicating danger';
 		case 'Indonesian':
+			return 'tag indicating danger';
+		case 'Korean':
 			return 'tag indicating danger';
 		case 'Norwegian':
 			return 'tag indicating danger';
 		case 'Persian':
 			return 'tag indicating danger';
-		case 'Slovak':
-			return 'tag indicating danger';
-		case 'Dutch':
-			return 'tag indicating danger';
 		case 'Polish':
 			return 'tag indicating danger';
-		case 'Korean':
+		case 'Portuguese':
+			return 'tag indicating danger';
+		case 'Romanian':
+			return 'tag indicating danger';
+		case 'Slovak':
+			return 'tag indicating danger';
+		case 'Swedish':
 			return 'tag indicating danger';
 		case 'Thai':
+			return 'tag indicating danger';
+		case 'Turkish':
+			return 'tag indicating danger';
+		case 'Ukrainian':
 			return 'tag indicating danger';
 		default:
 			return 'tag indicating danger';
@@ -7334,7 +7334,7 @@ var $author$project$Bubblegum$TextArea$BulmaHelper$tagsDanger = F2(
 var $author$project$Bubblegum$TextArea$Internationalization$translateInfoTag = function (language) {
 	switch (language.$) {
 		case 'Arabic':
-			return 'علامة المعلومات';
+			return 'علامة المعلومات ';
 		case 'Chinese':
 			return '信息標籤';
 		case 'English':
@@ -7351,45 +7351,45 @@ var $author$project$Bubblegum$TextArea$Internationalization$translateInfoTag = f
 			return 'информационный тег';
 		case 'Spanish':
 			return 'etiqueta de información';
-		case 'Swedish':
-			return 'information tag';
-		case 'Danish':
-			return 'information tag';
 		case 'Bulgarian':
-			return 'information tag';
-		case 'Portuguese':
-			return 'information tag';
-		case 'Vietnamese':
-			return 'information tag';
-		case 'Finnish':
-			return 'information tag';
-		case 'Hungarian':
-			return 'information tag';
-		case 'Turkish':
 			return 'information tag';
 		case 'Czech':
 			return 'information tag';
-		case 'Romanian':
+		case 'Danish':
+			return 'information tag';
+		case 'Dutch':
+			return 'information tag';
+		case 'Finnish':
 			return 'information tag';
 		case 'Greek':
 			return 'information tag';
-		case 'Ukrainian':
+		case 'Hebrew':
+			return 'information tag';
+		case 'Hungarian':
 			return 'information tag';
 		case 'Indonesian':
+			return 'information tag';
+		case 'Korean':
 			return 'information tag';
 		case 'Norwegian':
 			return 'information tag';
 		case 'Persian':
 			return 'information tag';
-		case 'Slovak':
-			return 'information tag';
-		case 'Dutch':
-			return 'information tag';
 		case 'Polish':
 			return 'information tag';
-		case 'Korean':
+		case 'Portuguese':
+			return 'information tag';
+		case 'Romanian':
+			return 'information tag';
+		case 'Slovak':
+			return 'information tag';
+		case 'Swedish':
 			return 'information tag';
 		case 'Thai':
+			return 'information tag';
+		case 'Turkish':
+			return 'information tag';
+		case 'Ukrainian':
 			return 'information tag';
 		default:
 			return 'information tag';
@@ -7419,7 +7419,7 @@ var $author$project$Bubblegum$TextArea$BulmaHelper$tagsInfo = F2(
 var $author$project$Bubblegum$TextArea$Internationalization$translateSuccessTag = function (language) {
 	switch (language.$) {
 		case 'Arabic':
-			return 'العلامة التي تشير إلى النجاح';
+			return 'العلامة التي تشير إلى النجاح ';
 		case 'Chinese':
 			return '成功標籤';
 		case 'English':
@@ -7436,45 +7436,45 @@ var $author$project$Bubblegum$TextArea$Internationalization$translateSuccessTag 
 			return 'тег указывающий успех';
 		case 'Spanish':
 			return 'etiqueta que indica el éxito';
-		case 'Swedish':
-			return 'tag indicating success';
-		case 'Danish':
-			return 'tag indicating success';
 		case 'Bulgarian':
-			return 'tag indicating success';
-		case 'Portuguese':
-			return 'tag indicating success';
-		case 'Vietnamese':
-			return 'tag indicating success';
-		case 'Finnish':
-			return 'tag indicating success';
-		case 'Hungarian':
-			return 'tag indicating success';
-		case 'Turkish':
 			return 'tag indicating success';
 		case 'Czech':
 			return 'tag indicating success';
-		case 'Romanian':
+		case 'Danish':
+			return 'tag indicating success';
+		case 'Dutch':
+			return 'tag indicating success';
+		case 'Finnish':
 			return 'tag indicating success';
 		case 'Greek':
 			return 'tag indicating success';
-		case 'Ukrainian':
+		case 'Hebrew':
+			return 'tag indicating success';
+		case 'Hungarian':
 			return 'tag indicating success';
 		case 'Indonesian':
+			return 'tag indicating success';
+		case 'Korean':
 			return 'tag indicating success';
 		case 'Norwegian':
 			return 'tag indicating success';
 		case 'Persian':
 			return 'tag indicating success';
-		case 'Slovak':
-			return 'tag indicating success';
-		case 'Dutch':
-			return 'tag indicating success';
 		case 'Polish':
 			return 'tag indicating success';
-		case 'Korean':
+		case 'Portuguese':
+			return 'tag indicating success';
+		case 'Romanian':
+			return 'tag indicating success';
+		case 'Slovak':
+			return 'tag indicating success';
+		case 'Swedish':
 			return 'tag indicating success';
 		case 'Thai':
+			return 'tag indicating success';
+		case 'Turkish':
+			return 'tag indicating success';
+		case 'Ukrainian':
 			return 'tag indicating success';
 		default:
 			return 'tag indicating success';
@@ -7504,7 +7504,7 @@ var $author$project$Bubblegum$TextArea$BulmaHelper$tagsSuccess = F2(
 var $author$project$Bubblegum$TextArea$Internationalization$translateWarningTag = function (language) {
 	switch (language.$) {
 		case 'Arabic':
-			return 'العلامة التي تشير إلى التحذير';
+			return 'العلامة التي تشير إلى التحذير ';
 		case 'Chinese':
 			return '警告標籤';
 		case 'English':
@@ -7521,45 +7521,45 @@ var $author$project$Bubblegum$TextArea$Internationalization$translateWarningTag 
 			return 'тег указывающий предупреждение';
 		case 'Spanish':
 			return 'etiqueta que indica advertencia';
-		case 'Swedish':
-			return 'tag indicating warning';
-		case 'Danish':
-			return 'tag indicating warning';
 		case 'Bulgarian':
-			return 'tag indicating warning';
-		case 'Portuguese':
-			return 'tag indicating warning';
-		case 'Vietnamese':
-			return 'tag indicating warning';
-		case 'Finnish':
-			return 'tag indicating warning';
-		case 'Hungarian':
-			return 'tag indicating warning';
-		case 'Turkish':
 			return 'tag indicating warning';
 		case 'Czech':
 			return 'tag indicating warning';
-		case 'Romanian':
+		case 'Danish':
+			return 'tag indicating warning';
+		case 'Dutch':
+			return 'tag indicating warning';
+		case 'Finnish':
 			return 'tag indicating warning';
 		case 'Greek':
 			return 'tag indicating warning';
-		case 'Ukrainian':
+		case 'Hebrew':
+			return 'tag indicating warning';
+		case 'Hungarian':
 			return 'tag indicating warning';
 		case 'Indonesian':
+			return 'tag indicating warning';
+		case 'Korean':
 			return 'tag indicating warning';
 		case 'Norwegian':
 			return 'tag indicating warning';
 		case 'Persian':
 			return 'tag indicating warning';
-		case 'Slovak':
-			return 'tag indicating warning';
-		case 'Dutch':
-			return 'tag indicating warning';
 		case 'Polish':
 			return 'tag indicating warning';
-		case 'Korean':
+		case 'Portuguese':
+			return 'tag indicating warning';
+		case 'Romanian':
+			return 'tag indicating warning';
+		case 'Slovak':
+			return 'tag indicating warning';
+		case 'Swedish':
 			return 'tag indicating warning';
 		case 'Thai':
+			return 'tag indicating warning';
+		case 'Turkish':
+			return 'tag indicating warning';
+		case 'Ukrainian':
 			return 'tag indicating warning';
 		default:
 			return 'tag indicating warning';
@@ -7664,152 +7664,152 @@ var $author$project$Bubblegum$TextArea$Internationalization$translateWord = F2(
 				return A2(
 					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
 					howMany,
-					_Utils_Tuple2('كلمة', 'كلمات'));
+					_Utils_Tuple2('كلم', 'كلم'));
 			case 'Chinese':
 				return A2(
 					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
 					howMany,
-					_Utils_Tuple2('字', '话'));
+					_Utils_Tuple2('字', '字'));
 			case 'English':
 				return A2(
 					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
 					howMany,
-					_Utils_Tuple2('word', 'words'));
+					_Utils_Tuple2('word', 'word'));
 			case 'French':
 				return A2(
 					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
 					howMany,
-					_Utils_Tuple2('mot', 'mots'));
+					_Utils_Tuple2('mot', 'mot'));
 			case 'German':
 				return A2(
 					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
 					howMany,
-					_Utils_Tuple2('wort', 'wörter'));
+					_Utils_Tuple2('wort', 'wort'));
 			case 'Italian':
 				return A2(
 					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
 					howMany,
-					_Utils_Tuple2('parola', 'parole'));
+					_Utils_Tuple2('parola', 'parola'));
 			case 'Japanese':
 				return A2(
 					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
 					howMany,
-					_Utils_Tuple2('ワード', '言葉'));
+					_Utils_Tuple2('ワード', 'ワード'));
 			case 'Russian':
 				return A2(
 					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
 					howMany,
-					_Utils_Tuple2('слово', 'слова'));
+					_Utils_Tuple2('слово', 'слово'));
 			case 'Spanish':
 				return A2(
 					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
 					howMany,
-					_Utils_Tuple2('palabra', 'palabras'));
-			case 'Swedish':
-				return A2(
-					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
-					howMany,
-					_Utils_Tuple2('word', 'words'));
-			case 'Danish':
-				return A2(
-					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
-					howMany,
-					_Utils_Tuple2('word', 'words'));
+					_Utils_Tuple2('palabra', 'palabra'));
 			case 'Bulgarian':
 				return A2(
 					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
 					howMany,
-					_Utils_Tuple2('word', 'words'));
-			case 'Portuguese':
-				return A2(
-					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
-					howMany,
-					_Utils_Tuple2('word', 'words'));
-			case 'Vietnamese':
-				return A2(
-					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
-					howMany,
-					_Utils_Tuple2('word', 'words'));
-			case 'Finnish':
-				return A2(
-					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
-					howMany,
-					_Utils_Tuple2('word', 'words'));
-			case 'Hungarian':
-				return A2(
-					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
-					howMany,
-					_Utils_Tuple2('word', 'words'));
-			case 'Turkish':
-				return A2(
-					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
-					howMany,
-					_Utils_Tuple2('word', 'words'));
+					_Utils_Tuple2('word', 'word'));
 			case 'Czech':
 				return A2(
 					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
 					howMany,
-					_Utils_Tuple2('word', 'words'));
-			case 'Romanian':
+					_Utils_Tuple2('word', 'word'));
+			case 'Danish':
 				return A2(
 					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
 					howMany,
-					_Utils_Tuple2('word', 'words'));
-			case 'Greek':
-				return A2(
-					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
-					howMany,
-					_Utils_Tuple2('word', 'words'));
-			case 'Ukrainian':
-				return A2(
-					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
-					howMany,
-					_Utils_Tuple2('word', 'words'));
-			case 'Indonesian':
-				return A2(
-					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
-					howMany,
-					_Utils_Tuple2('word', 'words'));
-			case 'Norwegian':
-				return A2(
-					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
-					howMany,
-					_Utils_Tuple2('word', 'words'));
-			case 'Persian':
-				return A2(
-					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
-					howMany,
-					_Utils_Tuple2('word', 'words'));
-			case 'Slovak':
-				return A2(
-					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
-					howMany,
-					_Utils_Tuple2('word', 'words'));
+					_Utils_Tuple2('word', 'word'));
 			case 'Dutch':
 				return A2(
 					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
 					howMany,
-					_Utils_Tuple2('word', 'words'));
-			case 'Polish':
+					_Utils_Tuple2('word', 'word'));
+			case 'Finnish':
 				return A2(
 					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
 					howMany,
-					_Utils_Tuple2('word', 'words'));
+					_Utils_Tuple2('word', 'word'));
+			case 'Greek':
+				return A2(
+					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
+					howMany,
+					_Utils_Tuple2('word', 'word'));
+			case 'Hebrew':
+				return A2(
+					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
+					howMany,
+					_Utils_Tuple2('word', 'word'));
+			case 'Hungarian':
+				return A2(
+					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
+					howMany,
+					_Utils_Tuple2('word', 'word'));
+			case 'Indonesian':
+				return A2(
+					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
+					howMany,
+					_Utils_Tuple2('word', 'word'));
 			case 'Korean':
 				return A2(
 					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
 					howMany,
-					_Utils_Tuple2('word', 'words'));
+					_Utils_Tuple2('word', 'word'));
+			case 'Norwegian':
+				return A2(
+					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
+					howMany,
+					_Utils_Tuple2('word', 'word'));
+			case 'Persian':
+				return A2(
+					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
+					howMany,
+					_Utils_Tuple2('word', 'word'));
+			case 'Polish':
+				return A2(
+					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
+					howMany,
+					_Utils_Tuple2('word', 'word'));
+			case 'Portuguese':
+				return A2(
+					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
+					howMany,
+					_Utils_Tuple2('word', 'word'));
+			case 'Romanian':
+				return A2(
+					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
+					howMany,
+					_Utils_Tuple2('word', 'word'));
+			case 'Slovak':
+				return A2(
+					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
+					howMany,
+					_Utils_Tuple2('word', 'word'));
+			case 'Swedish':
+				return A2(
+					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
+					howMany,
+					_Utils_Tuple2('word', 'word'));
 			case 'Thai':
 				return A2(
 					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
 					howMany,
-					_Utils_Tuple2('word', 'words'));
+					_Utils_Tuple2('word', 'word'));
+			case 'Turkish':
+				return A2(
+					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
+					howMany,
+					_Utils_Tuple2('word', 'word'));
+			case 'Ukrainian':
+				return A2(
+					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
+					howMany,
+					_Utils_Tuple2('word', 'word'));
 			default:
 				return A2(
 					$author$project$Bubblegum$TextArea$Internationalization$pickSingularOrPlural,
 					howMany,
-					_Utils_Tuple2('word', 'words'));
+					_Utils_Tuple2('word', 'word'));
 		}
 	});
 var $author$project$Bubblegum$TextArea$Helper$tupleify = F2(
@@ -7819,7 +7819,7 @@ var $author$project$Bubblegum$TextArea$Helper$tupleify = F2(
 var $author$project$Bubblegum$TextArea$Internationalization$translateUnit = function (language) {
 	switch (language.$) {
 		case 'Arabic':
-			return 'الوحدة';
+			return 'الوحدة ';
 		case 'Chinese':
 			return '單位';
 		case 'English':
@@ -7836,45 +7836,45 @@ var $author$project$Bubblegum$TextArea$Internationalization$translateUnit = func
 			return 'единица';
 		case 'Spanish':
 			return 'unidad';
-		case 'Swedish':
-			return 'unit';
-		case 'Danish':
-			return 'unit';
 		case 'Bulgarian':
-			return 'unit';
-		case 'Portuguese':
-			return 'unit';
-		case 'Vietnamese':
-			return 'unit';
-		case 'Finnish':
-			return 'unit';
-		case 'Hungarian':
-			return 'unit';
-		case 'Turkish':
 			return 'unit';
 		case 'Czech':
 			return 'unit';
-		case 'Romanian':
+		case 'Danish':
+			return 'unit';
+		case 'Dutch':
+			return 'unit';
+		case 'Finnish':
 			return 'unit';
 		case 'Greek':
 			return 'unit';
-		case 'Ukrainian':
+		case 'Hebrew':
+			return 'unit';
+		case 'Hungarian':
 			return 'unit';
 		case 'Indonesian':
+			return 'unit';
+		case 'Korean':
 			return 'unit';
 		case 'Norwegian':
 			return 'unit';
 		case 'Persian':
 			return 'unit';
-		case 'Slovak':
-			return 'unit';
-		case 'Dutch':
-			return 'unit';
 		case 'Polish':
 			return 'unit';
-		case 'Korean':
+		case 'Portuguese':
+			return 'unit';
+		case 'Romanian':
+			return 'unit';
+		case 'Slovak':
+			return 'unit';
+		case 'Swedish':
 			return 'unit';
 		case 'Thai':
+			return 'unit';
+		case 'Turkish':
+			return 'unit';
+		case 'Ukrainian':
 			return 'unit';
 		default:
 			return 'unit';
