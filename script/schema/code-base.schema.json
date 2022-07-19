@@ -18,7 +18,7 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "filename": {
+        "filepath": {
           "type": "string",
           "description": "Relative path to the file"
         },
@@ -47,7 +47,7 @@
           "default": false
         }
       },
-      "required": ["description", "filename"],
+      "required": ["description", "filepath"],
       "title": "File",
       "description": "Description of an individual source file"
     }
