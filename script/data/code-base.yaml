@@ -1,0 +1,59 @@
+---
+files:
+  - filename: src/Bubblegum/TextArea/Adapter.elm
+    description: model for the adapter
+  - filename: src/Bubblegum/TextArea/BulmaHelper.elm
+    description: facilitates the creation of Bulma styled html elements
+  - filename: src/Bubblegum/TextArea/EntityHelper.elm
+    description: Basic functions for the VocabularyHelper to facilitate the retrieval of data from the configuration
+  - filename: src/Bubblegum/TextArea/Helper.elm
+    description: Helper to keep the noise away from Widget
+  - filename: src/Bubblegum/TextArea/HelperLimits.elm
+    description: Various limits used across the widget
+  - filename: src/Bubblegum/TextArea/Internationalization.elm
+    description: Utility to translate some of the text used by the widget
+    generator: script/generate.sh
+  - filename: src/Bubblegum/TextArea/IsoLanguage.elm
+    description: Utility to identify ISO languages
+    generator: script/generate.sh
+  - filename: src/Bubblegum/TextArea/Vocabulary.elm
+    description: List of keys (predicates) used for the settings
+    generator: script/generate.sh
+  - filename: src/Bubblegum/TextArea/VocabularyHelper.elm
+    description: Helpers for accessing settings
+    generator: script/generate.sh
+  - filename: src/Bubblegum/TextArea/Widget.elm
+    description: The textarea widget and most important source file
+  - filename: tests/WidgetCreateTests.elm
+    description: the unit tests for testing all the main settings
+    generator: script/generate.sh
+  - filename: tests/WidgetTestData.elm
+    description: Some data to support the unit tests
+  - filename: demo/App.elm
+    description: Entry point for the Demo application
+  - filename: demo/AppModel.elm
+    description: Model for the Demo application
+  - filename: demo/AppMsg.elm
+    description: Messages for the Demo application
+  - filename: demo/AttributeDoc.elm
+    description: Model for the documentation of the Demo application
+  - filename: demo/Ipsum.elm
+    description: fixture with Ipsum paragraph
+  - filename: demo/KeyDescription.elm
+    description: List of description for the keys used by the widget
+    generator: script/generate.sh
+  - filename: demo/PackageJson.elm
+    description: Model for the package description
+  - filename: demo/WidgetBuilder.elm
+    description: View for the widget demo
+  - filename: demo/WidgetDocData.elm
+    description: Examples of settings for the demo application
+    generator: script/generate.sh
+  - filename: demo/WidgetDocView.elm
+    description: View for the documentation of the widget
+  - filename: demo/WidgetPackageJson.elm
+    description: Latest package description and version for the widget
+    generator: script/generate.sh
+
+
+

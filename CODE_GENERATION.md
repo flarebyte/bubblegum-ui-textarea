@@ -44,27 +44,27 @@ make generate
 
 ## Generated files
 
-|                                  | File                                                                    |                       | Description          |                                                | Generator |   | Editable |   | Link |   |
-| -------------------------------- | ----------------------------------------------------------------------- | --------------------- | -------------------- | ---------------------------------------------- | --------- | - | -------- | - | ---- | - |
-| `README.md`                      | Essential guide that gives a detailed description of the project.       | `baldrick-elm`        | :heavy\_check\_mark: |                                                |           |   |          |   |      |   |
-| `LICENSE`                        | The license for the project                                             | `baldrick-elm`        |                      |                                                |           |   |          |   |      |   |
-| `Makefile`                       | The entry point for all the commands used for development               | `baldrick-elm`        |                      |                                                |           |   |          |   |      |   |
-| `commands.txt`                   | A summary of all the commands as a text filename                        | `baldrick-elm`        |                      |                                                |           |   |          |   |      |   |
-| `.aliases.zsh`                   | A list of helpful zsh aliases that you use                              | `baldrick-elm`        |                      |                                                |           |   |          |   |      |   |
-| `elm.json`                       | Elm package description                                                 | `baldrick-elm`        | :heavy\_check\_mark: |                                                |           |   |          |   |      |   |
-| `TECHNICAL_DESIGN.md`            | A description of the technical design and architecture approach         | `baldrick-elm`        | :heavy\_check\_mark: |                                                |           |   |          |   |      |   |
-| `.editorconfig`                  | helps maintain consistent coding styles for multiple developers         | `script/normalize.sh` |                      | [See more](https://editorconfig.org/)          |           |   |          |   |      |   |
-| `.gitignore`                     | Specifies intentionally untracked files that Github should ignore       | `script/normalize.sh` |                      | [See more](https://git-scm.com/docs/gitignore) |           |   |          |   |      |   |
-| `ACCESSIBILITY.md`               | Recommendations for accessibility testing                               | `script/normalize.sh` |                      |                                                |           |   |          |   |      |   |
-| `CODE_GENERATION.md`             | Strategy for code CODE\_GENERATION.md                                   | `script/normalize.sh` |                      |                                                |           |   |          |   |      |   |
-| `CODE_OF_CONDUCT.md`             | Define community standards and signal a welcoming and inclusive project | `script/normalize.sh` |                      |                                                |           |   |          |   |      |   |
-| `CONTRIBUTING.md`                | Guidelines to communicate how people should contribute                  | `script/normalize.sh` |                      |                                                |           |   |          |   |      |   |
-| `DECISIONS.md`                   | Architecture decision records                                           | `script/normalize.sh` | :heavy\_check\_mark: |                                                |           |   |          |   |      |   |
-| `documentation.json`             | Documentation for the Elm source code                                   | `elm`                 |                      |                                                |           |   |          |   |      |   |
-| `GLOSSARY.md`                    | software development glossary                                           | `script/normalize.sh` |                      |                                                |           |   |          |   |      |   |
-| `INTERNATIONALIZATION.md`        | Guidelines for translating the library for several languages            | `script/normalize.sh` |                      |                                                |           |   |          |   |      |   |
-| `.vscode/baldrick.code-snippets` | Code snippets that could be helpful for the project                     | `script/normalize.sh` |                      |                                                |           |   |          |   |      |   |
-| `.vscode/settings.json`          | Settings for the current Visual Studio Code project                     | `script/normalize.sh` | :heavy\_check\_mark: |                                                |           |   |          |   |      |   |
+| File                             | Description                                                             | Generator             | Editable             | Link                                           |
+| -------------------------------- | ----------------------------------------------------------------------- | --------------------- | -------------------- | ---------------------------------------------- |
+| `README.md`                      | Essential guide that gives a detailed description of the project.       | `baldrick-elm`        | :heavy\_check\_mark: |                                                |
+| `LICENSE`                        | The license for the project                                             | `baldrick-elm`        |                      |                                                |
+| `Makefile`                       | The entry point for all the commands used for development               | `baldrick-elm`        |                      |                                                |
+| `commands.txt`                   | A summary of all the commands as a text filename                        | `baldrick-elm`        |                      |                                                |
+| `.aliases.zsh`                   | A list of helpful zsh aliases that you use                              | `baldrick-elm`        |                      |                                                |
+| `elm.json`                       | Elm package description                                                 | `baldrick-elm`        | :heavy\_check\_mark: |                                                |
+| `TECHNICAL_DESIGN.md`            | A description of the technical design and architecture approach         | `baldrick-elm`        | :heavy\_check\_mark: |                                                |
+| `.editorconfig`                  | helps maintain consistent coding styles for multiple developers         | `script/normalize.sh` |                      | [See more](https://editorconfig.org/)          |
+| `.gitignore`                     | Specifies intentionally untracked files that Github should ignore       | `script/normalize.sh` |                      | [See more](https://git-scm.com/docs/gitignore) |
+| `ACCESSIBILITY.md`               | Recommendations for accessibility testing                               | `script/normalize.sh` |                      |                                                |
+| `CODE_GENERATION.md`             | Strategy for code CODE\_GENERATION.md                                   | `script/normalize.sh` |                      |                                                |
+| `CODE_OF_CONDUCT.md`             | Define community standards and signal a welcoming and inclusive project | `script/normalize.sh` |                      |                                                |
+| `CONTRIBUTING.md`                | Guidelines to communicate how people should contribute                  | `script/normalize.sh` |                      |                                                |
+| `DECISIONS.md`                   | Architecture decision records                                           | `script/normalize.sh` | :heavy\_check\_mark: |                                                |
+| `documentation.json`             | Documentation for the Elm source code                                   | `elm`                 |                      |                                                |
+| `GLOSSARY.md`                    | software development glossary                                           | `script/normalize.sh` |                      |                                                |
+| `INTERNATIONALIZATION.md`        | Guidelines for translating the library for several languages            | `script/normalize.sh` |                      |                                                |
+| `.vscode/baldrick.code-snippets` | Code snippets that could be helpful for the project                     | `script/normalize.sh` |                      |                                                |
+| `.vscode/settings.json`          | Settings for the current Visual Studio Code project                     | `script/normalize.sh` | :heavy\_check\_mark: |                                                |
 
 ## Links
 

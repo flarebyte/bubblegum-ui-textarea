@@ -5,6 +5,7 @@
     "./script/schema/project.schema.json": "script/data/project.yaml",
     "./script/schema/vocabulary.schema.json": "script/data/vocabulary.yaml",
     "./script/schema/language.schema.json": "script/data/language.yaml",
-    "./script/schema/translation.schema.json": "script/data/translation.yaml"
+    "./script/schema/translation.schema.json": "script/data/translation.yaml",
+    "./script/schema/code-base.schema.json": "script/data/code-base.yaml"
   }
 }

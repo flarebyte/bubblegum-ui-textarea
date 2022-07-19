@@ -29,3 +29,7 @@ generations:
     schema: translation
     template: internationalization
     destination: src/Bubblegum/TextArea/Internationalization.elm
+  - data: code-base
+    schema: code-base
+    template: code-base
+    destination: CODE_BASE.md

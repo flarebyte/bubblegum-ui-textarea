@@ -1,6 +1,11 @@
 #!/bin/sh
 # Generated with make generate. See template script/template/generate.hbs
-npx baldrick-whisker@latest render elm.json script/template/widget-package.hbs demo/WidgetPackageJson.elm
+mkdir -p report
+echo "Generating CODE_BASE.md ..."
+scc --by-file -f json | jq '.[0].Files | map({ key: .Location, value: .}) | from_entries' > report/scc.json
+npx baldrick-whisker@latest object report/code-base.yaml report/scc.json script/data/code-base.yaml
+npx baldrick-whisker@latest render report/code-base.yaml script/template/code-base.hbs CODE_BASE.md
+
 {{#each generations}}
 echo "Generating {{template}} with {{data}}..."
 npx ajv validate --errors text -s script/schema/{{schema}}.schema.json -d script/data/{{data}}.yaml
