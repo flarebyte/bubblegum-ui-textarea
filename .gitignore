@@ -6,3 +6,6 @@ repl-temp-*
 .DS_Store
 report/
 .message
+node_modules/
+.cache/
+temp/
