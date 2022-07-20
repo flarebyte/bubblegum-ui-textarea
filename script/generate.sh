@@ -27,24 +27,6 @@ echo "Generating code-base with code-base..."
 npx ajv validate --errors text -s script/schema/code-base.schema.json -d script/data/code-base.yaml
 npx baldrick-whisker@latest render script/data/code-base.yaml script/template/code-base.hbs CODE_BASE.md
 
-echo "Generating the app.js from Elm source code ..."
-rm docs/*.js docs/*.css docs/*.html
-pushd demo && elm make App.elm --output ../docs/app.js && popd
-
-echo "Copy demo files to docs ..."
-cp demo/index.html docs/index.html
-cp demo/styles.css docs/styles.css
-
-echo "Create unique hash ..."
-hash=$(md5 -q docs/app.js)
-hashcss=$(md5 -q docs/styles.css)
-
-mv docs/app.js docs/app-$hash.js
-sed -i '' "s/app.js/app-$hash.js/" docs/index.html
-	
-mv docs/styles.css docs/styles-$hashcss.css
-sed -i '' "s/styles.css/styles-$hashcss.css/" docs/index.html
-
 echo "Generating CODE_BASE.md ..."
 scc --by-file -f json | jq '.[0].Files | map({ key: .Location, value: .}) | from_entries' > report/scc.json
 npx baldrick-whisker@latest object report/code-base.yaml report/scc.json script/data/code-base.yaml

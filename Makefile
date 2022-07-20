@@ -17,10 +17,12 @@ beautify:
 # Run the bigger tests suite
 big-test: test
 	npx baldrick-whisker@latest render script/data/project.yaml script/template/big-test.hbs script/big-test.sh
+	sh script/big-test.sh
 
 # Build the library
 build: test beautify doc
 	npx baldrick-whisker@latest render script/data/project.yaml script/template/build.hbs script/build.sh
+	sh script/build.sh
 
 # Detects Elm code API changes
 diff: 
@@ -87,6 +89,7 @@ preview-doc:
 # Prepare for pull request
 pull: 
 	npx baldrick-whisker@latest render script/data/project.yaml script/template/pull.hbs script/pull.sh
+	sh script/pull.sh
 
 # Ready for publishing
 ready: analyze test
