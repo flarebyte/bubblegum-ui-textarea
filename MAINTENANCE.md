@@ -329,6 +329,38 @@ code that can be easily generated
 
 ***
 
+### Run the bigger tests suite
+
+> Run browser tests
+
+**Motivation:** Run longer tests using different browsers
+
+**When to use it:** After building
+
+**Run:** `make big-test`
+
+**From package:**
+[makefile](https://opensource.com/article/18/8/what-how-makefile) of
+[brew](https://docs.brew.sh/) : Build management
+
+***
+
+### Prepare for pull request
+
+> Run some code that we should do just before a release
+
+**Motivation:** Streamline the release
+
+**When to use it:** Before release
+
+**Run:** `make pull`
+
+**From package:**
+[makefile](https://opensource.com/article/18/8/what-how-makefile) of
+[brew](https://docs.brew.sh/) : Build management
+
+***
+
 ### Generate some code in the console
 
 > Generate some of the boilerplate code that has to be manually added

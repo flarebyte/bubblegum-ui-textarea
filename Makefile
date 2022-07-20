@@ -1,4 +1,4 @@
-.PHONY: analyze assist beautify build diff doc generate github help install install-global md md-fix norm pre-generate preview-doc ready reset reset-generated test whisker-norm
+.PHONY: analyze assist beautify big-test build diff doc generate github help install install-global md md-fix norm pre-generate preview-doc pull ready reset reset-generated test whisker-norm
 
 # Static code analysis
 analyze: 
@@ -14,8 +14,13 @@ beautify:
 	elm-format tests/ --yes
 	test -d demo/ && elm-format demo/ --yes
 
+# Run the bigger tests suite
+big-test: test
+	npx baldrick-whisker@latest render script/data/project.yaml script/template/big-test.hbs script/big-test.sh
+
 # Build the library
 build: test beautify doc
+	npx baldrick-whisker@latest render script/data/project.yaml script/template/build.hbs script/build.sh
 
 # Detects Elm code API changes
 diff: 
@@ -31,7 +36,6 @@ generate: reset-generated pre-generate
 	sh script/generate.sh
 	make beautify
 	make test
-	make doc
 	make md-fix
 
 # Update github repository
@@ -79,6 +83,10 @@ pre-generate:
 # Preview the documentation
 preview-doc: 
 	elm-doc-preview
+
+# Prepare for pull request
+pull: 
+	npx baldrick-whisker@latest render script/data/project.yaml script/template/pull.hbs script/pull.sh
 
 # Ready for publishing
 ready: analyze test
