@@ -1,0 +1,59 @@
+---
+files:
+  - filepath: src/Bubblegum/TextArea/Adapter.elm
+    description: model for the adapter
+  - filepath: src/Bubblegum/TextArea/BulmaHelper.elm
+    description: facilitates the creation of Bulma styled html elements
+  - filepath: src/Bubblegum/TextArea/EntityHelper.elm
+    description: Basic functions for the VocabularyHelper to facilitate the retrieval of data from the configuration
+  - filepath: src/Bubblegum/TextArea/Helper.elm
+    description: Helper to keep the noise away from Widget
+  - filepath: src/Bubblegum/TextArea/HelperLimits.elm
+    description: Various limits used across the widget
+  - filepath: src/Bubblegum/TextArea/Internationalization.elm
+    description: Utility to translate some of the text used by the widget
+    generator: script/generate.sh
+  - filepath: src/Bubblegum/TextArea/IsoLanguage.elm
+    description: Utility to identify ISO languages
+    generator: script/generate.sh
+  - filepath: src/Bubblegum/TextArea/Vocabulary.elm
+    description: List of keys (predicates) used for the settings
+    generator: script/generate.sh
+  - filepath: src/Bubblegum/TextArea/VocabularyHelper.elm
+    description: Helpers for accessing settings
+    generator: script/generate.sh
+  - filepath: src/Bubblegum/TextArea/Widget.elm
+    description: The textarea widget and most important source file
+  - filepath: tests/WidgetCreateTests.elm
+    description: the unit tests for testing all the main settings
+    generator: script/generate.sh
+  - filepath: tests/WidgetTestData.elm
+    description: Some data to support the unit tests
+  - filepath: demo/App.elm
+    description: Entry point for the Demo application
+  - filepath: demo/AppModel.elm
+    description: Model for the Demo application
+  - filepath: demo/AppMsg.elm
+    description: Messages for the Demo application
+  - filepath: demo/AttributeDoc.elm
+    description: Model for the documentation of the Demo application
+  - filepath: demo/Ipsum.elm
+    description: fixture with Ipsum paragraph
+  - filepath: demo/KeyDescription.elm
+    description: List of description for the keys used by the widget
+    generator: script/generate.sh
+  - filepath: demo/PackageJson.elm
+    description: Model for the package description
+  - filepath: demo/WidgetBuilder.elm
+    description: View for the widget demo
+  - filepath: demo/WidgetDocData.elm
+    description: Examples of settings for the demo application
+    generator: script/generate.sh
+  - filepath: demo/WidgetDocView.elm
+    description: View for the documentation of the widget
+  - filepath: demo/WidgetPackageJson.elm
+    description: Latest package description and version for the widget
+    generator: script/generate.sh
+
+
+

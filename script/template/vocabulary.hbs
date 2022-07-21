@@ -1,0 +1,15 @@
+module {{packageNameDot}}.{{moduleName}} exposing (..)
+
+{-| List of keys used for the settings
+
+    **generated** with make generate
+
+-}
+
+{{#each uiKeys}}
+{-|  {{description}}. ({{signature}}) -}
+ui_{{lowerCamelCase name}}: String
+ui_{{lowerCamelCase name}} =
+    "ui:{{dasherize name}}"
+
+{{/each}}

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Project code base",
+  "additionalProperties": false,
+  "properties": {
+    "files": {
+      "type": "array",
+      "title": "List of source code files",
+      "items": {
+        "$ref": "#/$defs/File"
+      }
+    }
+  },
+  "required": ["files"],
+  "$defs": {
+    "File": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "filepath": {
+          "type": "string",
+          "description": "Relative path to the file"
+        },
+        "description": {
+          "type": "string",
+          "description": "A description for the file"
+        },
+        "generator": {
+          "type": "string",
+          "description": "The generator producing the file",
+          "enum": [
+            "baldrick-elm",
+            "script/normalize.sh",
+            "script/generate.sh",
+            "elm"
+          ]
+        },
+        "homepage": {
+          "type": "string",
+          "description": "An URL to the homepage about the file",
+          "format": "uri"
+        },
+        "editable": {
+          "type": "boolean",
+          "description": "Whether the file can be manually edited",
+          "default": false
+        }
+      },
+      "required": ["description", "filepath"],
+      "title": "File",
+      "description": "Description of an individual source file"
+    }
+  }
+}

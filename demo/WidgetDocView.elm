@@ -65,6 +65,7 @@ viewRadioItem isUserSettings key actual value =
                     (\v ->
                         if v == value then
                             "has-text-success has-text-weight-bold"
+
                         else
                             ""
                     )
@@ -86,6 +87,7 @@ viewRadioItemForState key actual value =
                     (\v ->
                         if v == value then
                             "has-text-success has-text-weight-bold"
+
                         else
                             ""
                     )

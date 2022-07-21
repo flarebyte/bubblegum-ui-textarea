@@ -1,0 +1,35 @@
+---
+packageNameSlash: Bubblegum/TextArea
+generations:
+  - data: vocabulary
+    schema: vocabulary
+    template: vocabulary
+    destination: src/Bubblegum/TextArea/Vocabulary.elm
+  - data: vocabulary
+    schema: vocabulary
+    template: vocabulary-helper
+    destination: src/Bubblegum/TextArea/VocabularyHelper.elm
+  - data: vocabulary
+    schema: vocabulary
+    template: key-description
+    destination: demo/KeyDescription.elm
+  - data: vocabulary
+    schema: vocabulary
+    template: widget-doc-data
+    destination: demo/WidgetDocData.elm
+  - data: vocabulary
+    schema: vocabulary
+    template: widget-create-tests
+    destination: tests/WidgetCreateTests.elm
+  - data: language
+    schema: language
+    template: iso-language
+    destination: src/Bubblegum/TextArea/IsoLanguage.elm
+  - data: translation
+    schema: translation
+    template: internationalization
+    destination: src/Bubblegum/TextArea/Internationalization.elm
+  - data: code-base
+    schema: code-base
+    template: code-base
+    destination: CODE_BASE.md

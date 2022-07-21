@@ -1,0 +1,12 @@
+module WidgetPackageJson exposing (meta)
+
+import PackageJson
+
+meta : PackageJson.Model
+meta =
+    { version = "{{version}}"
+    , summary = "{{summary}}"
+    , repository = "https://github.com/{{name}}.git"
+    , license = "{{license}}"
+    , exposedModules = [ {{#listJoin "," exposed-modules}} "{{this}}" {{/listJoin}} ]
+    }

@@ -1,0 +1,191 @@
+---
+moduleName: Vocabulary
+packageNameDot: Bubblegum.TextArea
+uiRangeKeys:
+  - kind: success
+    unit: char
+    description: The range of characters accepted for successful content
+  - kind: danger
+    unit: char
+    description: The range of characters triggering a warning
+  - kind: success
+    unit: word
+    description: The range of words accepted for successful content
+  - kind: danger
+    unit: word
+    description: The range of words triggering a warning
+uiKeys:
+  - name: content id
+    description: The unique id of the content
+    signature: String
+    constraints: state medium not-empty attribute no-comma
+    examples:
+      - "id:aa61e603-9947-4fd8-86bb-d63a682259d0 "
+  - name: content language
+    description: Language of the content
+    signature: String
+    constraints: small not-empty user attribute no-comma
+    examples:
+      - en-GB
+      - ja
+      - ar
+      - zh-CN-SC
+      - ru-RUS
+      - es
+      - it
+      - fr
+  - name: content right to left
+    description: Whether the content requires right to left
+    signature: Bool
+    constraints: user attribute
+    examples:
+      - "true"
+      - "false"
+  - name: content
+    description: The content of the field
+    signature: String
+    constraints: state very-large attribute
+    examples:
+      - "some content "
+  - name: danger help
+    description: Help message to highlight an issue with the content
+    signature: String
+    constraints: medium not-empty state
+    examples:
+      - do not do this
+  - name: danger maximum chars
+    description: Warning when over the maximum number of characters
+    signature: Int
+    constraints: "no-comma"
+    examples:
+      - '80'
+      - '160'
+      - '320'
+  - name: danger maximum words
+    description: Warning when over the maximum number of words
+    signature: Int
+    constraints: ""
+    examples:
+      - '40'
+      - '80'
+      - '160'
+  - name: danger minimum chars
+    description: Warning when under the minimum number of characters
+    signature: Int
+    constraints: ""
+    examples:
+      - '0'
+      - '20'
+      - '40'      
+  - name: danger minimum words
+    description: Warning when under the minimum number of words
+    signature: Int
+    constraints: ""
+    examples:
+      - '0'
+      - '10'
+      - '20'
+  - name: danger tag
+    description: Tag representing a dangerous aspect of the content
+    signature: List String
+    constraints: small not-empty state
+    examples:
+      - sensitive
+      - save
+  - name: help
+    description: Some help tip related to the field
+    signature: String
+    constraints: medium not-empty
+    examples:
+      - Lorem ipsum dolor sit amet consectetur adipiscing elit.
+      - 助けて
+  - name: label
+    description: Label related to the field
+    signature: String
+    constraints: medium not-empty
+    examples:
+      - Some label
+      - ラベル
+      - ضع الكلمة المناسبة
+  - name: placeholder
+    description: Short hint describing the expected content
+    signature: String
+    constraints: medium not-empty attribute
+    examples:
+      - Some placeholder
+      - プレースホルダ
+  - name: success maximum chars
+    description: The maximum number of characters needed for successful content
+    signature: Int
+    constraints: ""
+    examples:
+      - '70'
+      - '150'
+      - '310'
+  - name: success maximum words
+    description: The maximum number of words needed for successful content
+    signature: Int
+    constraints: ""
+    examples:
+      - '30'
+      - '70'
+      - '150'
+  - name: success minimum chars
+    description: The minimum number of characters needed for successful content
+    signature: Int
+    constraints: ""
+    examples:
+      - '1'
+      - '10'
+      - '20'
+  - name: success minimum words
+    description: The minimum number of words needed for successful content
+    signature: Int
+    constraints: ""
+    examples:
+      - '1'
+      - '10'
+      - '20'
+  - name: success tag
+    description: Tag representing a successful facet of the content
+    signature: List String
+    constraints: small not-empty state
+    examples:
+      - spelling
+      - concise
+      - italian
+  - name: tag
+    description: Tag used to describe the field
+    signature: List String
+    constraints: small not-empty
+    examples:
+      - it
+      - learning
+      - elm
+  - name: user language
+    description: Language used by the user
+    signature: String
+    constraints: small not-empty user attribute
+    examples:
+      - en-GB
+      - ja
+      - ar
+      - zh-CN-SC
+      - ru-RUS
+      - es
+      - it
+      - fr
+  - name: user right to left
+    description: Whether the user is using right to left
+    signature: Bool
+    constraints: user attribute
+    examples:
+      - "true"
+      - "false"
+  - name: warning tag
+    description: Tag representing a warning aspect of the content
+    signature: List String
+    constraints: small not-empty state
+    examples:
+      - grammar
+      - synonyms

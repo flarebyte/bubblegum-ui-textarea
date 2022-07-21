@@ -5,7 +5,7 @@ module Bubblegum.TextArea.IsoLanguage exposing (IsoLanguage(..), toIsoLanguage)
     See https://en.wikipedia.org/wiki/Languages_used_on_the_Internet
     And https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 
-    **Generated** by generate-translation.py
+    **generated** with make generate
 
 -}
 

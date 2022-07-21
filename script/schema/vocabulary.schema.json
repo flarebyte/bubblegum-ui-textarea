@@ -1,0 +1,124 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Schema for UI Keys",
+  "type": "object",
+  "required": ["uiRangeKeys", "uiKeys"],
+  "properties": {
+    "moduleName": {
+      "type": "string",
+      "description": "The name of the Elm module"
+    },
+    "packageNameDot": {
+      "type": "string",
+      "description": "The Elm package name separated by dots",
+      "examples": ["Bubblegum.Entity"]
+    },
+    "uiRangeKeys": {
+      "$id": "#root/uiRangeKeys",
+      "title": "Keys for range",
+      "type": "array",
+      "default": [],
+      "items": {
+        "$id": "#root/uiRangeKeys/items",
+        "title": "Items",
+        "type": "object",
+        "required": ["kind", "unit", "description"],
+        "properties": {
+          "kind": {
+            "$id": "#root/uiRangeKeys/items/kind",
+            "title": "Kind",
+            "type": "string",
+            "default": "",
+            "examples": ["success"],
+            "pattern": "^.*$"
+          },
+          "unit": {
+            "$id": "#root/uiRangeKeys/items/unit",
+            "title": "Unit",
+            "type": "string",
+            "default": "",
+            "examples": ["char"],
+            "pattern": "^.*$"
+          },
+          "description": {
+            "$id": "#root/uiRangeKeys/items/description",
+            "title": "Description",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "The range of characters accepted for successful content"
+            ],
+            "pattern": "^.*$"
+          }
+        }
+      }
+    },
+    "uiKeys": {
+      "$id": "#root/uiKeys",
+      "title": "Keys for UI",
+      "type": "array",
+      "default": [],
+      "items": {
+        "$id": "#root/uiKeys/items",
+        "title": "Items",
+        "type": "object",
+        "required": [
+          "name",
+          "description",
+          "signature",
+          "constraints",
+          "examples"
+        ],
+        "properties": {
+          "name": {
+            "$id": "#root/uiKeys/items/name",
+            "title": "Name",
+            "type": "string",
+            "default": "",
+            "examples": ["content-id"],
+            "pattern": "^.*$"
+          },
+          "description": {
+            "$id": "#root/uiKeys/items/description",
+            "title": "Description",
+            "type": "string",
+            "default": "",
+            "examples": ["The unique id of the content"],
+            "pattern": "^.*$"
+          },
+          "signature": {
+            "$id": "#root/uiKeys/items/signature",
+            "title": "Signature",
+            "type": "string",
+            "default": "",
+            "examples": ["String"],
+            "pattern": "^.*$"
+          },
+          "constraints": {
+            "$id": "#root/uiKeys/items/constraints",
+            "title": "Constraints",
+            "type": "string",
+            "default": "",
+            "examples": ["state medium! attribute"],
+            "pattern": "^.*$"
+          },
+          "examples": {
+            "$id": "#root/uiKeys/items/examples",
+            "title": "Examples",
+            "type": "array",
+            "default": [],
+            "items": {
+              "$id": "#root/uiKeys/items/examples/items",
+              "title": "Items",
+              "type": "string",
+              "default": "",
+              "examples": ["id:aa61e603-9947-4fd8-86bb-d63a682259d0 "],
+              "pattern": "^.*$"
+            }
+          }
+        }
+      }
+    }
+  }
+}

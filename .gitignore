@@ -1,9 +1,22 @@
-elm-stuff
-repl-temp-*
+# os
+.DS_Store
 
-*.DS_Store
-.AppleDouble
-.LSOverride
-Icon
+# baldrick
+.cache/
+.message
+report/
+temp/
 
+# python
 *.pyc
+
+# elm
+elm-stuff
+
+# node.js
+node_modules/
+
+# other
+.vscode/*.log
+*.log
+repl-temp-*

@@ -21,7 +21,7 @@ setUserSettings userSettings model =
 
 helperAsUserSettingsIn : AppModel -> SettingsEntity.Model -> AppModel
 helperAsUserSettingsIn =
-    flip setUserSettings
+    \b a -> setUserSettings a b
 
 
 setSettings : SettingsEntity.Model -> AppModel -> AppModel
@@ -31,13 +31,14 @@ setSettings settings model =
 
 helperAsSettingsIn : AppModel -> SettingsEntity.Model -> AppModel
 helperAsSettingsIn =
-    flip setSettings
+    \b a -> setSettings a b
 
 
 asSettingsIn : Bool -> AppModel -> SettingsEntity.Model -> AppModel
 asSettingsIn isUserSettings model settings =
     if isUserSettings then
         helperAsUserSettingsIn model settings
+
     else
         helperAsSettingsIn model settings
 
@@ -46,6 +47,7 @@ getSettings : Bool -> AppModel -> SettingsEntity.Model
 getSettings isUserSettings model =
     if isUserSettings then
         model.userSettings
+
     else
         model.settings
 
@@ -72,7 +74,7 @@ setState state model =
 
 asStateIn : AppModel -> StateEntity.Model -> AppModel
 asStateIn =
-    flip setState
+    \b a -> setState a b
 
 
 reset : AppModel

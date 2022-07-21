@@ -1,0 +1,7 @@
+# Code base
+
+| File  | Description  | Generator | Complexity |
+| ------|---------------|----------|------------|
+{{#each files}}
+| `{{filepath}}` | {{description}} | {{#if generator}}`{{generator}}`{{/if}}| {{#with (lookup @root filepath)~}}{{#if Complexity}}{{Complexity}}{{/if}}{{/with}}|
+{{/each}}

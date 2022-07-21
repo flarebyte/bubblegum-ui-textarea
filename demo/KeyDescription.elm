@@ -2,7 +2,7 @@ module KeyDescription exposing (..)
 
 {-| List of descriptions for the keys used for the settings
 
-    **Generated** by generate-vocabulary.py
+    **generated** with make generate
 
 -}
 

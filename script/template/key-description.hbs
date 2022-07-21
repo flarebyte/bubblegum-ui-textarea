@@ -1,0 +1,14 @@
+module KeyDescription exposing (..)
+
+{-| List of descriptions for the keys used for the settings
+
+    **generated** with make generate
+
+-}
+
+{{#each uiKeys}}
+desc{{upperCamelCase name}}: String
+desc{{upperCamelCase name}} =
+    "{{description}}"
+
+{{/each}}
