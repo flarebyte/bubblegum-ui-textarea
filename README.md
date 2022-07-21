@@ -13,8 +13,6 @@ Please check the [demo](https://flarebyte.github.io/bubblegum-ui-textarea/)
 
 ### Installing Elm packages
 
-There is no dependency.
-
 ```
 elm-app package install flarebyte/bubblegum-ui-textarea
 ```
