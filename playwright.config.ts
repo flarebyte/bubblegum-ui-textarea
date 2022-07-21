@@ -5,16 +5,15 @@ import { devices } from "@playwright/test";
  * See https://playwright.dev/docs/test-configuration.
  */
 
-const config: PlaywrightTestConfig = {
+const devConfig: PlaywrightTestConfig = {
   testDir: "./e2e",
   timeout: 20 * 1000,
   expect: {
     timeout: 5000,
   },
   fullyParallel: true,
-  forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
+  forbidOnly: false,
+  retries: 0,
   reporter: [
     ["html", { outputFolder: "report/playwright-html" }],
     ["json", { outputFile: "report/playwright-test-results.json" }],
@@ -22,7 +21,38 @@ const config: PlaywrightTestConfig = {
   use: {
     actionTimeout: 0,
     trace: "retain-on-failure",
-    headless: !!process.env.CI
+    headless: false
+  },
+
+  projects: [
+    {
+      name: "chromium",
+      use: {
+        ...devices["Desktop Chrome"],
+      },
+    },
+  ],
+
+  outputDir: "report/playwright-trace/",
+};
+
+const ciConfig: PlaywrightTestConfig = {
+  testDir: "./e2e",
+  timeout: 20 * 1000,
+  expect: {
+    timeout: 5000,
+  },
+  fullyParallel: true,
+  forbidOnly: true,
+  retries: 2,
+  workers: 1,
+  reporter: [
+    ["json", { outputFile: "report/playwright-test-results.json" }],
+  ],
+  use: {
+    actionTimeout: 0,
+    trace: "retain-on-failure",
+    headless: true
   },
 
   projects: [
@@ -33,22 +63,23 @@ const config: PlaywrightTestConfig = {
       },
     },
 
-    // {
-    //   name: "firefox",
-    //   use: {
-    //     ...devices["Desktop Firefox"],
-    //   },
-    // },
+    {
+      name: "firefox",
+      use: {
+        ...devices["Desktop Firefox"],
+      },
+    },
 
-    // {
-    //   name: "webkit",
-    //   use: {
-    //     ...devices["Desktop Safari"],
-    //   },
-    // },
+    {
+      name: "webkit",
+      use: {
+        ...devices["Desktop Safari"],
+      },
+    },
   ],
 
   outputDir: "report/playwright-trace/",
 };
 
+const config: PlaywrightTestConfig = !!process.env.CI ? ciConfig : devConfig;
 export default config;
